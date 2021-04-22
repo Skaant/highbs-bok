@@ -4,7 +4,11 @@
 @import "../../node_modules/bootstrap/scss/mixins";
 
 @import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
 
 body {
-  background: #DBB;
+  background: #dbb;
 }
