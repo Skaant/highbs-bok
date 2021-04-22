@@ -5,6 +5,16 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `HIGHBS-BOK, le livre du motif absolu`,
+    siteUrl: `https://highbs-bok.art`,
+    description: `Découvrez les secrets de l'HIGHBS, le motif absolu,
+      à travers l'histoire des ZUMS : ces singes conquérants,
+      partis jusqu'aux confins de l'univers et
+      revenus pour former le tout-un.`,
+  },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`
+  ],
 }
