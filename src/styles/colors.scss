@@ -1,0 +1,23 @@
+// Remove all default theme colors.
+$theme-colors: map-remove(
+  $theme-colors,
+  "primary",
+  "secondary",
+  "success",
+  "danger",
+  "warning",
+  "info",
+  /* "light", */ "dark"
+);
+
+/** Custom colors list.
+  * @note should be auto-generated from data. */
+$gold: #ffcd5c;
+
+// Add custom colors to theme colors.
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "gold": $gold,
+  )
+);

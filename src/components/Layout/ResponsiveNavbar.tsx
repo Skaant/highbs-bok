@@ -43,7 +43,7 @@ export default function ResponsiveNavbar({ pageId }) {
                 className={`nav-link ${pageId === "a-propos" && "active"}`}
                 href="/a-propos"
               >
-                À propos du projet
+                À propos
               </a>
             </li>
           </ul>
