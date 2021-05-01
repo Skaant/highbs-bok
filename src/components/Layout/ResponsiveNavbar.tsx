@@ -25,7 +25,7 @@ export default function ResponsiveNavbar({ pageId }) {
                 className={`nav-link ${
                   pageId === "l-univers/index" && "active"
                 }`}
-                href="/univers"
+                href="/l-univers"
               >
                 Découvrir l'univers
               </a>

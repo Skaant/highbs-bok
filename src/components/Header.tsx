@@ -20,6 +20,12 @@ export function Header({ title }) {
       <title>
         {title} | {data.site.siteMetadata.title}
       </title>
+      <link
+        rel="icon"
+        href="/highbs-bok.svg"
+        sizes="any"
+        type="image/svg+xml"
+      />
     </Helmet>
   )
 }
