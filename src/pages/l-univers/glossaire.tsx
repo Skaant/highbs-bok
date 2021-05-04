@@ -18,7 +18,7 @@ export default function Glossaire() {
               </p>
             </div>
           </div>
-          <div className="row px-4 align-content-center">
+          <div className="row px-4 pt-4 align-content-center">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <p className="mb-4">
                 Quelques mots écrits en majuscule se baladent dans l'HIGHBS-BOK,

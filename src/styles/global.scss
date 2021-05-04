@@ -63,6 +63,12 @@ h2 {
   margin-bottom: map.get($spacers, 5);
 }
 
+p,
+li {
+  font-size: 1.3rem;
+  letter-spacing: 0.12rem;
+}
+
 .navbar-brand img {
   height: 80px;
 }
