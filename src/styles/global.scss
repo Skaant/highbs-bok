@@ -31,6 +31,7 @@ $grid-gutter-width: 0;
 @import "../../node_modules/bootstrap/scss/type";
 @import "../../node_modules/bootstrap/scss/buttons";
 @import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/badge";
 @import "../../node_modules/bootstrap/scss/images";
 
 img.cover {
@@ -44,6 +45,10 @@ img.cover {
 
 body {
   background: $gray-100;
+}
+
+#layout > .container-fluid {
+  min-height: 200vh;
 }
 
 h1,

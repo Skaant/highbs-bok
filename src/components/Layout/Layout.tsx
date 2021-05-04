@@ -10,7 +10,7 @@ export function Layout({
   children: ReactElement
 }) {
   return (
-    <>
+    <div id="layout">
       <ResponsiveNavbar pageId={pageId} />
       {children}
       <footer className="py-2 text-center">
@@ -20,6 +20,6 @@ export function Layout({
         <i>, le développeur</i>).
       </footer>
       <script src="/bootstrap.min.js"></script>
-    </>
+    </div>
   )
 }

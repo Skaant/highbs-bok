@@ -7,7 +7,7 @@ $theme-colors: map-remove(
   "danger",
   "warning",
   "info",
-  /* "light", */ "dark"
+  /* Keep only : "light", "dark" */
 );
 
 /** Custom colors list.
