@@ -44,7 +44,7 @@ export default function Couleurs() {
                     color
                   )
                   return (
-                    <tr>
+                    <tr key={color}>
                       <td>
                         <span
                           className="badge rounded-pill w-100"

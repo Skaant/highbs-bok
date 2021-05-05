@@ -13,11 +13,27 @@ $theme-colors: map-remove(
 /** Custom colors list.
   * @note should be auto-generated from data. */
 $gold: #ffcd5c;
+$lightGold: #ffde95;
+$blue: #5d89ff;
+$lightDeep: #b6b1c5;
+$jewel: #ffdcb0;
+$skin: #ff6e38;
+$green: #46af49;
+$purple: #a735ff;
+$turquoize: #00ffab;
 
 // Add custom colors to theme colors.
 $theme-colors: map-merge(
   $theme-colors,
   (
     "gold": $gold,
+    "lightGold": $lightGold,
+    "blue": $blue,
+    "lightDeep": $lightDeep,
+    "jewel": $jewel,
+    "skin": $skin,
+    "green": $green,
+    "purple": $purple,
+    "turquoize": $turquoize,
   )
 );

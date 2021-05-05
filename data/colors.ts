@@ -16,7 +16,7 @@ export enum colors {
 
 export const colorsData = new Map<
   colors,
-  { hexa: string; description: string }
+  { hexa: string; description: string; colorWhite?: boolean }
 >([
   [
     colors.gold,
@@ -32,7 +32,10 @@ export const colorsData = new Map<
       description: "Rayons diffractés du tout-un",
     },
   ],
-  [colors.blue, { hexa: "#5d89ff", description: "Eau, TERA (planète)" }],
+  [
+    colors.blue,
+    { hexa: "#5d89ff", description: "Eau, TERA (planète)", colorWhite: true },
+  ],
   [
     colors.lightBlue,
     {
@@ -66,6 +69,7 @@ export const colorsData = new Map<
     {
       hexa: "#ff6e38",
       description: "ZUM, amour, force gravitationnelle",
+      colorWhite: true,
     },
   ],
   [
@@ -80,6 +84,7 @@ export const colorsData = new Map<
     {
       hexa: "#46af49",
       description: "Végétation, GRAND-ARBRE",
+      colorWhite: true,
     },
   ],
   [
@@ -94,6 +99,7 @@ export const colorsData = new Map<
     {
       hexa: "#a735ff",
       description: "PSIK",
+      colorWhite: true,
     },
   ],
   [

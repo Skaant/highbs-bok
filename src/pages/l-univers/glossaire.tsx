@@ -10,7 +10,7 @@ export default function Glossaire() {
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
-          <div className="row px-4 text-center align-content-center">
+          <div className="row px-4 text-center align-content-center bg-lightGold">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1>{title}</h1>
               <p className="lead">
