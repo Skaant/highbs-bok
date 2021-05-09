@@ -18,7 +18,7 @@ const erasRowColor = {
 
 export default function SeptEras() {
   return (
-    <Layout pageId="index/7-eras">
+    <Layout pageId="index/sept-eras">
       <>
         <Header title={title} />
         <div className="container-fluid px-0">

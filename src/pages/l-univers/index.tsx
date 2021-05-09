@@ -33,8 +33,8 @@ export default function () {
               <h2>Concepts et pages de la section univers</h2>
               <ul>
                 <li>
-                  <a href="/l-univers/7-eras">7 ERAS</a>, les sept périodes de
-                  l'histoire des ZUMS,
+                  <a href="/l-univers/sept-eras">Sept ERAS</a>, les sept
+                  périodes de l'histoire des ZUMS,
                 </li>
                 <li>
                   <a href="/l-univers/glossaire">Le glossaire</a> des termes

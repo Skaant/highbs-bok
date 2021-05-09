@@ -10,7 +10,15 @@ export default function Glossaire() {
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
-          <div className="row px-4 text-center align-content-center bg-lightGold">
+          <img
+            src="/images/hb1-hol-ong.svg"
+            className="w-100 h-100 cover shadow"
+            style={{ zIndex: -1 }}
+          />
+          <div
+            className="row px-4 text-center align-content-center position-absolute"
+            style={{ top: 0 }}
+          >
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1>{title}</h1>
               <p className="lead">
@@ -20,7 +28,7 @@ export default function Glossaire() {
           </div>
           <div className="row px-4 pt-4 align-content-center">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <p className="mb-4">
+              <p className="mt-5 mb-4">
                 Quelques mots écrits en majuscule se baladent dans l'HIGHBS-BOK,
                 et pour cause : ce sont des concepts propres à l'univers ! Mais
                 rassurez-vous, la plupart sont transparents ;)
