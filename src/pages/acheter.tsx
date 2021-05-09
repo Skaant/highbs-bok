@@ -26,7 +26,7 @@ export default function () {
             </div>
           </div>
           <div className="row px-4 pt-4 align-content-center bg-gold">
-            <div className="col-12 col-md-10 col-lg-5 col-xl-4">
+            <div className="col-12 col-md-10 col-lg-5 col-xl-4 px-lg-4">
               <h3>"Maître zen"</h3>
               <p>
                 Sans fioriture, la version "maître zen" est imprimée à la maison
