@@ -1,0 +1,16 @@
+@import "../../node_modules/bootstrap/scss/buttons";
+
+/** Fix :hover() */
+.btn:hover {
+  color: $dark;
+}
+@each $color, $value in $theme-colors {
+  .btn.btn-#{$color} {
+    border-width: 3px;
+    border-color: $value;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}

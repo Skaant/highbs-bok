@@ -20,7 +20,7 @@ $grid-gutter-width: 0;
 }
 
 .row {
-  padding: 20vh 0;
+  padding: 15vh 0;
   // Fix exceeding row size causing overflow
   width: 100%;
 }
@@ -38,7 +38,10 @@ $grid-gutter-width: 0;
 
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/buttons";
+
+// Rebuild $theme-colors scheme
+@import "./buttons.scss";
+
 @import "../../node_modules/bootstrap/scss/tables";
 @import "../../node_modules/bootstrap/scss/badge";
 @import "../../node_modules/bootstrap/scss/images";
@@ -84,7 +87,8 @@ h3 {
 }
 
 p,
-li {
+li,
+.btn {
   font-size: 1.3rem;
   letter-spacing: 0.12rem;
 }
