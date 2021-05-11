@@ -32,14 +32,22 @@ export default function Home({ data }) {
                 </b>{" "}
                 pour tenter de conceptualiser l'abstraction absolue :{" "}
                 <b>l'HIGHBS</b> (prononcez comme le "high" anglais, suivi de
-                "bs").
+                "bs", comme dans "abstrait" ou "absolu").
               </p>
-              <a
-                href="/HIGHBS-BOK 1 (extrait).pdf"
-                className="btn btn-gold mt-4 shadow"
-              >
-                Téléchargez l'extrait
-              </a>
+              <div className="d-flex mt-5">
+                <a
+                  href="/HIGHBS-BOK 1 (extrait).pdf"
+                  className="btn btn-gold btn-lg rounded-pill mr-4 px-4 py-3 shadow"
+                >
+                  Téléchargez l'extrait
+                </a>
+                <a
+                  href="/acheter"
+                  className="btn btn-purple btn-lg rounded-pill px-4 py-3 shadow"
+                >
+                  Acheter un livret imprimé
+                </a>
+              </div>
             </div>
           </div>
           <div className="row px-4 bg-gold">
@@ -55,9 +63,39 @@ export default function Home({ data }) {
                 </b>
                 .
               </p>
-              <a href="/l-univers" className="btn btn-light mt-4 shadow">
-                Découvrez l'univers des ZUMS
-              </a>
+              <div>
+                <div className="d-flex mt-5">
+                  <a
+                    href="/l-univers"
+                    className="btn btn-purple btn-lg rounded-pill px-4 py-3 shadow"
+                  >
+                    Découvrez l'univers des ZUMS
+                  </a>
+                </div>
+              </div>
+              <div className="d-flex justify-content-center align-items-center mt-5">
+                <p className="my-0 mr-4">
+                  <b>Les pages :</b>
+                </p>
+                <a
+                  href="/l-univers/sept-eras"
+                  className="btn btn-light rounded-pill mr-3 px-4 py-3 shadow"
+                >
+                  Sept ERAS
+                </a>
+                <a
+                  href="/l-univers/couleurs"
+                  className="btn btn-light rounded-pill mr-3 px-4 py-3 shadow"
+                >
+                  Les couleurs
+                </a>
+                <a
+                  href="/l-univers/glossaire"
+                  className="btn btn-light rounded-pill px-4 py-3 shadow"
+                >
+                  Glossaire
+                </a>
+              </div>
             </div>
           </div>
           <div className="row px-4">
@@ -69,7 +107,10 @@ export default function Home({ data }) {
                 ainsi que des idées écologiques et futuristes, sa forme s'est
                 raffinée avec le temps pour en arriver à cette forme.
               </p>
-              <a href="/a-propos" className="btn btn-gold mt-4 shadow">
+              <a
+                href="/a-propos"
+                className="btn btn-purple btn-lg rounded-pill mt-5 px-4 py-3 shadow"
+              >
                 En savoir plus
               </a>
             </div>
