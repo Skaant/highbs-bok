@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Header } from "../components/Header"
-import "../styles/global.scss"
 import { Layout } from "../components/Layout/Layout"
+import "../styles/global.scss"
 
 /** Page d'accueil */
 export default function Home({ data }) {
