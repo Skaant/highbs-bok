@@ -2,6 +2,7 @@ import React from "react"
 import { colors, colorsData } from "../../../data/colors"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import "../../styles/global.scss"
 
 const title = "Signification des couleurs"
 

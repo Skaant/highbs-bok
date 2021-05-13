@@ -3,6 +3,7 @@ import { colors, colorsData } from "../../../data/colors"
 import { eras, erasData } from "../../../data/eras"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import "../../styles/global.scss"
 
 const title = "Les sept ERAS de l'histoire des ZUMS"
 const erasRowColor = {
