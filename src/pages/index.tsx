@@ -34,16 +34,16 @@ export default function Home({ data }) {
                 <b>l'HIGHBS</b> (prononcez comme le "high" anglais, suivi de
                 "bs", comme dans "abstrait" ou "absolu").
               </p>
-              <div className="d-flex mt-5">
+              <div className="d-flex flex-column flex-md-row mt-5">
                 <a
                   href="/HIGHBS-BOK 1 (extrait).pdf"
-                  className="btn btn-gold btn-lg rounded-pill mr-4 px-4 py-3 shadow"
+                  className="btn btn-gold btn-lg rounded-pill mb-4 mx-2 px-4 py-3 shadow"
                 >
                   Téléchargez l'extrait
                 </a>
                 <a
                   href="/acheter"
-                  className="btn btn-purple btn-lg rounded-pill px-4 py-3 shadow"
+                  className="btn btn-purple btn-lg rounded-pill mb-4 mx-2 px-4 py-3 shadow"
                 >
                   Acheter un livret imprimé
                 </a>
@@ -67,31 +67,29 @@ export default function Home({ data }) {
                 <div className="d-flex mt-5">
                   <a
                     href="/l-univers"
-                    className="btn btn-purple btn-lg rounded-pill px-4 py-3 shadow"
+                    className="btn btn-purple btn-lg rounded-pill mb-4 mx-2 px-4 py-3 shadow"
                   >
                     Découvrez l'univers des ZUMS
                   </a>
                 </div>
               </div>
-              <div className="d-flex justify-content-center align-items-center mt-5">
-                <p className="my-0 mr-4">
-                  <b>Les pages :</b>
-                </p>
+              <h3 className="mx-2">Les pages</h3>
+              <div className="d-flex flex-column flex-md-row align-items-center mt-5">
                 <a
                   href="/l-univers/sept-eras"
-                  className="btn btn-light rounded-pill mr-3 px-4 py-3 shadow"
+                  className="btn btn-light rounded-pill mb-3 mx-2 px-4 py-3 shadow"
                 >
                   Sept ERAS
                 </a>
                 <a
                   href="/l-univers/couleurs"
-                  className="btn btn-light rounded-pill mr-3 px-4 py-3 shadow"
+                  className="btn btn-light rounded-pill mb-3 mx-2 px-4 py-3 shadow"
                 >
                   Les couleurs
                 </a>
                 <a
                   href="/l-univers/glossaire"
-                  className="btn btn-light rounded-pill px-4 py-3 shadow"
+                  className="btn btn-light rounded-pill mb-3 mx-2 px-4 py-3 shadow"
                 >
                   Glossaire
                 </a>
