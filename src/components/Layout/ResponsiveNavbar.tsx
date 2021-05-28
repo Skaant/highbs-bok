@@ -2,7 +2,7 @@ import React from "react"
 
 export default function ResponsiveNavbar({ pageId }) {
   return (
-    <nav className="navbar navbar-expand-lg position-absolute w-100">
+    <nav className="navbar navbar-expand-md position-absolute w-100">
       <div className="container-fluid justify-content-between">
         <a className="navbar-brand" href="/">
           <img src="/highbs-bok-letters.svg" />
@@ -24,7 +24,7 @@ export default function ResponsiveNavbar({ pageId }) {
               <a
                 className={`nav-link ${
                   pageId === "l-univers/index" && "active"
-                } btn btn-outline-purple mx-2 px-3 rounded-pill shadow`}
+                } btn btn-outline-purple my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/l-univers"
               >
                 L'univers
@@ -34,7 +34,7 @@ export default function ResponsiveNavbar({ pageId }) {
               <a
                 className={`nav-link ${
                   pageId === "a-propos" && "active"
-                } btn btn-outline-purple mx-2 px-3 rounded-pill shadow`}
+                } btn btn-outline-purple my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/a-propos"
               >
                 À propos
@@ -44,7 +44,7 @@ export default function ResponsiveNavbar({ pageId }) {
               <a
                 className={`nav-link ${
                   pageId === "acheter" && "active"
-                } btn btn-purple mx-2 px-3 rounded-pill shadow`}
+                } btn btn-purple my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/acheter"
               >
                 Acheter

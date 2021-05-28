@@ -25,16 +25,7 @@ $grid-gutter-width: 0;
   width: 100%;
 }
 
-@import "../../node_modules/bootstrap/scss/nav";
-@import "../../node_modules/bootstrap/scss/navbar";
-
-.navbar {
-  z-index: 1000;
-}
-
-.navbar-brand img {
-  height: 80px;
-}
+@import "./nav-navbar.scss";
 
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/type";

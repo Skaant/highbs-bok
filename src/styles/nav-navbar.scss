@@ -1,0 +1,20 @@
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+
+.navbar {
+  z-index: 1000;
+}
+
+.navbar-collapse {
+  flex-grow: unset;
+}
+
+.navbar-brand img {
+  height: 80px;
+}
+
+@media (max-width: 575px /** `sm` - 1px */) {
+  .nav-link {
+    width: 100%;
+  }
+}
