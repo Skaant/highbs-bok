@@ -26,6 +26,7 @@ export function Header({ title }) {
         sizes="any"
         type="image/svg+xml"
       />
+      <script src="/bootstrap.min.js" defer={true}></script>
     </Helmet>
   )
 }
