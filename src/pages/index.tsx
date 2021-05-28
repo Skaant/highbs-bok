@@ -54,8 +54,8 @@ export default function Home({ data }) {
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2 className="mb-5">Les ZUMS à la conquête de l'univers</h2>
               <p>
-                Avec leurs puissants alliés : le PSIK, la vie, GRAND-ARBRE
-                [...], <b>les ZUMS, cette espèce de singes brillants,</b> sont
+                Avec leurs puissants alliés : le PSIK, la vie et GRAND-ARBRE
+                , <b>les ZUMS, cette espèce de singes brillants,</b> sont
                 partis jusqu'aux confins de l'univers, et sont revenus{" "}
                 <b>
                   pour tenter de réaliser l'HIGHBS et de manifester le{" "}
@@ -103,7 +103,7 @@ export default function Home({ data }) {
                 L'écriture de l'HIGHBS-BOK a commencé il y a plusieurs années.
                 Synthétisant des bribes de textes philosophiques et spirituels,
                 ainsi que des idées écologiques et futuristes, sa forme s'est
-                raffinée avec le temps pour en arriver à cette forme.
+                raffinée avec le temps.
               </p>
               <a
                 href="/a-propos"
