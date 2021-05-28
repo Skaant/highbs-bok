@@ -39,7 +39,9 @@ $grid-gutter-width: 0;
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/type";
 
-// Rebuild $theme-colors scheme
+/** BUTTONS CUSTO :
+  * * Fix hover colors,
+  * * ix btn-outline (& hover) border-width. */
 @import "./buttons.scss";
 
 @import "../../node_modules/bootstrap/scss/tables";
@@ -58,10 +60,6 @@ img.cover {
 
 body {
   background: $gray-100;
-}
-
-#layout > .container-fluid {
-  min-height: 200vh;
 }
 
 h1,

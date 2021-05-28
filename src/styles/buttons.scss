@@ -1,12 +1,14 @@
+/** Fix `.outline` & `:hover` `border-width` */
+$btn-border-width: 3px;
+
 @import "../../node_modules/bootstrap/scss/buttons";
 
-/** Fix :hover() */
+/** Fix `:hover` colors */
 .btn:hover {
   color: $dark;
 }
 @each $color, $value in $theme-colors {
   .btn.btn-#{$color} {
-    border-width: 3px;
     border-color: $value;
 
     &:hover {
