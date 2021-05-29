@@ -11,11 +11,9 @@ export default function Home({ data }) {
       <>
         <Header title={"Accueil"} />
         <div className="container-fluid px-0" style={{ minHeight: "100vh" }}>
-          <img
-            src="/images/hb-banner.svg"
-            className="position-absolute w-100 h-100"
-            style={{ zIndex: -1 }}
-          />
+          <div className="position-absolute w-100" style={{ zIndex: -1 }}>
+            <img src="/images/hb-banner.svg" className="w-100 parallax cover" />
+          </div>
           <div className="row px-4 text-center align-content-center">
             <h1 className="col-12 display-4">HIGHBS-BOK</h1>
             <p className="col-12 lead">Le livre du motif absolu</p>
@@ -30,9 +28,20 @@ export default function Home({ data }) {
                 <b>
                   histoire de science-fiction ésotérique et sincèrement utopiste
                 </b>{" "}
-                pour tenter de conceptualiser l'abstraction absolue :{" "}
-                <b>l'HIGHBS</b> (prononcez comme le "high" anglais, suivi de
-                "bs", comme dans "abstrait" ou "absolu").
+                pour tenter de conceptualiser l'abstraction absolue, le motif
+                ultime : <b>l'HIGHBS</b>*.
+              </p>
+              <p>
+                Dans cette <b>saga poétique et imagée</b>, le lecteur est emmené
+                avec les ZUMS, une civilisation intelligente très semblable à la
+                nôtre, dans leur forêt spatiale et
+                <b>à la découverte des idées les plus hautes perchées</b>.
+              </p>
+              <p>
+                Le <b>premier épisode de l'aventure</b>, le livret 1 de
+                l'HIGHBS-BOK : "L'histoire des ZUMS" est déjà disponible{" "}
+                <b>à l'achat en version imprimée</b> ou à la lecture en format
+                numérique dans <b>l'extrait de 5 chapitres (sur 14 !)</b>.
               </p>
               <div className="d-flex flex-column flex-md-row mt-5">
                 <a
@@ -48,18 +57,22 @@ export default function Home({ data }) {
                   Acheter un livret imprimé
                 </a>
               </div>
+              <p className="small pt-4 pb-0">
+                *Prononcez comme le "high" anglais, suivi de "bs", comme dans
+                "abstrait" ou "absolu".
+              </p>
             </div>
           </div>
           <div className="row px-4 bg-gold">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2 className="mb-5">Les ZUMS à la conquête de l'univers</h2>
               <p>
-                Avec leurs puissants alliés : le PSIK, la vie et GRAND-ARBRE
-                , <b>les ZUMS, cette espèce de singes brillants,</b> sont
+                Avec leurs puissants alliés : le PSIK, la vie et GRAND-ARBRE ,{" "}
+                <b>les ZUMS, cette espèce de singes vraiment brillants,</b> sont
                 partis jusqu'aux confins de l'univers, et sont revenus{" "}
                 <b>
                   pour tenter de réaliser l'HIGHBS et de manifester le{" "}
-                  <span>tout-un</span>
+                  <span className="text-gold">tout-un</span>
                 </b>
                 .
               </p>
@@ -73,29 +86,13 @@ export default function Home({ data }) {
                   </a>
                 </div>
               </div>
-              <h3 className="mx-2">Les pages</h3>
-              <div className="d-flex flex-column flex-md-row align-items-center mt-5">
-                <a
-                  href="/l-univers/sept-eras"
-                  className="btn btn-light rounded-pill mb-3 mx-2 px-4 py-3 shadow"
-                >
-                  Sept ERAS
-                </a>
-                <a
-                  href="/l-univers/couleurs"
-                  className="btn btn-light rounded-pill mb-3 mx-2 px-4 py-3 shadow"
-                >
-                  Les couleurs
-                </a>
-                <a
-                  href="/l-univers/glossaire"
-                  className="btn btn-light rounded-pill mb-3 mx-2 px-4 py-3 shadow"
-                >
-                  Glossaire
-                </a>
-              </div>
             </div>
           </div>
+          <img
+            src="/images/hb-droplets.svg"
+            className="position-absolute w-100 cover"
+            style={{ zIndex: -1 }}
+          />
           <div className="row px-4">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2 className="mb-3">Un projet au long cours</h2>
