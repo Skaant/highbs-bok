@@ -11,8 +11,10 @@ $grid-gutter-width: 0;
 // Rebuild $theme-colors scheme
 @import "./colors.scss";
 
+@import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/containers";
 @import "../../node_modules/bootstrap/scss/grid";
 
 .container-fluid > .row {
@@ -20,7 +22,7 @@ $grid-gutter-width: 0;
 }
 
 .row {
-  padding: 15vh 0;
+  padding: calc(15vh + 150px) 0 15vh;
   // Fix exceeding row size causing overflow
   width: 100%;
 }
@@ -28,6 +30,7 @@ $grid-gutter-width: 0;
 @import "./nav-navbar.scss";
 
 @import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/utilities/api";
 @import "../../node_modules/bootstrap/scss/type";
 
 /** BUTTONS CUSTO :

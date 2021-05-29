@@ -1,7 +1,7 @@
 /** Fix `.outline` & `:hover` `border-width` */
 $btn-border-width: 3px;
 
-@import "../../node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/buttons";
 
 /** Fix `:hover` colors */
 .btn:hover {
@@ -14,5 +14,8 @@ $btn-border-width: 3px;
     &:hover {
       background-color: white;
     }
+  }
+  .btn.btn-outline-#{$color} {
+    background-color: white;
   }
 }
