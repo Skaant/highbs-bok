@@ -22,9 +22,13 @@ $grid-gutter-width: 0;
 }
 
 .row {
-  padding: calc(15vh + 150px) 0 15vh;
+  padding: 100px 0;
   // Fix exceeding row size causing overflow
   width: 100%;
+}
+
+.row.spaced {
+  padding: calc(150px + 15vh);
 }
 
 @import "./nav-navbar.scss";
