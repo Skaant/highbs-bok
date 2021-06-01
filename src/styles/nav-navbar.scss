@@ -9,8 +9,18 @@
   flex-grow: unset;
 }
 
-.navbar-brand img {
-  height: 80px;
+.navbar-brand {
+  :first-child {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    z-index: -1;
+    margin-left: -45px;
+    margin-top: -75px;
+  }
+  img {
+    height: 80px;
+  }
 }
 
 @media (max-width: 575px /** `sm` - 1px */) {

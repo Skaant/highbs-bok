@@ -17,5 +17,8 @@ $btn-border-width: 3px;
   }
   .btn.btn-outline-#{$color} {
     background-color: white;
+    &.active {
+      color: $value;
+    }
   }
 }

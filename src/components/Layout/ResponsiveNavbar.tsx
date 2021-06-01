@@ -5,6 +5,7 @@ export default function ResponsiveNavbar({ pageId }) {
     <nav className="navbar navbar-expand-md position-absolute w-100">
       <div className="container-fluid justify-content-between">
         <a className="navbar-brand" href="/">
+          <div className="position-absolute rounded-circle bg-deep">&nbsp;</div>
           <img src="/highbs-bok-letters.svg" />
         </a>
         <button
@@ -22,9 +23,11 @@ export default function ResponsiveNavbar({ pageId }) {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a
-                className={`nav-link ${
-                  pageId === "l-univers/index" && "active"
-                } btn btn-outline-purple my-2 mx-sm-2 px-3 rounded-pill shadow`}
+                className={`nav-link btn ${
+                  pageId === "l-univers/index"
+                    ? "btn-deep"
+                    : "btn-outline-purple"
+                } my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/l-univers"
               >
                 L'univers
@@ -32,9 +35,9 @@ export default function ResponsiveNavbar({ pageId }) {
             </li>
             <li className="nav-item">
               <a
-                className={`nav-link ${
-                  pageId === "a-propos" && "active"
-                } btn btn-outline-purple my-2 mx-sm-2 px-3 rounded-pill shadow`}
+                className={`nav-link btn ${
+                  pageId === "a-propos" ? "btn-deep" : "btn-outline-purple"
+                } my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/a-propos"
               >
                 À propos
@@ -42,9 +45,9 @@ export default function ResponsiveNavbar({ pageId }) {
             </li>
             <li className="nav-item">
               <a
-                className={`nav-link ${
-                  pageId === "acheter" && "active"
-                } btn btn-purple my-2 mx-sm-2 px-3 rounded-pill shadow`}
+                className={`nav-link btn ${
+                  pageId === "acheter" ? "btn-deep" : "btn-purple"
+                }  my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/acheter"
               >
                 Acheter

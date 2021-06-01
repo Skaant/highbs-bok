@@ -47,13 +47,25 @@ $grid-gutter-width: 0;
 @import "../../node_modules/bootstrap/scss/images";
 @import "../../node_modules/bootstrap/scss/card";
 
+@font-face {
+  font-family: "Merriweather-Regular";
+  src: url("/fonts/Merriweather-Regular.ttf");
+}
+
 img.cover {
   object-fit: cover;
 }
 
-@font-face {
-  font-family: "Merriweather-Regular";
-  src: url("/fonts/Merriweather-Regular.ttf");
+.full-img-container {
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > img {
+    min-width: 500px;
+  }
 }
 
 body {
@@ -92,4 +104,17 @@ li,
 footer {
   color: $gray-100;
   background: $gray-900;
+
+  a,
+  a:hover,
+  a:focus,
+  a:active,
+  a:visited {
+    color: inherit;
+  }
+
+  /* ul,
+  p:not(.h4) {
+    font-weight: lighter;
+  } */
 }

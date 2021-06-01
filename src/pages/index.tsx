@@ -11,10 +11,13 @@ export default function Home({ data }) {
       <>
         <Header title={"Accueil"} />
         <div className="container-fluid px-0" style={{ minHeight: "100vh" }}>
-          <div className="position-absolute w-100" style={{ zIndex: -1 }}>
+          <div
+            className="position-absolute w-100 full-img-container"
+            style={{ height: "150vh" }}
+          >
             <img
               src="/images/hb-banner.svg"
-              className="w-100 parallax cover position-absolute"
+              className="w-100 cover position-absolute"
               data-parallax-direction="up"
             />
           </div>
@@ -110,16 +113,19 @@ export default function Home({ data }) {
               </div>
             </div>
           </div>
-          <div className="position-absolute w-100" style={{ zIndex: -1 }}>
+          <div
+            className="position-absolute w-100 full-img-container"
+            style={{ height: "100vh" }}
+          >
             <img
               src="/images/hb-droplets.svg"
-              className="w-100 parallax cover position-absolute"
+              className="w-100 cover position-absolute"
               data-parallax-direction="up"
             />
           </div>
           <div className="row px-4">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h2 className="mb-3">Un projet au long cours</h2>
+              <h2 className="mb-5">Un projet au long cours</h2>
               <p>
                 L'écriture de l'HIGHBS-BOK a commencé il y a plusieurs années.
                 Synthétisant{" "}
