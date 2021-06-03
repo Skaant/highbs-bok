@@ -32,7 +32,8 @@ jobs:
         run: npm i
 
       # - run: npm test
-      - run: npx gatsby build
+      - run: npm run build
+      - run: npm run build:script 
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
