@@ -60,12 +60,18 @@ export function Layout({
                   <i>, le développeur</i>).
                 </p>
                 <div>
-                  <button className="btn btn-light rounded-pill my-2 mx-sm-2 px-3">
+                  <button
+                    id="footer__contact"
+                    className="btn btn-light rounded-pill my-2 mx-sm-2 px-3"
+                  >
                     Contact
                   </button>
-                  <button className="btn btn-outline-light rounded-pill bg-deep my-2 mx-sm-2 px-3">
+                  <a
+                    href="/mentions-legales"
+                    className="btn btn-outline-light rounded-pill bg-deep my-2 mx-sm-2 px-3"
+                  >
                     Mentions légales
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>

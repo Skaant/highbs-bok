@@ -1,5 +1,17 @@
 import collapse from "bootstrap/js/dist/collapse"
 
+const prevBtn = document.getElementById("footer__contact")
+prevBtn.onclick = displayContact
+
+function displayContact() {
+  const link = document.createElement("a")
+  link.href = "mailto:romaric.ruga@gmail.com"
+  link.className = "btn btn-light rounded-pill my-2 mx-sm-2 px-3"
+  link.innerHTML = "romaric.ruga@gmail.com"
+  prevBtn.parentElement.prepend(link)
+  prevBtn.remove()
+}
+
 /* const parallaxesUpdate = [...document.getElementsByClassName("parallax")].map(
   el => {
     const direction = el.getAttribute("data-parallax-direction")
