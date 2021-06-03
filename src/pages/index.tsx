@@ -12,7 +12,7 @@ export default function Home({ data }) {
         <Header title={"Accueil"} />
         <div className="container-fluid px-0" style={{ minHeight: "100vh" }}>
           <div
-            className="position-absolute w-100 full-img-container"
+            className="position-absolute w-100 full-img-container align-items-center"
             style={{ height: "150vh" }}
           >
             <img
@@ -115,7 +115,7 @@ export default function Home({ data }) {
           </div>
           <div
             className="position-absolute w-100 full-img-container"
-            style={{ height: "100vh" }}
+            style={{ height: "120vh" }}
           >
             <img
               src="/images/hb-droplets.svg"
