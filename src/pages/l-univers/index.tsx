@@ -10,12 +10,17 @@ export default function () {
     <Layout pageId="l-univers/index">
       <>
         <Header title={title} />
-        <img
-          src="/images/hb1-soln-syst.svg"
-          className="position-absolute w-100 cover"
-          style={{ zIndex: -1 }}
-        />
         <div className="container-fluid px-0">
+          <div
+            className="position-absolute w-100 full-img-container align-items-center"
+            style={{ height: "150vh", marginTop: "calc(10vh - 200px)" }}
+          >
+            <img
+              src="/images/hb1-soln-syst.svg"
+              className="w-100 cover position-absolute"
+              data-parallax-direction="up"
+            />
+          </div>
           <div className="row px-4 pt-4 pb-5 align-content-center">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1>{title}</h1>
