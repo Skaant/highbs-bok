@@ -119,16 +119,18 @@ export default function Home({ data }) {
               <div className="d-flex mt-5">
                 <a
                   href="/l-univers"
-                  className="btn btn-purple btn-lg rounded-pill mb-4 mx-2 px-4 py-3 shadow"
+                  className="btn btn-purple btn-lg rounded-pill mb-5 mx-2 px-4 py-3 shadow"
                 >
                   Découvrez l'univers des ZUMS
                 </a>
               </div>
               <p className="text-muted display-6">
-                Il connaît son travail, c’est le même que tous les autres ZUMS à
-                travers GRAND-ARBRE : Susciter plus d’idées encore ! Enrichir le
-                HOL-ONG avec toujours plus de données, dériver les motifs les
-                plus hauts [...].
+                "Il connaît son travail, c’est le même que tous les autres ZUMS
+                à travers GRAND-ARBRE :<br />
+                Susciter plus d’idées encore !<br />
+                Enrichir le HOL-ONG avec toujours plus de données,
+                <br />
+                dériver les motifs les plus hauts [...]."
               </p>
               <p className="small mb-4">
                 - Extrait du livret 1, chapitre 12 : <i>Balthazum</i>.
