@@ -1,8 +1,16 @@
 import collapse from "bootstrap/js/dist/collapse"
 
+let navbarCollapse
+let navbarCollapserEl = document.getElementById("navbar-collapser")
+function navbarToggle() {
+  if (!navbarCollapse)
+    navbarCollapse = new collapse(document.getElementById("navbar-collapsible"))
+  else navbarCollapse.toggle()
+}
+navbarCollapserEl.onclick = navbarToggle
+
 const prevBtn = document.getElementById("footer__contact")
 prevBtn.onclick = displayContact
-
 function displayContact() {
   const link = document.createElement("a")
   link.href = "mailto:romaric.ruga@gmail.com"
