@@ -6,7 +6,7 @@
     // .mx-2.mb-4
     margin: 0 map-get($spacers, 2) map-get($spacers, 4) map-get($spacers, 2);
     // .btn-lg (padding)
-    padding: $btn-padding-y-lg $btn-padding-x-lg;
+    padding: map-get($spacers, 3) map-get($spacers, 4);
     // .shadow
     box-shadow: $box-shadow;
     // .rounded-pill

@@ -75,7 +75,7 @@ export default function () {
             </div>
           </div>
           <div className="row px-4 pt-4">
-            <div className="col-12 col-xl-10">
+            <div className="col-10">
               <p className="display-4 text-muted">
                 "Lorsqu’il ne restera plus dans cet univers qu’un monde,
                 <br />

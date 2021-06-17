@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
 import "../styles/global.scss"
+import { EXTRACT_DOWNLOAD_LINK } from "../config"
 
 /** Page d'accueil */
 export default function Home({ data }) {
@@ -27,7 +28,7 @@ export default function Home({ data }) {
               Le livre du motif absolu
             </p>
           </div>
-          <div className="row px-4 pt-4">
+          <div className="row p-4">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2 className="mb-5">
                 Jusqu'au <span className="bg-gold">tout-un</span> !
@@ -54,7 +55,11 @@ export default function Home({ data }) {
                 conquérir l'espace{" "}
                 <b>à la recherche des idées les plus hautes perchées</b>.
               </p>
-              <p className="display-6 text-muted mt-4">
+            </div>
+          </div>
+          <div className="row px-4 pb-4">
+            <div className="col-10">
+              <p className="display-4 text-muted">
                 "Entend, horizon de tous les regards !<br />
                 <b>Nous te cherchons tous à travers le PSIK</b>
                 <br />
@@ -66,29 +71,28 @@ export default function Home({ data }) {
               <p className="small mb-4">
                 - Extrait du livret 1, chapitre 7 : <i>Jardins sans fin</i>.
               </p>
+            </div>
+          </div>
+          <div className="row px-4 pt-4">
+            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
+              <h3 className="my-4">Comment se procurer le premier livret ?</h3>
               <p>
                 Le <b>premier épisode de l'aventure</b>, le livret 1 de
                 l'HIGHBS-BOK : "L'histoire des ZUMS" est déjà disponible{" "}
                 <b>à l'achat en version imprimée</b> ou à la lecture en format
                 numérique dans <b>l'extrait de 5 chapitres (sur 14 !)</b>.
               </p>
-              <div className="d-flex flex-column flex-md-row mt-5">
-                <a
-                  href="/HIGHBS-BOK 1 (extrait).pdf"
-                  className="btn btn-gold btn-lg rounded-pill mb-4 mx-2 px-4 py-3 shadow"
-                >
+              <div className="menu-btn mt-5">
+                <a href="/HIGHBS-BOK 1 (extrait).pdf" className="btn btn-gold">
                   Téléchargez l'extrait
                 </a>
-                <a
-                  href="/acheter"
-                  className="btn btn-purple btn-lg rounded-pill mb-4 mx-2 px-4 py-3 shadow"
-                >
+                <a href="/acheter" className="btn btn-purple">
                   Acheter un livret imprimé
                 </a>
               </div>
             </div>
           </div>
-          <div className="row px-4 bg-gold">
+          <div className="row px-4 pb-4 bg-gold">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2 className="mb-5">Les ZUMS à la conquête de l'univers</h2>
               <p className="mb-4">
@@ -124,7 +128,11 @@ export default function Home({ data }) {
                   Découvrez l'univers des ZUMS
                 </a>
               </div>
-              <p className="text-muted display-6">
+            </div>
+          </div>
+          <div className="row bg-gold p-4">
+            <div className="col-10">
+              <p className="display-4 text-deep">
                 "Il connaît son travail, c’est le même que tous les autres ZUMS
                 à travers GRAND-ARBRE :<br />
                 Susciter plus d’idées encore !<br />
@@ -135,6 +143,10 @@ export default function Home({ data }) {
               <p className="small mb-4">
                 - Extrait du livret 1, chapitre 12 : <i>Balthazum</i>.
               </p>
+            </div>
+          </div>
+          <div className="row px-4 pt-4 bg-gold">
+            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h3 className="my-4">Un manifeste pour les idées</h3>
               <p>
                 Le monde de l'imagination est <b>sans limite</b>, il est{" "}
@@ -164,7 +176,7 @@ export default function Home({ data }) {
                   href="/acheter"
                   className="btn btn-purple btn-lg rounded-pill mb-4 mx-2 px-4 py-3 shadow"
                 >
-                  Acheter un livret imprimé
+                  Acheter le livret
                 </a>
               </div>
             </div>
@@ -204,16 +216,32 @@ export default function Home({ data }) {
               <h3>Amélioration continue</h3>
               <p>
                 Enfin, je publie <b>la première version</b> du premier livret.
-                <b>Pour pouvoir le partager</b>, pas parce que je le pense fini.
+                <b>Pour pouvoir le partager</b>, pas parce que je le pense
+                "terminé". <b>Que cette notion n'est pas cours ici ...</b>
               </p>
               <p>
                 Avec <b>le temps et les retours</b> je souhaite continuer d'en
-                améliorer <b>la forme et le sens</b>. Mais maintenant mon but
-                est bien de pouvoir montrer l'HIGHBS-BOK,{" "}
+                améliorer <b>la forme et le sens</b>. Puisse-t'il même être{" "}
+                <b>recyclé</b> par d'autres ! C'est finalement le but de toutes
+                les idées.
+              </p>
+              <p>
+                Mais maintenant mon but est bien de pouvoir montrer
+                l'HIGHBS-BOK,{" "}
                 <b>de pouvoir le faire lire et d'obtenir un feedback</b>,
                 bienvenu, dessus.
               </p>
-              <p>Donc, bonne lecture et bonne aventure :D</p>
+              <p>
+                Donc, bonne lecture et <b>bonne aventure :D</b>.
+              </p>
+              <div className="menu-btn mt-5">
+                <a href={EXTRACT_DOWNLOAD_LINK} className="btn btn-gold">
+                  Téléchargez l'extrait
+                </a>
+                <a href="/acheter" className="btn btn-purple">
+                  Acheter un livret imprimé
+                </a>
+              </div>
             </div>
           </div>
         </div>
