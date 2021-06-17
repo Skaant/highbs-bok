@@ -1,7 +1,23 @@
+/** Menu button definition :
+
+  We group a set of features from different bootstrap classes. */
+.menu-btn {
+  > .btn {
+    // .mx-2.mb-4
+    margin: 0 map-get($spacers, 2) map-get($spacers, 4) map-get($spacers, 2);
+    // .btn-lg (padding)
+    padding: $btn-padding-y-lg $btn-padding-x-lg;
+    // .shadow
+    box-shadow: $box-shadow;
+    // .rounded-pill
+    border-radius: $border-radius-pill;
+  }
+}
+
 /** Fix `.outline` & `:hover` `border-width` */
 $btn-border-width: 3px;
 
-@import "node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/buttons";
 
 /** Fix `:hover` colors */
 .btn:hover {
