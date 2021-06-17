@@ -94,7 +94,7 @@ export default function () {
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2>Autres pages du site</h2>
               <div className="menu-btn">
-                <a href="/a-propos" className="btn btn-outline-purple">
+                <a href="/a-propos" className="btn btn-light">
                   À propos
                 </a>
                 <a href={EXTRACT_DOWNLOAD_LINK} className="btn btn-light">

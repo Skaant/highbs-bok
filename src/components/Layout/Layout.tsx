@@ -24,7 +24,7 @@ export function Layout({
                   </li>
                   <li>
                     <a href="/l-univers">Découvrir l'univers</a>
-                    <ul>
+                    <ul className="list-unstyled ps-4 py-3">
                       <li>
                         <a href="/l-univers/sept-eras">
                           Les sept ERAS de l'histoire des ZUMS

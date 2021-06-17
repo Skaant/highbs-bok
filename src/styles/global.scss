@@ -108,6 +108,10 @@ footer {
     color: inherit;
   }
 
+  li {
+    margin: map-get($spacers, 2) 0;
+  }
+
   /* ul,
   p:not(.h4) {
     font-weight: lighter;
