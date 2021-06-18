@@ -47,14 +47,14 @@ export default function Home({ data }) {
             />
           </div>
           <div className="row spaced pb-5 px-4 text-center align-content-center">
-            <h1 className="col-12 display-1">HIGHBS-BOK</h1>
+            <h1 className="col-12 display-1 mb-2">HIGHBS-BOK</h1>
             <p className="col-12 display-6 text-muted">
               Le livre du motif absolu
             </p>
           </div>
           <div className="row p-4">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h2 className="mb-5">
+              <h2>
                 Jusqu'au <span className="bg-gold">tout-un</span> !
               </h2>
               <p className="mt-4 mb-2">
@@ -99,7 +99,7 @@ export default function Home({ data }) {
           </div>
           <div className="row px-4 pt-4">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h3 className="my-4">Comment se procurer le premier livret ?</h3>
+              <h3>Comment se procurer le premier livret ?</h3>
               <p>
                 Le <b>premier épisode de l'aventure</b>, le livret 1 de
                 l'HIGHBS-BOK : "L'histoire des ZUMS" est déjà disponible{" "}
@@ -111,7 +111,7 @@ export default function Home({ data }) {
           </div>
           <div className="row px-4 pb-4 bg-gold">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h2 className="mb-5">Les ZUMS à la conquête de l'univers</h2>
+              <h2>Les ZUMS à la conquête de l'univers</h2>
               <p className="mb-4">
                 Avec leurs puissants alliés : le PSIK, la vie et GRAND-ARBRE ,{" "}
                 <b>les ZUMS, cette espèce de singes vraiment brillants,</b> sont
@@ -166,7 +166,7 @@ export default function Home({ data }) {
           </div>
           <div className="row px-4 pt-4 bg-gold">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h3 className="my-4">Un manifeste pour les idées</h3>
+              <h3>Un manifeste pour les idées</h3>
               <p>
                 Le monde de l'imagination est <b>sans limite</b>, il est{" "}
                 <b>sans commencement ni fin</b> !{" "}
@@ -199,7 +199,7 @@ export default function Home({ data }) {
           </div>
           <div className="row px-4">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h2 className="mb-5">Un projet au long cours</h2>
+              <h2>Un projet au long cours</h2>
               <p>
                 L'écriture de l'HIGHBS-BOK a commencé il y a plusieurs années.
                 Synthétisant{" "}
