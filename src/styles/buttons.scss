@@ -1,7 +1,7 @@
-/** Menu button definition :
+/** Buttons menu definition :
 
   We group a set of features from different bootstrap classes. */
-.menu-btn {
+.btn-menu {
   > .btn {
     // .mx-2.mb-4
     margin: 0 map-get($spacers, 2) map-get($spacers, 4) map-get($spacers, 2);

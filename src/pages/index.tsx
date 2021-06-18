@@ -4,6 +4,30 @@ import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
 import "../styles/global.scss"
 import { EXTRACT_DOWNLOAD_LINK } from "../config"
+import { ButtonsMenu } from "../components/ButtonsMenu"
+import { colors } from "../../data/colors"
+
+const ButtonsMenuExtraitAcheter = ({
+  goldBackground = false,
+}: {
+  goldBackground?: boolean
+}) => (
+  <ButtonsMenu
+    className="mt-5"
+    buttons={[
+      {
+        href: EXTRACT_DOWNLOAD_LINK,
+        color: goldBackground ? colors.light : colors.gold,
+        label: "Téléchargez l'extrait",
+      },
+      {
+        href: "/acheter",
+        color: colors.purple,
+        label: "Acheter un livret imprimé",
+      },
+    ]}
+  />
+)
 
 /** Page d'accueil */
 export default function Home({ data }) {
@@ -82,14 +106,7 @@ export default function Home({ data }) {
                 <b>à l'achat en version imprimée</b> ou à la lecture en format
                 numérique dans <b>l'extrait de 5 chapitres (sur 14 !)</b>.
               </p>
-              <div className="menu-btn mt-5">
-                <a href="/HIGHBS-BOK 1 (extrait).pdf" className="btn btn-gold">
-                  Téléchargez l'extrait
-                </a>
-                <a href="/acheter" className="btn btn-purple">
-                  Acheter un livret imprimé
-                </a>
-              </div>
+              <ButtonsMenuExtraitAcheter />
             </div>
           </div>
           <div className="row px-4 pb-4 bg-gold">
@@ -120,14 +137,16 @@ export default function Home({ data }) {
                 <b>le pouvoir abstrayant du PSIK</b> sera la clé de leur
                 salvation !
               </p>
-              <div className="d-flex mt-5">
-                <a
-                  href="/l-univers"
-                  className="btn btn-purple btn-lg rounded-pill mb-5 mx-2 px-4 py-3 shadow"
-                >
-                  Découvrez l'univers des ZUMS
-                </a>
-              </div>
+              <ButtonsMenu
+                className="mt-5"
+                buttons={[
+                  {
+                    href: "/l-univers",
+                    color: colors.purple,
+                    label: "Découvrez l'univers des ZUMS",
+                  },
+                ]}
+              />
             </div>
           </div>
           <div className="row bg-gold p-4">
@@ -165,20 +184,7 @@ export default function Home({ data }) {
                 <b>idéant sur cet univers</b>
                 psychédélique ;)
               </p>
-              <div className="d-flex flex-column flex-md-row mt-5">
-                <a
-                  href="/HIGHBS-BOK 1 (extrait).pdf"
-                  className="btn btn-light btn-lg rounded-pill mb-4 mx-2 px-4 py-3 shadow"
-                >
-                  Téléchargez l'extrait
-                </a>
-                <a
-                  href="/acheter"
-                  className="btn btn-purple btn-lg rounded-pill mb-4 mx-2 px-4 py-3 shadow"
-                >
-                  Acheter le livret
-                </a>
-              </div>
+              <ButtonsMenuExtraitAcheter goldBackground={true} />
             </div>
           </div>
           <div
@@ -207,12 +213,16 @@ export default function Home({ data }) {
                 Malgré cela, il reste un ouvrage particulier, à la motivation
                 sincère mais peut-être un peu difficile à cerner.
               </p>
-              <a
-                href="/a-propos"
-                className="btn btn-purple btn-lg rounded-pill my-5 px-4 py-3 shadow"
-              >
-                En savoir plus
-              </a>
+              <ButtonsMenu
+                className="mt-5"
+                buttons={[
+                  {
+                    href: "/a-propos",
+                    color: colors.purple,
+                    label: "En savoir plus",
+                  },
+                ]}
+              />
               <h3>Amélioration continue</h3>
               <p>
                 Enfin, je publie <b>la première version</b> du premier livret.
@@ -234,14 +244,7 @@ export default function Home({ data }) {
               <p>
                 Donc, bonne lecture et <b>bonne aventure :D</b>.
               </p>
-              <div className="menu-btn mt-5">
-                <a href={EXTRACT_DOWNLOAD_LINK} className="btn btn-gold">
-                  Téléchargez l'extrait
-                </a>
-                <a href="/acheter" className="btn btn-purple">
-                  Acheter un livret imprimé
-                </a>
-              </div>
+              <ButtonsMenuExtraitAcheter />
             </div>
           </div>
         </div>

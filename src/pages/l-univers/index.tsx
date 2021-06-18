@@ -1,4 +1,6 @@
 import React from "react"
+import { colors } from "../../../data/colors"
+import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { EXTRACT_DOWNLOAD_LINK } from "../../config"
@@ -49,29 +51,40 @@ export default function () {
                 Servez-vous de ces quelques pages pour{" "}
                 <b>explorer plus encore l'univers épique des ZUMS</b>.
               </p>
-              <div className="menu-btn mt-5">
-                <a href="/l-univers/sept-eras" className="btn btn-purple">
-                  Sept ERAS
-                </a>
-                <a href="/l-univers/sept-eras" className="btn btn-purple">
-                  Les couleurs
-                </a>
-                <a href="/l-univers/glossaire" className="btn btn-purple">
-                  Glossaire
-                </a>
-                <a
-                  className="btn btn-outline-deep disabled"
-                  title="Cette page n'est pas encore prête !"
-                >
-                  Personnages et entités
-                </a>
-                <a
-                  className="btn btn-outline-deep disabled"
-                  title="Cette page n'est pas encore prête !"
-                >
-                  Lieux
-                </a>
-              </div>
+              <ButtonsMenu
+                className="mt-5"
+                buttons={[
+                  {
+                    href: "/l-univers/sept-eras",
+                    color: colors.purple,
+                    label: "Sept ERAS",
+                  },
+                  {
+                    href: "/l-univers/couleurs",
+                    color: colors.purple,
+                    label: "Les couleurs",
+                  },
+                  {
+                    href: "/l-univers/glossaire",
+                    color: colors.purple,
+                    label: "Glossaire",
+                  },
+                  {
+                    href: "/l-univers/personnages-et-entites",
+                    color: colors.purple,
+                    outline: true,
+                    disabled: true,
+                    label: "Personnages et entités",
+                  },
+                  {
+                    href: "/l-univers/lieux",
+                    color: colors.purple,
+                    outline: true,
+                    disabled: true,
+                    label: "Lieux",
+                  },
+                ]}
+              />
             </div>
           </div>
           <div className="row px-4 pt-4">
@@ -93,17 +106,25 @@ export default function () {
           <div className="row px-4 bg-gold">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2>Autres pages du site</h2>
-              <div className="menu-btn">
-                <a href="/a-propos" className="btn btn-light">
-                  À propos
-                </a>
-                <a href={EXTRACT_DOWNLOAD_LINK} className="btn btn-light">
-                  Télécharger l'extrait
-                </a>
-                <a href="/acheter" className="btn btn-purple">
-                  Acheter le livret
-                </a>
-              </div>
+              <ButtonsMenu
+                buttons={[
+                  {
+                    href: "/a-propos",
+                    color: colors.light,
+                    label: "A propos",
+                  },
+                  {
+                    href: EXTRACT_DOWNLOAD_LINK,
+                    color: colors.light,
+                    label: "Télécharger l'extrait",
+                  },
+                  {
+                    href: "/acheter",
+                    color: colors.purple,
+                    label: "Acheter le livret",
+                  },
+                ]}
+              />
             </div>
           </div>
         </div>

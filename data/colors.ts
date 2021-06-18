@@ -1,4 +1,8 @@
 export enum colors {
+  /** Kept default Bootstrap's palette */
+  light = "light",
+  muted = "muted",
+  /** Custom HIGHBS-BOK's palette */
   gold = "gold",
   lightGold = "lightGold",
   blue = "blue",
