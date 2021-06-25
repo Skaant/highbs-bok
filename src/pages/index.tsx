@@ -7,6 +7,7 @@ import { EXTRACT_DOWNLOAD_LINK } from "../config"
 import { ButtonsMenu } from "../components/ButtonsMenu"
 import { colors } from "../../data/colors"
 import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
+import { QuoteRow } from "../components/_rows/QuoteRow"
 
 const ButtonsMenuExtraitAcheter = ({
   goldBackground = false,
@@ -88,22 +89,23 @@ export default function Home({ data }) {
               </p>
             </>
           </ContentRowWithHeader>
-          <div className="row px-4 pb-4">
-            <div className="col-10">
-              <p className="display-4 text-muted">
-                "Entend, horizon de tous les regards !<br />
-                <b>Nous te cherchons tous à travers le PSIK</b>
-                <br />
-                pour te rendre,
-                <br />
-                conscience harmonieuse,
-                <br />à la matière inerte du cosmos."
-              </p>
-              <p className="small mb-4">
+          <QuoteRow
+            legend={
+              <>
                 - Extrait du livret 1, chapitre 7 : <i>Jardins sans fin</i>.
-              </p>
-            </div>
-          </div>
+              </>
+            }
+          >
+            <>
+              "Entend, horizon de tous les regards !<br />
+              <b>Nous te cherchons tous à travers le PSIK</b>
+              <br />
+              pour te rendre,
+              <br />
+              conscience harmonieuse,
+              <br />à la matière inerte du cosmos."
+            </>
+          </QuoteRow>
           <ContentRowWithHeader
             header={{
               level: 2,
@@ -166,21 +168,23 @@ export default function Home({ data }) {
               />
             </>
           </ContentRowWithHeader>
-          <div className="row bg-gold p-4">
-            <div className="col-10">
-              <p className="display-4 text-deep">
-                "Il connaît son travail, c’est le même que tous les autres ZUMS
-                à travers GRAND-ARBRE :<br />
-                Susciter plus d’idées encore !<br />
-                Enrichir le HOL-ONG avec toujours plus de données,
-                <br />
-                dériver les motifs les plus hauts [...]."
-              </p>
-              <p className="small mb-4">
+          <QuoteRow
+            background={colors.gold}
+            legend={
+              <>
                 - Extrait du livret 1, chapitre 12 : <i>Balthazum</i>.
-              </p>
-            </div>
-          </div>
+              </>
+            }
+          >
+            <>
+              "Il connaît son travail, c’est le même que tous les autres ZUMS à
+              travers GRAND-ARBRE :<br />
+              Susciter plus d’idées encore !<br />
+              Enrichir le HOL-ONG avec toujours plus de données,
+              <br />
+              dériver les motifs les plus hauts [...]."
+            </>
+          </QuoteRow>
           <ContentRowWithHeader
             header={{
               level: 3,

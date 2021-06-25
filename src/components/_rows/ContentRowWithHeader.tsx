@@ -1,4 +1,4 @@
-import React, { CSSProperties, ReactElement } from "react"
+import React, { ReactElement } from "react"
 
 export function ContentRowWithHeader({
   header,

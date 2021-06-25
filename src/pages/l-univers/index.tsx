@@ -3,6 +3,7 @@ import { colors } from "../../../data/colors"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import { QuoteRow } from "../../components/_rows/QuoteRow"
 import { EXTRACT_DOWNLOAD_LINK } from "../../config"
 import "../../styles/global.scss"
 
@@ -87,22 +88,23 @@ export default function () {
               />
             </div>
           </div>
-          <div className="row px-4 pt-4">
-            <div className="col-10">
-              <p className="display-4 text-muted">
-                "Lorsqu’il ne restera plus dans cet univers qu’un monde,
-                <br />
-                qu'une ville : la cité de l’aube,
-                <br />
-                assiégée par les hordes de l’entropie;
-                <br />
-                ce sera l’AURO-ERA."
-              </p>
-              <p className="small">
+          <QuoteRow
+            legend={
+              <>
                 - Extrait du livret 1, chapitre 6 : <i>Sept ERAS</i>
-              </p>
-            </div>
-          </div>
+              </>
+            }
+          >
+            <>
+              "Lorsqu’il ne restera plus dans cet univers qu’un monde,
+              <br />
+              qu'une ville : la cité de l’aube,
+              <br />
+              assiégée par les hordes de l’entropie;
+              <br />
+              ce sera l’AURO-ERA."
+            </>
+          </QuoteRow>
           <div className="row px-4 bg-gold">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2>Autres pages du site</h2>
