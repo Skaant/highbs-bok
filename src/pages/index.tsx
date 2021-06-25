@@ -6,6 +6,7 @@ import "../styles/global.scss"
 import { EXTRACT_DOWNLOAD_LINK } from "../config"
 import { ButtonsMenu } from "../components/ButtonsMenu"
 import { colors } from "../../data/colors"
+import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 
 const ButtonsMenuExtraitAcheter = ({
   goldBackground = false,
@@ -52,11 +53,17 @@ export default function Home({ data }) {
               Le livre du motif absolu
             </p>
           </div>
-          <div className="row p-4">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h2>
-                Jusqu'au <span className="bg-gold">tout-un</span> !
-              </h2>
+          <ContentRowWithHeader
+            header={{
+              element: (
+                <h2>
+                  Jusqu'au <span className="bg-gold">tout-un</span> !
+                </h2>
+              ),
+            }}
+            className="py-4"
+          >
+            <>
               <p className="mt-4 mb-2">
                 Une{" "}
                 <b>
@@ -79,8 +86,8 @@ export default function Home({ data }) {
                 conquérir l'espace{" "}
                 <b>à la recherche des idées les plus hautes perchées</b>.
               </p>
-            </div>
-          </div>
+            </>
+          </ContentRowWithHeader>
           <div className="row px-4 pb-4">
             <div className="col-10">
               <p className="display-4 text-muted">
@@ -97,9 +104,14 @@ export default function Home({ data }) {
               </p>
             </div>
           </div>
-          <div className="row px-4 pt-4">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h3>Comment se procurer le premier livret ?</h3>
+          <ContentRowWithHeader
+            header={{
+              level: 2,
+              content: "Comment se procurer le premier livret ?",
+            }}
+            className="pt-4"
+          >
+            <>
               <p>
                 Le <b>premier épisode de l'aventure</b>, le livret 1 de
                 l'HIGHBS-BOK : "L'histoire des ZUMS" est déjà disponible{" "}
@@ -107,11 +119,16 @@ export default function Home({ data }) {
                 numérique dans <b>l'extrait de 5 chapitres (sur 14 !)</b>.
               </p>
               <ButtonsMenuExtraitAcheter />
-            </div>
-          </div>
-          <div className="row px-4 pb-4 bg-gold">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h2>Les ZUMS à la conquête de l'univers</h2>
+            </>
+          </ContentRowWithHeader>
+          <ContentRowWithHeader
+            header={{
+              level: 2,
+              content: "Les ZUMS à la conquête de l'univers",
+            }}
+            className="pb-4 bg-gold"
+          >
+            <>
               <p className="mb-4">
                 Avec leurs puissants alliés : le PSIK, la vie et GRAND-ARBRE ,{" "}
                 <b>les ZUMS, cette espèce de singes vraiment brillants,</b> sont
@@ -147,8 +164,8 @@ export default function Home({ data }) {
                   },
                 ]}
               />
-            </div>
-          </div>
+            </>
+          </ContentRowWithHeader>
           <div className="row bg-gold p-4">
             <div className="col-10">
               <p className="display-4 text-deep">
@@ -164,9 +181,14 @@ export default function Home({ data }) {
               </p>
             </div>
           </div>
-          <div className="row px-4 pt-4 bg-gold">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h3>Un manifeste pour les idées</h3>
+          <ContentRowWithHeader
+            header={{
+              level: 3,
+              content: "Un manifeste pour les idées",
+            }}
+            className="pt-4 bg-gold"
+          >
+            <>
               <p>
                 Le monde de l'imagination est <b>sans limite</b>, il est{" "}
                 <b>sans commencement ni fin</b> !{" "}
@@ -185,8 +207,8 @@ export default function Home({ data }) {
                 psychédélique ;)
               </p>
               <ButtonsMenuExtraitAcheter goldBackground={true} />
-            </div>
-          </div>
+            </>
+          </ContentRowWithHeader>
           <div
             className="position-absolute w-100 full-img-container"
             style={{ height: "180vh", marginTop: "20vh" }}
@@ -197,9 +219,14 @@ export default function Home({ data }) {
               data-parallax-direction="up"
             />
           </div>
-          <div className="row px-4">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h2>Un projet au long cours</h2>
+          <ContentRowWithHeader
+            header={{
+              level: 2,
+              content: "Un projet au long cours",
+            }}
+            className="pb-4"
+          >
+            <>
               <p>
                 L'écriture de l'HIGHBS-BOK a commencé il y a plusieurs années.
                 Synthétisant{" "}
@@ -223,7 +250,16 @@ export default function Home({ data }) {
                   },
                 ]}
               />
-              <h3>Amélioration continue</h3>
+            </>
+          </ContentRowWithHeader>
+          <ContentRowWithHeader
+            header={{
+              level: 3,
+              content: "Amélioration continue",
+            }}
+            className="pt-4"
+          >
+            <>
               <p>
                 Enfin, je publie <b>la première version</b> du premier livret.
                 <b>Pour pouvoir le partager</b>, pas parce que je le pense
@@ -245,8 +281,8 @@ export default function Home({ data }) {
                 Donc, bonne lecture et <b>bonne aventure :D</b>.
               </p>
               <ButtonsMenuExtraitAcheter />
-            </div>
-          </div>
+            </>
+          </ContentRowWithHeader>
         </div>
       </>
     </Layout>
