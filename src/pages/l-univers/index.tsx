@@ -3,6 +3,7 @@ import { colors } from "../../../data/colors"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import { ImageRowPositionAbsolute } from "../../components/_rows/ImageRowPositionAbsolute"
 import { QuoteRow } from "../../components/_rows/QuoteRow"
 import { EXTRACT_DOWNLOAD_LINK } from "../../config"
 import "../../styles/global.scss"
@@ -15,16 +16,10 @@ export default function () {
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
-          <div
-            className="position-absolute w-100 full-img-container align-items-center"
+          <ImageRowPositionAbsolute
+            src="/images/hb1-soln-syst.svg"
             style={{ height: "max-content", marginTop: "calc(100px - 10vh)" }}
-          >
-            <img
-              src="/images/hb1-soln-syst.svg"
-              className="w-100 cover"
-              data-parallax-direction="up"
-            />
-          </div>
+          />
           <div className="row px-4 pb-4">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1>{title}</h1>

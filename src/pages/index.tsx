@@ -8,6 +8,7 @@ import { ButtonsMenu } from "../components/ButtonsMenu"
 import { colors } from "../../data/colors"
 import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import { QuoteRow } from "../components/_rows/QuoteRow"
+import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
 
 const ButtonsMenuExtraitAcheter = ({
   goldBackground = false,
@@ -38,16 +39,10 @@ export default function Home({ data }) {
       <>
         <Header title={"Accueil"} />
         <div className="container-fluid px-0" style={{ minHeight: "100vh" }}>
-          <div
-            className="position-absolute w-100 full-img-container align-items-center"
+          <ImageRowPositionAbsolute
+            src="/images/hb-banner.svg"
             style={{ height: "150vh", marginTop: "calc(10vh - 200px)" }}
-          >
-            <img
-              src="/images/hb-banner.svg"
-              className="w-100 cover position-absolute"
-              data-parallax-direction="up"
-            />
-          </div>
+          />
           <div className="row spaced pb-5 px-4 text-center align-content-center">
             <h1 className="col-12 display-1 mb-2">HIGHBS-BOK</h1>
             <p className="col-12 display-6 text-muted">
@@ -213,16 +208,10 @@ export default function Home({ data }) {
               <ButtonsMenuExtraitAcheter goldBackground={true} />
             </>
           </ContentRowWithHeader>
-          <div
-            className="position-absolute w-100 full-img-container"
+          <ImageRowPositionAbsolute
+            src="/images/hb-droplets.svg"
             style={{ height: "180vh", marginTop: "20vh" }}
-          >
-            <img
-              src="/images/hb-droplets.svg"
-              className="w-100 cover position-absolute"
-              data-parallax-direction="up"
-            />
-          </div>
+          />
           <ContentRowWithHeader
             header={{
               level: 2,
