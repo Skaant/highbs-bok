@@ -1,10 +1,12 @@
 import React, { ReactElement } from "react"
 
 export function ContentRowWithHeader({
+  id,
   header,
   className,
   children,
 }: {
+  id?: string
   header:
     | { level: 1 | 2 | 3; content: string; className?: string }
     | { element: ReactElement }
@@ -12,7 +14,7 @@ export function ContentRowWithHeader({
   children: ReactElement
 }) {
   return (
-    <div className={`row px-4 ${className || ""}`}>
+    <div id={id} className={`row px-4 ${className || ""}`}>
       <div className="col-12 col-md-10 col-lg-8 col-xl-6">
         {"element" in header ? (
           header.element
