@@ -11,7 +11,7 @@ export function ContentRowWithHeader({
     | { level: 1 | 2 | 3; content: string; className?: string }
     | { element: ReactElement }
   className?: string
-  children: ReactElement
+  children?: ReactElement
 }) {
   return (
     <div id={id} className={`row px-4 ${className || ""}`}>
