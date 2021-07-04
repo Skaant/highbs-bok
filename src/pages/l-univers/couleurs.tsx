@@ -2,6 +2,7 @@ import React from "react"
 import { colors, colorsData } from "../../../data/colors"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
 import "../../styles/global.scss"
 
 const title = "Signification des couleurs"
@@ -17,60 +18,62 @@ export default function Couleurs() {
             className="position-absolute w-100 cover"
             style={{ zIndex: -1 }}
           />
-          <div className="row px-4 pt-4 pb-5 align-content-center">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h1>{title}</h1>
-              <p className="lead mb-5">
-                Comme le <a href="/l-univers/glossaire">glossaire</a>, mais pour
-                les couleurs.
+          <ContentRowWithHeader
+            header={{
+              level: 1,
+              content: title,
+            }}
+            className="pb-4"
+          >
+            <>
+              <p>
+                Dans l'univers visuel de l'HIGHBS-BOK,{" "}
+                <b>
+                  les couleurs tiennent une place aussi importante que les
+                  termes du <a href="/l-univers/glossaire">glossaire</a>
+                </b>
+                . Et pour cause : ces couleurs{" "}
+                <b>forment elles aussi un langage</b> !
               </p>
               <p>
-                Pour nous permettre de mieux lire cet univers visuel, j'utilise
-                un langage couleurs qui, comme{" "}
-                <a href="/l-univers/glossaire">le glossaire</a> pour les mots,
-                suggère un ensemble de sens.
+                À l'image du tarot de Marseille,{" "}
+                <b>le contenu chromatique est porteur de sens</b> (au pluriel),
+                dont quelques uns sont <b>résumés ci-dessous</b> :
               </p>
-            </div>
-          </div>
-          <div className="row px-4 pt-4 align-content-center pb-5">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h2>Liste et détails des couleurs</h2>
-              <p>
-                Voici les concordances couleur-description, par ordre
-                d'apparition dans l'HIGHBS-BOK :
-              </p>
-              <table className="table" style={{ background: "#f8f9facc" }}>
-                {Object.values(colors)
-                  .filter(
-                    color => ![colors.light, colors.muted].includes(color)
+            </>
+          </ContentRowWithHeader>
+          <ContentRowWithHeader className="pt-4">
+            <table className="table" style={{ background: "#f8f9facc" }}>
+              {Object.values(colors)
+                .filter(color => ![colors.light, colors.muted].includes(color))
+                .map(color => {
+                  const {
+                    hexa: backgroundColor,
+                    description,
+                    colorWhite,
+                  } = colorsData.get(color)
+                  return (
+                    <tr key={color}>
+                      <td className="p-3">
+                        <span
+                          className={`badge rounded-pill w-100 ${
+                            colorWhite ? " text-light" : ""
+                          }`}
+                          style={{
+                            backgroundColor,
+                            maxWidth: "25vw",
+                            whiteSpace: "initial",
+                          }}
+                        >
+                          {backgroundColor} - <i>{color}</i>
+                        </span>
+                      </td>
+                      <td>{description}</td>
+                    </tr>
                   )
-                  .map(color => {
-                    const {
-                      hexa: backgroundColor,
-                      description,
-                    } = colorsData.get(color)
-                    return (
-                      <tr key={color}>
-                        <td>
-                          <span
-                            className="badge rounded-pill w-100"
-                            style={{ backgroundColor }}
-                          >
-                            &nbsp;
-                          </span>
-                        </td>
-                        <td>
-                          <span className="small text-muted text-uppercase">
-                            {backgroundColor}
-                          </span>
-                        </td>
-                        <td>{description}</td>
-                      </tr>
-                    )
-                  })}
-              </table>
-            </div>
-          </div>
+                })}
+            </table>
+          </ContentRowWithHeader>
         </div>
       </>
     </Layout>

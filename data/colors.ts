@@ -51,7 +51,7 @@ export const colorsData = new Map<
     colors.lightDeep,
     {
       hexa: "#b6b1c5",
-      description: "#b6b1c5",
+      description: "KANG, espace, trame temporelle",
     },
   ],
   [
