@@ -40,29 +40,34 @@ export default function Couleurs() {
                 d'apparition dans l'HIGHBS-BOK :
               </p>
               <table className="table" style={{ background: "#f8f9facc" }}>
-                {Object.values(colors).map(color => {
-                  const { hexa: backgroundColor, description } = colorsData.get(
-                    color
+                {Object.values(colors)
+                  .filter(
+                    color => ![colors.light, colors.muted].includes(color)
                   )
-                  return (
-                    <tr key={color}>
-                      <td>
-                        <span
-                          className="badge rounded-pill w-100"
-                          style={{ backgroundColor }}
-                        >
-                          &nbsp;
-                        </span>
-                      </td>
-                      <td>
-                        <span className="small text-muted text-uppercase">
-                          {backgroundColor}
-                        </span>
-                      </td>
-                      <td>{description}</td>
-                    </tr>
-                  )
-                })}
+                  .map(color => {
+                    const {
+                      hexa: backgroundColor,
+                      description,
+                    } = colorsData.get(color)
+                    return (
+                      <tr key={color}>
+                        <td>
+                          <span
+                            className="badge rounded-pill w-100"
+                            style={{ backgroundColor }}
+                          >
+                            &nbsp;
+                          </span>
+                        </td>
+                        <td>
+                          <span className="small text-muted text-uppercase">
+                            {backgroundColor}
+                          </span>
+                        </td>
+                        <td>{description}</td>
+                      </tr>
+                    )
+                  })}
               </table>
             </div>
           </div>
