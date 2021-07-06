@@ -20,11 +20,11 @@ export function ContentRowWithHeader({
           ("element" in header ? (
             header.element
           ) : header.level === 1 ? (
-            <h1>{header.content}</h1>
+            <h1 className={header.className}>{header.content}</h1>
           ) : header.level === 2 ? (
-            <h2>{header.content}</h2>
+            <h2 className={header.className}>{header.content}</h2>
           ) : (
-            <h3>{header.content}</h3>
+            <h3 className={header.className}>{header.content}</h3>
           ))}
         {children}
       </div>
