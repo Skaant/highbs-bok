@@ -1,5 +1,6 @@
 import React from "react"
 import { colors } from "../../data/colors"
+import { pages } from "../../data/pages"
 import { ButtonsMenu } from "../components/ButtonsMenu"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
@@ -8,11 +9,12 @@ import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAb
 import { EXTRACT_DOWNLOAD_LINK } from "../config"
 import "../styles/global.scss"
 
+const pageId = pages.ACHETER
 const title = "Acheter le livret"
 
 export default function () {
   return (
-    <Layout pageId="acheter">
+    <Layout pageId={pageId}>
       <>
         <Header title={title} />
         <div className="container-fluid px-0">

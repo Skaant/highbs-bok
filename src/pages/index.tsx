@@ -10,11 +10,14 @@ import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import { QuoteRow } from "../components/_rows/QuoteRow"
 import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
 import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
+import { pages } from "../../data/pages"
+
+const pageId = pages.HOME
 
 /** Page d'accueil */
 export default function Home({ data }) {
   return (
-    <Layout pageId="index">
+    <Layout pageId={pageId}>
       <>
         <Header title={"Accueil"} />
         <div className="container-fluid px-0" style={{ minHeight: "100vh" }}>

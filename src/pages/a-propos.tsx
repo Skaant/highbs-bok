@@ -1,5 +1,6 @@
 import React from "react"
 import { colors } from "../../data/colors"
+import { pages } from "../../data/pages"
 import { ButtonsMenu } from "../components/ButtonsMenu"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
@@ -8,6 +9,7 @@ import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
 import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import "../styles/global.scss"
 
+const pageId = pages.A_PROPOS
 const title = "À propos"
 
 export enum sectionsId {
@@ -46,7 +48,7 @@ const sections: Section[] = [
 
 export default function () {
   return (
-    <Layout pageId="a-propos">
+    <Layout pageId={pageId}>
       <>
         <Header title={title} />
         <div className="container-fluid px-0">

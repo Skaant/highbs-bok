@@ -1,12 +1,13 @@
 import React from "react"
 import { colors, colorsData } from "../../../data/colors"
+import { pages } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
 import "../../styles/global.scss"
 
-export const pageId = "l-univers/couleurs"
+const pageId = pages.L_UNIVERS_COULEURS
 const title = "Signification des couleurs"
 
 export default function Couleurs() {

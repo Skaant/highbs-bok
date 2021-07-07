@@ -5,7 +5,9 @@ import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import { TableOfContent } from "../components/TableOfContent"
 
 import "../styles/global.scss"
+import { pages } from "../../data/pages"
 
+const pageId = pages.MENTIONS_LEGALES
 const title = "Mentions légales"
 
 enum sectionsId {
@@ -25,7 +27,7 @@ const sectionsData = {
 /** Page mentions légales */
 export default function Legals() {
   return (
-    <Layout pageId="legals">
+    <Layout pageId={pageId}>
       <>
         <Header
           title={title}
