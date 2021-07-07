@@ -42,7 +42,16 @@ $grid-gutter-width: 0;
   * * ix btn-outline (& hover) border-width. */
 @import "./buttons.scss";
 
+$table-cell-padding-x: map-get($spacers, 3);
+$table-cell-padding-y: map-get($spacers, 3);
 @import "../../node_modules/bootstrap/scss/tables";
+
+.table--first-row-right {
+  td:first-child {
+    text-align: right;
+  }
+}
+
 @import "../../node_modules/bootstrap/scss/badge";
 @import "../../node_modules/bootstrap/scss/images";
 @import "../../node_modules/bootstrap/scss/card";

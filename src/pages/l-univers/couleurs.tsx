@@ -44,34 +44,38 @@ export default function Couleurs() {
           </ContentRowWithHeader>
           <ContentRowWithHeader className="pt-4">
             <table className="table" style={{ background: "#f8f9facc" }}>
-              {Object.values(colors)
-                .filter(color => ![colors.light, colors.muted].includes(color))
-                .map(color => {
-                  const {
-                    hexa: backgroundColor,
-                    description,
-                    colorWhite,
-                  } = colorsData.get(color)
-                  return (
-                    <tr key={color}>
-                      <td className="p-3">
-                        <span
-                          className={`badge rounded-pill w-100 ${
-                            colorWhite ? " text-light" : ""
-                          }`}
-                          style={{
-                            backgroundColor,
-                            maxWidth: "25vw",
-                            whiteSpace: "initial",
-                          }}
-                        >
-                          {backgroundColor} - <i>{color}</i>
-                        </span>
-                      </td>
-                      <td>{description}</td>
-                    </tr>
+              <tbody>
+                {Object.values(colors)
+                  .filter(
+                    color => ![colors.light, colors.muted].includes(color)
                   )
-                })}
+                  .map(color => {
+                    const {
+                      hexa: backgroundColor,
+                      description,
+                      colorWhite,
+                    } = colorsData.get(color)
+                    return (
+                      <tr key={color}>
+                        <td>
+                          <span
+                            className={`badge rounded-pill w-100 ${
+                              colorWhite ? " text-light" : ""
+                            }`}
+                            style={{
+                              backgroundColor,
+                              maxWidth: "25vw",
+                              whiteSpace: "initial",
+                            }}
+                          >
+                            {backgroundColor} - <i>{color}</i>
+                          </span>
+                        </td>
+                        <td>{description}</td>
+                      </tr>
+                    )
+                  })}
+              </tbody>
             </table>
           </ContentRowWithHeader>
         </div>
