@@ -9,28 +9,7 @@ import { colors } from "../../data/colors"
 import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import { QuoteRow } from "../components/_rows/QuoteRow"
 import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
-
-const ButtonsMenuExtraitAcheter = ({
-  goldBackground = false,
-}: {
-  goldBackground?: boolean
-}) => (
-  <ButtonsMenu
-    className="mt-5"
-    buttons={[
-      {
-        href: EXTRACT_DOWNLOAD_LINK,
-        color: goldBackground ? colors.light : colors.gold,
-        label: "Téléchargez l'extrait",
-      },
-      {
-        href: "/acheter",
-        color: colors.purple,
-        label: "Acheter un livret imprimé",
-      },
-    ]}
-  />
-)
+import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
 
 /** Page d'accueil */
 export default function Home({ data }) {
@@ -115,7 +94,7 @@ export default function Home({ data }) {
                 <b>à l'achat en version imprimée</b> ou à la lecture en format
                 numérique dans <b>l'extrait de 5 chapitres (sur 14 !)</b>.
               </p>
-              <ButtonsMenuExtraitAcheter />
+              <ExtraitAcheterCTA />
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
@@ -205,7 +184,7 @@ export default function Home({ data }) {
                 <b>idéant sur cet univers</b>
                 psychédélique ;)
               </p>
-              <ButtonsMenuExtraitAcheter goldBackground={true} />
+              <ExtraitAcheterCTA extraitButtonColor={colors.light} />
             </>
           </ContentRowWithHeader>
           <ImageRowPositionAbsolute
@@ -273,7 +252,7 @@ export default function Home({ data }) {
               <p>
                 Donc, bonne lecture et <b>bonne aventure :D</b>.
               </p>
-              <ButtonsMenuExtraitAcheter />
+              <ExtraitAcheterCTA />
             </>
           </ContentRowWithHeader>
         </div>
