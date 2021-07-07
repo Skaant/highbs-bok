@@ -1,6 +1,6 @@
 import React from "react"
 
-type Section = {
+export type Section = {
   id: string
   label: string
 }
