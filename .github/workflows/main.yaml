@@ -2,9 +2,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [dev]
-  pull_request:
-    branches: [dev]
+    branches: [main]
 
 jobs:
   build:
@@ -22,15 +20,18 @@ jobs:
         id: node-modules-cache
         uses: actions/cache@v2
         with:
-          path: node_modules
-          key: node_modules
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
         if: steps.node-modules-cache.outputs.cache-it != 'true'
         run: npm i
 
       # - run: npm test
-      - run: npx gatsby build
+      - run: npm run build
+      - run: npm run build:script 
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
@@ -38,5 +39,5 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public
-          server-dir: ${{ secrets.FTP_DEV_SERVER_DIR }}
+          local-dir: ./public/
+          server-dir: ${{ secrets.FTP_MAIN_SERVER_DIR }}

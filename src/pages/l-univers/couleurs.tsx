@@ -1,13 +1,18 @@
 import React from "react"
 import { colors, colorsData } from "../../../data/colors"
+import { pages } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
+import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
+import "../../styles/global.scss"
 
+const pageId = pages.L_UNIVERS_COULEURS
 const title = "Signification des couleurs"
 
 export default function Couleurs() {
   return (
-    <Layout pageId="l-univers/colors">
+    <Layout pageId={pageId}>
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
@@ -16,55 +21,77 @@ export default function Couleurs() {
             className="position-absolute w-100 cover"
             style={{ zIndex: -1 }}
           />
-          <div className="row px-4 pt-4 pb-5 align-content-center">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h1>{title}</h1>
-              <p className="lead mb-5">
-                Comme le <a href="/l-univers/glossaire">glossaire</a>, mais pour
-                les couleurs.
+          <ContentRowWithHeader
+            header={{
+              level: 1,
+              content: title,
+            }}
+            className="pb-4"
+          >
+            <>
+              <p>
+                Dans l'univers visuel de l'HIGHBS-BOK,{" "}
+                <b>
+                  les couleurs tiennent une place aussi importante que les
+                  termes du <a href="/l-univers/glossaire">glossaire</a>
+                </b>
+                . Et pour cause : ces couleurs{" "}
+                <b>forment elles aussi un langage</b> !
               </p>
               <p>
-                Pour nous permettre de mieux lire cet univers visuel, j'utilise
-                un langage couleurs qui, comme{" "}
-                <a href="/l-univers/glossaire">le glossaire</a> pour les mots,
-                suggère un ensemble de sens.
+                À l'image du tarot de Marseille,{" "}
+                <b>le contenu chromatique est porteur de sens</b> (au pluriel),
+                dont quelques uns sont <b>résumés ci-dessous</b> :
               </p>
-            </div>
-          </div>
-          <div className="row px-4 pt-4 align-content-center pb-5">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h2>Liste et détails des couleurs</h2>
-              <p>
-                Voici les concordances couleur-description, par ordre
-                d'apparition dans l'HIGHBS-BOK :
-              </p>
-              <table className="table" style={{ background: "#f8f9facc" }}>
-                {Object.values(colors).map(color => {
-                  const { hexa: backgroundColor, description } = colorsData.get(
-                    color
+            </>
+          </ContentRowWithHeader>
+          <ContentRowWithHeader className="pt-4">
+            <table className="table" style={{ background: "#f8f9facc" }}>
+              <tbody>
+                {Object.values(colors)
+                  .filter(
+                    color => ![colors.light, colors.muted].includes(color)
                   )
-                  return (
-                    <tr key={color}>
-                      <td>
-                        <span
-                          className="badge rounded-pill w-100"
-                          style={{ backgroundColor }}
-                        >
-                          &nbsp;
-                        </span>
-                      </td>
-                      <td>
-                        <span className="small text-muted text-uppercase">
-                          {backgroundColor}
-                        </span>
-                      </td>
-                      <td>{description}</td>
-                    </tr>
-                  )
-                })}
-              </table>
-            </div>
-          </div>
+                  .map(color => {
+                    const {
+                      hexa: backgroundColor,
+                      description,
+                      colorWhite,
+                    } = colorsData.get(color)
+                    return (
+                      <tr key={color}>
+                        <td>
+                          <span
+                            className={`badge rounded-pill w-100 ${
+                              colorWhite ? " text-light" : ""
+                            }`}
+                            style={{
+                              backgroundColor,
+                              maxWidth: "25vw",
+                              whiteSpace: "initial",
+                            }}
+                          >
+                            {backgroundColor} - <i>{color}</i>
+                          </span>
+                        </td>
+                        <td>{description}</td>
+                      </tr>
+                    )
+                  })}
+              </tbody>
+            </table>
+          </ContentRowWithHeader>
+          <ContentRowWithHeader
+            header={{
+              level: 2,
+              content: "Autres pages de l'univers",
+            }}
+            className="bg-gold"
+          >
+            <>
+              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
+            </>
+          </ContentRowWithHeader>
         </div>
       </>
     </Layout>

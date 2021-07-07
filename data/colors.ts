@@ -1,4 +1,8 @@
 export enum colors {
+  /** Kept default Bootstrap's palette */
+  light = "light",
+  muted = "muted",
+  /** Custom HIGHBS-BOK's palette */
   gold = "gold",
   lightGold = "lightGold",
   blue = "blue",
@@ -47,7 +51,7 @@ export const colorsData = new Map<
     colors.lightDeep,
     {
       hexa: "#b6b1c5",
-      description: "#b6b1c5",
+      description: "KANG, espace, trame temporelle",
     },
   ],
   [
