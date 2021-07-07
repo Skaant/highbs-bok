@@ -3,8 +3,11 @@ import { colors, colorsData } from "../../../data/colors"
 import { eras, erasData } from "../../../data/eras"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
+import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
 import "../../styles/global.scss"
 
+export const pageId = "l-univers/sept-eras"
 const title = "Les sept ERAS de l'histoire des ZUMS"
 const erasRowColor = {
   [eras.presentEra]: colors.purple,
@@ -19,7 +22,7 @@ const erasRowColor = {
 
 export default function SeptEras() {
   return (
-    <Layout pageId="index/sept-eras">
+    <Layout pageId={pageId}>
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
@@ -60,6 +63,16 @@ export default function SeptEras() {
               </div>
             )
           })}
+          <ContentRowWithHeader
+            header={{
+              level: 2,
+              content: "Autres pages de l'univers",
+            }}
+          >
+            <>
+              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
+            </>
+          </ContentRowWithHeader>
         </div>
       </>
     </Layout>

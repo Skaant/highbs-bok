@@ -2,6 +2,8 @@
 
   We group a set of features from different bootstrap classes. */
 .btn-menu {
+  margin-top: map-get($spacers, 5) + map-get($spacers, 2);
+
   > .btn {
     // .mx-2.mb-4
     margin: 0 map-get($spacers, 2) map-get($spacers, 4) map-get($spacers, 2);

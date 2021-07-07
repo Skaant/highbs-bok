@@ -3,16 +3,18 @@ import { colors } from "../../../data/colors"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import { ImageRowPositionAbsolute } from "../../components/_rows/ImageRowPositionAbsolute"
 import { QuoteRow } from "../../components/_rows/QuoteRow"
 import { EXTRACT_DOWNLOAD_LINK } from "../../config"
 import "../../styles/global.scss"
 
+export const pageId = "l-univers/index"
 const title = "Découvrir l'univers"
 
 export default function () {
   return (
-    <Layout pageId="l-univers/index">
+    <Layout pageId={pageId}>
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
@@ -48,40 +50,7 @@ export default function () {
                 Servez-vous de ces quelques pages pour{" "}
                 <b>explorer plus encore l'univers épique des ZUMS</b>.
               </p>
-              <ButtonsMenu
-                className="mt-5"
-                buttons={[
-                  {
-                    href: "/l-univers/sept-eras",
-                    color: colors.purple,
-                    label: "Sept ERAS",
-                  },
-                  {
-                    href: "/l-univers/couleurs",
-                    color: colors.purple,
-                    label: "Les couleurs",
-                  },
-                  {
-                    href: "/l-univers/glossaire",
-                    color: colors.purple,
-                    label: "Glossaire",
-                  },
-                  {
-                    href: "/l-univers/personnages-et-entites",
-                    color: colors.purple,
-                    outline: true,
-                    disabled: true,
-                    label: "Personnages et entités",
-                  },
-                  {
-                    href: "/l-univers/lieux",
-                    color: colors.purple,
-                    outline: true,
-                    disabled: true,
-                    label: "Lieux",
-                  },
-                ]}
-              />
+              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
             </div>
           </div>
           <QuoteRow

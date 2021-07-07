@@ -2,14 +2,16 @@ import React from "react"
 import { colors, colorsData } from "../../../data/colors"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
 import "../../styles/global.scss"
 
+export const pageId = "l-univers/couleurs"
 const title = "Signification des couleurs"
 
 export default function Couleurs() {
   return (
-    <Layout pageId="l-univers/colors">
+    <Layout pageId={pageId}>
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
@@ -77,6 +79,17 @@ export default function Couleurs() {
                   })}
               </tbody>
             </table>
+          </ContentRowWithHeader>
+          <ContentRowWithHeader
+            header={{
+              level: 2,
+              content: "Autres pages de l'univers",
+            }}
+            className="bg-gold"
+          >
+            <>
+              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
+            </>
           </ContentRowWithHeader>
         </div>
       </>

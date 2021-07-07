@@ -1,16 +1,19 @@
 import React from "react"
+import { colors } from "../../../data/colors"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
 import { ImageRowPositionAbsolute } from "../../components/_rows/ImageRowPositionAbsolute"
 import "../../styles/global.scss"
 import { sectionsId as A_PROPOS_SECTIONS_ID } from "../a-propos"
 
+export const pageId = "l-univers/glossaire"
 const title = "Glossaire"
 
 export default function Glossaire() {
   return (
-    <Layout pageId="l-univers/glossaire">
+    <Layout pageId={pageId}>
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
@@ -142,6 +145,17 @@ export default function Glossaire() {
                 </tr>
               </tbody>
             </table>
+          </ContentRowWithHeader>
+          <ContentRowWithHeader
+            header={{
+              level: 2,
+              content: "Autres pages de l'univers",
+            }}
+            className="bg-gold"
+          >
+            <>
+              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
+            </>
           </ContentRowWithHeader>
         </div>
       </>
