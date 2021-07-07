@@ -6,8 +6,9 @@ import "../styles/global.scss"
 
 const title = "À propos"
 
-enum sectionsId {
+export enum sectionsId {
   QU_EST_CE_QUE_L_HIGHBS_BOK = "qu-est-ce-que-l-highbs-bok",
+  POURQUOI_UTILISER_DES_MOTS_BIZARRES = "pourquoi-utiliser-des-mots-bizarres",
   AU_SUJET_DES_PSYCHEDELIQUES = "au-sujet-des-psychedeliques",
 }
 
