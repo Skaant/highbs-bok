@@ -18,7 +18,8 @@ export default function () {
         <div className="container-fluid px-0">
           <ImageRowPositionAbsolute
             src="/images/hb1-soln-syst.svg"
-            style={{ height: "max-content", marginTop: "calc(100px - 10vh)" }}
+            style={{ height: "100%", minHeight: "100vh", marginTop: "-50px" }}
+            imgClassName="h-100"
           />
           <div className="row px-4 pb-4">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
@@ -84,11 +85,13 @@ export default function () {
             </div>
           </div>
           <QuoteRow
+            background={colors.gold}
             legend={
               <>
                 - Extrait du livret 1, chapitre 6 : <i>Sept ERAS</i>
               </>
             }
+            className="px-4 pb-4"
           >
             <>
               "Lorsqu’il ne restera plus dans cet univers qu’un monde,
@@ -100,7 +103,7 @@ export default function () {
               ce sera l’AURO-ERA."
             </>
           </QuoteRow>
-          <div className="row px-4 bg-gold">
+          <div className="row px-4 pt-4 bg-gold">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2>Autres pages du site</h2>
               <ButtonsMenu
