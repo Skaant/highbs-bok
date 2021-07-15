@@ -20,7 +20,7 @@ export default function () {
         <div className="container-fluid px-0">
           <ImageRowPositionAbsolute
             src="/images/hb1-24-further.svg"
-            style={{ height: "70vw" }}
+            style={{ height: "70vw", minHeight: "400px", marginTop: "80px" }}
           />
           <ContentRowWithHeader
             header={{
@@ -39,24 +39,27 @@ export default function () {
               <p>
                 Mis en page et imprimé <b>par des professionnels</b>, le livret
                 A5 à la couverture cartonnée est{" "}
-                <b>un beau petit objet à lire, méditer et relire</b>.
+                <b>un bel objet à lire, méditer et relire</b>.
               </p>
               <p className="mb-5">
                 Les illustrations minimalistes, aux couleurs vives{" "}
                 <a href="/l-univers/couleurs">et riches de sens</a>, sont{" "}
                 <b>superbement mises en valeur</b> par le support papier.
               </p>
-              <p>
-                Pour vous procurer un exemplaire du volume 1 (48 pages) et
-                commencer la lecture, rendez-vous sur le lien Stripe juste en
-                dessous !
+              <p id="soon">
+                Pour <b>vous procurer un exemplaire</b> du volume 1 (48 pages)
+                et commencer la lecture, il vous faudra encore{" "}
+                <b>être patient</b> : la première impression sera{" "}
+                <b>disponible en Septembre 2021</b> !
               </p>
               <ButtonsMenu
                 buttons={[
                   {
-                    href: process.env.STRIPE_PAYMENT_URL,
-                    label: "Lien de paiement Stripe (16€)",
+                    href: /** process.env.STRIPE_PAYMENT_URL */ "#soon",
+                    label:
+                      "Lien de paiement Stripe (livret 16€ + livraison 5€)",
                     color: colors.purple,
+                    disabled: true,
                   },
                 ]}
                 className="mt-5"
@@ -72,15 +75,18 @@ export default function () {
           >
             <>
               <p>
-                Et bien, c'est <b>très simple</b> ! En voici <b>les étapes</b> :
+                <b>Voici les étapes :</b>
               </p>
               <ol>
                 <li className="mb-2">
                   <b>
-                    Vous vous rendez sur{" "}
-                    <a href={process.env.STRIPE_PAYMENT_URL}>le lien Stripe</a>
+                    Rendez-vous sur{" "}
+                    <a href={/** process.env.STRIPE_PAYMENT_URL */ "#soon"}>
+                      le lien Stripe
+                    </a>
                   </b>{" "}
-                  pour saisir vos informations bancaires et payer les 16€.
+                  pour saisir vos informations bancaires et payer les 21€ du
+                  livre (16€) et des frais de livraison (5€).
                 </li>
                 <li className="mb-2">
                   Je reçois une notification de votre paiement et je vous envoie
@@ -92,7 +98,7 @@ export default function () {
                   exemplaire(s) par la Poste dans une <b>lettre suivie</b>.
                 </li>
                 <li>
-                  Vous recevez <b>votre exemplaire</b> et, de joie,{" "}
+                  Vous recevez <b>votre exemplaire, le lisez</b> et, de joie,{" "}
                   <b>vous m'envoyez un email psychédélique</b> à l'adresse{" "}
                   <b>romaric.ruga@gmail.com</b>. <br />
                   <i>
