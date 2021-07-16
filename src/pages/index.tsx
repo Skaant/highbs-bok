@@ -11,6 +11,7 @@ import { QuoteRow } from "../components/_rows/QuoteRow"
 import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
 import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
 import { pages } from "../../data/pages"
+import MiniRowAbsolute from "../components/_rows/MiniRowAbsolute"
 
 const pageId = pages.HOME
 
@@ -83,6 +84,7 @@ export default function Home({ data }) {
               <br />à la matière inerte du cosmos."
             </>
           </QuoteRow>
+          <MiniRowAbsolute id="psik" justify="right" />
           <ContentRowWithHeader
             header={{
               level: 2,
@@ -184,8 +186,7 @@ export default function Home({ data }) {
               </p>
               <p>
                 <b>Vous pourriez y contribuer</b> aussi en{" "}
-                <b>idéant sur cet univers</b>
-                psychédélique ;)
+                <b>idéant sur cet univers</b> psychédélique ;)
               </p>
               <ExtraitAcheterCTA extraitButtonColor={colors.light} />
             </>
@@ -236,7 +237,7 @@ export default function Home({ data }) {
           >
             <>
               <p>
-                Enfin, je publie <b>la première version</b> du premier livret.
+                Enfin, je publie <b>la première version</b> du premier livret.{" "}
                 <b>Pour pouvoir le partager</b>, pas parce que je le pense
                 "terminé". <b>Que cette notion n'est pas cours ici ...</b>
               </p>
