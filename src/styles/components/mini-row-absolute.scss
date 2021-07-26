@@ -1,0 +1,22 @@
+$mini-size: 240px;
+
+.row.mini-row-absolute {
+  position: absolute;
+  padding: 0;
+  z-index: -1;
+  > img {
+    position: absolute;
+    width: $mini-size;
+    top: -$mini-size;
+  }
+  &.left {
+    > img {
+      left: 10vw;
+    }
+  }
+  &.right {
+    > img {
+      right: 10vw;
+    }
+  }
+}
