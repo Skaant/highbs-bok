@@ -86,8 +86,7 @@ export default function () {
               </p>
               <p>
                 Comme nous tous plus ou moins consciemment, les ZUMS cherchent
-                le
-                <span className="bg-gold">tout-un</span>. La façon dont ils y
+                le <span className="bg-gold">tout-un</span>. La façon dont ils y
                 arrivent nécessite forcément des idées transcendantes.
               </p>
               <ExtraitAcheterCTA />
@@ -99,7 +98,24 @@ export default function () {
               level: 2,
               content: sections[1].label,
             }}
-          />
+          >
+            <>
+              <p>
+                Parce que ça fait pas de mal de s'aérer un peu l'esprit, de
+                contempler le tout, le un et le rien.
+              </p>
+              <p>
+                Jodorowsky pour booster la créativité propose dans son
+                interview, <i>Psychomagie</i>, de méditer en se voyant remplir
+                l'univers;
+              </p>
+              <p>
+                Parce que ce sont les idées qu'on a qui créent tous les temps,
+                je vous propose quelques idées fabuleuses pour egayer votre
+                imaginaire du futur.
+              </p>
+            </>
+          </ContentRowWithHeader>
           <ContentRowWithHeader
             id={sections[2].id}
             header={{
@@ -107,7 +123,19 @@ export default function () {
               content: sections[2].label,
             }}
             className="bg-turquoize"
-          />
+          >
+            <>
+              <p>
+                Comme au jardin, dans la création je crois aussi fort à l'action
+                continue d'amélioration.
+              </p>
+              <p>Nous vivons et nos expériences nous transforment.</p>
+              <p>
+                En conséquence, comme pour tout le reste, j'ai envie de dire :
+                pourvu que le temps nourrisse l'HIGHBS-BOK.
+              </p>
+            </>
+          </ContentRowWithHeader>
           <ContentRowWithHeader
             id={sections[3].id}
             header={{
@@ -115,7 +143,21 @@ export default function () {
               content: sections[3].label,
             }}
             className="bg-gold"
-          />
+          >
+            <>
+              <p>
+                Si l'on ne peut dire vrai ou faux,
+                <br />
+                si l'on ne peut dire juste ou pas juste,
+                <br />
+                beau ou pas beau,
+                <br />
+                comment décrire l'idée ultime ?
+              </p>
+              <p>Dès qu'on y pose des mots on en perd l'essence.</p>
+              <p>L'HIGHBS c'est être très très high mon pote.</p>
+            </>
+          </ContentRowWithHeader>
           <ContentRowWithHeader
             id={sections[4].id}
             header={{
@@ -124,11 +166,21 @@ export default function () {
             }}
           >
             <>
+              <p>
+                Pour certains termes, je voulais légèrement ré-initialiser les
+                idées courantes qu'on a dans la tête pour{" "}
+                <b>se permettre d'imaginer d'autres choses autour du mot</b>.
+              </p>
+              <p>
+                Depuis mes premiers storyboards, j'ai beaucoup réduit ces mots
+                couramment écrits en majuscule, mais ceux qui restent sont bien
+                expliqués dans le livret et sur le site.
+              </p>
               <ButtonsMenu
                 buttons={[
                   {
                     href: "/l-univers/glossaire",
-                    label: "Glossaire",
+                    label: "Se rendre au glossaire",
                     color: colors.gold,
                   },
                 ]}
@@ -153,7 +205,7 @@ export default function () {
                 leurs spécificités.
               </p>
               <p>
-                Le "PSIK" est un terme générique cherchant à saisir cette
+                Le PSIK est un terme générique cherchant à saisir cette
                 multiplicité de formes, tout en identifiant de façon générique
                 le concept de psychoactivité.
               </p>
@@ -184,8 +236,8 @@ export default function () {
                 <b>réaliser les choses les plus folles</b>.
               </p>
               <ExtraitAcheterCTA
-                extraitButtonColor={colors.light}
-                acheterButtonColor={colors.gold}
+                primaryBtnColor={colors.light}
+                secondaryBtnColor={colors.gold}
               />
             </>
           </ContentRowWithHeader>
@@ -195,7 +247,20 @@ export default function () {
               level: 2,
               content: sections[6].label,
             }}
-          />
+          >
+            <>
+              <p>
+                J'ai lu quelques livres spirituels et philosophiques, mais rien
+                que de très classiques.
+              </p>
+              <p>
+                Ceux qui pourraient le plus se référer à cet ouvrage sont : le{" "}
+                <b>Tao-Te-King</b>, le <b>Mahabaratha</b> et la Gîta, le{" "}
+                <b>Sutra des Dix Terres</b>, ainsi que d'autres plus connus mais
+                que je ne souhaite pas citer ici.
+              </p>
+            </>
+          </ContentRowWithHeader>
           <ContentRowWithHeader
             id={sections[7].id}
             header={{
@@ -203,7 +268,39 @@ export default function () {
               content: sections[7].label,
             }}
             className="bg-skin text-light"
-          />
+          >
+            <>
+              <p>Contactez-moi via mes réseaux :</p>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/imrok.le.bleu/"
+                    className="text-light"
+                  >
+                    Instagram
+                  </a>
+                  ,
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/user/romaricruga/"
+                    className="text-light"
+                  >
+                    YouTube
+                  </a>
+                  ,
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/romaricruga/"
+                    className="text-light"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+              </ul>
+            </>
+          </ContentRowWithHeader>
         </div>
       </>
     </Layout>

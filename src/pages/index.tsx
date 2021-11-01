@@ -94,9 +94,9 @@ export default function Home({ data }) {
           >
             <>
               <p>
-                Le <b>premier épisode de l'aventure</b>, le livret 1 de
-                l'HIGHBS-BOK : "L'histoire des ZUMS" est déjà disponible{" "}
-                <b>à l'achat en version imprimée</b> ou à la lecture en format
+                Le <b>premier épisode de l'aventure</b>, le volume 1 de
+                l'HIGHBS-BOK : "L'histoire des ZUMS" est maintenant disponible{" "}
+                <b>en pré-commande sur Ulule</b> ou à la lecture en format
                 numérique dans <b>l'extrait de 5 chapitres (sur 14 !)</b>.
               </p>
               <ExtraitAcheterCTA />
@@ -188,7 +188,7 @@ export default function Home({ data }) {
                 <b>Vous pourriez y contribuer</b> aussi en{" "}
                 <b>idéant sur cet univers</b> psychédélique ;)
               </p>
-              <ExtraitAcheterCTA extraitButtonColor={colors.light} />
+              <ExtraitAcheterCTA primaryBtnColor={colors.light} />
             </>
           </ContentRowWithHeader>
           <ImageRowPositionAbsolute
@@ -213,8 +213,8 @@ export default function Home({ data }) {
                 , j'ai tenté d'affiner sa forme avec le temps.
               </p>
               <p className="mb-0">
-                Malgré cela, il reste un ouvrage particulier, à la motivation
-                sincère mais peut-être un peu difficile à cerner.
+                Malgré cela, il reste un ouvrage particulier, aux motivations
+                sincères mais peut-être un peu difficiles à cerner.
               </p>
               <ButtonsMenu
                 className="mt-5"
@@ -222,7 +222,7 @@ export default function Home({ data }) {
                   {
                     href: "/a-propos",
                     color: colors.purple,
-                    label: "En savoir plus",
+                    label: "En savoir plus sur les motivations",
                   },
                 ]}
               />

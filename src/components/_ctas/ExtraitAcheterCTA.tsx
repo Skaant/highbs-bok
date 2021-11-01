@@ -4,25 +4,30 @@ import { EXTRACT_DOWNLOAD_LINK } from "../../config"
 import { ButtonsMenu } from "../ButtonsMenu"
 
 export function ExtraitAcheterCTA({
-  extraitButtonColor = colors.gold,
-  acheterButtonColor = colors.purple,
+  primaryBtnColor = colors.gold,
+  secondaryBtnColor = colors.purple,
 }: {
-  extraitButtonColor?: colors
-  acheterButtonColor?: colors
+  primaryBtnColor?: colors
+  secondaryBtnColor?: colors
 }) {
   return (
     <ButtonsMenu
       className="mt-5"
       buttons={[
         {
-          href: EXTRACT_DOWNLOAD_LINK,
-          color: extraitButtonColor,
-          label: "Téléchargez l'extrait",
+          href: process.env.ULULE_VOL1_URL,
+          color: primaryBtnColor,
+          label: "Pré-commander sur Ulule",
         },
         {
           href: "/acheter",
-          color: acheterButtonColor,
-          label: "Acheter un livret imprimé",
+          color: primaryBtnColor,
+          label: "Acheter un livret",
+        },
+        {
+          href: EXTRACT_DOWNLOAD_LINK,
+          color: secondaryBtnColor,
+          label: "Téléchargez l'extrait",
         },
       ]}
     />
