@@ -65,6 +65,16 @@ export default function Home({ data }) {
                 conquérir l'espace{" "}
                 <b>à la recherche des idées les plus hautes perchées</b>.
               </p>
+              <ButtonsMenu
+                className="mt-5"
+                buttons={[
+                  {
+                    href: process.env.ULULE_VOL1_URL,
+                    color: colors.purple,
+                    label: "En ce moment, en pré-commande sur Ulule",
+                  },
+                ]}
+              />
             </>
           </ContentRowWithHeader>
           <QuoteRow
@@ -95,9 +105,12 @@ export default function Home({ data }) {
             <>
               <p>
                 Le <b>premier épisode de l'aventure</b>, le volume 1 de
-                l'HIGHBS-BOK : "L'histoire des ZUMS" est maintenant disponible{" "}
-                <b>en pré-commande sur Ulule</b> ou à la lecture en format
-                numérique dans <b>l'extrait de 5 chapitres (sur 14 !)</b>.
+                l'HIGHBS-BOK : L'histoire des ZUMS, est maintenant disponible{" "}
+                <b>en pré-commande sur Ulule</b>.
+              </p>
+              <p>
+                Vous pouvez également télécharger sur ce site
+                <b>un extrait de 5 chapitres (sur 14 !)</b>.
               </p>
               <ExtraitAcheterCTA />
             </>

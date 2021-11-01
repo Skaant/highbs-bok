@@ -21,10 +21,26 @@ export default function ResponsiveNavbar({ pageId }) {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a
+                className="nav-link btn btn-purple my-2 mx-sm-2 px-3 rounded-pill shadow"
+                href={process.env.ULULE_VOL1_URL}
+              >
+                Pré-commandes Ulule
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
                 className={`nav-link btn ${
-                  pageId === pages.L_UNIVERS
-                    ? "btn-deep"
-                    : "btn-outline-purple"
+                  pageId === pages.ACHETER ? "btn-deep" : "btn-purple"
+                }  my-2 mx-sm-2 px-3 rounded-pill shadow`}
+                href="/acheter"
+              >
+                Acheter un livret
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className={`nav-link btn ${
+                  pageId === pages.L_UNIVERS ? "btn-deep" : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/l-univers"
               >
@@ -39,16 +55,6 @@ export default function ResponsiveNavbar({ pageId }) {
                 href="/a-propos"
               >
                 À propos
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className={`nav-link btn ${
-                  pageId === pages.ACHETER ? "btn-deep" : "btn-purple"
-                }  my-2 mx-sm-2 px-3 rounded-pill shadow`}
-                href="/acheter"
-              >
-                Acheter
               </a>
             </li>
           </ul>
