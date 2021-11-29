@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
 import "../styles/global.scss"
-import { EXTRACT_DOWNLOAD_LINK } from "../config"
 import { ButtonsMenu } from "../components/ButtonsMenu"
 import { colors } from "../../data/colors"
 import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
@@ -109,7 +108,7 @@ export default function Home({ data }) {
                 <b>en pré-commande sur Ulule</b>.
               </p>
               <p>
-                Vous pouvez également télécharger sur ce site
+                Vous pouvez également télécharger sur ce site{" "}
                 <b>un extrait de 5 chapitres (sur 14 !)</b>.
               </p>
               <ExtraitAcheterCTA />
@@ -124,7 +123,7 @@ export default function Home({ data }) {
           >
             <>
               <p className="mb-4">
-                Avec leurs puissants alliés : le PSIK, la vie et GRAND-ARBRE ,{" "}
+                Avec leurs puissants alliés : le PSIK, la vie et GRAND-ARBRE,{" "}
                 <b>les ZUMS, cette espèce de singes vraiment brillants,</b> sont
                 partis jusqu'aux confins de l'univers, et sont revenus{" "}
                 <b>

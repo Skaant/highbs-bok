@@ -39,3 +39,5 @@ $theme-colors: map-merge(
     "turquoize": $turquoize,
   )
 );
+
+$utilities-bg-colors: $theme-colors;
