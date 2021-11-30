@@ -49,7 +49,7 @@ export default function () {
                 peuvent toutes se parler.
               </p>
               <figure>
-                <img src="/images/articles/0/zums-connectes-au-hol-ong.png" />
+                <img src="/images/articles/0/zums-connectes-au-hol-ong.jpg" />
                 <figcaption>
                   On peut explorer les souvenirs des autres, et tout ceux jamais
                   eu ... Suffit d'être patient.
@@ -90,7 +90,7 @@ export default function () {
                 Dans la société des ZUMS, on a plus faim et on est pas triste.
               </p>
               <figure>
-                <img src="/images/articles/0/sketch-zum-data-et-ongs.png" />
+                <img src="/images/articles/0/sketch-zum-data-et-ongs.jpg" />
                 <figcaption>
                   Chez les ZUMS, l'activité principale est la création d'idées
                   pour enrichir le HOL-ONG, le réseau de conscience collective.
@@ -137,7 +137,7 @@ export default function () {
                 qu&#x27;elle pourrait intéresser :)
               </p>
               <figure>
-                <img src="/images/articles/0/zums-avec-hologrammes.png" />
+                <img src="/images/articles/0/zums-avec-hologrammes.jpg" />
                 <figcaption>
                   Les interfaces ZUMS sont de plus en plus proche du langage
                   conceptuel.
