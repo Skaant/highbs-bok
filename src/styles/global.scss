@@ -86,6 +86,11 @@ td {
   letter-spacing: 0.025rem;
 }
 
+figure > img {
+  width: 100%;
+  margin: 48px 0;
+}
+
 footer {
   color: $gray-100;
   background: $gray-900;

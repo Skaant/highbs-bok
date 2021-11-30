@@ -8,11 +8,13 @@ export type ArticleData = {
 
 const articles: ArticleData[] = [
   {
-    slug: "les-zums-ne-meurent-plus",
+    slug: "un-monde-sans-mort",
     date: "2021-11-28",
-    title: "Les ZUMS ne meurent plus",
+    title: "Un monde sans mort",
     description:
       "Dans la société des ZUMS, il n'y a plus de mort ni de tristesse.",
     tags: ["zums", "immortalité"],
   },
 ]
+
+export default articles

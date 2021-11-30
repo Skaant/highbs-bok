@@ -27,7 +27,7 @@ export function Header({
         <meta key={index} {...meta} />
       ))}
       <title>
-        {title} | {data.site.siteMetadata.title}
+        {typeof title} | {data.site.siteMetadata.title}
       </title>
       <link
         rel="icon"
