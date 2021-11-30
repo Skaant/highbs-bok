@@ -19,11 +19,11 @@ export function ExtraitAcheterCTA({
           color: primaryBtnColor,
           label: "Pré-commander sur Ulule",
         },
-        {
+        /* {
           href: "/acheter",
           color: primaryBtnColor,
           label: "Acheter un livret",
-        },
+        }, */
         {
           href: EXTRACT_DOWNLOAD_LINK,
           color: secondaryBtnColor,

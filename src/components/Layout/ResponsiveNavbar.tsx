@@ -50,6 +50,16 @@ export default function ResponsiveNavbar({ pageId }) {
             <li className="nav-item">
               <a
                 className={`nav-link btn ${
+                  pageId === pages.BLOG ? "btn-deep" : "btn-outline-purple"
+                } my-2 mx-sm-2 px-3 rounded-pill shadow`}
+                href="/blog"
+              >
+                Blog
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                className={`nav-link btn ${
                   pageId === pages.A_PROPOS ? "btn-deep" : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/a-propos"

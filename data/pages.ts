@@ -1,6 +1,6 @@
 export enum pages {
   HOME = "home",
-  ARTICLES = "articles",
+  BLOG = "blog",
   L_UNIVERS = "l-univers",
   L_UNIVERS_ERAS = "l-univers-eras",
   L_UNIVERS_COULEURS = "l-univers-couleurs",

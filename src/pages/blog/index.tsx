@@ -8,7 +8,7 @@ import { Layout } from "../../components/Layout/Layout"
 import MiniRowAbsolute from "../../components/_rows/MiniRowAbsolute"
 import "../../styles/global.scss"
 
-const pageId = pages.ARTICLES
+const pageId = pages.BLOG
 const title = "Articles publiés"
 
 export default function () {
