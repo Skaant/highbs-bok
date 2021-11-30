@@ -25,10 +25,9 @@ $grid-gutter-width: 0;
   padding: 100px 0;
   // Fix exceeding row size causing overflow
   width: 100%;
-}
-
-.row.spaced {
-  padding: calc(150px + 15vh);
+  &.spaced {
+    padding: calc(150px + 15vh);
+  }
 }
 
 @import "./nav-navbar.scss";
@@ -84,6 +83,22 @@ li,
 td {
   font-size: 1.3rem;
   letter-spacing: 0.025rem;
+}
+
+.mb-6 {
+  margin-bottom: 5rem;
+}
+
+figure {
+  margin: 48px 0;
+  > img {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+.font-size-initial {
+  font-size: initial;
 }
 
 footer {

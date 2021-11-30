@@ -4,7 +4,7 @@ function MiniRowAbsolute({
   id,
   justify,
 }: {
-  id: "psik"
+  id: "psik" | "data-plant"
   justify: "left" | "right"
 }) {
   return (

@@ -20,7 +20,7 @@ const pagesData = {
     href: "/l-univers/glossaire",
     label: "Glossaire",
   },
-  [pages.L_UNIVERS_PERSONNAGES]: {
+  /* [pages.L_UNIVERS_PERSONNAGES]: {
     href: "/l-univers/personnages-et-entites",
     outline: true,
     disabled: true,
@@ -31,7 +31,7 @@ const pagesData = {
     outline: true,
     disabled: true,
     label: "Lieux",
-  },
+  }, */
 }
 
 export function UniversePagesCTA({

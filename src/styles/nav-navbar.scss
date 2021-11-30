@@ -17,9 +17,13 @@
     z-index: -1;
     margin-left: -45px;
     margin-top: -75px;
+    transition: transform 0.3s ease-in-out;
   }
   img {
     height: 80px;
+  }
+  &:hover > :first-child {
+    transform: scale(1.4);
   }
 }
 
