@@ -15,7 +15,7 @@ import MiniRowAbsolute from "../components/_rows/MiniRowAbsolute"
 const pageId = pages.HOME
 
 /** Page d'accueil */
-export default function Home({ data }) {
+export default function Home() {
   return (
     <Layout pageId={pageId}>
       <>
@@ -197,10 +197,24 @@ export default function Home({ data }) {
                 motif absolu.
               </p>
               <p>
-                <b>Vous pourriez y contribuer</b> aussi en{" "}
-                <b>idéant sur cet univers</b> psychédélique ;)
+                Afin de rendre <b>vivant</b> cet ouvrage et le <b>processus de création</b> qui y mène,{" "}
+                je tiens un blog où je publie <b>des articles sur l'univers et la philosophie</b> de l'HIGHBS-BOK.
               </p>
-              <ExtraitAcheterCTA primaryBtnColor={colors.light} />
+              <ButtonsMenu
+                className="mt-5"
+                buttons={[
+                  {
+                    href: "/blog",
+                    color: colors.purple,
+                    label: "Accéder au blog",
+                  },
+                  {
+                    href: process.env.ULULE_VOL1_URL,
+                    color: colors.light,
+                    label: "Pré-commander sur Ulule",
+                  }
+                ]}
+              />
             </>
           </ContentRowWithHeader>
           <ImageRowPositionAbsolute
