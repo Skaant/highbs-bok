@@ -1,5 +1,7 @@
 import React from "react"
 import articles from "../../../data/articles"
+import { colors } from "../../../data/colors"
+import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
@@ -12,9 +14,22 @@ export default function () {
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
-          <div className="row px-4 bg-white">
-            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h1>{title}</h1>
+          <ContentRowWithHeader className="col-12 col-md-10 col-lg-8 col-xl-6 spaced pb-0">
+            <ButtonsMenu
+              buttons={[
+                {
+                  href: "..",
+                  label: "Retour aux articles",
+                  color: colors.purple,
+                },
+              ]}
+            />
+          </ContentRowWithHeader>
+          <ContentRowWithHeader
+            className="bg-white pt-0"
+            header={{ level: 1, content: title }}
+          >
+            <>
               <p>
                 Les ZUMS étaient comme nous avant ...
                 <br />
@@ -40,8 +55,8 @@ export default function () {
                 </strong>
                 . Et de là, ils sont partis conquérir tout l&#x27;univers.
               </p>
-            </div>
-          </div>
+            </>
+          </ContentRowWithHeader>
           <ContentRowWithHeader
             header={{
               level: 2,
