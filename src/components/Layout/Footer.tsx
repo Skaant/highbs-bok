@@ -46,8 +46,8 @@ export function Footer() {
           </div>
         </div>
         <div className="col-12 col-md-6 col-xl-4">
-          <div className="mx-auto px-5 pt-5 pt-md-3 pb-3">
-            <p className="h4">HIGHBS-BOK 2021</p>
+          <div className="mx-auto px-5 py-3">
+            <p className="h4 my-4">HIGHBS-BOK 2021</p>
             <p>
               Livret et site par Romaric Ruga (aka.{" "}
               <a href="https://imrok.fr">IMROK</a>

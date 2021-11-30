@@ -14,7 +14,7 @@ export function ContentRowWithHeader({
   children?: ReactElement
 }) {
   return (
-    <div id={id} className={`row px-4 ${className || ""}`}>
+    <div id={id} className={`row px-5 ${className || ""}`}>
       <div className="col-12 col-md-10 col-lg-8 col-xl-6">
         {header &&
           ("element" in header ? (
