@@ -9,7 +9,7 @@ export type ArticleData = {
 const articles: ArticleData[] = [
   {
     slug: "un-monde-sans-mort",
-    date: "2021-11-28",
+    date: "2021-11-26",
     title: "Un monde sans mort",
     description:
       "Dans la société des ZUMS, il n'y a plus de mort ni de tristesse.",

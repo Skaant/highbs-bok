@@ -4,11 +4,12 @@ import { colors } from "../../../data/colors"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import { ExtraitAcheterCTA } from "../../components/_ctas/ExtraitAcheterCTA"
 import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
 import "../../styles/global.scss"
 
 export default function () {
-  const { slug, title } = articles[0]
+  const { slug, title, date } = articles[0]
   return (
     <Layout pageId={slug}>
       <>
@@ -16,20 +17,22 @@ export default function () {
         <div className="container-fluid px-0">
           <ContentRowWithHeader className="col-12 col-md-10 col-lg-8 col-xl-6 spaced pb-0">
             <ButtonsMenu
+              className="mt-0"
               buttons={[
                 {
-                  href: "..",
+                  href: "./",
                   label: "Retour aux articles",
                   color: colors.purple,
                 },
               ]}
             />
           </ContentRowWithHeader>
-          <ContentRowWithHeader
-            className="bg-white pt-0"
-            header={{ level: 1, content: title }}
-          >
-            <>
+          <div className="row px-4 bg-white">
+            <div className="col-12 col-md-10 col-lg-8 col-xl-6">
+              <h1 className="my-0">{title}</h1>
+              <p className="mb-6 font-size-initial">
+                Publié le {date.split("-").reverse().join("/")}
+              </p>
               <p>
                 Les ZUMS étaient comme nous avant ...
                 <br />
@@ -47,6 +50,10 @@ export default function () {
               </p>
               <figure>
                 <img src="/images/articles/0/zums-connectes-au-hol-ong.png" />
+                <figcaption>
+                  On peut explorer les souvenirs des autres, et tout ceux jamais
+                  eu ... Suffit d'être patient.
+                </figcaption>
               </figure>
               <p>
                 Pour accompagner leur désir de croissance, ils ont aussi{" "}
@@ -55,8 +62,8 @@ export default function () {
                 </strong>
                 . Et de là, ils sont partis conquérir tout l&#x27;univers.
               </p>
-            </>
-          </ContentRowWithHeader>
+            </div>
+          </div>
           <ContentRowWithHeader
             header={{
               level: 2,
@@ -84,6 +91,10 @@ export default function () {
               </p>
               <figure>
                 <img src="/images/articles/0/sketch-zum-data-et-ongs.png" />
+                <figcaption>
+                  Chez les ZUMS, l'activité principale est la création d'idées
+                  pour enrichir le HOL-ONG, le réseau de conscience collective.
+                </figcaption>
               </figure>
               <p>
                 Si on a un problème,{" "}
@@ -127,6 +138,10 @@ export default function () {
               </p>
               <figure>
                 <img src="/images/articles/0/zums-avec-hologrammes.png" />
+                <figcaption>
+                  Les interfaces ZUMS sont de plus en plus proche du langage
+                  conceptuel.
+                </figcaption>
               </figure>
               <p>
                 Si le projet vous plaît,{" "}
@@ -136,6 +151,7 @@ export default function () {
                 et partager cette page ou lien de la campagne Ulule. Ça
                 m&#x27;aiderait beaucoup !{" "}
               </p>
+              <ExtraitAcheterCTA />
             </>
           </ContentRowWithHeader>
         </div>
