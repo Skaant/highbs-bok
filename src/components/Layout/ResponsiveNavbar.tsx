@@ -27,7 +27,7 @@ export default function ResponsiveNavbar({ pageId }) {
                 Pré-commandes Ulule
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a
                 className={`nav-link btn ${
                   pageId === pages.ACHETER ? "btn-deep" : "btn-purple"
@@ -36,7 +36,7 @@ export default function ResponsiveNavbar({ pageId }) {
               >
                 Acheter un livret
               </a>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a
                 className={`nav-link btn ${
