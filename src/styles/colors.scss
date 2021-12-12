@@ -27,6 +27,7 @@ $turquoize: #00ffab;
 $theme-colors: map-merge(
   $theme-colors,
   (
+    "white": $white,
     "gold": $gold,
     "lightGold": $lightGold,
     "blue": $blue,
