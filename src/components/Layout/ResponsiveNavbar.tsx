@@ -1,7 +1,13 @@
 import React from "react"
 import { pages } from "../../../data/pages"
 
-export default function ResponsiveNavbar({ pageId }) {
+export default function ResponsiveNavbar({
+  pageId,
+  alternativeColor = false,
+}: {
+  pageId: string
+  alternativeColor?: boolean
+}) {
   return (
     <nav className="navbar navbar-expand-md position-absolute w-100">
       <div className="container-fluid justify-content-between">
@@ -21,7 +27,9 @@ export default function ResponsiveNavbar({ pageId }) {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a
-                className="nav-link btn btn-purple my-2 mx-sm-2 px-3 rounded-pill shadow"
+                className={`nav-link btn ${
+                  alternativeColor ? "btn-gold" : "btn-purple"
+                } my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href={process.env.ULULE_VOL1_URL}
               >
                 Pré-commandes Ulule
@@ -40,7 +48,11 @@ export default function ResponsiveNavbar({ pageId }) {
             <li className="nav-item">
               <a
                 className={`nav-link btn ${
-                  pageId === pages.L_UNIVERS ? "btn-deep" : "btn-outline-purple"
+                  alternativeColor
+                    ? "btn-light"
+                    : pageId === pages.L_UNIVERS
+                    ? "btn-deep"
+                    : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/l-univers"
               >
@@ -50,7 +62,11 @@ export default function ResponsiveNavbar({ pageId }) {
             <li className="nav-item">
               <a
                 className={`nav-link btn ${
-                  pageId === pages.BLOG ? "btn-deep" : "btn-outline-purple"
+                  alternativeColor
+                    ? "btn-light"
+                    : pageId === pages.BLOG
+                    ? "btn-deep"
+                    : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/blog"
               >
@@ -60,7 +76,11 @@ export default function ResponsiveNavbar({ pageId }) {
             <li className="nav-item">
               <a
                 className={`nav-link btn ${
-                  pageId === pages.A_PROPOS ? "btn-deep" : "btn-outline-purple"
+                  alternativeColor
+                    ? "btn-light"
+                    : pageId === pages.A_PROPOS
+                    ? "btn-deep"
+                    : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/a-propos"
               >

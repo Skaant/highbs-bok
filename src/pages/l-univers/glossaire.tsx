@@ -35,7 +35,7 @@ export default function Glossaire() {
                 Il y a <b>quelques mots étranges</b>, écrits <b>en majuscule</b>
                 , dans l'HIGHBS-BOK.{" "}
                 <a
-                  href={`/a-propos/${A_PROPOS_SECTIONS_ID.POURQUOI_UTILISER_DES_MOTS_BIZARRES}`}
+                  href={`/a-propos#${A_PROPOS_SECTIONS_ID.POURQUOI_UTILISER_DES_MOTS_BIZARRES}`}
                 >
                   Pourquoi ?
                 </a>

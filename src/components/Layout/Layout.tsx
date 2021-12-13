@@ -6,14 +6,19 @@ import ResponsiveNavbar from "./ResponsiveNavbar"
 export function Layout({
   pageId,
   children,
+  navbarAlternativeColor,
 }: {
   pageId?: string
   children: ReactElement
+  navbarAlternativeColor?: boolean
 }) {
   return (
     <>
       <div id="layout">
-        <ResponsiveNavbar pageId={pageId} />
+        <ResponsiveNavbar
+          pageId={pageId}
+          alternativeColor={navbarAlternativeColor}
+        />
         {children}
         <Footer />
       </div>
