@@ -15,15 +15,10 @@ export function ExtraitAcheterCTA({
       className="mt-5"
       buttons={[
         {
-          href: process.env.ULULE_VOL1_URL,
-          color: primaryBtnColor,
-          label: "Pré-commander sur Ulule",
-        },
-        /* {
           href: "/acheter",
           color: primaryBtnColor,
           label: "Acheter un livret",
-        }, */
+        },
         {
           href: EXTRACT_DOWNLOAD_LINK,
           color: secondaryBtnColor,

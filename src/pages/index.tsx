@@ -64,16 +64,6 @@ export default function Home() {
                 conquérir l'espace{" "}
                 <b>à la recherche des idées les plus hautes perchées</b>.
               </p>
-              <ButtonsMenu
-                className="mt-5"
-                buttons={[
-                  {
-                    href: process.env.ULULE_VOL1_URL,
-                    color: colors.purple,
-                    label: "En ce moment, en pré-commande sur Ulule",
-                  },
-                ]}
-              />
             </>
           </ContentRowWithHeader>
           <QuoteRow
@@ -103,9 +93,13 @@ export default function Home() {
           >
             <>
               <p>
-                Le <b>premier épisode de l'aventure</b>, le volume 1 de
-                l'HIGHBS-BOK : L'histoire des ZUMS, est maintenant disponible{" "}
-                <b>en pré-commande sur Ulule</b>.
+                Après{" "}
+                <a href="https://fr.ulule.com/highbs-bok-volume-1/">
+                  une campagne de pré-commandes réussie sur Ulule
+                </a>
+                , le <b>livret est maintenant disponible à l'achat</b> via
+                Stripe. <b>Différentes options sont disponibles</b> sur la page{" "}
+                <a href="/acheter">Acheter un livret</a>.
               </p>
               <p>
                 Vous pouvez également télécharger sur ce site{" "}
@@ -197,8 +191,10 @@ export default function Home() {
                 motif absolu.
               </p>
               <p>
-                Afin de rendre <b>vivant</b> cet ouvrage et le <b>processus de création</b> qui y mène,{" "}
-                je tiens un blog où je publie <b>des articles sur l'univers et la philosophie</b> de l'HIGHBS-BOK.
+                Afin de rendre <b>vivant</b> cet ouvrage et le{" "}
+                <b>processus de création</b> qui y mène, je tiens un blog où je
+                publie <b>des articles sur l'univers et la philosophie</b> de
+                l'HIGHBS-BOK.
               </p>
               <ButtonsMenu
                 className="mt-5"
@@ -212,7 +208,7 @@ export default function Home() {
                     href: process.env.ULULE_VOL1_URL,
                     color: colors.light,
                     label: "Pré-commander sur Ulule",
-                  }
+                  },
                 ]}
               />
             </>
