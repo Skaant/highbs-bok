@@ -1,16 +1,30 @@
 import React from "react"
-import { colors } from "../../data/colors"
 import { pages } from "../../data/pages"
-import { ButtonsMenu } from "../components/ButtonsMenu"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
+import BuyOptions from "../components/_pages/acheter/BuyOptions"
 import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
-import { EXTRACT_DOWNLOAD_LINK } from "../config"
 import "../styles/global.scss"
 
 const pageId = pages.ACHETER
 const title = "Acheter le livret"
+
+function ContentDedicace() {
+  return (
+    <>
+      1 exemplaire <b>DÉDICACÉ</b> de l'HIGHBS-BOK volume 1,
+    </>
+  )
+}
+
+function ContentHolographique() {
+  return (
+    <>
+      1 sticker <b>HOLOGRAPHIQUE</b> joyau HIGHBS.
+    </>
+  )
+}
 
 export default function () {
   return (
@@ -33,7 +47,7 @@ export default function () {
               level: 2,
               content: "Un beau petit ouvrage",
             }}
-            className="pt-0"
+            className="pt-0 pb-5"
           >
             <>
               <p>
@@ -46,30 +60,132 @@ export default function () {
                 <a href="/l-univers/couleurs">et riches de sens</a>, sont{" "}
                 <b>superbement mises en valeur</b> par le support papier.
               </p>
-              <p id="soon">
-                Pour <b>vous procurer un exemplaire</b> du volume 1 (48 pages)
-                et commencer la lecture, il vous faudra encore{" "}
-                <b>être patient</b> : la première impression sera{" "}
-                <b>disponible en Janvier 2022</b> !
-              </p>
-              <p>
-                Vous pouvez déjà <b>pré-commander</b> votre exemplaire en vous
-                rendant <b>sur la page Ulule</b> de l'HIGHBS-BOK :)
-              </p>
-              <ButtonsMenu
-                buttons={[
-                  {
-                    href: process.env.ULULE_VOL1_URL,
-                    label: "Lien vers les pré-commandes Ulule",
-                    color: colors.purple,
-                    disabled: true,
-                  },
-                ]}
-                className="mt-5"
-              />
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
+            header={{
+              level: 2,
+              content: "Choisissez l'option qui vous convient",
+            }}
+            className="bg-gold"
+          >
+            <>
+              <p>
+                Les commandes sont possible via la{" "}
+                <b>solution de paiement sécurisée</b> Stripe, mais les
+                expéditions ne commenceront qu'aux alentours du 20 Janvier 2022.
+              </p>
+              <p>
+                <b>Plusieurs options d'achat sont disponibles</b>, agrémentées
+                de sitckers et éventuellement d'une dédicace.
+              </p>
+              <p>
+                En France métropolitaine, pour toutes les options,{" "}
+                <b>la livraison est offerte</b>.
+              </p>
+              <BuyOptions
+                options={[
+                  {
+                    link: "https://buy.stripe.com/dR6dT37AGdkf5UIfZ1",
+                    title: "Un livret HIGHBS-BOK 1 + 1 sticker",
+                    content: [
+                      "1 exemplaire de l'HIGHBS-BOK volume 1,",
+                      "1 sticker de ZUM portant du PSIK.",
+                    ],
+                    details: [
+                      "1 sticker ZUM portant du PSIK (3 x 5 cm environ) aléatoire parmi les trois disponibles.",
+                    ],
+                    label: "Acheter pour 15€",
+                  },
+                  {
+                    link: "https://buy.stripe.com/fZe8yJ4oudkfere3ce",
+                    title: "Un livret HIGHBS-BOK 1 dédicacé + 2 stickers",
+                    content: [
+                      ContentDedicace,
+                      ContentHolographique,
+                      "1 sticker de ZUM portant du PSIK.",
+                    ],
+                    details: ["Le sticker joyau HIGHBS fait 7 cm de diamètre."],
+                    label: "Disponible pour 25€",
+                  },
+                  {
+                    link: "https://buy.stripe.com/5kA8yJ5sy0xtdnabIM",
+                    title: "Deux livrets HIGHBS-BOK 1 + 3 stickers",
+                    content: [
+                      "2 exemplaires de l'HIGHBS-BOK volume 1,",
+                      "2 stickers de ZUMS portant du PSIK,",
+                      "1 sticker de plante-idée.",
+                    ],
+                    details: [
+                      "2 stickers ZUMS aléatoires (mais différents) parmi les trois modèles dispo.",
+                      "Le sticker plante-idée mesure 4.4 x 4 cm.",
+                    ],
+                    label: "Disponible pour 28€",
+                  },
+                  {
+                    link: "https://buy.stripe.com/8wM8yJcV0cgbereeUZ",
+                    title: "Trois livrets HIGHBS-BOK 1 + 5 stickers",
+                    content: [
+                      "3 exemplaires de l'HIGHBS-BOK volume 1,",
+                      "Les 3 stickers de ZUMS portant du PSIK,",
+                      "1 sticker plante-idée,",
+                      "1 sticker plante-PSIK.",
+                    ],
+                    details: [
+                      "Un sticker ZUM de chacun des 3 modèles dispo.",
+                      "Le sticker plante-PSIK mesure 4.4 x 4 cm.",
+                    ],
+                    label: "Disponible pour 40€",
+                  },
+                  {
+                    link: "https://buy.stripe.com/6oE16h7AGcgbere14c",
+                    title:
+                      "Deux livrets HIGHBS-BOK 1, dont 1 dédicacé + 6 stickers",
+                    content: [
+                      ContentDedicace,
+                      ContentHolographique,
+                      "1 autre exemplaire de l'HIGHBS-BOK volume 1,",
+                      "3 stickers de ZUMS portant du PSIK,",
+                      "2 stickers plante-idée,",
+                      "2 stickers plante-PSIK,",
+                    ],
+                    details: ["Un sticker ZUM de chacun des 3 modèles dispo."],
+                    label: "Disponible pour 42€",
+                  },
+                  {
+                    link: "https://buy.stripe.com/cN24itbQWa83ere006",
+                    title: "Quatre livrets HIGHBS-BOK 1 + 8 stickers",
+                    content: [
+                      "4 exemplaires de l'HIGHBS-BOK volume 1,",
+                      "4 stickers de ZUMS portant du PSIK,",
+                      "2 stickers plante-idée,",
+                      "2 stickers plante-PSIK.",
+                    ],
+                    details: [
+                      "Au moins un sticker ZUM de chacun des trois modèles.",
+                    ],
+                    label: "Disponible pour 52€",
+                  },
+                  {
+                    link: "https://buy.stripe.com/fZe16hcV0gwr96U007",
+                    title: "Cinq livrets HIGHBS-BOK 1 + 10 stickers",
+                    content: [
+                      "5 exemplaires de l'HIGHBS-BOK volume 1,",
+                      ContentHolographique,
+                      "5 stickers de ZUMS portant du PSIK,",
+                      "2 stickers plante-idée,",
+                      "2 stickers plante-PSIK,",
+                    ],
+                    details: [
+                      "Au moins un sticker ZUM de chacun des trois modèles.",
+                    ],
+                    label: "Disponible pour 64€",
+                  },
+                ]}
+              />
+            </>
+          </ContentRowWithHeader>
+          {/* <ContentRowWithHeader
             header={{
               level: 2,
               content: "Bientôt une version électronique ?",
@@ -99,7 +215,7 @@ export default function () {
                 className="mt-5"
               />
             </>
-          </ContentRowWithHeader>
+          </ContentRowWithHeader> */}
         </div>
       </>
     </Layout>

@@ -28,23 +28,13 @@ export default function ResponsiveNavbar({
             <li className="nav-item">
               <a
                 className={`nav-link btn ${
-                  alternativeColor ? "btn-gold" : "btn-purple"
-                } my-2 mx-sm-2 px-3 rounded-pill shadow`}
-                href={process.env.ULULE_VOL1_URL}
-              >
-                Pré-commandes Ulule
-              </a>
-            </li>
-            {/* <li className="nav-item">
-              <a
-                className={`nav-link btn ${
                   pageId === pages.ACHETER ? "btn-deep" : "btn-purple"
                 }  my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/acheter"
               >
                 Acheter un livret
               </a>
-            </li> */}
+            </li>
             <li className="nav-item">
               <a
                 className={`nav-link btn ${
