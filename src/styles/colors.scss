@@ -42,3 +42,9 @@ $theme-colors: map-merge(
 );
 
 $utilities-bg-colors: $theme-colors;
+$utilities-text-colors: map-merge(
+  $theme-colors,
+  (
+    "gold": $gold,
+  )
+);

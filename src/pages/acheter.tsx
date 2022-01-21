@@ -1,4 +1,5 @@
 import React from "react"
+import { colors } from "../../data/colors"
 import { pages } from "../../data/pages"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
@@ -13,7 +14,8 @@ const title = "Acheter le livret"
 function ContentDedicace() {
   return (
     <>
-      1 exemplaire <b>DÉDICACÉ</b> de l'HIGHBS-BOK volume 1,
+      1 exemplaire <b className="text-gold">DÉDICACÉ</b> de l'HIGHBS-BOK volume
+      1,
     </>
   )
 }
@@ -21,7 +23,7 @@ function ContentDedicace() {
 function ContentHolographique() {
   return (
     <>
-      1 sticker <b>HOLOGRAPHIQUE</b> joyau HIGHBS.
+      1 sticker <b className="text-gold">HOLOGRAPHIQUE</b> joyau HIGHBS,
     </>
   )
 }
@@ -107,6 +109,9 @@ export default function () {
                     ],
                     details: ["Le sticker joyau HIGHBS fait 7 cm de diamètre."],
                     label: "Disponible pour 25€",
+                    bgColor: colors.deep,
+                    textColor: colors.light,
+                    accentColor: colors.gold,
                   },
                   {
                     link: "https://buy.stripe.com/5kA8yJ5sy0xtdnabIM",
@@ -151,6 +156,9 @@ export default function () {
                     ],
                     details: ["Un sticker ZUM de chacun des 3 modèles dispo."],
                     label: "Disponible pour 42€",
+                    bgColor: colors.deep,
+                    textColor: colors.light,
+                    accentColor: colors.gold,
                   },
                   {
                     link: "https://buy.stripe.com/cN24itbQWa83ere006",
@@ -180,6 +188,9 @@ export default function () {
                       "Au moins un sticker ZUM de chacun des trois modèles.",
                     ],
                     label: "Disponible pour 64€",
+                    bgColor: colors.deep,
+                    textColor: colors.light,
+                    accentColor: colors.gold,
                   },
                 ]}
               />
