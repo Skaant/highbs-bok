@@ -74,9 +74,7 @@ export default function Legals() {
                 <dt>Adresse de courrier électronique</dt>
                 <dd>romaric.ruga@gmail.com</dd>
                 <dt>Hébèrgement du site</dt>
-                <dd>
-                  OVH, 2 rue Kellermann, 59100 Roubaix (+33-8-203-203-63)
-                </dd>
+                <dd>OVH, 2 rue Kellermann, 59100 Roubaix (+33-8-203-203-63)</dd>
               </dl>
             </>
           </ContentRowWithHeader>
@@ -92,8 +90,8 @@ export default function Legals() {
             <>
               <p className="small mb-5">
                 <a href="https://www.service-public.fr/professionnels-entreprises/vosdroits/F22672">
-                  Quelles sont les mentions obligatoires sur un livre papier ou numérique ?
-                  (service-public.fr)
+                  Quelles sont les mentions obligatoires sur un livre papier ou
+                  numérique ? (service-public.fr)
                 </a>
               </p>
               <dl>
@@ -101,18 +99,22 @@ export default function Legals() {
                 <dd>Romaric Ruga, 56 rue de Sillery, 51100 Reims</dd>
                 <dt>Nom (ou raison sociale) et adresse de l'imprimeur</dt>
                 <dt>Prix de vente en euros</dt>
-                <dd>16 €</dd>
-                <dt>Date du dépôt légal</dt>
-                <dt>Date de fin du tirage d'impression</dt>
+                <dd>10 € (ou 15€ avec frais de port compris)</dd>
                 <dt>ISBN</dt>
+                <dd>979-10-699-8247-5</dd>
+                <dt>Date de fin du tirage d'impression</dt>
+                <dd>07/01/2022</dd>
+                <dt>Date du dépôt légal</dt>
+                <dd>19/01/2022</dd>
               </dl>
             </>
           </ContentRowWithHeader>
-          <ContentRowWithHeader
+          {/** <ContentRowWithHeader
             id={sectionsId.MENTIONS_OBLIGATOIRES_ENTREPRISE}
             header={{
               level: 2,
-              content: sectionsData[sectionsId.MENTIONS_OBLIGATOIRES_ENTREPRISE]
+              content:
+                sectionsData[sectionsId.MENTIONS_OBLIGATOIRES_ENTREPRISE],
             }}
             className="py-5 bg-lightDeep"
           >
@@ -125,6 +127,7 @@ export default function Legals() {
               </dl>
             </>
           </ContentRowWithHeader>
+        */}
         </div>
       </>
     </Layout>

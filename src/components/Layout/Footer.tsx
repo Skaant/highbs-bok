@@ -1,4 +1,5 @@
 import React from "react"
+import articles from "../../../data/articles"
 
 export function Footer() {
   return (
@@ -32,11 +33,13 @@ export function Footer() {
               <li>
                 <a href="/blog">Blog</a>
                 <ul className="list-unstyled ps-4 py-3">
-                  <li>
-                    <a href="/blog/un-monde-sans-mort">
-                      26/11/2021 | Un monde sans mort
-                    </a>
-                  </li>
+                  {articles.map(article => (
+                    <li key={article.slug}>
+                      <a href={`/blog/${article.slug}`}>
+                        {article.date} | {article.title}
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </li>
               <li>
