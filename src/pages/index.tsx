@@ -11,6 +11,7 @@ import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAb
 import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
 import { pages } from "../../data/pages"
 import MiniRowAbsolute from "../components/_rows/MiniRowAbsolute"
+import { EXTRACT_DOWNLOAD_LINK } from "../config"
 
 const pageId = pages.HOME
 
@@ -146,8 +147,13 @@ export default function Home() {
                 buttons={[
                   {
                     href: "/l-univers",
-                    color: colors.purple,
+                    color: colors.gold,
                     label: "Découvrez l'univers des ZUMS",
+                  },
+                  {
+                    href: EXTRACT_DOWNLOAD_LINK,
+                    color: colors.purple,
+                    label: "Téléchargez l'extrait",
                   },
                 ]}
               />
@@ -205,9 +211,9 @@ export default function Home() {
                     label: "Accéder au blog",
                   },
                   {
-                    href: process.env.ULULE_VOL1_URL,
+                    href: "/acheter",
                     color: colors.light,
-                    label: "Pré-commander sur Ulule",
+                    label: "Acheter le livret",
                   },
                 ]}
               />
@@ -243,8 +249,13 @@ export default function Home() {
                 buttons={[
                   {
                     href: "/a-propos",
-                    color: colors.purple,
+                    color: colors.gold,
                     label: "En savoir plus sur les motivations",
+                  },
+                  {
+                    href: EXTRACT_DOWNLOAD_LINK,
+                    color: colors.purple,
+                    label: "Téléchargez l'extrait",
                   },
                 ]}
               />
