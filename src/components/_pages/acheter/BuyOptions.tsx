@@ -32,7 +32,7 @@ function BuyOptions({ options }: BuyOptionsProps) {
           <li
             className={`${
               bgColor ? `bg-${bgColor} ` : "bg-light "
-            }px-5 py-4 rounded mt-5 shadow`}
+            }px-4 px-md-5 py-1 py-md-4 rounded mt-5 shadow`}
           >
             <a
               href={link}
@@ -41,25 +41,32 @@ function BuyOptions({ options }: BuyOptionsProps) {
               } text-decoration-none`}
             >
               <h3
-                className={`my-5 ${accentColor ? `text-${accentColor}` : ""}`}
+                className={`mt-5 mb-4 mb-md-5 ${
+                  accentColor ? `text-${accentColor}` : ""
+                }`}
               >
                 {title}
               </h3>
               <ul>
                 {content.map((item, index) => (
-                  <li key={index}>
+                  <li key={index} className="fit-small">
                     {typeof item === "string" ? item : item({})}
                   </li>
                 ))}
               </ul>
               {details &&
                 details.map((item, index) => (
-                  <p key={index} className={index ? "mt-3" : "mt-5"}>
+                  <p
+                    key={index}
+                    className={`fit-small ${
+                      index ? "mt-2 mt-md-3" : "mt-4 mt-md-5"
+                    }`}
+                  >
                     <i>{item}</i>
                   </p>
                 ))}
               <ButtonsMenu
-                className="mt-5"
+                className="mt-4 mt-md-5"
                 buttons={[
                   {
                     href: link,

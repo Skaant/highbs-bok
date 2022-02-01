@@ -85,6 +85,15 @@ td {
   letter-spacing: 0.025rem;
 }
 
+@media (max-width: 767px /** `md` - 1px */) {
+  p,
+  li {
+    &.fit-small {
+      font-size: 1.05rem;
+    }
+  }
+}
+
 .mb-6 {
   margin-bottom: 5rem;
 }
