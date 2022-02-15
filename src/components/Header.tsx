@@ -7,7 +7,7 @@ export function Header({
   metas,
 }: {
   title: string
-  metas?: { [key: string]: any }[]
+  metas?: { [key: string]: string }[]
 }) {
   const data = useStaticQuery(
     graphql`
