@@ -33,6 +33,14 @@ const articles: ArticleData[] = [
       "Maintenant, mon attention est tournée vers le volume 2.",
     tags: ["ulule", "site"],
   },
+  {
+    slug: "tout-un-ou-toute-une",
+    date: "2022-02-15",
+    title: "Tout-un ou toute-une ?",
+    description:
+      "Le tout-un est-il masculin ou féminin ? Au regard de son exceptionelle abstraction, cette question a-t'elle même un sens ?",
+    tags: ["tout-un", "dualité", "abstraction", "hol-adin"],
+  },
 ]
 
 export default articles
