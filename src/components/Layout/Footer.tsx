@@ -33,7 +33,7 @@ export function Footer() {
               <li>
                 <a href="/blog">Blog</a>
                 <ul className="list-unstyled ps-4 py-3">
-                  {articles.map(article => (
+                  {articles.reverse().map(article => (
                     <li key={article.slug}>
                       <a href={`/blog/${article.slug}`}>
                         {article.date} | {article.title}
