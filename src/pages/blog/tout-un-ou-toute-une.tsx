@@ -91,8 +91,9 @@ export default function () {
                 src="/images/articles/3/triple-deux-un.jpg"
                 caption={() => (
                   <>
-                    Les deux forment un triplé. Mais une fois résorbée la
-                    dualité,{" "}
+                    Les deux forment un triplé.
+                    <br />
+                    Une fois résorbée la dualité,{" "}
                     <b>on ne peut plus rien dire que le un ne soit pas</b>.
                   </>
                 )}
@@ -128,7 +129,7 @@ export default function () {
           >
             <>
               <p>
-                Bref, <b>féminin et masculin se dissipe dans le tout-un</b>
+                Bref, <b>féminin et masculin se dissipe dans le tout-un</b>{" "}
                 puisqu'il est l'un, l'autre, les deux et ni l'un ni l'autre.
               </p>
               <p>
@@ -247,10 +248,7 @@ export default function () {
                 Pour <b>acquérir un exemplaire de l'HIGHBS-BOK volume 1</b>,
                 rendez-vous sur <a href="/acheter">la page Acheter {":D"}</a>
               </p>
-              <ExtraitAcheterCTA
-                primaryBtnColor={colors.purple}
-                secondaryBtnColor={colors.light}
-              />
+              <ExtraitAcheterCTA secondaryBtnColor={colors.light} />
             </>
           </ContentRowWithHeader>
         </div>
