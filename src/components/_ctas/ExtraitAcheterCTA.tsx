@@ -4,8 +4,8 @@ import { EXTRACT_DOWNLOAD_LINK } from "../../config"
 import { ButtonsMenu } from "../ButtonsMenu"
 
 export function ExtraitAcheterCTA({
-  primaryBtnColor = colors.gold,
-  secondaryBtnColor = colors.purple,
+  primaryBtnColor = colors.purple,
+  secondaryBtnColor = colors.gold,
 }: {
   primaryBtnColor?: colors
   secondaryBtnColor?: colors
