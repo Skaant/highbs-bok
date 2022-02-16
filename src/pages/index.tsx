@@ -120,7 +120,10 @@ export default function Home() {
               <p className="mb-4">
                 Avec leurs puissants alliés : le PSIK, la vie et GRAND-ARBRE,{" "}
                 <b>les ZUMS, cette espèce de singes vraiment brillants,</b> sont
-                partis jusqu'aux confins de l'univers, et sont revenus{" "}
+                partis jusqu'aux confins de l'univers.
+              </p>
+              <p>
+                Puis ils sont revenus{" "}
                 <b>
                   pour tenter de réaliser l'HIGHBS et de manifester le{" "}
                   <span className="bg-gold">tout-un</span>
@@ -134,7 +137,10 @@ export default function Home() {
                   susciter des idées pour s'extraire du douloureux cycle des
                   naissances et des morts
                 </b>
-                . La cible de leur désir n'est rien de moins que ...{" "}
+                .
+              </p>
+              <p>
+                La cible de leur désir n'est rien de moins que ...{" "}
                 <b>se fixer dans une posture d'éternelle harmonie !</b>
               </p>
               <p>
@@ -147,12 +153,12 @@ export default function Home() {
                 buttons={[
                   {
                     href: "/l-univers",
-                    color: colors.gold,
+                    color: colors.purple,
                     label: "Découvrez l'univers des ZUMS",
                   },
                   {
                     href: EXTRACT_DOWNLOAD_LINK,
-                    color: colors.purple,
+                    color: colors.light,
                     label: "Téléchargez l'extrait",
                   },
                 ]}
@@ -191,8 +197,10 @@ export default function Home() {
               </p>
               <p>
                 L'HIGHBS-BOK est un manifeste{" "}
-                <b>pour l'ouverture d'esprit "par le haut"</b>. Dans cette
-                histoire, les ZUMS doivent conceptualiser{" "}
+                <b>pour l'ouverture d'esprit "par le haut"</b>.
+              </p>
+              <p>
+                Dans cette histoire, les ZUMS doivent conceptualiser{" "}
                 <b>toutes les idées</b> pour espérer <b>dériver l'HIGHBS</b>, le
                 motif absolu.
               </p>
@@ -233,6 +241,8 @@ export default function Home() {
             <>
               <p>
                 L'écriture de l'HIGHBS-BOK a commencé il y a plusieurs années.
+              </p>
+              <p>
                 Synthétisant{" "}
                 <b>
                   des bribes de textes philosophiques et spirituels, ainsi que
@@ -270,15 +280,19 @@ export default function Home() {
           >
             <>
               <p>
-                Enfin, je publie <b>la première version</b> du premier livret.{" "}
+                Enfin, je publie <b>la première version</b> du volume 1.
+              </p>
+              <p>
                 <b>Pour pouvoir le partager</b>, pas parce que je le pense
-                "terminé". <b>Que cette notion n'est pas cours ici ...</b>
+                "terminé"<b>: que cette notion n'est pas cours ici.</b>
               </p>
               <p>
                 Avec <b>le temps et les retours</b> je souhaite continuer d'en
-                améliorer <b>la forme et le sens</b>. Puisse-t'il même être{" "}
-                <b>recyclé</b> par d'autres ! C'est finalement le but de toutes
-                les idées.
+                améliorer <b>la forme et le sens</b>.
+              </p>
+              <p>
+                Puisse-t'il même être <b>recyclé</b> par d'autres ! C'est
+                finalement le but de toutes les idées.
               </p>
               <p>
                 Mais maintenant mon but est bien de pouvoir montrer
