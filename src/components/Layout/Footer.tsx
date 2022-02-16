@@ -33,13 +33,15 @@ export function Footer() {
               <li>
                 <a href="/blog">Blog</a>
                 <ul className="list-unstyled ps-4 py-3">
-                  {[...articles].reverse().map(article => (
-                    <li key={article.slug}>
-                      <a href={`/blog/${article.slug}`}>
-                        {article.date} | {article.title}
-                      </a>
-                    </li>
-                  ))}
+                  {articles
+                    .sort((a, b) => (a.date < b.date ? 1 : -1))
+                    .map(article => (
+                      <li key={article.slug}>
+                        <a href={`/blog/${article.slug}`}>
+                          {article.date} | {article.title}
+                        </a>
+                      </li>
+                    ))}
                 </ul>
               </li>
               <li>
