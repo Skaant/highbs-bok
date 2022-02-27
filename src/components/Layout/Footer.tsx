@@ -38,7 +38,10 @@ export function Footer() {
                     .map(article => (
                       <li key={article.slug}>
                         <a href={`/blog/${article.slug}`}>
-                          {article.date} | {article.title}
+                          <span className="badge rounded-pill bg-light text-dark me-2">
+                            {article.date.split("-").reverse().join("/")}
+                          </span>
+                          {article.title}
                         </a>
                       </li>
                     ))}
