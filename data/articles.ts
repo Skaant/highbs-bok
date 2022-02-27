@@ -13,7 +13,7 @@ const articles: ArticleData[] = [
     title: "On ne meurt pas vraiment chez les ZUMS",
     description:
       "Dans la société des ZUMS, il n'y a plus de mort ni de tristesse.",
-    tags: ["zums", "immortalité"],
+    tags: ["zums", "immortalité", "univers"],
   },
   {
     slug: "avoir-plus-d-idees",
@@ -22,7 +22,7 @@ const articles: ArticleData[] = [
       "Le PSIK : qu'est-ce qui est plus précieux qu'avoir de nouvelles idées ?",
     description:
       "Dans la société des ZUMS, ce qui permet de créer plus d'idées est très valorisé.",
-    tags: ["zums", "psik", "psychédéliques"],
+    tags: ["zums", "psik", "idées", "psychédéliques"],
   },
   {
     slug: "campagne-ulule-terminee-la-suite",
@@ -31,7 +31,7 @@ const articles: ArticleData[] = [
     description:
       "Ma campagne Ulule s'est achevée avec succès et les contreparties ont été expédiées. " +
       "Maintenant, mon attention est tournée vers le volume 2.",
-    tags: ["ulule", "site"],
+    tags: ["ulule", "volume 2", "site"],
   },
   {
     slug: "tout-un-ou-toute-une",
