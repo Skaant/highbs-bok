@@ -29,7 +29,7 @@ export default function () {
           ]}
         />
         <div className="container-fluid px-0">
-          <ContentRowWithHeader className="spaced pb-0 bg-lightGold" px="px-0">
+          <ContentRowWithHeader className="spaced pb-0 bg-lightBlue" px="px-0">
             <ButtonsMenu
               className="mt-0 px-0"
               buttons={[
@@ -41,20 +41,50 @@ export default function () {
               ]}
             />
           </ContentRowWithHeader>
-          <div className="row px-4 pt-5 bg-lightGold">
+          <div className="row px-4 pt-5 bg-lightBlue">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h1 className="my-0">{title}</h1>
+              <h1 className="my-0">
+                <span className="bg-gold">Tout-un</span> ou{" "}
+                <span className="bg-gold">tout-une</span> ?
+              </h1>
               <p className="mb-6 font-size-initial">
                 Publié le {date.split("-").reverse().join("/")}
+                {" · "}
+                {tags.length > 0 &&
+                  tags.map(tag => (
+                    <span
+                      key={tag}
+                      className={`badge rounded-pill ${
+                        tag === "tout-un" || tag === "hol-adin"
+                          ? "bg-gold text-dark"
+                          : "bg-purple"
+                      } mx-1`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
               </p>
               <p>
-                <b>Cette question très sérieuse m'a surpris.</b>
+                C'est une question qui m'a été posée avec le plus grand sérieux.
+              </p>
+              <p>
+                <b>
+                  Pourquoi le <span className="bg-gold">tout-un</span> n'est-il
+                  pas une <span className="bg-gold">tout-une</span> ?
+                </b>
+              </p>
+              <p>
+                Résumé : il est en <b>même temps</b> un, une, les deux, aucun.
               </p>
               <Figure
                 src="/images/articles/3/hol-adin-droplets.jpg"
                 caption={() => (
                   <>
-                    Une illustration du <b>tout-un dans l'HIGHBS-BOK</b>.
+                    Une illustration du{" "}
+                    <b>
+                      <span className="bg-gold">tout-un</span> dans l'HIGHBS-BOK
+                    </b>
+                    .
                     <br />
                     Consultable dans{" "}
                     <a href={EXTRACT_DOWNLOAD_LINK}>
@@ -65,13 +95,18 @@ export default function () {
                 )}
               />
               <p>
-                Pour moi, ça paraissait normal, <b>Presque évident.</b>
+                Pour moi, <b>ça paraissait normal</b>, presque évident.
                 <br />
                 Pourtant non.
               </p>
               <p>
-                Expliquer mon point de vue sur le sujet permet aussi de
-                s'intéresser à <i>l'apparente</i> <b>hiérarchie des motifs</b>.
+                Expliquer rapidement ce sujet permet aussi de s'intéresser à{" "}
+                <i>l'apparente hiérarchie des motifs</i>, et surtout de{" "}
+                <b>
+                  commencer à effleurer la nature du{" "}
+                  <span className="bg-gold">tout-un</span>
+                </b>
+                .
               </p>
             </div>
           </div>
@@ -113,7 +148,10 @@ export default function () {
                 Et au-dessus il y a ce qui <b>ne peut être nommé</b>:{" "}
                 <b>celui qui n'a pas d'attribut</b>.
               </p>
-              <p>Par tentative, je l'appelle tout-un.</p>
+              <p>
+                Par dépit/défaut, je l'appelle{" "}
+                <span className="bg-gold text-dark">tout-un</span>.
+              </p>
               <p>
                 Mais <b>que peut-on dire de lui qu'il ne soit et ne soit pas</b>{" "}
                 simultanément ?
@@ -129,7 +167,11 @@ export default function () {
           >
             <>
               <p>
-                Bref, <b>féminin et masculin se dissipe dans le tout-un</b>{" "}
+                Bref,{" "}
+                <b>
+                  féminin et masculin se dissipe dans le{" "}
+                  <span className="bg-gold">tout-un</span>
+                </b>{" "}
                 puisqu'il est l'un, l'autre, les deux et ni l'un ni l'autre.
               </p>
               <p>
@@ -137,7 +179,11 @@ export default function () {
                 <a href="/l-univers/glossaire">
                   <i>ces termes qui réinitialisent les mots</i>
                 </a>
-                , <b>je l'avais appelé HOL-ADIN</b>.
+                ,{" "}
+                <b>
+                  je l'avais appelé <span className="bg-gold">HOL-ADIN</span>
+                </b>
+                .
               </p>
               <p>
                 Toutefois, les premiers retours de lecture m'ont fait craindre
@@ -145,15 +191,20 @@ export default function () {
                 .
               </p>
               <p>
-                Je l'ai donc traduit comme <i>tout-un</i> avec, de fait, sa{" "}
-                <b>connotation masculine</b>.
+                Je l'ai donc traduit comme{" "}
+                <i>
+                  {" "}
+                  <span className="bg-gold">tout-un</span>
+                </i>{" "}
+                avec, de fait, sa <b>connotation masculine</b>.
               </p>
               <Figure
                 src="/images/articles/3/comment-tout-devint-adin.jpg"
                 caption={() => (
                   <>
                     <b>Extrait d'un storyboard</b> de l'HIGHBS-BOK réalisé en
-                    2018 représentant le HOL-ADIN.
+                    2018 représentant le{" "}
+                    <span className="bg-gold">HOL-ADIN</span>.
                     <br />
                     On y voit la <b>convergence de trois idées</b> (DATA) dans
                     le tout-un.
@@ -167,7 +218,8 @@ export default function () {
               </p>
               <ul>
                 <li>
-                  Le tout-un n'est pas <b>un vieux monsieur surpuissant</b>.
+                  Le <span className="bg-gold">tout-un</span> n'est pas{" "}
+                  <b>un vieux monsieur surpuissant</b>.
                 </li>
                 <li>
                   <b>
@@ -175,7 +227,8 @@ export default function () {
                   </b>
                 </li>
                 <li>
-                  Le tout-un n'est pas un <i>mâle</i>.<br />
+                  Le <span className="bg-gold">tout-un</span> n'est pas un{" "}
+                  <i>mâle</i>.<br />
                   Il n'est pas <i>il</i>.<br />
                   D'ailleurs, <b>il n'est pas, en même temps qu'il est</b>.
                 </li>
@@ -211,10 +264,10 @@ export default function () {
               <p>
                 Ce mot a aussi la sonorité "dine" des noms arabes en rapport
                 avec la religion, car il y a <b>quelque chose de (sur-)divin</b>{" "}
-                dans le HOL-ADIN ...
+                dans le <span className="bg-gold">HOL-ADIN</span> ...
               </p>
               <p>
-                Le HOL-ADIN, donc, c'est{" "}
+                Le <span className="bg-gold">HOL-ADIN</span>, donc, c'est{" "}
                 <b>quand tout, tout, ne forme plus qu'un.</b>
               </p>
               <p>
@@ -230,7 +283,8 @@ export default function () {
                     Baignée dans un rayon de lumière,
                     <b>l'HIGHBS, l'idée ultime</b>.<br />
                     C'est elle qui permet de faire{" "}
-                    <b>se rejoindre les parties</b> dans le tout-un.
+                    <b>se rejoindre les parties</b> dans le{" "}
+                    <span className="bg-gold">tout-un</span>.
                   </>
                 )}
               />
@@ -245,10 +299,16 @@ export default function () {
           >
             <>
               <p>
-                Pour <b>acquérir un exemplaire de l'HIGHBS-BOK volume 1</b>,
-                rendez-vous sur <a href="/acheter">la page Acheter {":D"}</a>
+                Tentez vous aussi de{" "}
+                <b>
+                  vous approcher de la nature parfaite du{" "}
+                  <span className="bg-gold">tout-un</span> en vous procurant un
+                  exemplaire de l'HIGHBS-BOK volume 1
+                </b>{" "}
+                !
               </p>
               <ExtraitAcheterCTA secondaryBtnColor={colors.light} />
+              <p>À bientôt !</p>
             </>
           </ContentRowWithHeader>
         </div>
