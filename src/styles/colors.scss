@@ -15,6 +15,7 @@ $theme-colors: map-remove(
 $gold: #ffcd5c;
 $lightGold: #ffde95;
 $blue: #5d89ff;
+$lightBlue: #bfd8ff;
 $lightDeep: #b6b1c5;
 $jewel: #ffdcb0;
 $deep: #433869;
@@ -31,6 +32,7 @@ $theme-colors: map-merge(
     "gold": $gold,
     "lightGold": $lightGold,
     "blue": $blue,
+    "lightBlue": $lightBlue,
     "lightDeep": $lightDeep,
     "jewel": $jewel,
     "deep": $deep,

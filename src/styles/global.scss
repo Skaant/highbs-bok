@@ -101,8 +101,10 @@ td {
 figure {
   margin: 48px 0;
   > img {
-    width: 100%;
+    max-width: 100%;
     margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
