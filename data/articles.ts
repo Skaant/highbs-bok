@@ -35,7 +35,7 @@ const articles: ArticleData[] = [
   },
   {
     slug: "tout-un-ou-toute-une",
-    date: "2022-02-15",
+    date: "2022-02-27",
     title: "Tout-un ou toute-une ?",
     description:
       "Le tout-un est-il masculin ou féminin ? Au regard de son exceptionelle abstraction, cette question a-t'elle même un sens ?",
