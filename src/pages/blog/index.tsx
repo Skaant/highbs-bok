@@ -38,7 +38,7 @@ export default function () {
                     ({ slug, title, description, date, tags }: ArticleData) => (
                       <li className="mb-3 card shadow">
                         <a
-                          href={`blog/${slug}`}
+                          href={`/blog/${slug}`}
                           className="p-4 text-dark card-body text-decoration-none"
                         >
                           <h3>{title}</h3>

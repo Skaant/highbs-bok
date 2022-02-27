@@ -34,6 +34,7 @@ export function Footer() {
                 <a href="/blog">Blog</a>
                 <ul className="list-unstyled ps-4 py-3">
                   {articles
+                    .slice(0, 5)
                     .sort((a, b) => (a.date < b.date ? 1 : -1))
                     .map(article => (
                       <li key={article.slug}>
