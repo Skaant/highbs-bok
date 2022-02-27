@@ -20,7 +20,7 @@ export default function () {
               className="mt-0"
               buttons={[
                 {
-                  href: "./",
+                  href: "/blog",
                   label: "Retour aux articles",
                   color: colors.light,
                 },

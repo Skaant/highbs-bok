@@ -34,7 +34,7 @@ export default function () {
               className="mt-0 px-0"
               buttons={[
                 {
-                  href: "./",
+                  href: "/blog",
                   label: "Retour aux articles",
                   color: colors.light,
                 },
@@ -235,14 +235,12 @@ export default function () {
               </ul>
             </>
           </ContentRowWithHeader>
-          <ContentRowWithHeader
-            header={{
-              level: 2,
-              content: "Bonus: HOL-ADIN ? Un rapport avec le HOL-ONG ?",
-            }}
-            className="bg-turquoize"
-          >
+          <ContentRowWithHeader className="bg-turquoize">
             <>
+              <h2>
+                Bonus: <span className="bg-gold">HOL-ADIN</span> ? Un rapport
+                avec le HOL-ONG ?
+              </h2>
               <p>
                 Depuis le grec, <i>hol-</i> est une racine pour dire{" "}
                 <b>la totalité</b> (holistique, holon, holocène).
