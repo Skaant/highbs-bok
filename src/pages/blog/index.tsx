@@ -1,8 +1,6 @@
 import React from "react"
 import articles, { ArticleData } from "../../../data/articles"
-import { colors } from "../../../data/colors"
 import { pages } from "../../../data/pages"
-import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import MiniRowAbsolute from "../../components/_rows/MiniRowAbsolute"
@@ -32,13 +30,34 @@ export default function () {
           <div className="row px-4 pt-4 bg-green">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h2>Liste des articles</h2>
-              <ButtonsMenu
-                buttons={articles.reverse().map(article => ({
-                  href: `/blog/${article.slug}`,
-                  color: colors.light,
-                  label: `${article.date} | ${article.title}`,
-                }))}
-              />
+              <ul className="list-unstyled">
+                {articles
+                  .slice(0)
+                  .reverse()
+                  .map(
+                    ({ slug, title, description, date, tags }: ArticleData) => (
+                      <li className="mb-3 card shadow">
+                        <a
+                          href={`blog/${slug}`}
+                          className="p-4 text-dark card-body text-decoration-none"
+                        >
+                          <h3>{title}</h3>
+                          {description}
+                          <br />
+                          <br />
+                          Publié le {date.split("-").reverse().join("/")}
+                          {" · "}
+                          {tags.length > 0 &&
+                            tags.map(tag => (
+                              <span className="badge rounded-pill bg-purple text-light me-2">
+                                {tag}
+                              </span>
+                            ))}
+                        </a>
+                      </li>
+                    )
+                  )}
+              </ul>
             </div>
           </div>
         </div>
