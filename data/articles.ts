@@ -16,6 +16,7 @@ const articles: ArticleData[] = [
     tags: ["zums", "immortalité", "univers"],
   },
   {
+    // 1
     slug: "avoir-plus-d-idees",
     date: "2021-12-08",
     title:
@@ -25,6 +26,7 @@ const articles: ArticleData[] = [
     tags: ["zums", "psik", "idées", "psychédéliques"],
   },
   {
+    // 2
     slug: "campagne-ulule-terminee-la-suite",
     date: "2022-01-24",
     title: "Campagne Ulule terminée ! La suite ...",
@@ -34,13 +36,26 @@ const articles: ArticleData[] = [
     tags: ["ulule", "volume 2", "site"],
   },
   {
+    // 3
     slug: "tout-un-ou-toute-une",
     date: "2022-02-27",
     title: "Tout-un ou toute-une ?",
     description:
-      "Le tout-un est-il masculin ou féminin ? Au regard de son exceptionelle abstraction, cette question a-t'elle même un sens ?",
+      "Le tout-un est-il masculin ou féminin ? Au regard de son exceptionelle abstraction, " +
+      "cette question a-t'elle même un sens ?",
     tags: ["tout-un", "dualité", "abstraction", "hol-adin"],
   },
+  /* {
+    // 4
+    slug: "la-source-de-l-angoisse-existentielle",
+    date: "2022-02-2x",
+    title: "La source de l'angoisse existentielle",
+    description:
+      "Qu'est-ce qui nous met en mouvement ? La sensation d'inconfort. " +
+      "Quelle est la plus grande source d'inconfort ? Notre fin ? " +
+      "Non, la fin de toutes choses",
+    tags: ["univers", "philosophie", "angoisse existentielle"],
+  }, */
 ]
 
 export default articles
