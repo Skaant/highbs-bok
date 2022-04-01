@@ -1,5 +1,5 @@
 import collapse from "bootstrap/js/dist/collapse"
-import matomo from "./_modules/matomo"
+// import matomo from "./_modules/matomo"
 
 let navbarCollapse
 let navbarCollapserEl = document.getElementById("navbar-collapser")
@@ -21,7 +21,7 @@ function displayContact() {
   prevBtn.remove()
 }
 
-matomo()
+// matomo()
 
 /* const parallaxesUpdate = [...document.getElementsByClassName("parallax")].map(
   el => {
