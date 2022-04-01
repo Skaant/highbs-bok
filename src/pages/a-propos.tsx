@@ -4,7 +4,7 @@ import { pages } from "../../data/pages"
 import { ButtonsMenu } from "../components/ButtonsMenu"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
-import { Section, TableOfContent } from "../components/TableOfContent"
+import { TableOfContent } from "../components/TableOfContent"
 import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
 import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import "../styles/global.scss"
@@ -12,7 +12,7 @@ import "../styles/global.scss"
 const pageId = pages.A_PROPOS
 const title = "À propos"
 
-export enum sectionsId {
+export enum SECTIONS_ID {
   QU_EST_CE_QUE_L_HIGHBS_BOK = "qu-est-ce-que-l-highbs-bok",
   POURQUOI_LIRE_CE_LIVRE = "pourquoi-lire-ce-livre",
   UN_PROCESSUS_D_AMELIORATION_CONTINUE = "un-processus-d-amelioration-continue",
@@ -23,28 +23,18 @@ export enum sectionsId {
   ENTRER_EN_CONTACT = "entrer-en-contact",
 }
 
-const sections: Section[] = [
-  {
-    id: sectionsId.QU_EST_CE_QUE_L_HIGHBS_BOK,
-    label: "Qu'est-ce que l'HIGHBS-BOK ?",
-  },
-  { id: sectionsId.POURQUOI_LIRE_CE_LIVRE, label: "Pourquoi lire ce livre ?" },
-  {
-    id: sectionsId.UN_PROCESSUS_D_AMELIORATION_CONTINUE,
-    label: "Un processus d'amélioration continue",
-  },
-  { id: sectionsId.HIGHBS_EGAL_ILLUMINATION, label: "HIGHBS = illumination ?" },
-  {
-    id: sectionsId.POURQUOI_UTILISER_DES_MOTS_BIZARRES,
-    label: "Pourquoi utiliser des mots bizarres ?",
-  },
-  {
-    id: sectionsId.AU_SUJET_DES_PSYCHEDELIQUES,
-    label: "Au sujet des psychédéliques",
-  },
-  { id: sectionsId.INSPIRATIONS, label: "Inspirations" },
-  { id: sectionsId.ENTRER_EN_CONTACT, label: "Entrer en contact" },
-]
+const sections = {
+  [SECTIONS_ID.QU_EST_CE_QUE_L_HIGHBS_BOK]: "Qu'est-ce que l'HIGHBS-BOK ?",
+  [SECTIONS_ID.POURQUOI_LIRE_CE_LIVRE]: "Pourquoi lire ce livre ?",
+  [SECTIONS_ID.UN_PROCESSUS_D_AMELIORATION_CONTINUE]:
+    "Un processus d'amélioration continue",
+  [SECTIONS_ID.HIGHBS_EGAL_ILLUMINATION]: "HIGHBS = illumination ?",
+  [SECTIONS_ID.POURQUOI_UTILISER_DES_MOTS_BIZARRES]:
+    "Pourquoi utiliser des mots bizarres ?",
+  [SECTIONS_ID.AU_SUJET_DES_PSYCHEDELIQUES]: "Au sujet des psychédéliques",
+  [SECTIONS_ID.INSPIRATIONS]: "Inspirations",
+  [SECTIONS_ID.ENTRER_EN_CONTACT]: "Entrer en contact",
+}
 
 export default function () {
   return (
@@ -64,10 +54,10 @@ export default function () {
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sections[0].id}
+            id={SECTIONS_ID.QU_EST_CE_QUE_L_HIGHBS_BOK}
             header={{
               level: 2,
-              content: sections[0].label,
+              content: sections[SECTIONS_ID.QU_EST_CE_QUE_L_HIGHBS_BOK],
             }}
             className="pt-4"
           >
@@ -93,10 +83,10 @@ export default function () {
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sections[1].id}
+            id={SECTIONS_ID.POURQUOI_LIRE_CE_LIVRE}
             header={{
               level: 2,
-              content: sections[1].label,
+              content: sections[SECTIONS_ID.POURQUOI_LIRE_CE_LIVRE],
             }}
           >
             <>
@@ -117,10 +107,11 @@ export default function () {
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sections[2].id}
+            id={SECTIONS_ID.UN_PROCESSUS_D_AMELIORATION_CONTINUE}
             header={{
               level: 2,
-              content: sections[2].label,
+              content:
+                sections[SECTIONS_ID.UN_PROCESSUS_D_AMELIORATION_CONTINUE],
             }}
             className="bg-turquoize"
           >
@@ -137,10 +128,10 @@ export default function () {
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sections[3].id}
+            id={SECTIONS_ID.HIGHBS_EGAL_ILLUMINATION}
             header={{
               level: 2,
-              content: sections[3].label,
+              content: sections[SECTIONS_ID.HIGHBS_EGAL_ILLUMINATION],
             }}
             className="bg-gold"
           >
@@ -159,10 +150,11 @@ export default function () {
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sections[4].id}
+            id={SECTIONS_ID.POURQUOI_UTILISER_DES_MOTS_BIZARRES}
             header={{
               level: 2,
-              content: sections[4].label,
+              content:
+                sections[SECTIONS_ID.POURQUOI_UTILISER_DES_MOTS_BIZARRES],
             }}
           >
             <>
@@ -188,10 +180,10 @@ export default function () {
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sections[5].id}
+            id={SECTIONS_ID.AU_SUJET_DES_PSYCHEDELIQUES}
             header={{
               level: 2,
-              content: sections[5].label,
+              content: sections[SECTIONS_ID.AU_SUJET_DES_PSYCHEDELIQUES],
             }}
             className="pt-5 pb-4 bg-purple text-light"
           >
@@ -242,10 +234,10 @@ export default function () {
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sections[6].id}
+            id={SECTIONS_ID.INSPIRATIONS}
             header={{
               level: 2,
-              content: sections[6].label,
+              content: sections[SECTIONS_ID.INSPIRATIONS],
             }}
           >
             <>
@@ -262,10 +254,10 @@ export default function () {
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sections[7].id}
+            id={SECTIONS_ID.ENTRER_EN_CONTACT}
             header={{
               level: 2,
-              content: sections[7].label,
+              content: sections[SECTIONS_ID.ENTRER_EN_CONTACT],
             }}
             className="bg-skin text-light"
           >

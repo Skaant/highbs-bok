@@ -10,17 +10,17 @@ import { pages } from "../../data/pages"
 const pageId = pages.MENTIONS_LEGALES
 const title = "Mentions légales"
 
-enum sectionsId {
+enum SECTIONS_ID {
   MENTIONS_OBLIGATOIRES_SITE = "mentions-obligatoires-site",
   MENTIONS_OBLIGATOIRES_LIVRE = "mentions-obligatoires-livre",
   MENTIONS_OBLIGATOIRES_ENTREPRISE = "mentions-obligatoires-entreprise",
 }
 
-const sectionsData = {
-  [sectionsId.MENTIONS_OBLIGATOIRES_SITE]:
+const sections = {
+  [SECTIONS_ID.MENTIONS_OBLIGATOIRES_SITE]:
     "Mentions obligatoires du site internet",
-  [sectionsId.MENTIONS_OBLIGATOIRES_LIVRE]: "Mentions obligatoires du livre",
-  [sectionsId.MENTIONS_OBLIGATOIRES_ENTREPRISE]:
+  [SECTIONS_ID.MENTIONS_OBLIGATOIRES_LIVRE]: "Mentions obligatoires du livre",
+  [SECTIONS_ID.MENTIONS_OBLIGATOIRES_ENTREPRISE]:
     "Mentions obligatoires de l'entreprise",
 }
 
@@ -41,18 +41,13 @@ export default function Legals() {
             }}
             className="pb-0"
           >
-            <TableOfContent
-              sections={Object.entries(sectionsData).map(([id, label]) => ({
-                id,
-                label,
-              }))}
-            />
+            <TableOfContent sections={sections} />
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sectionsId.MENTIONS_OBLIGATOIRES_SITE}
+            id={SECTIONS_ID.MENTIONS_OBLIGATOIRES_SITE}
             header={{
               level: 2,
-              content: sectionsData[sectionsId.MENTIONS_OBLIGATOIRES_SITE],
+              content: sections[SECTIONS_ID.MENTIONS_OBLIGATOIRES_SITE],
               className: "mb-0",
             }}
             className="pt-0 pb-5"
@@ -79,10 +74,10 @@ export default function Legals() {
             </>
           </ContentRowWithHeader>
           <ContentRowWithHeader
-            id={sectionsId.MENTIONS_OBLIGATOIRES_LIVRE}
+            id={SECTIONS_ID.MENTIONS_OBLIGATOIRES_LIVRE}
             header={{
               level: 2,
-              content: sectionsData[sectionsId.MENTIONS_OBLIGATOIRES_LIVRE],
+              content: sections[SECTIONS_ID.MENTIONS_OBLIGATOIRES_LIVRE],
               className: "mb-0",
             }}
             className="py-5 bg-gold"
@@ -110,11 +105,11 @@ export default function Legals() {
             </>
           </ContentRowWithHeader>
           {/** <ContentRowWithHeader
-            id={sectionsId.MENTIONS_OBLIGATOIRES_ENTREPRISE}
+            id={SECTIONS_ID.MENTIONS_OBLIGATOIRES_ENTREPRISE}
             header={{
               level: 2,
               content:
-                sectionsData[sectionsId.MENTIONS_OBLIGATOIRES_ENTREPRISE],
+                sectionsData[SECTIONS_ID.MENTIONS_OBLIGATOIRES_ENTREPRISE],
             }}
             className="py-5 bg-lightDeep"
           >

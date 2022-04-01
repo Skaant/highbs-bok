@@ -1,22 +1,17 @@
 import React from "react"
 
-export type Section = {
-  id: string
-  label: string
-}
-
-function SectionList({ sections }: { sections: Section[] }) {
+export function TableOfContent({
+  sections,
+}: {
+  sections: { [key: string]: string }
+}) {
   return (
     <ul className="list-unstyled">
-      {sections.map(({ id, label }) => (
+      {Object.entries(sections).map(([id, label]) => (
         <li key={id}>
           <a href={"#" + id}>{label}</a>
         </li>
       ))}
     </ul>
   )
-}
-
-export function TableOfContent({ sections }: { sections: Section[] }) {
-  return <SectionList sections={sections} />
 }

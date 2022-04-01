@@ -7,7 +7,7 @@ import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
 import { ImageRowPositionAbsolute } from "../../components/_rows/ImageRowPositionAbsolute"
 import "../../styles/global.scss"
-import { sectionsId as A_PROPOS_SECTIONS_ID } from "../a-propos"
+import { SECTIONS_ID as A_PROPOS_SECTIONS_ID } from "../a-propos"
 
 const pageId = pages.L_UNIVERS_GLOSSAIRE
 const title = "Glossaire"
