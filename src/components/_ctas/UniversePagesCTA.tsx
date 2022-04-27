@@ -20,13 +20,11 @@ const pagesData = {
     href: "/l-univers/glossaire",
     label: "Glossaire",
   },
-  /* [pages.L_UNIVERS_PERSONNAGES]: {
+  [pages.L_UNIVERS_PERSONNAGES_ET_ENTITES]: {
     href: "/l-univers/personnages-et-entites",
-    outline: true,
-    disabled: true,
     label: "Personnages et entités",
   },
-  [pages.L_UNIVERS_LIEUX]: {
+  /* [pages.L_UNIVERS_LIEUX]: {
     href: "/l-univers/lieux",
     outline: true,
     disabled: true,
