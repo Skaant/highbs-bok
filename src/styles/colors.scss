@@ -50,3 +50,6 @@ $utilities-text-colors: map-merge(
     "gold": $gold,
   )
 );
+.bg-none {
+  background: none !important;
+}
