@@ -1,6 +1,6 @@
 import React from "react"
 import { colors, colorsData } from "../../../data/colors"
-import { eras, erasData } from "../../../data/eras"
+import { ERAS, ERAS_DATA } from "../../../data/eras"
 import { pages } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
@@ -10,15 +10,15 @@ import "../../styles/global.scss"
 
 const pageId = pages.L_UNIVERS_ERAS
 const title = "Les sept ERAS de l'histoire des ZUMS"
-const erasRowColor = {
-  [eras.presentEra]: colors.purple,
-  [eras.paleoEra]: colors.turquoize,
-  [eras.primaEra]: colors.green,
-  [eras.expansionEra]: colors.skin,
-  [eras.dispersionEra]: colors.lightDeep,
-  [eras.contractionEra]: colors.jewel,
-  [eras.auroEra]: colors.gold,
-  [eras.angkEra]: colors.blue,
+const erasRowColor: { [key in ERAS]: colors } = {
+  PRESENT_ERA: colors.purple,
+  PALEO_ERA: colors.turquoize,
+  PRIMA_ERA: colors.green,
+  EXPANSION_ERA: colors.skin,
+  DISPERSION_ERA: colors.lightDeep,
+  CONTRACTION_ERA: colors.jewel,
+  AURO_ERA: colors.gold,
+  ANGK_ERA: colors.blue,
 }
 
 export default function SeptEras() {
@@ -46,8 +46,8 @@ export default function SeptEras() {
               </p>
             </div>
           </div>
-          {Object.values(eras).map((era: eras) => {
-            const { name, description } = erasData.get(era)
+          {Object.values(ERAS).map((era: ERAS) => {
+            const { name, description } = ERAS_DATA[era]
             const color = erasRowColor[era]
             const { colorWhite = false } = color ? colorsData.get(color) : {}
             return (
