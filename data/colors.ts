@@ -88,6 +88,7 @@ export const colorsData = new Map<
     {
       hexa: "#a7654d",
       description: "ZUM (variation)",
+      colorWhite: true,
     },
   ],
   [
