@@ -15,7 +15,7 @@ function EraListInline({ eras }: Pick<CharacterData, "eras">) {
             summary: "Présent tout au long de l'histoire.",
             color: colors.light,
           }}
-          className="border border-3 border-jewel"
+          className="border border-3 small border-jewel"
         />
       ) : (
         eras.map(era => {
