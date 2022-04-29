@@ -37,7 +37,7 @@ export default function SeptEras() {
             </div>
           </div>
           {Object.values(ERAS).map((era: ERAS) => {
-            const { name, description, id, color } = ERAS_DATA[era]
+            const { name, summary, id, color } = ERAS_DATA[era]
             const { colorWhite = false } = color ? colorsData.get(color) : {}
             return (
               <div
@@ -49,7 +49,7 @@ export default function SeptEras() {
               >
                 <div className="col-12 col-md-10 col-lg-8 col-xl-6">
                   <h3>{name}</h3>
-                  <p>{description}</p>
+                  <p>{summary}</p>
                 </div>
               </div>
             )
