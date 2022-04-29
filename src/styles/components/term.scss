@@ -2,23 +2,30 @@
   font-family: "CaesarDressing-Regular";
   border-radius: 64px;
 }
-p .term {
-  letter-spacing: 2px;
-  padding: 0 12px;
-  font-size: 1.5rem;
-  line-height: 1.3rem;
+p,
+li {
+  .term {
+    letter-spacing: 2px;
+    padding: 0 12px;
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+    &.small {
+      font-size: 1rem;
+      display: inline-block;
+    }
+  }
 }
-a .term {
-  border: solid 2px #0d6efd;
-  color: #0d6efd !important;
+h2 .term {
+  letter-spacing: 3px;
+  padding: 0 16px;
 }
 .display-1 .term {
-  letter-spacing: 10px;
+  letter-spacing: 8px;
   padding: 0 36px;
 }
 .display-4 .term {
   font-size: 3rem;
   line-height: map-get($display-font-sizes, 4);
-  letter-spacing: 10px;
-  padding: 0 36px;
+  letter-spacing: 5px;
+  padding: 0 24px;
 }
