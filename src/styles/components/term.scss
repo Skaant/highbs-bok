@@ -1,5 +1,7 @@
 .term {
-  font-family: "CaesarDressing-Regular";
+  &:not(.font-regular) {
+    font-family: "CaesarDressing-Regular";
+  }
   border-radius: 64px;
 }
 p,

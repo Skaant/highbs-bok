@@ -27,7 +27,7 @@ function Character({
         color,
       }}
       link={`${PAGES_DATA[PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES].url}#${name}`}
-      className={className}
+      className={`font-regular ${className || ""}`}
     />
   )
 }
