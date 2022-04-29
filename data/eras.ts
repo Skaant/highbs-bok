@@ -75,6 +75,6 @@ export const ERAS_DATA: { [key in ERAS]: EraData } = {
     name: "ANGK-ERA",
     summary: `Le moment est venu pour le clôtureur de connaître la vérité.`,
     id: "angk-era",
-    color: colors.turquoize,
+    color: colors.lightBlue,
   },
 }
