@@ -4,18 +4,18 @@ import { colors } from "../../data/colors"
 import Era from "./Era"
 import Term from "./Term"
 
-function EraList({ eras }: Pick<CharacterData, "eras">) {
+function EraListInline({ eras }: Pick<CharacterData, "eras">) {
   return (
     <>
       {eras === "all" ? (
         <Term
           term={{
-            name: "Sept ERAS",
-            short: "Toutes les ERAS",
+            name: "Toutes les ERAS",
+            short: "Les sept ERAS",
             summary: "Présent tout au long de l'histoire.",
             color: colors.light,
           }}
-          className="small border border-3 border-lightGold"
+          className="border border-3 border-jewel"
         />
       ) : (
         eras.map(era => {
@@ -26,4 +26,4 @@ function EraList({ eras }: Pick<CharacterData, "eras">) {
   )
 }
 
-export default EraList
+export default EraListInline
