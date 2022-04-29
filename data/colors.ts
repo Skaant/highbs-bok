@@ -23,6 +23,13 @@ export const colorsData = new Map<
   { hexa: string; description: string; colorWhite?: boolean }
 >([
   [
+    colors.light,
+    {
+      hexa: "",
+      description: "",
+    },
+  ],
+  [
     colors.gold,
     {
       hexa: "#ffcd5c",
@@ -111,6 +118,7 @@ export const colorsData = new Map<
     {
       hexa: "#00ffab",
       description: "Donnée",
+      colorWhite: true,
     },
   ],
 ])
