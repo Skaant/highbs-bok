@@ -1,25 +1,15 @@
 import React from "react"
 import { colors, colorsData } from "../../../data/colors"
 import { ERAS, ERAS_DATA } from "../../../data/eras"
-import { pages } from "../../../data/pages"
+import { PAGES } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
 import "../../styles/global.scss"
 
-const pageId = pages.L_UNIVERS_ERAS
+const pageId = PAGES.L_UNIVERS_ERAS
 const title = "Les sept ERAS de l'histoire des ZUMS"
-const erasRowColor: { [key in ERAS]: colors } = {
-  PRESENT_ERA: colors.purple,
-  PALEO_ERA: colors.turquoize,
-  PRIMA_ERA: colors.green,
-  EXPANSION_ERA: colors.skin,
-  DISPERSION_ERA: colors.lightDeep,
-  CONTRACTION_ERA: colors.jewel,
-  AURO_ERA: colors.gold,
-  ANGK_ERA: colors.blue,
-}
 
 export default function SeptEras() {
   return (
@@ -47,12 +37,12 @@ export default function SeptEras() {
             </div>
           </div>
           {Object.values(ERAS).map((era: ERAS) => {
-            const { name, description } = ERAS_DATA[era]
-            const color = erasRowColor[era]
+            const { name, description, id, color } = ERAS_DATA[era]
             const { colorWhite = false } = color ? colorsData.get(color) : {}
             return (
               <div
                 key={era}
+                id={id}
                 className={`row px-4 py-5 align-content-center${
                   color ? ` bg-${color}` : ""
                 }${colorWhite ? " text-light" : ""}`}
