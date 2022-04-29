@@ -1,38 +1,40 @@
 import * as React from "react"
 import { colorsData } from "../../data/colors"
 import { PAGES, PAGES_DATA } from "../../data/pages"
-import { TERMS, TERMS_DATA } from "../../data/terms"
+import { TermData, TERMS, TERMS_DATA } from "../../data/terms"
 
 function Term({
   term,
   plural = false,
   link = true,
+  className: _className,
 }: {
-  term: TERMS
+  term: TERMS | Pick<TermData, "name" | "short" | "summary" | "color">
   plural?: boolean
-  link?: boolean
+  link?: boolean | string
+  className?: string
 }) {
-  const bgColor = TERMS_DATA[term].color
-  const className = `term bg-${bgColor} text-${
-    colorsData.get(bgColor).colorWhite ? "light" : "dark"
-  }`
+  const { name, short, summary, color } =
+    typeof term === "object" ? term : TERMS_DATA[term]
+  const className = `term bg-${color} text-${
+    colorsData.get(color).colorWhite ? "light" : "dark"
+  } ${_className || ""}`
   return link ? (
     <a
-      href={`${PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url}#${
-        TERMS_DATA[term].name
-      }`}
+      href={
+        typeof link === "string"
+          ? link
+          : `${PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url}#${name}`
+      }
       className={className}
-      title={`${TERMS_DATA[term].short}.\n${TERMS_DATA[term].summary}`}
+      title={`${short}.\n${summary}`}
     >
-      {TERMS_DATA[term].name}
+      {name}
       {plural ? "S" : ""}
     </a>
   ) : (
-    <span
-      className={className}
-      title={`${TERMS_DATA[term].short}.\n${TERMS_DATA[term].summary}`}
-    >
-      {TERMS_DATA[term].name}
+    <span className={className} title={`${short}.\n${summary}`}>
+      {name}
       {plural ? "S" : ""}
     </span>
   )
