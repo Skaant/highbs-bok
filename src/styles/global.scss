@@ -30,6 +30,10 @@ $grid-gutter-width: 0;
   }
 }
 
+.container-fluid a {
+  text-decoration: none;
+}
+
 @import "./nav-navbar.scss";
 
 @import "../../node_modules/bootstrap/scss/utilities";
@@ -58,6 +62,17 @@ $table-cell-padding-y: map-get($spacers, 3);
 @font-face {
   font-family: "Merriweather-Regular";
   src: url("/fonts/Merriweather-Regular.ttf");
+}
+.font-merri {
+  font-family: "Merriweather-Regular";
+}
+
+@font-face {
+  font-family: "CaesarDressing-Regular";
+  src: url("/fonts/CaesarDressing-Regular.ttf");
+}
+.font-cae {
+  font-family: "CaesarDressing-Regular";
 }
 
 img.cover {
@@ -135,3 +150,4 @@ footer {
 }
 
 @import "./components/mini-row-absolute";
+@import "./components/term.scss";
