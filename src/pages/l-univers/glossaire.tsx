@@ -1,6 +1,6 @@
 import React from "react"
 import { colors } from "../../../data/colors"
-import { pages } from "../../../data/pages"
+import { PAGES } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
@@ -9,7 +9,7 @@ import { ImageRowPositionAbsolute } from "../../components/_rows/ImageRowPositio
 import "../../styles/global.scss"
 import { SECTIONS_ID as A_PROPOS_SECTIONS_ID } from "../a-propos"
 
-const pageId = pages.L_UNIVERS_GLOSSAIRE
+const pageId = PAGES.L_UNIVERS_GLOSSAIRE
 const title = "Glossaire"
 
 export default function Glossaire() {

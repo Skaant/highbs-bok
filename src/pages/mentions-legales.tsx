@@ -5,9 +5,9 @@ import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import { TableOfContent } from "../components/TableOfContent"
 
 import "../styles/global.scss"
-import { pages } from "../../data/pages"
+import { PAGES } from "../../data/pages"
 
-const pageId = pages.MENTIONS_LEGALES
+const pageId = PAGES.MENTIONS_LEGALES
 const title = "Mentions légales"
 
 enum SECTIONS_ID {

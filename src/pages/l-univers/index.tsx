@@ -1,6 +1,6 @@
 import React from "react"
 import { colors } from "../../../data/colors"
-import { pages } from "../../../data/pages"
+import { PAGES } from "../../../data/pages"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
@@ -10,7 +10,7 @@ import { QuoteRow } from "../../components/_rows/QuoteRow"
 import { EXTRACT_DOWNLOAD_LINK } from "../../config"
 import "../../styles/global.scss"
 
-const pageId = pages.L_UNIVERS
+const pageId = PAGES.L_UNIVERS
 const title = "Découvrir l'univers"
 
 export default function () {

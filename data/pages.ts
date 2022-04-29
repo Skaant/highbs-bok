@@ -1,13 +1,65 @@
-export enum pages {
-  HOME = "home",
-  BLOG = "blog",
-  L_UNIVERS = "l-univers",
-  L_UNIVERS_ERAS = "l-univers-eras",
-  L_UNIVERS_COULEURS = "l-univers-couleurs",
-  L_UNIVERS_GLOSSAIRE = "l-univers-glossaire",
-  L_UNIVERS_PERSONNAGES_ET_ENTITES = "l-univers-personnages-et-entites",
-  L_UNIVERS_LIEUX = "l-univers-lieux",
-  A_PROPOS = "a-propos",
-  ACHETER = "acheter",
-  MENTIONS_LEGALES = "mentions-legales",
+export enum PAGES {
+  HOME = "HOME",
+  ACHETER = "ACHETER",
+  L_UNIVERS = "L_UNIVERS",
+  L_UNIVERS_ERAS = "L_UNIVERS_ERAS",
+  L_UNIVERS_COULEURS = "L_UNIVERS_COULEURS",
+  L_UNIVERS_GLOSSAIRE = "L_UNIVERS_GLOSSAIRE",
+  L_UNIVERS_PERSONNAGES_ET_ENTITES = "L_UNIVERS_PERSONNAGES_ET_ENTITES",
+  L_UNIVERS_LIEUX = "L_UNIVERS_LIEUX",
+  BLOG = "BLOG",
+  A_PROPOS = "A_PROPOS",
+  MENTIONS_LEGALES = "MENTIONS_LEGALES",
+}
+
+type PageData = {
+  title: string
+  url: string
+}
+
+export const PAGES_DATA: { [key in PAGES]: PageData } = {
+  HOME: {
+    title: "Accueil",
+    url: "/",
+  },
+  ACHETER: {
+    title: "Acheter",
+    url: "/acheter",
+  },
+  L_UNIVERS: {
+    title: "L'univers",
+    url: "/l-univers",
+  },
+  L_UNIVERS_ERAS: {
+    title: "Sept ERAS",
+    url: "/l-univers/sept-eras",
+  },
+  L_UNIVERS_COULEURS: {
+    title: "Signification des couleurs",
+    url: "/l-univers/couleurs",
+  },
+  L_UNIVERS_GLOSSAIRE: {
+    title: "Glossaire",
+    url: "/l-univers/glossaire",
+  },
+  L_UNIVERS_PERSONNAGES_ET_ENTITES: {
+    title: "Personnages et entités",
+    url: "/l-univers/personnages-et-entites",
+  },
+  L_UNIVERS_LIEUX: {
+    title: "Lieux",
+    url: "/l-univers/lieux",
+  },
+  BLOG: {
+    title: "Blog",
+    url: "/blog",
+  },
+  A_PROPOS: {
+    title: "À propos",
+    url: "/a-propos",
+  },
+  MENTIONS_LEGALES: {
+    title: "Mentions légales",
+    url: "/mentions-legales",
+  },
 }

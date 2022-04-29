@@ -1,30 +1,30 @@
 import React from "react"
 import { colors } from "../../../data/colors"
-import { pages } from "../../../data/pages"
+import { PAGES } from "../../../data/pages"
 import { ButtonsMenu } from "../ButtonsMenu"
 
 const pagesData = {
-  [pages.L_UNIVERS]: {
+  [PAGES.L_UNIVERS]: {
     href: "/l-univers",
     label: "L'univers",
   },
-  [pages.L_UNIVERS_ERAS]: {
+  [PAGES.L_UNIVERS_ERAS]: {
     href: "/l-univers/sept-eras",
     label: "Sept ERAS",
   },
-  [pages.L_UNIVERS_COULEURS]: {
+  [PAGES.L_UNIVERS_COULEURS]: {
     href: "/l-univers/couleurs",
     label: "Les couleurs",
   },
-  [pages.L_UNIVERS_GLOSSAIRE]: {
+  [PAGES.L_UNIVERS_GLOSSAIRE]: {
     href: "/l-univers/glossaire",
     label: "Glossaire",
   },
-  [pages.L_UNIVERS_PERSONNAGES_ET_ENTITES]: {
+  [PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES]: {
     href: "/l-univers/personnages-et-entites",
     label: "Personnages et entités",
   },
-  /* [pages.L_UNIVERS_LIEUX]: {
+  /* [PAGES.L_UNIVERS_LIEUX]: {
     href: "/l-univers/lieux",
     outline: true,
     disabled: true,

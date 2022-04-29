@@ -1,5 +1,5 @@
 import React from "react"
-import { pages } from "../../../data/pages"
+import { PAGES } from "../../../data/pages"
 
 export default function ResponsiveNavbar({
   pageId,
@@ -28,7 +28,7 @@ export default function ResponsiveNavbar({
             <li className="nav-item">
               <a
                 className={`nav-link btn ${
-                  pageId === pages.ACHETER ? "btn-deep" : "btn-purple"
+                  pageId === PAGES.ACHETER ? "btn-deep" : "btn-purple"
                 }  my-2 mx-sm-2 px-3 rounded-pill shadow`}
                 href="/acheter"
               >
@@ -40,7 +40,7 @@ export default function ResponsiveNavbar({
                 className={`nav-link btn ${
                   alternativeColor
                     ? "btn-light"
-                    : pageId === pages.L_UNIVERS
+                    : pageId === PAGES.L_UNIVERS
                     ? "btn-deep"
                     : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
@@ -54,7 +54,7 @@ export default function ResponsiveNavbar({
                 className={`nav-link btn ${
                   alternativeColor
                     ? "btn-light"
-                    : pageId === pages.BLOG
+                    : pageId === PAGES.BLOG
                     ? "btn-deep"
                     : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
@@ -68,7 +68,7 @@ export default function ResponsiveNavbar({
                 className={`nav-link btn ${
                   alternativeColor
                     ? "btn-light"
-                    : pageId === pages.A_PROPOS
+                    : pageId === PAGES.A_PROPOS
                     ? "btn-deep"
                     : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}

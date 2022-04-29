@@ -1,12 +1,12 @@
 import React from "react"
 import articles, { ArticleData } from "../../../data/articles"
-import { pages } from "../../../data/pages"
+import { PAGES } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import MiniRowAbsolute from "../../components/_rows/MiniRowAbsolute"
 import "../../styles/global.scss"
 
-const pageId = pages.BLOG
+const pageId = PAGES.BLOG
 const title = "Articles publiés"
 
 export default function () {

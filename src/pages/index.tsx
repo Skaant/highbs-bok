@@ -9,11 +9,13 @@ import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import { QuoteRow } from "../components/_rows/QuoteRow"
 import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
 import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
-import { pages } from "../../data/pages"
+import { PAGES } from "../../data/pages"
 import MiniRowAbsolute from "../components/_rows/MiniRowAbsolute"
 import { EXTRACT_DOWNLOAD_LINK } from "../config"
+import Term from "../components/Term"
+import { TERMS } from "../../data/terms"
 
-const pageId = pages.HOME
+const pageId = PAGES.HOME
 
 /** Page d'accueil */
 export default function Home() {
@@ -27,7 +29,9 @@ export default function Home() {
             style={{ height: "150vh", marginTop: "calc(10vh - 400px)" }}
           />
           <div className="row spaced pb-5 px-4 text-center align-content-center">
-            <h1 className="col-12 display-1 mb-2">HIGHBS-BOK</h1>
+            <h1 className="col-12 display-1 mb-2">
+              <Term term={TERMS.HIGHBS_BOK} />
+            </h1>
             <p className="col-12 display-6 text-muted">
               Le livre du motif absolu
             </p>
@@ -36,7 +40,8 @@ export default function Home() {
             header={{
               element: (
                 <h2>
-                  Jusqu'au <span className="bg-gold">tout-un</span> !
+                  Jusqu'au{" "}
+                  <span className="bg-gold rounded-pill px-3">tout-un</span> !
                 </h2>
               ),
             }}
@@ -49,7 +54,12 @@ export default function Home() {
                   histoire de science-fiction ésotérique et sincèrement utopiste
                 </b>{" "}
                 pour tenter de conceptualiser l'abstraction absolue, le motif
-                ultime : <b>l'HIGHBS</b>*.
+                ultime :{" "}
+                <b>
+                  l'
+                  <Term term={TERMS.HIGHBS} />
+                </b>
+                *.
               </p>
               <p className="small mb-4">
                 * Prononcez comme le "high" anglais, suivi de "bs", comme dans
@@ -59,7 +69,7 @@ export default function Home() {
                 Dans cette{" "}
                 <b>
                   saga poétique et imagée, lecteur, tu es emmené dans la forêt
-                  spatiale des ZUMS
+                  spatiale des <Term term={TERMS.ZUM} plural={true} />
                 </b>
                 , une civilisation intelligente très semblable à la nôtre partie
                 conquérir l'espace{" "}
@@ -76,7 +86,9 @@ export default function Home() {
           >
             <>
               "Entend, horizon de tous les regards !<br />
-              <b>Nous te cherchons tous à travers le PSIK</b>
+              <b>
+                Nous te cherchons tous à travers le <Term term={TERMS.PSIK} />
+              </b>
               <br />
               pour te rendre,
               <br />

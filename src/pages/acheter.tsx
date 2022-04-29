@@ -1,14 +1,14 @@
 import React from "react"
 import { colors } from "../../data/colors"
-import { pages } from "../../data/pages"
+import { PAGES } from "../../data/pages"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
-import BuyOptions from "../components/_pages/acheter/BuyOptions"
+import BuyOptions from "../components/_PAGES/acheter/BuyOptions"
 import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
 import "../styles/global.scss"
 
-const pageId = pages.ACHETER
+const pageId = PAGES.ACHETER
 const title = "Acheter le livret"
 
 function ContentDedicace() {
