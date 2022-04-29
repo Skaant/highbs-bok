@@ -1,10 +1,16 @@
 import React from "react"
+import { CHARACTERS, CHARACTERS_DATA } from "../../../data/characters"
 import { colors } from "../../../data/colors"
-import { pages } from "../../../data/pages"
+import { PAGES, PAGES_DATA } from "../../../data/pages"
+import { TERMS } from "../../../data/terms"
+import { VOLUMES } from "../../../data/volumes"
+import CharactersList from "../../components/_pages/personnages-et-entites/CharactersList"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { TableOfContent } from "../../components/TableOfContent"
+import Term from "../../components/Term"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
+import CharacterRow from "../../components/_pages/personnages-et-entites/CharacterRow"
 import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
 import { ImageRowPositionAbsolute } from "../../components/_rows/ImageRowPositionAbsolute"
 import "../../styles/global.scss"
@@ -21,10 +27,20 @@ const sections: { [key in SECTIONS_ID]: string } = {
     "Personnages et entités du volume 2",
 }
 
-const pageId = pages.L_UNIVERS_PERSONNAGES_ET_ENTITES
+const pageId = PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES
 const title = "Personnages et entités"
 
 export default function Glossaire() {
+  const volumesCharacters = Object.values(CHARACTERS).reduce(
+    (acc, character) => {
+      acc[CHARACTERS_DATA[character].volume].push(character)
+      return acc
+    },
+    {
+      [VOLUMES.VOLUME_1]: [] as CHARACTERS[],
+      [VOLUMES.VOLUME_2]: [] as CHARACTERS[],
+    }
+  )
   return (
     <Layout pageId={pageId}>
       <>
@@ -36,6 +52,7 @@ export default function Glossaire() {
               marginTop: "20vh",
               overflow: "unset",
             }}
+            imgStyle={{ maxWidth: "992px" }}
           />
           <ContentRowWithHeader
             header={{
@@ -47,7 +64,8 @@ export default function Glossaire() {
             <>
               <p>
                 Apprennez-en plus sur les <b>personnages épiques</b> et les{" "}
-                <b>entités mystérieuses</b> de l'univers des ZUMS.
+                <b>entités mystérieuses</b> de l'univers des{" "}
+                <Term term={TERMS.ZUM} plural={true} />.
               </p>
               <TableOfContent sections={sections} unstyled={false} />
             </>
@@ -58,28 +76,53 @@ export default function Glossaire() {
               level: 2,
               content: sections[SECTIONS_ID.PERSONNAGES_ET_ENTITES_DU_VOLUME_1],
             }}
+            className="pt-5"
           >
             <>
               <p>
                 Dans le volume 1, on parle beaucoup des{" "}
-                <a href="/l-univers/glossaire">concepts</a> et et des{" "}
-                <a href="/l-univers/7-eras">ERAS</a>.
+                <a href={PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url}>concepts</a>{" "}
+                et et des{" "}
+                <a href={PAGES_DATA[PAGES.L_UNIVERS_ERAS].url}>
+                  sept <Term term={TERMS.ERA} plural={true} link={false} />
+                </a>
+                .
               </p>
               <p>
-                Les personnages sont un peu en second plan, mais
+                Les personnages sont un peu en second plan, mais{" "}
                 <b>
                   ceux introduits ici nous suivront sans doute jusqu'au bout de
                   l'histoire
                 </b>
                 .
               </p>
-              <ul>
-                <li>Le tout-un,</li>
-                <li>Balthazum (CONTRACTION-ERA),</li>
-                <li>L'ANGK (CONTRACTION, AURO, ANGK-ERA).</li>
-              </ul>
+              <CharactersList
+                characters={volumesCharacters[VOLUMES.VOLUME_1]}
+              />
             </>
           </ContentRowWithHeader>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_1][0]}>
+            <>
+              <p>
+                <b>L'être* absolu</b> que les{" "}
+                <Term term={TERMS.ZUM} plural={true} /> tente éperdument de
+                manifester <b>pour fusionner</b> à l'intérieur de lui**.
+              </p>
+              <p className="small mb-2">
+                *Ou le non-être, ou les deux et aucun des deux.
+              </p>
+              <p className="small">*Neutre.</p>
+            </>
+          </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_1][1]}>
+            <></>
+          </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_1][2]}>
+            <></>
+          </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_1][3]}>
+            <></>
+          </CharacterRow>
           <ContentRowWithHeader
             id={SECTIONS_ID.PERSONNAGES_ET_ENTITES_DU_VOLUME_2}
             header={{
