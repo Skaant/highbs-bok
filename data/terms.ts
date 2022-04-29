@@ -14,12 +14,13 @@ export enum TERMS {
   ONG = "ONG",
   PSIK = "PSIK",
   SHRIGHNE = "SHRIGHNE",
+  TOUT_UN = "TOUT_UN",
   TRIGHB = "TRIGHB",
   VAULT = "VAULT",
   ZUM = "ZUM",
 }
 
-type TermData = {
+export type TermData = {
   name: string
   /** Word translation. */
   short: string
@@ -99,6 +100,14 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     color: colors.purple,
   },
   SHRIGHNE: undefined,
+  TOUT_UN: {
+    name: "Tout-un",
+    short: "Totalité faite une",
+    summary: "État d'harmonie éternelle. La quête ultime des ZUMS.",
+    volume: VOLUMES.VOLUME_1,
+    color: colors.gold,
+  },
+  TRIGHB: undefined,
   VAULT: undefined,
   ZUM: {
     name: "ZUM",
@@ -107,5 +116,4 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
       "Êtres intelligents habitant la planète Tera, puis l'univers par extension.",
     color: colors.skin,
   },
-  TRIGHB: undefined,
 }
