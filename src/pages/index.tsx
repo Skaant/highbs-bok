@@ -14,6 +14,8 @@ import MiniRowAbsolute from "../components/_rows/MiniRowAbsolute"
 import { EXTRACT_DOWNLOAD_LINK } from "../config"
 import Term from "../components/Term"
 import { TERMS } from "../../data/terms"
+import Character from "../components/Character"
+import { CHARACTERS } from "../../data/characters"
 
 const pageId = PAGES.HOME
 
@@ -40,8 +42,7 @@ export default function Home() {
             header={{
               element: (
                 <h2>
-                  Jusqu'au{" "}
-                  <span className="bg-gold rounded-pill px-3">tout-un</span> !
+                  Jusqu'au <span className="bg-gold px-3">tout-un</span> !
                 </h2>
               ),
             }}
@@ -87,7 +88,8 @@ export default function Home() {
             <>
               "Entend, horizon de tous les regards !<br />
               <b>
-                Nous te cherchons tous à travers le <Term term={TERMS.PSIK} />
+                Nous te cherchons tous
+                <br />à travers le <Term term={TERMS.PSIK} />
               </b>
               <br />
               pour te rendre,
@@ -110,7 +112,7 @@ export default function Home() {
                 <a href="https://fr.ulule.com/highbs-bok-volume-1/">
                   une campagne de pré-commandes réussie sur Ulule
                 </a>
-                , le <b>livret est maintenant disponible à l'achat</b> via
+                , le <b>volume 1 est maintenant disponible à la vente</b> via
                 Stripe. <b>Différentes options sont disponibles</b> sur la page{" "}
                 <a href="/acheter">Acheter un livret</a>.
               </p>
@@ -123,21 +125,30 @@ export default function Home() {
           </ContentRowWithHeader>
           <ContentRowWithHeader
             header={{
-              level: 2,
-              content: "Les ZUMS à la conquête de l'univers",
+              element: (
+                <h2>
+                  Les <Term term={TERMS.ZUM} plural={true} /> à la conquête de
+                  l'univers
+                </h2>
+              ),
             }}
             className="pb-4 bg-gold"
           >
             <>
               <p className="mb-4">
-                Avec leurs puissants alliés : le PSIK, la vie et GRAND-ARBRE,{" "}
-                <b>les ZUMS, cette espèce de singes vraiment brillants,</b> sont
-                partis jusqu'aux confins de l'univers.
+                Avec leurs puissants alliés : le <Term term={TERMS.PSIK} />, la
+                vie et <Character character={CHARACTERS.GRAND_ARBRE} />,{" "}
+                <b>
+                  les <Term term={TERMS.ZUM} plural={true} />, cette espèce de
+                  singes vraiment brillants,
+                </b>{" "}
+                sont partis jusqu'aux confins de l'univers.
               </p>
               <p>
                 Puis ils sont revenus{" "}
                 <b>
-                  pour tenter de réaliser l'HIGHBS et de manifester le{" "}
+                  pour tenter de réaliser l'
+                  <Term term={TERMS.HIGHBS} /> et de manifester le{" "}
                   <span className="bg-gold">tout-un</span>
                 </b>
                 .
