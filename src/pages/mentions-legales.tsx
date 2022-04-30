@@ -1,7 +1,7 @@
 import React from "react"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
-import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../components/_rows/SectionRow"
 import { TableOfContent } from "../components/TableOfContent"
 
 import "../styles/global.scss"
@@ -34,7 +34,7 @@ export default function Legals() {
           metas={[{ name: "robots", content: "no-index" }]}
         />
         <div className="container-fluid px-0">
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 1,
               content: title,
@@ -42,8 +42,8 @@ export default function Legals() {
             className="pb-0"
           >
             <TableOfContent sections={sections} />
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.MENTIONS_OBLIGATOIRES_SITE}
             header={{
               level: 2,
@@ -72,8 +72,8 @@ export default function Legals() {
                 <dd>OVH, 2 rue Kellermann, 59100 Roubaix (+33-8-203-203-63)</dd>
               </dl>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.MENTIONS_OBLIGATOIRES_LIVRE}
             header={{
               level: 2,
@@ -103,8 +103,8 @@ export default function Legals() {
                 <dd>19/01/2022</dd>
               </dl>
             </>
-          </ContentRowWithHeader>
-          {/** <ContentRowWithHeader
+          </SectionRow>
+          {/** <SectionRow
             id={SECTIONS_ID.MENTIONS_OBLIGATOIRES_ENTREPRISE}
             header={{
               level: 2,
@@ -121,7 +121,7 @@ export default function Legals() {
                 <dd>822 765 764 00029</dd>
               </dl>
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         */}
         </div>
       </>

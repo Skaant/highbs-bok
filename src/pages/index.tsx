@@ -5,7 +5,7 @@ import { Layout } from "../components/Layout/Layout"
 import "../styles/global.scss"
 import { ButtonsMenu } from "../components/ButtonsMenu"
 import { COLORS } from "../../data/colors"
-import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../components/_rows/SectionRow"
 import { QuoteRow } from "../components/_rows/QuoteRow"
 import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
 import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
@@ -38,7 +38,7 @@ export default function Home() {
               Le livre du motif absolu
             </p>
           </div>
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               element: (
                 <h2>
@@ -77,7 +77,7 @@ export default function Home() {
                 <b>à la recherche des idées les plus hautes perchées</b>.
               </p>
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
           <QuoteRow
             legend={
               <>
@@ -99,7 +99,7 @@ export default function Home() {
             </>
           </QuoteRow>
           <MiniRowAbsolute id="psik" justify="right" />
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 2,
               content: "Comment se procurer le premier livret ?",
@@ -122,8 +122,8 @@ export default function Home() {
               </p>
               <ExtraitAcheterCTA />
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               element: (
                 <h2>
@@ -187,7 +187,7 @@ export default function Home() {
                 ]}
               />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
           <QuoteRow
             background={COLORS.GOLD}
             legend={
@@ -205,7 +205,7 @@ export default function Home() {
               dériver les motifs les plus hauts [...]."
             </>
           </QuoteRow>
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 3,
               content: "Un manifeste pour les idées",
@@ -249,12 +249,12 @@ export default function Home() {
                 ]}
               />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
           <ImageRowPositionAbsolute
             src="/images/hb-droplets.svg"
             style={{ height: "180vh", marginTop: "20vh" }}
           />
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 2,
               content: "Un projet au long cours",
@@ -293,8 +293,8 @@ export default function Home() {
                 ]}
               />
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               level: 3,
               content: "Amélioration continue",
@@ -328,7 +328,7 @@ export default function Home() {
               </p>
               <ExtraitAcheterCTA />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         </div>
       </>
     </Layout>

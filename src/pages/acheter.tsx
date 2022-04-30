@@ -4,7 +4,7 @@ import { PAGES } from "../../data/pages"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
 import BuyOptions from "../components/_PAGES/acheter/BuyOptions"
-import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../components/_rows/SectionRow"
 import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
 import "../styles/global.scss"
 
@@ -38,13 +38,13 @@ export default function () {
             src="/images/hb1-24-further.svg"
             style={{ height: "70vw", minHeight: "400px", marginTop: "80px" }}
           />
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 1,
               content: title,
             }}
           />
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 2,
               content: "Un beau petit ouvrage",
@@ -63,8 +63,8 @@ export default function () {
                 <b>superbement mises en valeur</b> par le support papier.
               </p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               level: 2,
               content: "Choisissez l'option qui vous convient",
@@ -195,8 +195,8 @@ export default function () {
                 ]}
               />
             </>
-          </ContentRowWithHeader>
-          {/* <ContentRowWithHeader
+          </SectionRow>
+          {/* <SectionRow
             header={{
               level: 2,
               content: "Bientôt une version électronique ?",
@@ -226,7 +226,7 @@ export default function () {
                 className="mt-5"
               />
             </>
-          </ContentRowWithHeader> */}
+          </SectionRow> */}
         </div>
       </>
     </Layout>

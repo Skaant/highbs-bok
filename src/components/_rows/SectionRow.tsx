@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react"
 
-export function ContentRowWithHeader({
+export function SectionRow({
   id,
   header,
   className,

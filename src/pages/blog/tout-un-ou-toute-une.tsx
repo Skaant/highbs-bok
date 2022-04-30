@@ -6,7 +6,7 @@ import Figure from "../../components/Figure"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { ExtraitAcheterCTA } from "../../components/_ctas/ExtraitAcheterCTA"
-import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../../components/_rows/SectionRow"
 import { EXTRACT_DOWNLOAD_LINK } from "../../config"
 import "../../styles/global.scss"
 
@@ -29,7 +29,7 @@ export default function () {
           ]}
         />
         <div className="container-fluid px-0">
-          <ContentRowWithHeader className="spaced pb-0 bg-light_blue" px="px-0">
+          <SectionRow className="spaced pb-0 bg-light_blue" px="px-0">
             <ButtonsMenu
               className="mt-0 px-0"
               buttons={[
@@ -40,7 +40,7 @@ export default function () {
                 },
               ]}
             />
-          </ContentRowWithHeader>
+          </SectionRow>
           <div className="row px-4 pt-5 bg-light_blue">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1 className="my-0">
@@ -110,7 +110,7 @@ export default function () {
               </p>
             </div>
           </div>
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 2,
               content: "Celui qui n'a pas d'attribut",
@@ -157,8 +157,8 @@ export default function () {
                 simultanément ?
               </p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               level: 2,
               content: "Du coup, il a un kiki ?",
@@ -234,8 +234,8 @@ export default function () {
                 </li>
               </ul>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader className="bg-turquoize">
+          </SectionRow>
+          <SectionRow className="bg-turquoize">
             <>
               <h2>
                 Bonus: <span className="bg-gold">HOL-ADIN</span> ? Un rapport
@@ -287,8 +287,8 @@ export default function () {
                 )}
               />
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               level: 2,
               content: "Prêt(s) à franchir le pas ?",
@@ -308,7 +308,7 @@ export default function () {
               <ExtraitAcheterCTA secondaryBtnColor={COLORS.LIGHT} />
               <p>À bientôt !</p>
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         </div>
       </>
     </Layout>

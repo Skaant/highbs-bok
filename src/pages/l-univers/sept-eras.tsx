@@ -5,7 +5,7 @@ import { PAGES } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
-import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../../components/_rows/SectionRow"
 import "../../styles/global.scss"
 
 const pageId = PAGES.L_UNIVERS_ERAS
@@ -54,7 +54,7 @@ export default function SeptEras() {
               </div>
             )
           })}
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 2,
               content: "Autres pages de l'univers",
@@ -63,7 +63,7 @@ export default function SeptEras() {
             <>
               <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         </div>
       </>
     </Layout>

@@ -4,7 +4,7 @@ import { PAGES } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
-import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../../components/_rows/SectionRow"
 import "../../styles/global.scss"
 
 const pageId = PAGES.L_UNIVERS_COULEURS
@@ -21,7 +21,7 @@ export default function Couleurs() {
             className="position-absolute w-100 cover"
             style={{ zIndex: -1 }}
           />
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 1,
               content: title,
@@ -44,8 +44,8 @@ export default function Couleurs() {
                 dont quelques uns sont <b>résumés ci-dessous</b> :
               </p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader className="pt-4">
+          </SectionRow>
+          <SectionRow className="pt-4">
             <table className="table" style={{ background: "#f8f9facc" }}>
               <tbody>
                 {Object.values(COLORS)
@@ -81,8 +81,8 @@ export default function Couleurs() {
                   })}
               </tbody>
             </table>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               level: 2,
               content: "Autres pages de l'univers",
@@ -92,7 +92,7 @@ export default function Couleurs() {
             <>
               <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         </div>
       </>
     </Layout>

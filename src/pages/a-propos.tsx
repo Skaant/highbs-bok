@@ -6,7 +6,7 @@ import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
 import { TableOfContent } from "../components/TableOfContent"
 import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
-import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../components/_rows/SectionRow"
 import "../styles/global.scss"
 
 const pageId = PAGES.A_PROPOS
@@ -42,7 +42,7 @@ export default function () {
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 1,
               content: title,
@@ -52,8 +52,8 @@ export default function () {
             <>
               <TableOfContent sections={sections} />
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.QU_EST_CE_QUE_L_HIGHBS_BOK}
             header={{
               level: 2,
@@ -81,8 +81,8 @@ export default function () {
               </p>
               <ExtraitAcheterCTA />
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.POURQUOI_LIRE_CE_LIVRE}
             header={{
               level: 2,
@@ -105,8 +105,8 @@ export default function () {
                 imaginaire du futur.
               </p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.UN_PROCESSUS_D_AMELIORATION_CONTINUE}
             header={{
               level: 2,
@@ -126,8 +126,8 @@ export default function () {
                 pourvu que le temps nourrisse l'HIGHBS-BOK.
               </p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.HIGHBS_EGAL_ILLUMINATION}
             header={{
               level: 2,
@@ -148,8 +148,8 @@ export default function () {
               <p>Dès qu'on y pose des mots on en perd l'essence.</p>
               <p>L'HIGHBS c'est être très très high mon pote.</p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.POURQUOI_UTILISER_DES_MOTS_BIZARRES}
             header={{
               level: 2,
@@ -178,8 +178,8 @@ export default function () {
                 ]}
               />
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.AU_SUJET_DES_PSYCHEDELIQUES}
             header={{
               level: 2,
@@ -202,8 +202,8 @@ export default function () {
                 le concept de psychoactivité.
               </p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               level: 3,
               content: "La psychoactivité, un mode de vie ?",
@@ -232,8 +232,8 @@ export default function () {
                 secondaryBtnColor={COLORS.GOLD}
               />
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.INSPIRATIONS}
             header={{
               level: 2,
@@ -252,8 +252,8 @@ export default function () {
                 que je ne souhaite pas citer ici.
               </p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.ENTRER_EN_CONTACT}
             header={{
               level: 2,
@@ -292,7 +292,7 @@ export default function () {
                 </li>
               </ul>
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         </div>
       </>
     </Layout>

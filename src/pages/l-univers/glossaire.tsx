@@ -4,7 +4,7 @@ import { PAGES } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
-import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../../components/_rows/SectionRow"
 import { ImageRowPositionAbsolute } from "../../components/_rows/ImageRowPositionAbsolute"
 import "../../styles/global.scss"
 import { SECTIONS_ID as A_PROPOS_SECTIONS_ID } from "../a-propos"
@@ -23,7 +23,7 @@ export default function Glossaire() {
             style={{ height: "100%", minHeight: "100vh" }}
             imgClassName="h-100"
           />
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 1,
               content: title,
@@ -46,8 +46,8 @@ export default function Glossaire() {
                 <b>leur définition</b>.
               </p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader className="pt-4">
+          </SectionRow>
+          <SectionRow className="pt-4">
             <table
               className="table table--first-row-right"
               style={{ background: "#f8f9facc" }}
@@ -146,8 +146,8 @@ export default function Glossaire() {
                 </tr>
               </tbody>
             </table>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               level: 2,
               content: "Autres pages de l'univers",
@@ -157,7 +157,7 @@ export default function Glossaire() {
             <>
               <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         </div>
       </>
     </Layout>

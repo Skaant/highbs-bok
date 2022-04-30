@@ -6,7 +6,7 @@ import Figure from "../../components/Figure"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { ExtraitAcheterCTA } from "../../components/_ctas/ExtraitAcheterCTA"
-import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../../components/_rows/SectionRow"
 import "../../styles/global.scss"
 
 export default function () {
@@ -16,7 +16,7 @@ export default function () {
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
-          <ContentRowWithHeader className="spaced pb-0 bg-blue">
+          <SectionRow className="spaced pb-0 bg-blue">
             <ButtonsMenu
               className="mt-0"
               buttons={[
@@ -27,7 +27,7 @@ export default function () {
                 },
               ]}
             />
-          </ContentRowWithHeader>
+          </SectionRow>
           <div className="row px-4 pt-5 bg-blue text-light">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1 className="my-0">{title}</h1>
@@ -65,7 +65,7 @@ export default function () {
               />
             </div>
           </div>
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 2,
               content: "Et maintenant ?",
@@ -103,8 +103,8 @@ export default function () {
                 envie, en fait, de la partager et de vous faire réver avec.
               </p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             className="bg-light"
             header={{
               level: 2,
@@ -163,7 +163,7 @@ export default function () {
               </p>
               <ExtraitAcheterCTA />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         </div>
       </>
     </Layout>

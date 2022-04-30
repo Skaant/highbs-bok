@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react"
 import { CHARACTERS, CHARACTERS_DATA } from "../../../../data/characters"
 import EraListInline from "../../EraListInline"
-import { ContentRowWithHeader } from "../../_rows/ContentRowWithHeader"
+import { SectionRow } from "../../_rows/SectionRow"
 
 function CharacterRow({
   character,
@@ -12,7 +12,7 @@ function CharacterRow({
 }) {
   const { name, eras, color } = CHARACTERS_DATA[character]
   return (
-    <ContentRowWithHeader
+    <SectionRow
       id={name}
       header={{
         level: 3,
@@ -27,7 +27,7 @@ function CharacterRow({
           <EraListInline eras={eras} />
         </p>
       </>
-    </ContentRowWithHeader>
+    </SectionRow>
   )
 }
 

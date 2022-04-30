@@ -11,7 +11,7 @@ import { TableOfContent } from "../../components/TableOfContent"
 import Term from "../../components/Term"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import CharacterRow from "../../components/_pages/personnages-et-entites/CharacterRow"
-import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../../components/_rows/SectionRow"
 import { ImageRowPositionAbsolute } from "../../components/_rows/ImageRowPositionAbsolute"
 import "../../styles/global.scss"
 
@@ -54,7 +54,7 @@ export default function Glossaire() {
             }}
             imgStyle={{ maxWidth: "992px" }}
           />
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 1,
               content: title,
@@ -69,8 +69,8 @@ export default function Glossaire() {
               </p>
               <TableOfContent sections={sections} unstyled={false} />
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             id={SECTIONS_ID.PERSONNAGES_ET_ENTITES_DU_VOLUME_1}
             header={{
               level: 2,
@@ -100,7 +100,7 @@ export default function Glossaire() {
                 characters={volumesCharacters[VOLUMES.VOLUME_1]}
               />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
           <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_1][0]}>
             <>
               <p>
@@ -123,7 +123,7 @@ export default function Glossaire() {
           <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_1][3]}>
             <></>
           </CharacterRow>
-          <ContentRowWithHeader
+          <SectionRow
             id={SECTIONS_ID.PERSONNAGES_ET_ENTITES_DU_VOLUME_2}
             header={{
               level: 2,
@@ -152,8 +152,8 @@ export default function Glossaire() {
                 <li>Quelques ZUMS de la cité de l'aube (AURO-ERA).</li>
               </ul>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               level: 2,
               content: "Autres pages de l'univers",
@@ -163,7 +163,7 @@ export default function Glossaire() {
             <>
               <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         </div>
       </>
     </Layout>

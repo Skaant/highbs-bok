@@ -5,7 +5,7 @@ import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import { ExtraitAcheterCTA } from "../../components/_ctas/ExtraitAcheterCTA"
-import { ContentRowWithHeader } from "../../components/_rows/ContentRowWithHeader"
+import { SectionRow } from "../../components/_rows/SectionRow"
 import "../../styles/global.scss"
 
 export default function () {
@@ -15,7 +15,7 @@ export default function () {
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
-          <ContentRowWithHeader className="col-12 col-md-10 col-lg-8 col-xl-6 spaced pb-0">
+          <SectionRow className="col-12 col-md-10 col-lg-8 col-xl-6 spaced pb-0">
             <ButtonsMenu
               className="mt-0"
               buttons={[
@@ -26,7 +26,7 @@ export default function () {
                 },
               ]}
             />
-          </ContentRowWithHeader>
+          </SectionRow>
           <div className="row px-4 bg-white">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1 className="my-0">{title}</h1>
@@ -64,7 +64,7 @@ export default function () {
               </p>
             </div>
           </div>
-          <ContentRowWithHeader
+          <SectionRow
             header={{
               level: 2,
               content: "Une société bienveillante",
@@ -104,8 +104,8 @@ export default function () {
               </p>
               <p>Ça donne envie, non ?</p>
             </>
-          </ContentRowWithHeader>
-          <ContentRowWithHeader
+          </SectionRow>
+          <SectionRow
             header={{
               level: 2,
               content: "Une ombre au tableau",
@@ -153,7 +153,7 @@ export default function () {
               </p>
               <ExtraitAcheterCTA />
             </>
-          </ContentRowWithHeader>
+          </SectionRow>
         </div>
       </>
     </Layout>
