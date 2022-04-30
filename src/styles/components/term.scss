@@ -2,6 +2,9 @@
   &:not(.font-regular) {
     font-family: "CaesarDressing-Regular";
   }
+  &.font-regular {
+    font-family: "Merriweather-Regular";
+  }
   border-radius: 64px;
 }
 p,
@@ -9,9 +12,9 @@ li {
   .term {
     &:not(.font-regular) {
       letter-spacing: 2px;
+      font-size: 1.5rem;
     }
     padding: 0 12px;
-    font-size: 1.5rem;
     line-height: 1.3rem;
     &.small {
       font-size: 1rem;
