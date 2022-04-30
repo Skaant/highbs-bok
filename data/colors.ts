@@ -53,6 +53,7 @@ export const COLORS_DATA: { [color in COLORS]: colorData } = {
   DEEP: {
     hexa: "#433869",
     description: "Entropie, dispersion",
+    colorWhite: true,
   },
   SKIN: {
     hexa: "#ff6e38",
@@ -81,6 +82,5 @@ export const COLORS_DATA: { [color in COLORS]: colorData } = {
   TURQUOIZE: {
     hexa: "#00ffab",
     description: "Donnée",
-    colorWhite: true,
   },
 }
