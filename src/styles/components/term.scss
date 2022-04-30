@@ -37,8 +37,11 @@ h2 .term {
 .display-4 .term {
   &:not(.font-regular) {
     letter-spacing: 5px;
+    font-size: 3rem;
   }
-  font-size: 3rem;
+  &.font-regular {
+    font-size: 3rem;
+  }
   line-height: map-get($display-font-sizes, 4);
   padding: 0 24px;
   display: inline-block;
