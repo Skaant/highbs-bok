@@ -89,7 +89,14 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     color: COLORS.LIGHT_GOLD,
   },
   HOL_ADIN: undefined,
-  HOL_ONG: undefined,
+  HOL_ONG: {
+    name: "HOL-ONG",
+    short: "Conscience collective",
+    summary:
+      "Réseau rassemblant les consciences de tous les créatures de Grand-Arbre.",
+    volume: VOLUMES.VOLUME_1,
+    color: COLORS.TURQUOIZE,
+  },
   ONG: undefined,
   PSIK: {
     name: "PSIK",
