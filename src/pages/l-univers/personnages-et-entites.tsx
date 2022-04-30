@@ -135,30 +135,38 @@ export default function Glossaire() {
                 Le volume 2 n'étant pas encore sorti, son contenu est à même
                 d'évoluer.
               </p>
-              <ul>
-                <li>Le siège de la pensée (CONTRACTION-ERA), aussi un lieu,</li>
-                <li>Raz-la-pouëpouët (CONTRACTION-ERA),</li>
-                <li>
-                  Binda (PALÉO, <i>CONTRACTION-</i>ERA),
-                </li>
-                <li>
-                  Za-zoz, KAMI de la tribu PSIK (PALÉO, <i>CONTRACTION</i>-ERA),
-                </li>
-                <li>Krao (EXPANS-ERA),</li>
-                <li>Jing-Jam-Zum (AURO-ERA),</li>
-                <li>
-                  Les trois anciens-anciens qui guident Binda (PALÉO-ERA),
-                </li>
-                <li>Quelques ZUMS de la cité de l'aube (AURO-ERA).</li>
-              </ul>
+              <CharactersList
+                characters={volumesCharacters[VOLUMES.VOLUME_2]}
+              />
             </>
           </SectionRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][0]}>
+            <></>
+          </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][1]}>
+            <></>
+          </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][2]}>
+            <></>
+          </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][3]}>
+            <></>
+          </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][4]}>
+            <></>
+          </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][5]}>
+            <></>
+          </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][6]}>
+            <></>
+          </CharacterRow>
           <SectionRow
             header={{
               level: 2,
               content: "Autres pages de l'univers",
             }}
-            className="bg-gold"
+            className="bg-light"
           >
             <>
               <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
