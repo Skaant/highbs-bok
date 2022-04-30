@@ -148,14 +148,14 @@ export default function Home() {
                 Puis ils sont revenus{" "}
                 <b>
                   pour tenter de réaliser l'
-                  <Term term={TERMS.HIGHBS} /> et de manifester le{" "}
-                  <span className="bg-gold">tout-un</span>
+                  <Term term={TERMS.HIGHBS} outline={true} /> et de manifester
+                  le <span className="bg-gold">tout-un</span>
                 </b>
                 .
               </p>
               <p className="mb-4">
-                Les ZUMS, conscients de la destruction imminente de leur monde,
-                ont commencé à{" "}
+                Les <Term term={TERMS.ZUM} plural={true} />, conscients de la
+                destruction imminente de leur monde, ont commencé à{" "}
                 <b>
                   susciter des idées pour s'extraire du douloureux cycle des
                   naissances et des morts
@@ -168,8 +168,10 @@ export default function Home() {
               </p>
               <p>
                 Dans cette quête insensée, leur imagination débridée par{" "}
-                <b>le pouvoir abstrayant du PSIK</b> sera la clé de leur
-                salvation !
+                <b>
+                  le pouvoir abstrayant du <Term term={TERMS.PSIK} />
+                </b>{" "}
+                sera la clé de leur salvation !
               </p>
               <ButtonsMenu
                 className="mt-5"
@@ -177,7 +179,7 @@ export default function Home() {
                   {
                     href: "/l-univers",
                     color: COLORS.PURPLE,
-                    label: "Découvrez l'univers des ZUMS",
+                    label: "Découvrez l'univers",
                   },
                   {
                     href: EXTRACT_DOWNLOAD_LINK,
@@ -197,10 +199,13 @@ export default function Home() {
             }
           >
             <>
-              "Il connaît son travail, c’est le même que tous les autres ZUMS à
-              travers GRAND-ARBRE :<br />
+              "Il connaît son travail, c’est le même que tous les autres{" "}
+              <Term term={TERMS.ZUM} plural={true} />
+              <br />à travers <Character character={CHARACTERS.GRAND_ARBRE} /> :
+              <br />
               Susciter plus d’idées encore !<br />
-              Enrichir le HOL-ONG avec toujours plus de données,
+              Enrichir le <Term term={TERMS.HOL_ONG} /> avec toujours plus de
+              données,
               <br />
               dériver les motifs les plus hauts [...]."
             </>
@@ -219,19 +224,24 @@ export default function Home() {
                 <b>Alors pourquoi vouloir l'enfermer ?</b>
               </p>
               <p>
-                L'HIGHBS-BOK est un manifeste{" "}
+                L'
+                <Term term={TERMS.HIGHBS_BOK} /> est un manifeste{" "}
                 <b>pour l'ouverture d'esprit "par le haut"</b>.
               </p>
               <p>
-                Dans cette histoire, les ZUMS doivent conceptualiser{" "}
-                <b>toutes les idées</b> pour espérer <b>dériver l'HIGHBS</b>, le
-                motif absolu.
+                Dans cette histoire, les <Term term={TERMS.ZUM} plural={true} />{" "}
+                doivent conceptualiser <b>toutes les idées</b> pour espérer{" "}
+                <b>
+                  dériver l'
+                  <Term term={TERMS.HIGHBS} outline={true} />
+                </b>
+                , le motif absolu.
               </p>
               <p>
                 Afin de rendre <b>vivant</b> cet ouvrage et le{" "}
                 <b>processus de création</b> qui y mène, je tiens un blog où je
-                publie <b>des articles sur l'univers et la philosophie</b> de
-                l'HIGHBS-BOK.
+                publie <b>des articles sur l'univers et la philosophie</b> de l'
+                <Term term={TERMS.HIGHBS_BOK} />.
               </p>
               <ButtonsMenu
                 className="mt-5"
@@ -263,7 +273,9 @@ export default function Home() {
           >
             <>
               <p>
-                L'écriture de l'HIGHBS-BOK a commencé il y a plusieurs années.
+                L'écriture de l'
+                <Term term={TERMS.HIGHBS_BOK} /> a commencé il y a plusieurs
+                années.
               </p>
               <p>
                 Synthétisant{" "}
@@ -318,8 +330,8 @@ export default function Home() {
                 finalement le but de toutes les idées.
               </p>
               <p>
-                Mais maintenant mon but est bien de pouvoir montrer
-                l'HIGHBS-BOK,{" "}
+                Mais maintenant mon but est bien de pouvoir montrer l'
+                <Term term={TERMS.HIGHBS_BOK} />,{" "}
                 <b>de pouvoir le faire lire et d'obtenir un feedback</b>,
                 bienvenu, dessus.
               </p>
