@@ -1,5 +1,5 @@
 import * as React from "react"
-import { colors } from "../../../../data/colors"
+import { COLORS } from "../../../../data/colors"
 import { ButtonsMenu } from "../../../components/ButtonsMenu"
 
 type BuyOptionsProps = {
@@ -9,9 +9,9 @@ type BuyOptionsProps = {
     content: Array<string | React.FC>
     details?: string[]
     label: string
-    bgColor?: colors
-    textColor?: colors
-    accentColor?: colors
+    bgColor?: COLORS
+    textColor?: COLORS
+    accentColor?: COLORS
   }>
 }
 
@@ -31,18 +31,18 @@ function BuyOptions({ options }: BuyOptionsProps) {
         }) => (
           <li
             className={`${
-              bgColor ? `bg-${bgColor} ` : "bg-light "
+              bgColor ? `bg-${bgColor.toLowerCase()} ` : "bg-light "
             }px-4 px-md-5 py-1 py-md-4 rounded mt-5 shadow`}
           >
             <a
               href={link}
               className={`${
-                textColor ? `text-${textColor} ` : "text-dark"
+                textColor ? `text-${textColor.toLowerCase()} ` : "text-dark"
               } text-decoration-none`}
             >
               <h3
                 className={`mt-5 mb-4 mb-md-5 ${
-                  accentColor ? `text-${accentColor}` : ""
+                  accentColor ? `text-${accentColor.toLowerCase()}` : ""
                 }`}
               >
                 {title}
@@ -71,7 +71,7 @@ function BuyOptions({ options }: BuyOptionsProps) {
                   {
                     href: link,
                     label: label,
-                    color: accentColor || colors.purple,
+                    color: accentColor || COLORS.PURPLE,
                   },
                 ]}
               />

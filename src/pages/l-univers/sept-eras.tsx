@@ -1,5 +1,5 @@
 import React from "react"
-import { colors, colorsData } from "../../../data/colors"
+import { COLORS, COLORS_DATA } from "../../../data/colors"
 import { ERAS, ERAS_DATA } from "../../../data/eras"
 import { PAGES } from "../../../data/pages"
 import { Header } from "../../components/Header"
@@ -38,13 +38,13 @@ export default function SeptEras() {
           </div>
           {Object.values(ERAS).map((era: ERAS) => {
             const { name, summary, id, color } = ERAS_DATA[era]
-            const { colorWhite = false } = color ? colorsData.get(color) : {}
+            const { colorWhite = false } = color ? COLORS_DATA[color] || {} : {}
             return (
               <div
                 key={era}
                 id={id}
                 className={`row px-4 py-5 align-content-center${
-                  color ? ` bg-${color}` : ""
+                  color ? ` bg-${color.toLowerCase()}` : ""
                 }${colorWhite ? " text-light" : ""}`}
               >
                 <div className="col-12 col-md-10 col-lg-8 col-xl-6">
@@ -61,7 +61,7 @@ export default function SeptEras() {
             }}
           >
             <>
-              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
+              <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </>
           </ContentRowWithHeader>
         </div>

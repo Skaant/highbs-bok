@@ -1,5 +1,5 @@
 import React from "react"
-import { colors } from "../../data/colors"
+import { COLORS } from "../../data/colors"
 import { PAGES } from "../../data/pages"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
@@ -109,9 +109,9 @@ export default function () {
                     ],
                     details: ["Le sticker joyau HIGHBS fait 7 cm de diamètre."],
                     label: "Disponible pour 25€",
-                    bgColor: colors.deep,
-                    textColor: colors.light,
-                    accentColor: colors.gold,
+                    bgColor: COLORS.DEEP,
+                    textColor: COLORS.LIGHT,
+                    accentColor: COLORS.GOLD,
                   },
                   {
                     link: "https://buy.stripe.com/5kA8yJ5sy0xtdnabIM",
@@ -156,9 +156,9 @@ export default function () {
                     ],
                     details: ["Un sticker ZUM de chacun des 3 modèles dispo."],
                     label: "Disponible pour 42€",
-                    bgColor: colors.deep,
-                    textColor: colors.light,
-                    accentColor: colors.gold,
+                    bgColor: COLORS.DEEP,
+                    textColor: COLORS.LIGHT,
+                    accentColor: COLORS.GOLD,
                   },
                   {
                     link: "https://buy.stripe.com/cN24itbQWa83ere006",
@@ -188,9 +188,9 @@ export default function () {
                       "Au moins un sticker ZUM de chacun des trois modèles.",
                     ],
                     label: "Disponible pour 64€",
-                    bgColor: colors.deep,
-                    textColor: colors.light,
-                    accentColor: colors.gold,
+                    bgColor: COLORS.DEEP,
+                    textColor: COLORS.LIGHT,
+                    accentColor: COLORS.GOLD,
                   },
                 ]}
               />
@@ -219,7 +219,7 @@ export default function () {
                 buttons={[
                   {
                     href: EXTRACT_DOWNLOAD_LINK,
-                    color: colors.gold,
+                    color: COLORS.GOLD,
                     label: "Téléchargez l'extrait",
                   },
                 ]}

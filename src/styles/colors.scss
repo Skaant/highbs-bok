@@ -13,14 +13,14 @@ $theme-colors: map-remove(
 /** Custom colors list.
   * @note should be auto-generated from data. */
 $gold: #ffcd5c;
-$lightGold: #ffde95;
+$light_gold: #ffde95;
 $blue: #5d89ff;
-$lightBlue: #bfd8ff;
-$lightDeep: #b6b1c5;
+$light_blue: #bfd8ff;
+$light_deep: #b6b1c5;
 $jewel: #ffdcb0;
 $deep: #433869;
 $skin: #ff6e38;
-$darkSkin: #a7654d;
+$dark_skin: #a7654d;
 $green: #46af49;
 $purple: #a735ff;
 $turquoize: #00ffab;
@@ -31,14 +31,14 @@ $theme-colors: map-merge(
   (
     "white": $white,
     "gold": $gold,
-    "lightGold": $lightGold,
+    "light_gold": $light_gold,
     "blue": $blue,
-    "lightBlue": $lightBlue,
-    "lightDeep": $lightDeep,
+    "light_blue": $light_blue,
+    "light_deep": $light_deep,
     "jewel": $jewel,
     "deep": $deep,
     "skin": $skin,
-    "darkSkin": $darkSkin,
+    "dark_skin": $dark_skin,
     "green": $green,
     "purple": $purple,
     "turquoize": $turquoize,

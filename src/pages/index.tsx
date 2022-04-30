@@ -4,7 +4,7 @@ import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
 import "../styles/global.scss"
 import { ButtonsMenu } from "../components/ButtonsMenu"
-import { colors } from "../../data/colors"
+import { COLORS } from "../../data/colors"
 import { ContentRowWithHeader } from "../components/_rows/ContentRowWithHeader"
 import { QuoteRow } from "../components/_rows/QuoteRow"
 import { ImageRowPositionAbsolute } from "../components/_rows/ImageRowPositionAbsolute"
@@ -176,12 +176,12 @@ export default function Home() {
                 buttons={[
                   {
                     href: "/l-univers",
-                    color: colors.purple,
+                    color: COLORS.PURPLE,
                     label: "Découvrez l'univers des ZUMS",
                   },
                   {
                     href: EXTRACT_DOWNLOAD_LINK,
-                    color: colors.light,
+                    color: COLORS.LIGHT,
                     label: "Téléchargez l'extrait",
                   },
                 ]}
@@ -189,7 +189,7 @@ export default function Home() {
             </>
           </ContentRowWithHeader>
           <QuoteRow
-            background={colors.gold}
+            background={COLORS.GOLD}
             legend={
               <>
                 - Extrait du livret 1, chapitre 12 : <i>Balthazum</i>.
@@ -238,12 +238,12 @@ export default function Home() {
                 buttons={[
                   {
                     href: "/blog",
-                    color: colors.purple,
+                    color: COLORS.PURPLE,
                     label: "Accéder au blog",
                   },
                   {
                     href: "/acheter",
-                    color: colors.light,
+                    color: COLORS.LIGHT,
                     label: "Acheter le livret",
                   },
                 ]}
@@ -282,12 +282,12 @@ export default function Home() {
                 buttons={[
                   {
                     href: "/a-propos",
-                    color: colors.gold,
+                    color: COLORS.GOLD,
                     label: "En savoir plus sur les motivations",
                   },
                   {
                     href: EXTRACT_DOWNLOAD_LINK,
-                    color: colors.purple,
+                    color: COLORS.PURPLE,
                     label: "Téléchargez l'extrait",
                   },
                 ]}

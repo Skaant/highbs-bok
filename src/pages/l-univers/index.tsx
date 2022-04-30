@@ -1,5 +1,5 @@
 import React from "react"
-import { colors } from "../../../data/colors"
+import { COLORS } from "../../../data/colors"
 import { PAGES } from "../../../data/pages"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
 import { Header } from "../../components/Header"
@@ -51,11 +51,11 @@ export default function () {
                 Servez-vous de ces quelques pages pour{" "}
                 <b>explorer plus encore l'univers épique des ZUMS</b>.
               </p>
-              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
+              <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </div>
           </div>
           <QuoteRow
-            background={colors.gold}
+            background={COLORS.GOLD}
             legend={
               <>
                 - Extrait du livret 1, chapitre 6 : <i>Sept ERAS</i>
@@ -80,17 +80,17 @@ export default function () {
                 buttons={[
                   {
                     href: "/a-propos",
-                    color: colors.light,
+                    color: COLORS.LIGHT,
                     label: "A propos",
                   },
                   {
                     href: EXTRACT_DOWNLOAD_LINK,
-                    color: colors.light,
+                    color: COLORS.LIGHT,
                     label: "Télécharger l'extrait",
                   },
                   {
                     href: "/acheter",
-                    color: colors.purple,
+                    color: COLORS.PURPLE,
                     label: "Acheter le livret",
                   },
                 ]}

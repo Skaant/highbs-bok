@@ -1,6 +1,6 @@
 import React from "react"
 import articles from "../../../data/articles"
-import { colors } from "../../../data/colors"
+import { COLORS } from "../../../data/colors"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
 import Figure from "../../components/Figure"
 import { Header } from "../../components/Header"
@@ -29,19 +29,19 @@ export default function () {
           ]}
         />
         <div className="container-fluid px-0">
-          <ContentRowWithHeader className="spaced pb-0 bg-lightBlue" px="px-0">
+          <ContentRowWithHeader className="spaced pb-0 bg-light_blue" px="px-0">
             <ButtonsMenu
               className="mt-0 px-0"
               buttons={[
                 {
                   href: "/blog",
                   label: "Retour aux articles",
-                  color: colors.light,
+                  color: COLORS.LIGHT,
                 },
               ]}
             />
           </ContentRowWithHeader>
-          <div className="row px-4 pt-5 bg-lightBlue">
+          <div className="row px-4 pt-5 bg-light_blue">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1 className="my-0">
                 <span className="bg-gold">Tout-un</span> ou{" "}
@@ -163,7 +163,7 @@ export default function () {
               level: 2,
               content: "Du coup, il a un kiki ?",
             }}
-            className="bg-lightGold"
+            className="bg-light_gold"
           >
             <>
               <p>
@@ -305,7 +305,7 @@ export default function () {
                 </b>{" "}
                 !
               </p>
-              <ExtraitAcheterCTA secondaryBtnColor={colors.light} />
+              <ExtraitAcheterCTA secondaryBtnColor={COLORS.LIGHT} />
               <p>À bientôt !</p>
             </>
           </ContentRowWithHeader>

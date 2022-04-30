@@ -1,5 +1,5 @@
 import React from "react"
-import { colors } from "../../data/colors"
+import { COLORS } from "../../data/colors"
 import { PAGES } from "../../data/pages"
 import { ButtonsMenu } from "../components/ButtonsMenu"
 import { Header } from "../components/Header"
@@ -59,7 +59,7 @@ export default function () {
               level: 2,
               content: sections[SECTIONS_ID.QU_EST_CE_QUE_L_HIGHBS_BOK],
             }}
-            className="pt-4"
+            className="pt-4 bg-light_gold"
           >
             <>
               <p>
@@ -173,7 +173,7 @@ export default function () {
                   {
                     href: "/l-univers/glossaire",
                     label: "Se rendre au glossaire",
-                    color: colors.gold,
+                    color: COLORS.GOLD,
                   },
                 ]}
               />
@@ -228,8 +228,8 @@ export default function () {
                 <b>réaliser les choses les plus folles</b>.
               </p>
               <ExtraitAcheterCTA
-                primaryBtnColor={colors.light}
-                secondaryBtnColor={colors.gold}
+                primaryBtnColor={COLORS.LIGHT}
+                secondaryBtnColor={COLORS.GOLD}
               />
             </>
           </ContentRowWithHeader>

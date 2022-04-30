@@ -1,4 +1,4 @@
-import { colors } from "./colors"
+import { COLORS } from "./colors"
 import { ERAS } from "./eras"
 import { VOLUMES } from "./volumes"
 
@@ -13,7 +13,7 @@ export type CharacterData = {
   name: string
   eras: ERAS[] | "all"
   summary: string
-  color: colors
+  color: COLORS
   /** First volume when the character appears. */
   volume: VOLUMES
 }
@@ -24,7 +24,7 @@ export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
     eras: "all",
     summary:
       "L'entité complète, en potentiel, que les ZUMS cherchent à manifester.",
-    color: colors.gold,
+    color: COLORS.GOLD,
     volume: VOLUMES.VOLUME_1,
   },
   BALTAZUM: {
@@ -32,7 +32,7 @@ export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
     eras: [ERAS.CONTRACTION_ERA],
     summary:
       "Voyant son monde sombrer dans les ténèbres, il cherche de nouvelles idées pour éviter qu'il ne disparaisse.",
-    color: colors.skin,
+    color: COLORS.SKIN,
     volume: VOLUMES.VOLUME_1,
   },
   ANGK: {
@@ -40,7 +40,7 @@ export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
     eras: [ERAS.AURO_ERA, ERAS.ANGK_ERA],
     summary:
       "Le projet de corps pour l'être unique capable de réaliser l'HIGHBS et former le tout-un.",
-    color: colors.darkSkin,
+    color: COLORS.DARK_SKIN,
     volume: VOLUMES.VOLUME_1,
   },
   GRAND_ARBRE: {
@@ -53,7 +53,7 @@ export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
     ],
     summary:
       "La structure organique qui sert de support à la colonisation de l'univers par les ZUMS.",
-    color: colors.green,
+    color: COLORS.GREEN,
     volume: VOLUMES.VOLUME_1,
   },
 }

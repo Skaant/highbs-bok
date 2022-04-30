@@ -1,5 +1,5 @@
 import React from "react"
-import { colors } from "../../../data/colors"
+import { COLORS } from "../../../data/colors"
 import { PAGES } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
@@ -155,7 +155,7 @@ export default function Glossaire() {
             className="bg-gold"
           >
             <>
-              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
+              <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </>
           </ContentRowWithHeader>
         </div>

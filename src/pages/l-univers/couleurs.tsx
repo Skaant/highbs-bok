@@ -1,5 +1,5 @@
 import React from "react"
-import { colors, colorsData } from "../../../data/colors"
+import { COLORS, COLORS_DATA } from "../../../data/colors"
 import { PAGES } from "../../../data/pages"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
@@ -48,16 +48,17 @@ export default function Couleurs() {
           <ContentRowWithHeader className="pt-4">
             <table className="table" style={{ background: "#f8f9facc" }}>
               <tbody>
-                {Object.values(colors)
+                {Object.values(COLORS)
                   .filter(
-                    color => ![colors.light, colors.muted].includes(color)
+                    color =>
+                      ![COLORS.LIGHT, COLORS.MUTED, COLORS.DARK].includes(color)
                   )
                   .map(color => {
                     const {
                       hexa: backgroundColor,
                       description,
                       colorWhite,
-                    } = colorsData.get(color)
+                    } = COLORS_DATA[color]
                     return (
                       <tr key={color}>
                         <td>
@@ -89,7 +90,7 @@ export default function Couleurs() {
             className="bg-gold"
           >
             <>
-              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
+              <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </>
           </ContentRowWithHeader>
         </div>

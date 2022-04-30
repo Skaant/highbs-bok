@@ -1,6 +1,6 @@
 import React from "react"
 import { CHARACTERS, CHARACTERS_DATA } from "../../../data/characters"
-import { colors } from "../../../data/colors"
+import { COLORS } from "../../../data/colors"
 import { PAGES, PAGES_DATA } from "../../../data/pages"
 import { TERMS } from "../../../data/terms"
 import { VOLUMES } from "../../../data/volumes"
@@ -161,7 +161,7 @@ export default function Glossaire() {
             className="bg-gold"
           >
             <>
-              <UniversePagesCTA current={pageId} buttonsColor={colors.purple} />
+              <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </>
           </ContentRowWithHeader>
         </div>

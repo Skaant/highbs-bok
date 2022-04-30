@@ -18,7 +18,7 @@ function CharacterRow({
         level: 3,
         content: name,
       }}
-      className={`bg-${color}`}
+      className={`bg-${color.toLowerCase()}`}
     >
       <>
         {children}

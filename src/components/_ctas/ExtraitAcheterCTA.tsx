@@ -1,14 +1,14 @@
 import React from "react"
-import { colors } from "../../../data/colors"
+import { COLORS } from "../../../data/colors"
 import { EXTRACT_DOWNLOAD_LINK } from "../../config"
 import { ButtonsMenu } from "../ButtonsMenu"
 
 export function ExtraitAcheterCTA({
-  primaryBtnColor = colors.purple,
-  secondaryBtnColor = colors.gold,
+  primaryBtnColor = COLORS.PURPLE,
+  secondaryBtnColor = COLORS.GOLD,
 }: {
-  primaryBtnColor?: colors
-  secondaryBtnColor?: colors
+  primaryBtnColor?: COLORS
+  secondaryBtnColor?: COLORS
 }) {
   return (
     <ButtonsMenu

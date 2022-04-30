@@ -1,4 +1,4 @@
-import { colors } from "./colors"
+import { COLORS } from "./colors"
 import { VOLUMES } from "./volumes"
 
 export enum TERMS {
@@ -34,7 +34,7 @@ export type TermData = {
    *  the universe.
    */
   volume?: "storyboards" | VOLUMES
-  color: colors
+  color: COLORS
 }
 
 export const TERMS_DATA: { [key in TERMS]: TermData } = {
@@ -43,28 +43,28 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     short: "Abstraction",
     summary: "Abstrait, qui se rapproche de l'absolu",
     volume: "storyboards",
-    color: colors.purple,
+    color: COLORS.PURPLE,
   },
   ABS_SUTRAT: {
     name: "ABS-SUTRAT",
     short: `"Soutrate" de l'abstraction`,
     summary: "Agrégat de données relatifs à l'ABS",
     volume: "storyboards",
-    color: colors.purple,
+    color: COLORS.PURPLE,
   },
   AVE: {
     name: "AVE",
     short: "Salut",
     summary: "Salutation, hommage rendu.",
     volume: "storyboards",
-    color: colors.jewel,
+    color: COLORS.JEWEL,
   },
   DATA: {
     name: "DATA",
     short: "Donnée/idée",
     summary: "Élément atomique de connaissance.",
     volume: "storyboards",
-    color: colors.turquoize,
+    color: COLORS.TURQUOIZE,
   },
   ERA: {
     name: "ERA",
@@ -72,21 +72,21 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     summary:
       "Le temps, du début des ZUMS à la fin de l'univers, est découpé en sept parties.",
     volume: VOLUMES.VOLUME_1,
-    color: colors.turquoize,
+    color: COLORS.TURQUOIZE,
   },
   HIGHBS: {
     name: "HIGHBS",
     short: "Abstraction absolue",
     summary: "Motif ultime, idée la plus haute perchée.",
     volume: VOLUMES.VOLUME_1,
-    color: colors.gold,
+    color: COLORS.GOLD,
   },
   HIGHBS_BOK: {
     name: "HIGHBS-BOK",
     short: "Le livre du motif absolu",
     summary: "Un recueil de poèmes ésotériques sur l'histoire des ZUMS.",
     volume: VOLUMES.VOLUME_1,
-    color: colors.lightGold,
+    color: COLORS.LIGHT_GOLD,
   },
   HOL_ADIN: undefined,
   HOL_ONG: undefined,
@@ -97,7 +97,7 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     summary:
       "Activités, musique, substances suscitant des états de consciences modifiées, et donc de nouvelles idées.",
     volume: VOLUMES.VOLUME_1,
-    color: colors.purple,
+    color: COLORS.PURPLE,
   },
   SHRIGHNE: undefined,
   TOUT_UN: {
@@ -105,7 +105,7 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     short: "Totalité faite une",
     summary: "État d'harmonie éternelle. La quête ultime des ZUMS.",
     volume: VOLUMES.VOLUME_1,
-    color: colors.gold,
+    color: COLORS.GOLD,
   },
   TRIGHB: undefined,
   VAULT: undefined,
@@ -114,6 +114,6 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     short: "Humanoïdes",
     summary:
       "Êtres intelligents habitant la planète Tera, puis l'univers par extension.",
-    color: colors.skin,
+    color: COLORS.SKIN,
   },
 }

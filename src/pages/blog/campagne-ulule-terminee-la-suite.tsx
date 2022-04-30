@@ -1,6 +1,6 @@
 import React from "react"
 import articles from "../../../data/articles"
-import { colors } from "../../../data/colors"
+import { COLORS } from "../../../data/colors"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
 import Figure from "../../components/Figure"
 import { Header } from "../../components/Header"
@@ -23,7 +23,7 @@ export default function () {
                 {
                   href: "/blog",
                   label: "Retour aux articles",
-                  color: colors.light,
+                  color: COLORS.LIGHT,
                 },
               ]}
             />

@@ -1,5 +1,5 @@
 import React from "react"
-import { colors } from "../../../data/colors"
+import { COLORS } from "../../../data/colors"
 import { PAGES } from "../../../data/pages"
 import { ButtonsMenu } from "../ButtonsMenu"
 
@@ -37,7 +37,7 @@ export function UniversePagesCTA({
   buttonsColor: color,
 }: {
   current: string
-  buttonsColor?: colors
+  buttonsColor?: COLORS
 }) {
   return (
     <ButtonsMenu

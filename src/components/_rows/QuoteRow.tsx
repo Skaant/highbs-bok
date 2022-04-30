@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react"
-import { colors } from "../../../data/colors"
+import { COLORS } from "../../../data/colors"
 
 export function QuoteRow({
   background = false,
@@ -7,21 +7,21 @@ export function QuoteRow({
   className,
   children,
 }: {
-  background?: false | colors.gold
+  background?: false | COLORS.GOLD
   legend: string | ReactElement
   className?: string
   children: ReactElement
 }) {
   return (
     <div
-      className={`row ${background === colors.gold ? "bg-gold" : ""} ${
+      className={`row ${background === COLORS.GOLD ? "bg-gold" : ""} ${
         className || ""
       }`}
     >
       <div className="col-10">
         <p
           className={`display-4 ${
-            background === colors.gold ? "text-deep" : "text-muted"
+            background === COLORS.GOLD ? "text-deep" : "text-muted"
           }`}
         >
           {children}

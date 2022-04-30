@@ -1,5 +1,5 @@
 import * as React from "react"
-import { colorsData } from "../../data/colors"
+import { COLORS_DATA } from "../../data/colors"
 import { PAGES, PAGES_DATA } from "../../data/pages"
 import { TermData, TERMS, TERMS_DATA } from "../../data/terms"
 
@@ -16,8 +16,8 @@ function Term({
 }) {
   const { name, short, summary, color } =
     typeof term === "object" ? term : TERMS_DATA[term]
-  const className = `term bg-${color} text-${
-    colorsData.get(color).colorWhite ? "light" : "dark"
+  const className = `term bg-${color.toLowerCase()} text-${
+    COLORS_DATA[color]?.colorWhite ? "light" : "dark"
   } ${_className || ""}`
   return link ? (
     <a
