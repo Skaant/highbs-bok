@@ -7,7 +7,9 @@
 p,
 li {
   .term {
-    letter-spacing: 2px;
+    &:not(.font-regular) {
+      letter-spacing: 2px;
+    }
     padding: 0 12px;
     font-size: 1.5rem;
     line-height: 1.3rem;
@@ -18,16 +20,23 @@ li {
   }
 }
 h2 .term {
-  letter-spacing: 3px;
+  &:not(.font-regular) {
+    letter-spacing: 3px;
+  }
   padding: 0 16px;
 }
 .display-1 .term {
-  letter-spacing: 8px;
+  &:not(.font-regular) {
+    letter-spacing: 8px;
+  }
   padding: 0 36px;
 }
 .display-4 .term {
+  &:not(.font-regular) {
+    letter-spacing: 5px;
+  }
   font-size: 3rem;
   line-height: map-get($display-font-sizes, 4);
-  letter-spacing: 5px;
   padding: 0 24px;
+  display: inline-block;
 }
