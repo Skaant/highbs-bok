@@ -4,7 +4,7 @@ export enum ERAS {
   PRESENT_ERA = "PRESENT_ERA",
   PALEO_ERA = "PALEO_ERA",
   PRIMA_ERA = "PRIMA_ERA",
-  EXPANSION_ERA = "EXPANSION_ERA",
+  EXPANS_ERA = "EXPANS_ERA",
   DISPERSION_ERA = "DISPERSION_ERA",
   CONTRACTION_ERA = "CONTRACTION_ERA",
   AURO_ERA = "AURO_ERA",
@@ -41,11 +41,11 @@ export const ERAS_DATA: { [key in ERAS]: EraData } = {
     id: "prima-era",
     color: COLORS.SKIN,
   },
-  EXPANSION_ERA: {
+  EXPANS_ERA: {
     index: 3,
-    name: "EXPANSION-ERA",
+    name: "EXPANS-ERA",
     summary: "Les ZUMS partent à la conquête de l'univers.",
-    id: "expansion-era",
+    id: "expans-era",
     color: COLORS.GREEN,
   },
   DISPERSION_ERA: {
