@@ -4,6 +4,7 @@ import { VOLUMES } from "./volumes"
 export enum TERMS {
   ABS = "ABS",
   ABS_SUTRAT = "ABS_SUTRAT",
+  ANCIENS_ANCIENS = "ANCIENS_ANCIENS",
   AVE = "AVE",
   DATA = "DATA",
   ERA = "ERA",
@@ -48,9 +49,17 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
   ABS_SUTRAT: {
     name: "ABS-SUTRAT",
     short: `"Soutrate" de l'abstraction`,
-    summary: "Agrégat de données relatifs à l'ABS",
+    summary: "Agrégat de DATA relatif à l'ABS",
     volume: "storyboards",
     color: COLORS.PURPLE,
+  },
+  ANCIENS_ANCIENS: {
+    name: "Anciens-anciens",
+    short: "Prédecesseur à la grande sagesse",
+    summary:
+      "ZUMS, ou autres, ayant senti la présence du tout-un en leur temps",
+    volume: VOLUMES.VOLUME_2,
+    color: COLORS.JEWEL,
   },
   AVE: {
     name: "AVE",
