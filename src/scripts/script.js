@@ -1,5 +1,4 @@
 import collapse from "bootstrap/js/dist/collapse"
-// import matomo from "./_modules/matomo"
 
 let navbarCollapse
 let navbarCollapserEl = document.getElementById("navbar-collapser")
@@ -21,41 +20,21 @@ function displayContact() {
   prevBtn.remove()
 }
 
-// matomo()
-
-/* const parallaxesUpdate = [...document.getElementsByClassName("parallax")].map(
-  el => {
-    const direction = el.getAttribute("data-parallax-direction")
-    // const speed = parseInt(el.getAttribute('data-parallax-speed'))
-    return (scrollY, windowHeight) => {
-      const { top, bottom } = el.parentElement.getBoundingClientRect()
-      const actionRangeTop = top - (direction === "up" ? windowHeight : 0)
-      const actionRangeBottom =
-        bottom + (direction === "down" ? windowHeight : 0)
-      if (
-        scrollY + windowHeight > actionRangeTop &&
-        scrollY < actionRangeBottom
-      )
-        el.setAttribute(
-          "style",
-          "top: " +
-            Math.round(
-              ((direction === "down"
-                ? scrollY - actionRangeTop
-                : -(scrollY - actionRangeBottom)) /
-                (actionRangeBottom - actionRangeTop)) *
-                windowHeight +
-                (direction === "up" ? -windowHeight : 0)
-            ) +
-            "px"
-        )
-    }
+const parallaxes = [...document.getElementsByClassName("parallax")].map(
+  el => (scrollY, windowHeight) => {
+    const ratio = 1 - scrollY / windowHeight
+    console.log(
+      scrollY,
+      windowHeight,
+      scrollY / windowHeight,
+      Math.round(ratio) * 60
+    )
+    if (ratio < 100) el.style.marginTop = `${Math.round(ratio * 60)}vh`
   }
 )
 
 window.onscroll = () => {
   const scrollY = window.scrollY
   const windowHeight = window.innerHeight
-  parallaxesUpdate.forEach(fn => fn(scrollY, windowHeight))
+  parallaxes.forEach(fn => fn(scrollY, windowHeight))
 }
- */

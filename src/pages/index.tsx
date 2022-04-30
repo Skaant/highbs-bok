@@ -28,7 +28,8 @@ export default function Home() {
         <div className="container-fluid px-0" style={{ minHeight: "100vh" }}>
           <ImageRowPositionAbsolute
             src="/images/hb-banner.svg"
-            style={{ height: "150vh", marginTop: "calc(10vh - 400px)" }}
+            className="parallax"
+            style={{ marginTop: "60vh" }}
           />
           <div className="row spaced pb-5 px-4 text-center align-content-center">
             <h1 className="col-12 display-1 mb-2">
