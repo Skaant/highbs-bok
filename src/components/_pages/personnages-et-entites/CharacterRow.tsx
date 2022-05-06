@@ -11,13 +11,13 @@ function CharacterRow({
   character: CHARACTERS
   children: ReactElement
 }) {
-  const { name, eras, color } = CHARACTERS_DATA[character]
+  const { name, eras, color, particle } = CHARACTERS_DATA[character]
   return (
     <SectionRow
-      id={name}
+      id={name.replace(/ /g, "-")}
       header={{
         level: 3,
-        content: name,
+        content: `${particle || ""}${name}`,
       }}
       className={`bg-${color.toLowerCase()} text-${
         COLORS_DATA[color]?.colorWhite ? "light" : "dark"
