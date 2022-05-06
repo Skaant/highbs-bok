@@ -13,15 +13,14 @@ const title = "Mentions légales"
 enum SECTIONS_ID {
   MENTIONS_OBLIGATOIRES_SITE = "mentions-obligatoires-site",
   MENTIONS_OBLIGATOIRES_LIVRE = "mentions-obligatoires-livre",
-  MENTIONS_OBLIGATOIRES_ENTREPRISE = "mentions-obligatoires-entreprise",
+  //MENTIONS_OBLIGATOIRES_ENTREPRISE = "mentions-obligatoires-entreprise",
 }
 
 const sections = {
   [SECTIONS_ID.MENTIONS_OBLIGATOIRES_SITE]:
     "Mentions obligatoires du site internet",
   [SECTIONS_ID.MENTIONS_OBLIGATOIRES_LIVRE]: "Mentions obligatoires du livre",
-  [SECTIONS_ID.MENTIONS_OBLIGATOIRES_ENTREPRISE]:
-    "Mentions obligatoires de l'entreprise",
+  //[SECTIONS_ID.MENTIONS_OBLIGATOIRES_ENTREPRISE]: "Mentions obligatoires de l'entreprise",
 }
 
 /** Page mentions légales */
