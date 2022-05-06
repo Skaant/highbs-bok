@@ -1,5 +1,6 @@
 import React from "react"
 import articles from "../../../data/articles"
+import { PAGES, PAGES_DATA } from "../../../data/pages"
 
 export function Footer() {
   return (
@@ -17,17 +18,19 @@ export function Footer() {
               <li>
                 <a href="/l-univers">Découvrir l'univers</a>
                 <ul className="list-unstyled ps-4 py-3">
-                  <li>
-                    <a href="/l-univers/sept-eras">
-                      Les sept ERAS de l'histoire des ZUMS
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/l-univers/glossaire">Glossaire</a>
-                  </li>
-                  <li>
-                    <a href="/l-univers/couleurs">Signification des couleurs</a>
-                  </li>
+                  {[
+                    PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES,
+                    PAGES.L_UNIVERS_ERAS,
+                    PAGES.L_UNIVERS_COULEURS,
+                    PAGES.L_UNIVERS_GLOSSAIRE,
+                  ].map(page => {
+                    const { title, url } = PAGES_DATA[page]
+                    return (
+                      <li key={page}>
+                        <a href={url}>{title}</a>
+                      </li>
+                    )
+                  })}
                 </ul>
               </li>
               <li>
