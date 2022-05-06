@@ -28,17 +28,19 @@ export type CharacterData = {
   color: COLORS
   /** First volume when the character appears. */
   volume: VOLUMES
+  particle?: string
   group?: boolean
 }
 
 export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
   TOUT_UN: {
-    name: "Le Tout-Un",
+    name: "Tout-Un",
     eras: "all",
     summary:
       "L'entité complète, en potentiel, que les ZUMS cherchent à manifester.",
     color: COLORS.GOLD,
     volume: VOLUMES.VOLUME_1,
+    particle: "le ",
   },
   BALTAZUM: {
     name: "Baltazum",
@@ -49,12 +51,13 @@ export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
     volume: VOLUMES.VOLUME_1,
   },
   ANGK: {
-    name: "L'Angk",
+    name: "Angk",
     eras: [ERAS.AURO_ERA, ERAS.ANGK_ERA],
     summary:
       "Le projet de corps pour l'être unique capable de réaliser l'HIGHBS et former le tout-un.",
     color: COLORS.DARK_SKIN,
     volume: VOLUMES.VOLUME_1,
+    particle: "l'",
   },
   GRAND_ARBRE: {
     name: "Grand-Arbre",
@@ -70,12 +73,13 @@ export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
     volume: VOLUMES.VOLUME_1,
   },
   SIEGE_PENSEE: {
-    name: "Le Siège de la Pensée",
+    name: "Siège de la Pensée",
     eras: [ERAS.CONTRACTION_ERA, ERAS.AURO_ERA],
     summary:
       "Le point de convergence de tous les idées de l'univers, le cerveau ultime.",
     color: COLORS.GOLD,
     volume: VOLUMES.VOLUME_2,
+    particle: "le ",
   },
   RAZ_LA: {
     name: "Raz-la-pouëpouët",
