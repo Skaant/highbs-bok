@@ -12,15 +12,17 @@ li {
   .term {
     &:not(.font-regular) {
       letter-spacing: 2px;
-      font-size: 1.5rem;
+      @include font-size($font-size-base * 1.2);
     }
     padding: 0 12px;
-    line-height: 1.3rem;
     &.small {
-      font-size: 1rem;
+      @include font-size($font-size-sm * 1.2);
       display: inline-block;
     }
   }
+}
+h1 .term {
+  padding: 0 36px;
 }
 h2 .term {
   &:not(.font-regular) {
@@ -31,18 +33,18 @@ h2 .term {
 .display-1 .term {
   &:not(.font-regular) {
     letter-spacing: 8px;
+    font-size: inherit;
   }
   padding: 0 36px;
 }
 .display-4 .term {
   &:not(.font-regular) {
     letter-spacing: 5px;
-    font-size: 3rem;
+    font-size: inherit;
   }
   &.font-regular {
-    font-size: 3rem;
+    font-size: inherit;
   }
-  line-height: map-get($display-font-sizes, 4);
   padding: 0 24px;
   display: inline-block;
 }
