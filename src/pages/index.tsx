@@ -43,7 +43,7 @@ export default function Home() {
             header={{
               element: (
                 <h2>
-                  Jusqu'au <span className="bg-gold px-3">tout-un</span> !
+                  Jusqu'au <Term term={TERMS.TOUT_UN} /> !
                 </h2>
               ),
             }}
@@ -204,11 +204,12 @@ export default function Home() {
               <Term term={TERMS.ZUM} plural={true} />
               <br />à travers <Character character={CHARACTERS.GRAND_ARBRE} /> :
               <br />
-              Susciter plus d’idées encore !<br />
+              <b>Susciter plus d’idées encore !</b>
+              <br />
               Enrichir le <Term term={TERMS.HOL_ONG} /> avec toujours plus de
               données,
               <br />
-              dériver les motifs les plus hauts [...]."
+              <b>dériver les motifs les plus hauts</b> [...]."
             </>
           </QuoteRow>
           <SectionRow
