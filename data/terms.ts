@@ -16,7 +16,7 @@ export enum TERMS {
   PSIK = "PSIK",
   SHRIGHNE = "SHRIGHNE",
   TOUT_UN = "TOUT_UN",
-  TRIGHB = "TRIGHB",
+  TRIBU = "TRIBU",
   VAULT = "VAULT",
   ZUM = "ZUM",
 }
@@ -36,6 +36,8 @@ export type TermData = {
    */
   volume?: "storyboards" | VOLUMES
   color: COLORS
+  /** Term will be printed w/ regular font. */
+  regular?: boolean
 }
 
 export const TERMS_DATA: { [key in TERMS]: TermData } = {
@@ -60,6 +62,7 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
       "ZUMS, ou autres, ayant senti la présence du tout-un en leur temps",
     volume: VOLUMES.VOLUME_2,
     color: COLORS.JEWEL,
+    regular: true,
   },
   AVE: {
     name: "AVE",
@@ -81,7 +84,7 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     summary:
       "Le temps, du début des ZUMS à la fin de l'univers, est découpé en sept parties.",
     volume: VOLUMES.VOLUME_1,
-    color: COLORS.TURQUOIZE,
+    color: COLORS.LIGHT_BLUE,
   },
   HIGHBS: {
     name: "HIGHBS",
@@ -93,7 +96,8 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
   HIGHBS_BOK: {
     name: "HIGHBS-BOK",
     short: "Le livre du motif absolu",
-    summary: "Un recueil de poèmes ésotériques sur l'histoire des ZUMS.",
+    summary:
+      "Un recueil de poèmes ésotériques sur l'histoire des ZUMS, leur recherche du Tout-Un et de sa porte, l'HIGHBS.",
     volume: VOLUMES.VOLUME_1,
     color: COLORS.LIGHT_GOLD,
   },
@@ -116,14 +120,23 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     color: COLORS.PURPLE,
   },
   SHRIGHNE: undefined,
+  TRIBU: {
+    name: "tribu",
+    short: "Groupe de ZUMS",
+    summary:
+      "Les tribus regroupent, dès la PRIMA-ERA, les individus rendant des services écologiques similaires.",
+    volume: VOLUMES.VOLUME_2,
+    color: COLORS.DARK_SKIN,
+    regular: true,
+  },
   TOUT_UN: {
     name: "Tout-un",
     short: "Totalité faite une",
     summary: "État d'harmonie éternelle. La quête ultime des ZUMS.",
     volume: VOLUMES.VOLUME_1,
     color: COLORS.GOLD,
+    regular: true,
   },
-  TRIGHB: undefined,
   VAULT: undefined,
   ZUM: {
     name: "ZUM",
