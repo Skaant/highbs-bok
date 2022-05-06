@@ -1,9 +1,15 @@
 import React from "react"
+import { CHARACTERS } from "../../../data/characters"
 import { COLORS } from "../../../data/colors"
+import { ERAS } from "../../../data/eras"
 import { PAGES } from "../../../data/pages"
+import { TERMS } from "../../../data/terms"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
+import Character from "../../components/Character"
+import Era from "../../components/Era"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import Term from "../../components/Term"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import { ImageRowPositionAbsolute } from "../../components/_rows/ImageRowPositionAbsolute"
 import { QuoteRow } from "../../components/_rows/QuoteRow"
@@ -28,9 +34,10 @@ export default function () {
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1>{title}</h1>
               <p className="mb-5">
-                Le <span className="bg-gold">tout-un</span> ... que de{" "}
-                <b>péripéties</b> ont vécu les ZUMS avant d'en arriver jusque
-                là.
+                Le <Character character={CHARACTERS.TOUT_UN} /> ... que de{" "}
+                <b>péripéties</b> ont vécu les{" "}
+                <Term term={TERMS.ZUM} plural={true} /> avant d'en arriver
+                jusque là.
               </p>
               <p>
                 Imaginez un peu :{" "}
@@ -43,13 +50,26 @@ export default function () {
               </p>
               <p className="mb-5">
                 Et ce n'est pas tout !{" "}
-                <b>Ils en sont revenus pour former l'ANGK</b> : l'être unique{" "}
+                <b>
+                  Ils en sont revenus pour former l'
+                  <Character character={CHARACTERS.ANGK} />
+                </b>{" "}
+                : l'être unique{" "}
                 <b>capable de conceptualiser la pensée libératrice</b>, le
-                concept ultime : <b>l'HIGHBS</b>.
+                concept ultime :{" "}
+                <b>
+                  l'
+                  <Term term={TERMS.HIGHBS} />
+                </b>
+                .
               </p>
               <p>
                 Servez-vous de ces quelques pages pour{" "}
-                <b>explorer plus encore l'univers épique des ZUMS</b>.
+                <b>
+                  explorer plus encore l'univers épique des{" "}
+                  <Term term={TERMS.ZUM} plural={true} />
+                </b>
+                .
               </p>
               <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
             </div>
@@ -64,13 +84,15 @@ export default function () {
             className="px-4 pb-4"
           >
             <>
-              "Lorsqu’il ne restera plus dans cet univers qu’un monde,
+              "Lorsqu’<b>il ne restera plus dans cet univers qu’un monde</b>,
               <br />
               qu'une ville : la cité de l’aube,
               <br />
               assiégée par les hordes de l’entropie;
               <br />
-              ce sera l’AURO-ERA."
+              ce sera l’
+              <Era era={ERAS.AURO_ERA} outline={true} textColor={COLORS.DEEP} />
+              ."
             </>
           </QuoteRow>
           <div className="row px-4 pt-4 bg-gold">
