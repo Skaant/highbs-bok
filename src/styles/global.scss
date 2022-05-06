@@ -11,6 +11,8 @@ $grid-gutter-width: 0;
 // Rebuild $theme-colors scheme
 @import "./colors.scss";
 
+$font-size-base: 1.3rem;
+
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/transitions";
