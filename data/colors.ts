@@ -17,6 +17,8 @@ export enum COLORS {
   LIGHT_PURPLE = "LIGHT_PURPLE",
   PURPLE = "PURPLE",
   TURQUOIZE = "TURQUOIZE",
+  DARK_TURQUOIZE = "DARK_TURQUOIZE",
+  ORANGE = "ORANGE",
 }
 
 type colorData = { hexa: string; description: string; colorWhite?: boolean }
@@ -82,5 +84,14 @@ export const COLORS_DATA: { [color in COLORS]: colorData } = {
   TURQUOIZE: {
     hexa: "#00ffab",
     description: "Donnée",
+  },
+  DARK_TURQUOIZE: {
+    hexa: "",
+    description: "TRIKO-CITÉ",
+    colorWhite: true,
+  },
+  ORANGE: {
+    hexa: "",
+    description: "SPARK",
   },
 }
