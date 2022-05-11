@@ -43,7 +43,7 @@ export default function Home() {
             header={{
               element: (
                 <h2>
-                  Jusqu'au <Term term={TERMS.TOUT_UN} /> !
+                  Jusqu'au <Character character={CHARACTERS.TOUT_UN} /> !
                 </h2>
               ),
             }}
