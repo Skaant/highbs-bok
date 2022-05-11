@@ -8,11 +8,12 @@
   border-radius: 64px;
 }
 p,
-li {
+li,
+td {
   .term {
+    @include font-size($font-size-base * 1.2);
     &:not(.font-regular) {
       letter-spacing: 2px;
-      @include font-size($font-size-base * 1.2);
     }
     padding: 0 12px;
     &.small {
@@ -31,19 +32,16 @@ h2 .term {
   padding: 0 16px;
 }
 .display-1 .term {
+  font-size: inherit;
   &:not(.font-regular) {
     letter-spacing: 8px;
-    font-size: inherit;
   }
   padding: 0 36px;
 }
 .display-4 .term {
+  font-size: inherit;
   &:not(.font-regular) {
     letter-spacing: 5px;
-    font-size: inherit;
-  }
-  &.font-regular {
-    font-size: inherit;
   }
   padding: 0 24px;
   display: inline-block;
