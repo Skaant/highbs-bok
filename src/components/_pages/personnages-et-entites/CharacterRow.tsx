@@ -16,8 +16,18 @@ function CharacterRow({
     <SectionRow
       id={name.replace(/ /g, "-")}
       header={{
-        level: 3,
-        content: `${particle || ""}${name}`,
+        element: (
+          <h3>
+            {particle ? (
+              <>
+                <span className="text-capitalize">{particle}</span>{" "}
+              </>
+            ) : (
+              ""
+            )}
+            {name}
+          </h3>
+        ),
       }}
       className={`bg-${color.toLowerCase()} text-${
         COLORS_DATA[color]?.colorWhite ? "light" : "dark"
@@ -25,7 +35,7 @@ function CharacterRow({
     >
       <>
         {children}
-        <p>
+        <p className="mt-5">
           <b className="me-3">Apparitions</b>
           <EraListInline eras={eras} outline={color} />
         </p>
