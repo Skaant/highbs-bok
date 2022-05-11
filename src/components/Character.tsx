@@ -6,10 +6,12 @@ import Term from "./Term"
 
 function Character({
   character,
+  pageLink = false,
   outline,
   className,
 }: {
   character: CHARACTERS
+  pageLink?: boolean
   outline?: boolean
   className?: string
 }) {
@@ -30,7 +32,7 @@ function Character({
         regular: true,
       }}
       link={`${
-        PAGES_DATA[PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES].url
+        pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES].url
       }#${name.replace(/ /g, "-")}`}
       outline={outline}
       className={className}

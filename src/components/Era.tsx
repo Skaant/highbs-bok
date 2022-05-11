@@ -6,11 +6,13 @@ import Term from "./Term"
 
 function Era({
   era,
+  pageLink = false,
   outline,
   textColor,
   className,
 }: {
   era: ERAS
+  pageLink?: boolean
   outline?: boolean
   textColor?: COLORS
   className?: string
@@ -24,7 +26,7 @@ function Era({
         summary,
         color,
       }}
-      link={`${PAGES_DATA[PAGES.L_UNIVERS_ERAS].url}#${name}`}
+      link={`${pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_ERAS].url}#${name}`}
       outline={outline}
       textColor={textColor}
       className={className}

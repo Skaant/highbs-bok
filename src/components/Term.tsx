@@ -8,6 +8,7 @@ function Term({
   plural = false,
   pluralSign = "S",
   link = true,
+  pageLink = false,
   outline = false,
   textColor: _textColor,
   className: _className,
@@ -18,6 +19,8 @@ function Term({
   plural?: boolean
   pluralSign?: string
   link?: boolean | string
+  /** Is the link points to current page ? Default to `false`. */
+  pageLink?: boolean
   outline?: boolean
   textColor?: COLORS
   className?: string
@@ -37,10 +40,9 @@ function Term({
       href={
         typeof link === "string"
           ? link
-          : `${PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url}#${name.replace(
-              / /g,
-              "-"
-            )}`
+          : `${
+              pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url
+            }#${name.replace(/ /g, "-")}`
       }
       className={className}
       title={`${short}.\n${summary}`}
