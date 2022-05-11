@@ -1,10 +1,12 @@
 import React from "react"
 import { COLORS } from "../../data/colors"
 import { PAGES } from "../../data/pages"
+import { TERMS } from "../../data/terms"
 import { ButtonsMenu } from "../components/ButtonsMenu"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
 import { TableOfContent } from "../components/TableOfContent"
+import Term from "../components/Term"
 import { ExtraitAcheterCTA } from "../components/_ctas/ExtraitAcheterCTA"
 import { SectionRow } from "../components/_rows/SectionRow"
 import "../styles/global.scss"
@@ -23,7 +25,7 @@ export enum SECTIONS_ID {
   ENTRER_EN_CONTACT = "entrer-en-contact",
 }
 
-const sections = {
+export const sections = {
   [SECTIONS_ID.QU_EST_CE_QUE_L_HIGHBS_BOK]: "Qu'est-ce que l'HIGHBS-BOK ?",
   [SECTIONS_ID.POURQUOI_LIRE_CE_LIVRE]: "Pourquoi lire ce livre ?",
   [SECTIONS_ID.UN_PROCESSUS_D_AMELIORATION_CONTINUE]:
@@ -197,9 +199,9 @@ export default function () {
                 leurs spécificités.
               </p>
               <p>
-                Le PSIK est un terme générique cherchant à saisir cette
-                multiplicité de formes, tout en identifiant de façon générique
-                le concept de psychoactivité.
+                Le <Term term={TERMS.PSIK} outline={true} /> est un terme
+                générique cherchant à saisir cette multiplicité de formes, tout
+                en identifiant de façon générique le concept de psychoactivité.
               </p>
             </>
           </SectionRow>
@@ -218,11 +220,13 @@ export default function () {
                 aujourd'hui peu connu et relativement mal perçu.
               </p>
               <p>
-                Cependant, les ZUMS ont choisi de vivre cette démarche à fond,
-                dans le but d'outrepasser les défis de chaque ERA.
+                Cependant, les <Term term={TERMS.ZUM} plural={true} /> ont
+                choisi de vivre cette démarche à fond, dans le but d'outrepasser
+                les défis de chaque <Term term={TERMS.ERA} />.
               </p>
               <p>
-                Le postulat défendu par l'HIGHBS-BOK est qu'
+                Le postulat défendu par l'
+                <Term term={TERMS.HIGHBS_BOK} /> est qu'
                 <b>avec des idées</b>, on trouve{" "}
                 <b>des solutions à tous les problèmes</b> et on peut{" "}
                 <b>réaliser les choses les plus folles</b>.
@@ -247,9 +251,8 @@ export default function () {
               </p>
               <p>
                 Ceux qui pourraient le plus se référer à cet ouvrage sont : le{" "}
-                <b>Tao-Te-King</b>, le <b>Mahabaratha</b> et la Gîta, le{" "}
-                <b>Sutra des Dix Terres</b>, ainsi que d'autres plus connus mais
-                que je ne souhaite pas citer ici.
+                <b>Sutra des Dix Terres</b>, le <b>Tao-Te-King</b> ou encore le{" "}
+                <b>Mahabaratha</b>.
               </p>
             </>
           </SectionRow>
