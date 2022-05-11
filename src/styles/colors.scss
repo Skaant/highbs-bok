@@ -23,7 +23,10 @@ $skin: #ff6e38;
 $dark_skin: #a7654d;
 $green: #46af49;
 $purple: #a735ff;
+$light_purple: #e1bbff;
 $turquoize: #00ffab;
+$dark_turquoize: #0298a3;
+$orange: #ff9900;
 
 // Add custom colors to theme colors.
 $theme-colors: map-merge(
@@ -41,7 +44,10 @@ $theme-colors: map-merge(
     "dark_skin": $dark_skin,
     "green": $green,
     "purple": $purple,
+    "light_purple": $light_purple,
     "turquoize": $turquoize,
+    "dark_turquoize": $dark_turquoize,
+    "orange": $orange,
   )
 );
 
