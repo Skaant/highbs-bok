@@ -13,7 +13,7 @@ export enum CHARACTERS {
   ZA_ZOZ = "ZA_ZOZ",
   KRAO = "KRAO",
   JING_JAM_ZUM = "JING_JAM_ZUM",
-  ENTROPIUS = "ENTROPIUS",
+  NUK_NOK = "NUK_NOK",
   /** 
                 <li>
                   Les trois anciens-anciens qui guident Binda (PALÉO-ERA),
@@ -99,7 +99,8 @@ export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
   ZA_ZOZ: {
     name: "Za-Zoz",
     eras: [ERAS.PALEO_ERA, ERAS.CONTRACTION_ERA],
-    summary: "KAMI de la tribu PSIK, interlocuteur de Binda et ses amis.",
+    summary:
+      "KAMI de la tribu PSIK, interlocuteur (entre autres) de Binda et ses amis.",
     color: COLORS.PURPLE,
     volume: VOLUMES.VOLUME_2,
   },
@@ -118,8 +119,8 @@ export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
     color: COLORS.LIGHT_DEEP,
     volume: VOLUMES.VOLUME_2,
   },
-  ENTROPIUS: {
-    name: "Entropius",
+  NUK_NOK: {
+    name: "Nuk-Nok",
     eras: [ERAS.AURO_ERA],
     summary: "KAMI de l'entropie, allié de Jing-Jam-Zum et de sa harde.",
     color: COLORS.DEEP,
