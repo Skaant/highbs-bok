@@ -7,6 +7,7 @@ export enum PAGES {
   L_UNIVERS_GLOSSAIRE = "L_UNIVERS_GLOSSAIRE",
   L_UNIVERS_PERSONNAGES_ET_ENTITES = "L_UNIVERS_PERSONNAGES_ET_ENTITES",
   L_UNIVERS_LIEUX = "L_UNIVERS_LIEUX",
+  L_UNIVERS_TRIBUS_DE_L_EVEIL = "L_UNIVERS_TRIBUS_DE_L_EVEIL",
   BLOG = "BLOG",
   A_PROPOS = "A_PROPOS",
   MENTIONS_LEGALES = "MENTIONS_LEGALES",
@@ -49,6 +50,10 @@ export const PAGES_DATA: { [key in PAGES]: PageData } = {
   L_UNIVERS_LIEUX: {
     title: "Lieux",
     url: "/l-univers/lieux",
+  },
+  L_UNIVERS_TRIBUS_DE_L_EVEIL: {
+    title: "Les tribus de l'éveil",
+    url: "/l-univers/tribus-de-l-eveil",
   },
   BLOG: {
     title: "Blog",
