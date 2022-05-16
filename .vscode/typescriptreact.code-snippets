@@ -34,5 +34,15 @@
     "scope": "typescriptreact",
     "prefix": "char",
     "body": "<Character character={CHARACTERS.${0}} />"
+  },
+  "Place": {
+    "scope": "typescriptreact",
+    "prefix": "place",
+    "body": "<Place place={PLACES.${0}} />"
+  },
+  "Tribe": {
+    "scope": "typescriptreact",
+    "prefix": "trib",
+    "body": "<Tribe tribe={TRIBES.${0}} />"
   }
 }
