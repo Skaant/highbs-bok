@@ -11,7 +11,7 @@ export enum ERAS {
   ANGK_ERA = "ANGK_ERA",
 }
 
-type EraData = {
+export type EraData = {
   index: number
   name: string
   summary: string
@@ -19,7 +19,9 @@ type EraData = {
   color: COLORS
 }
 
-export const ERAS_DATA: { [key in ERAS]: EraData } = {
+export type EraDataSet = { [era in ERAS]: EraData }
+
+export const ERAS_DATA: EraDataSet = {
   PRESENT_ERA: {
     index: 0,
     name: "Présent",
