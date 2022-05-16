@@ -17,6 +17,10 @@ import "../../styles/global.scss"
 import Era from "../../components/Era"
 import { ERAS } from "../../../data/eras"
 import Character from "../../components/Character"
+import { PLACES } from "../../../data/places"
+import Place from "../../components/Place"
+import Tribe from "../../components/Tribe"
+import { TRIBES } from "../../../data/tribes"
 
 export enum SECTIONS_ID {
   PERSONNAGES_ET_ENTITES_DU_VOLUME_1 = "personnages-et-entites-du-volume-1",
@@ -30,8 +34,8 @@ const sections: { [key in SECTIONS_ID]: string } = {
     "Personnages et entités du volume 2",
 }
 
-const pageId = PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES
-const title = "Personnages et entités"
+const page = PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES
+const { title } = PAGES_DATA[page]
 
 export default function Glossaire() {
   const volumesCharacters = Object.values(CHARACTERS).reduce(
@@ -45,7 +49,7 @@ export default function Glossaire() {
     }
   )
   return (
-    <Layout pageId={pageId}>
+    <Layout pageId={page}>
       <>
         <Header title={title} />
         <div className="container-fluid px-0">
@@ -145,8 +149,8 @@ export default function Glossaire() {
               </p>
               <p>
                 Ainsi, ils essaient d'augmenter les connaissances qui circulent
-                sur le <Term term={TERMS.HOL_ONG} />
-                et espèrent, par abstraction, dériver l'
+                sur le <Term term={TERMS.HOL_ONG} /> et espèrent, par
+                abstraction, dériver l'
                 <Term term={TERMS.HIGHBS} />.
               </p>
             </>
@@ -161,7 +165,8 @@ export default function Glossaire() {
                 créer un être unique.
               </p>
               <p>
-                Chantier ultime au coeur de la Cité de l'aube,{" "}
+                Chantier ultime au coeur de la{" "}
+                <Place place={PLACES.CITE_AUBE} />,{" "}
                 <b>
                   l'ANGK pourra-t'il être conçu avant que l'ombre ne submerge la
                   ville et ne relance un nouveau cycle de l'univers
@@ -176,7 +181,8 @@ export default function Glossaire() {
                 À la <Era era={ERAS.PALEO_ERA} />, les{" "}
                 <Term term={TERMS.ZUM} plural={true} /> parviennent à créer{" "}
                 {CHARACTERS_DATA[CHARACTERS.GRAND_ARBRE].name}{" "}
-                <b>en recyclant leur planète-mère</b> TERA.
+                <b>en recyclant leur planète-mère</b>{" "}
+                <Place place={PLACES.TERA} />.
               </p>
               <p>
                 De là, {CHARACTERS_DATA[CHARACTERS.GRAND_ARBRE].name} et ses
@@ -186,7 +192,7 @@ export default function Glossaire() {
               <p>
                 Au retour, à la <Era era={ERAS.CONTRACTION_ERA} />, l'arbre se
                 fossilise et forme le nuage de joyaux conceptuels autour du
-                <Character character={CHARACTERS.SIEGE_PENSEE} />.
+                <Place place={PLACES.SIEGE_PENSEE} />.
               </p>
             </>
           </CharacterRow>
@@ -210,49 +216,33 @@ export default function Glossaire() {
           <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][0]}>
             <>
               <p>
-                Par la force <Term term={TERMS.GRAV} /> exercée par le centre de
-                l'univers,
-                <b>les joyaux conceptuels</b>, les idées les plus pures,{" "}
-                <b>se sont agrégées pour former le cerveau ultime</b>.
-              </p>
-              <p>
-                C'est le <Term term={TERMS.KAMI} /> du{" "}
-                <Term term={TERMS.HOL_ONG} />, materialisée par la force de sa
-                densité.
+                <Term term={TERMS.KAMI} outline={true} /> du jardin de{" "}
+                <Character character={CHARACTERS.BALTAZUM} />.
               </p>
             </>
           </CharacterRow>
           <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][1]}>
             <>
               <p>
-                <Term term={TERMS.KAMI} outline={true} /> du jardin de{" "}
-                <Character character={CHARACTERS.BALTAZUM} />.
+                Un <Term term={TERMS.ZUM} /> de la{" "}
+                <Era era={ERAS.PALEO_ERA} outline={true} />.
+              </p>
+              <p>
+                Membre de la <Tribe tribe={TRIBES.PSIK} />, il va contribuer à
+                faire émerger le <Term term={TERMS.HOL_ONG} /> et{" "}
+                <Character character={CHARACTERS.GRAND_ARBRE} />.
               </p>
             </>
           </CharacterRow>
           <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][2]}>
             <>
               <p>
-                Un <Term term={TERMS.ZUM} /> de la{" "}
-                <Era era={ERAS.PALEO_ERA} outline={true} />.
-              </p>
-              <p>
-                Membre de la <Term term={TERMS.TRIBU} />
-                <Term term={TERMS.PSIK} />, il va contribuer à faire émerger le{" "}
-                <Term term={TERMS.HOL_ONG} /> et{" "}
-                <Character character={CHARACTERS.GRAND_ARBRE} />.
+                <Term term={TERMS.KAMI} /> de la{" "}
+                <Tribe tribe={TRIBES.PSIK} outline={true} />.
               </p>
             </>
           </CharacterRow>
           <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][3]}>
-            <>
-              <p>
-                <Term term={TERMS.KAMI} /> de la <Term term={TERMS.TRIBU} />
-                <Term term={TERMS.PSIK} outline={true} />.
-              </p>
-            </>
-          </CharacterRow>
-          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][4]}>
             <>
               <p>
                 Candidat à l'exil pour aider la vie à coloniser des terres
@@ -260,31 +250,31 @@ export default function Glossaire() {
                 <Term term={TERMS.EXPANS} />.
               </p>
               <p>
-                Membre de la <Term term={TERMS.TRIBU} /> <i>KOLOS</i> à l'
+                Membre de la <Tribe tribe={TRIBES.KOLOS} /> à l'
                 <Era era={ERAS.EXPANS_ERA} />, avec ses compagnons ils fondent
                 un nouvel établissement ailleurs.
               </p>
               <p>
                 De la part la succession ecologique des{" "}
-                <Term term={TERMS.TRIBU} plural={true} />
+                <Term term={TERMS.TRIBU} plural={true} pluralSign={"s"} />
               </p>
             </>
           </CharacterRow>
-          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][5]}>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][4]}>
             <>
               <p>Meneuse du nuage de l'ombre.</p>
               <p>
                 Epaulée par <Character character={CHARACTERS.NUK_NOK} />, elle
-                assiège la Cité de l'Aube.
+                assiège la <Place place={PLACES.CITE_AUBE} />.
               </p>
               <p>
                 Elle espère ainsi rendre à l'univers la vie qu'elle considère
-                sequestrée par les <Term term={TERMS.ZUM} plural={true} />
-                de la fin des temps.
+                sequestrée par les <Term term={TERMS.ZUM} plural={true} /> de la
+                fin des temps.
               </p>
             </>
           </CharacterRow>
-          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][6]}>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_2][5]}>
             <>
               <p>
                 <Term term={TERMS.KAMI} /> de l'entropie, force opposée au{" "}
@@ -300,7 +290,7 @@ export default function Glossaire() {
             className="bg-light"
           >
             <>
-              <UniversePagesCTA current={pageId} buttonsColor={COLORS.PURPLE} />
+              <UniversePagesCTA current={page} buttonsColor={COLORS.PURPLE} />
             </>
           </SectionRow>
         </div>

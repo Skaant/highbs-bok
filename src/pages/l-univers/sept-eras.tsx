@@ -3,10 +3,12 @@ import { CHARACTERS } from "../../../data/characters"
 import { COLORS, COLORS_DATA } from "../../../data/colors"
 import { ERAS, ERAS_DATA } from "../../../data/eras"
 import { PAGES, PAGES_DATA } from "../../../data/pages"
+import { PLACES } from "../../../data/places"
 import { TERMS } from "../../../data/terms"
 import Character from "../../components/Character"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import Place from "../../components/Place"
 import Term from "../../components/Term"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import EraRow from "../../components/_pages/sept-eras/EraRow"
@@ -165,7 +167,7 @@ export default function SeptEras() {
               </p>
               <p>
                 Les particules convergent vers un point, ou se forme le{" "}
-                <Character character={CHARACTERS.SIEGE_PENSEE} />.
+                <Place place={PLACES.SIEGE_PENSEE} />.
               </p>
               <p>
                 Les <Term term={TERMS.ZUM} plural={true} /> font alors face à
