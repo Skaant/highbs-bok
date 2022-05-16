@@ -23,12 +23,14 @@ export enum TERMS {
   MIKO = "MIKO",
   MIKO_PRIGHM = "MIKO_PRIGHM",
   ONG = "ONG",
+  OPTIM = "OPTIM",
   PRIGHM = "PRIGHM",
   PSIK = "PSIK",
   PSIK_PSIK = "PSIK_PSIK",
   SHRIGHNE = "SHRIGHNE",
   SPARK = "SPARK",
   TRIBU = "TRIBU",
+  TRIGHB = "TRIGHB",
   TRIKO_CITE = "TRIKO_CITE",
   VAULT = "VAULT",
   WIGHLD = "WIGHLD",
@@ -54,7 +56,9 @@ export type TermData = {
   regular?: boolean
 }
 
-export const TERMS_DATA: { [key in TERMS]: TermData } = {
+export type TermDataSet = { [term in TERMS]: TermData }
+
+export const TERMS_DATA: TermDataSet = {
   ABS: {
     name: "ABS",
     short: "Abstraction",
@@ -154,7 +158,13 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     volume: VOLUMES.VOLUME_1,
     color: COLORS.LIGHT_GOLD,
   },
-  HOL_ADIN: undefined,
+  HOL_ADIN: {
+    name: "HOL-ADIN",
+    short: "Tout-Un",
+    summary: "Nom du Tout-Un en ABS-LANG.",
+    volume: "storyboards",
+    color: COLORS.GOLD,
+  },
   HOL_ONG: {
     name: "HOL-ONG",
     short: "Conscience collective",
@@ -210,6 +220,13 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     volume: "storyboards",
     color: COLORS.LIGHT_GOLD,
   },
+  OPTIM: {
+    name: "OPTIM",
+    short: "Climax",
+    summary: "Culmination de l'efficience énergétique d'un système.",
+    volume: "storyboards",
+    color: COLORS.JEWEL,
+  },
   PRIGHM: {
     name: "PRIGHM",
     short: "Particule",
@@ -257,6 +274,13 @@ export const TERMS_DATA: { [key in TERMS]: TermData } = {
     volume: VOLUMES.VOLUME_2,
     color: COLORS.DARK_SKIN,
     regular: true,
+  },
+  TRIGHB: {
+    name: "TRIGHB",
+    short: "Tribu",
+    summary: 'Le mot "tribu" en ABS-LANG.',
+    volume: "storyboards",
+    color: COLORS.DARK_SKIN,
   },
   TRIKO_CITE: {
     name: "TRIKO-CITÉ",
