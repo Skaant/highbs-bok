@@ -7,7 +7,6 @@ export enum CHARACTERS {
   BALTAZUM = "BALTAZUM",
   ANGK = "ANGK",
   GRAND_ARBRE = "GRAND_ARBRE",
-  SIEGE_PENSEE = "SIEGE_PENSEE",
   RAZ_LA = "RAZ_LA",
   BINDA = "BINDA",
   ZA_ZOZ = "ZA_ZOZ",
@@ -32,7 +31,9 @@ export type CharacterData = {
   group?: boolean
 }
 
-export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
+export type CharacterDataSet = { [character in CHARACTERS]: CharacterData }
+
+export const CHARACTERS_DATA: CharacterDataSet = {
   TOUT_UN: {
     name: "Tout-Un",
     eras: "all",
@@ -71,15 +72,6 @@ export const CHARACTERS_DATA: { [key in CHARACTERS]: CharacterData } = {
       "La structure organique qui sert de support à la colonisation de l'univers par les ZUMS.",
     color: COLORS.GREEN,
     volume: VOLUMES.VOLUME_1,
-  },
-  SIEGE_PENSEE: {
-    name: "Siège de la Pensée",
-    eras: [ERAS.CONTRACTION_ERA, ERAS.AURO_ERA],
-    summary:
-      "Le point de convergence de tous les idées de l'univers, le cerveau ultime.",
-    color: COLORS.GOLD,
-    volume: VOLUMES.VOLUME_2,
-    particle: "le ",
   },
   RAZ_LA: {
     name: "Raz-la-pouëpouët",
