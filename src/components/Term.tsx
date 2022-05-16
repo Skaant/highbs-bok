@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { ReactElement } from "react"
 import { COLORS, COLORS_DATA } from "../../data/colors"
 import { PAGES, PAGES_DATA } from "../../data/pages"
 import { TermData, TERMS, TERMS_DATA } from "../../data/terms"
@@ -14,8 +14,14 @@ function Term({
   className: _className,
 }: {
   term:
-    | TERMS
-    | Pick<TermData, "name" | "short" | "summary" | "color" | "regular">
+    | (TERMS & {
+        /** @deprecated Never used, just not to throw */
+        id?: string
+      })
+    | (Pick<TermData, "short" | "summary" | "color" | "regular"> & {
+        id?: string
+        name: string | ReactElement
+      })
   plural?: boolean
   pluralSign?: string
   link?: boolean | string
@@ -25,7 +31,7 @@ function Term({
   textColor?: COLORS
   className?: string
 }) {
-  const { name, short, summary, color, regular } =
+  const { id, name, short, summary, color, regular } =
     typeof term === "object" ? term : TERMS_DATA[term]
   const textColor = _textColor
     ? _textColor.toLowerCase()
@@ -40,9 +46,9 @@ function Term({
       href={
         typeof link === "string"
           ? link
-          : `${
-              pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url
-            }#${name.replace(/ /g, "-")}`
+          : `${pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url}#${
+              id || name.replace(/ /g, "-")
+            }`
       }
       className={className}
       title={`${short}.\n${summary}`}
