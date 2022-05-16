@@ -23,6 +23,8 @@ export function Footer() {
                     PAGES.L_UNIVERS_ERAS,
                     PAGES.L_UNIVERS_COULEURS,
                     PAGES.L_UNIVERS_GLOSSAIRE,
+                    PAGES.L_UNIVERS_LIEUX,
+                    PAGES.L_UNIVERS_TRIBUS_DE_L_EVEIL,
                   ].map(page => {
                     const { title, url } = PAGES_DATA[page]
                     return (

@@ -7,6 +7,7 @@ export function UniversePagesCTA({
   current,
   buttonsColor,
 }: {
+  /** @todo Set type to PAGES */
   current: string
   buttonsColor?: COLORS
 }) {
@@ -17,6 +18,8 @@ export function UniversePagesCTA({
         PAGES.L_UNIVERS_ERAS,
         PAGES.L_UNIVERS_COULEURS,
         PAGES.L_UNIVERS_GLOSSAIRE,
+        PAGES.L_UNIVERS_LIEUX,
+        PAGES.L_UNIVERS_TRIBUS_DE_L_EVEIL,
       ]
         .filter(page => page !== current)
         .map(page => {
