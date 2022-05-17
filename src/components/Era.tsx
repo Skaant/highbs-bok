@@ -22,7 +22,9 @@ function Era({
     <Term
       term={{
         name,
-        short: `Période ${index} de l'histoire des ZUMS.`,
+        short: index
+          ? `Période ${index} de l'histoire des ZUMS.`
+          : "Notre époque",
         summary,
         color,
       }}
