@@ -1,3 +1,5 @@
+import { WordData } from "./_types/WordData"
+
 export enum COLORS {
   /* Kept default Bootstrap's palette color */
   LIGHT = "LIGHT",
@@ -8,90 +10,107 @@ export enum COLORS {
   LIGHT_GOLD = "LIGHT_GOLD",
   BLUE = "BLUE",
   LIGHT_BLUE = "LIGHT_BLUE",
+  DEEP = "DEEP",
   LIGHT_DEEP = "LIGHT_DEEP",
   JEWEL = "JEWEL",
-  DEEP = "DEEP",
   SKIN = "SKIN",
   DARK_SKIN = "DARK_SKIN",
   GREEN = "GREEN",
-  LIGHT_PURPLE = "LIGHT_PURPLE",
   PURPLE = "PURPLE",
+  LIGHT_PURPLE = "LIGHT_PURPLE",
   TURQUOIZE = "TURQUOIZE",
   DARK_TURQUOIZE = "DARK_TURQUOIZE",
   ORANGE = "ORANGE",
 }
 
-type colorData = { hexa: string; description: string; colorWhite?: boolean }
+type colorData = Omit<WordData, "summary" | "color"> & {
+  hexa: string
+}
 
 export const COLORS_DATA: { [color in COLORS]: colorData } = {
   LIGHT: undefined,
   MUTED: undefined,
   DARK: undefined,
   GOLD: {
+    id: "or",
+    name: "Or",
     hexa: "#ffcd5c",
-    description: "Tout-un, rayons du tout-un, soleil",
   },
   LIGHT_GOLD: {
+    id: "or-clair",
+    name: "Or clair",
     hexa: "#ffde95",
-    description: "Rayons diffractés du tout-un",
   },
   BLUE: {
+    id: "bleu",
+    name: "Bleu",
     hexa: "#5d89ff",
-    description: "Eau, TERA (planète)",
-    colorWhite: true,
+    textWhite: true,
   },
   LIGHT_BLUE: {
+    id: "bleu-clair",
+    name: "Bleu clair",
     hexa: "#bfd8ff",
-    description: "Eau (variation), ciel",
-  },
-  LIGHT_DEEP: {
-    hexa: "#b6b1c5",
-    description: "KANG, espace, trame temporelle",
-  },
-  JEWEL: {
-    hexa: "#ffdcb0",
-    description: "Joyau, élément proche de l'HIGHBS",
   },
   DEEP: {
+    id: "profond",
+    name: "Profond",
     hexa: "#433869",
-    description: "Entropie, dispersion",
-    colorWhite: true,
+    textWhite: true,
+  },
+  LIGHT_DEEP: {
+    id: "profond-clair",
+    name: "Profond clair",
+    hexa: "#b6b1c5",
+  },
+  JEWEL: {
+    id: "joyau",
+    name: "Joyau",
+    hexa: "#ffdcb0",
   },
   SKIN: {
+    id: "peau",
+    name: "Peau",
     hexa: "#ff6e38",
-    description: "ZUM, amour, force gravitationnelle",
-    colorWhite: true,
+    textWhite: true,
   },
   DARK_SKIN: {
+    id: "peau sombre",
+    name: "Peau sombre",
     hexa: "#a7654d",
-    description: "ZUM (variation)",
-    colorWhite: true,
+    textWhite: true,
   },
   GREEN: {
+    id: "vert",
+    name: "Vert",
     hexa: "#46af49",
-    description: "Végétation, GRAND-ARBRE",
-    colorWhite: true,
-  },
-  LIGHT_PURPLE: {
-    hexa: "#c579ff",
-    description: "PSIK (variation)",
+    textWhite: true,
   },
   PURPLE: {
+    id: "violet",
+    name: "Violet",
     hexa: "#a735ff",
-    description: "PSIK",
-    colorWhite: true,
+    textWhite: true,
+  },
+  LIGHT_PURPLE: {
+    id: "violet-clair",
+    name: "Violet clair",
+    hexa: "#c579ff",
   },
   TURQUOIZE: {
+    id: "turquoize",
+    name: "Turquoize",
     hexa: "#00ffab",
-    description: "Donnée",
   },
   DARK_TURQUOIZE: {
-    hexa: "",
-    description: "TRIKO-CITÉ",
-    colorWhite: true,
+    id: "turquoize-sombre",
+    name: "Turquoize sombre",
+    hexa: "#0298a3",
+    textWhite: true,
   },
   ORANGE: {
-    hexa: "",
-    description: "SPARK",
+    id: "orange",
+    name: "Orange",
+    hexa: "#ff9900",
   },
 }
