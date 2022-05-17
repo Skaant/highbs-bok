@@ -1,0 +1,32 @@
+footer {
+  color: $gray-100;
+  background: $gray-900;
+
+  a,
+  a:hover,
+  a:focus,
+  a:active,
+  a:visited {
+    &:not(.btn-outline-light) {
+      color: inherit;
+    }
+  }
+  a:hover,
+  a:active {
+    &:not(.btn-outline-light) {
+      text-decoration: underline;
+    }
+    &.btn-outline-light {
+      background-color: #fff8 !important;
+    }
+  }
+
+  li {
+    margin: map-get($spacers, 2) 0;
+  }
+
+  /* ul,
+  p:not(.h4) {
+    font-weight: lighter;
+  } */
+}

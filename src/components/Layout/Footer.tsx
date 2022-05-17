@@ -43,12 +43,7 @@ export function Footer() {
                     .sort((a, b) => (a.date < b.date ? 1 : -1))
                     .map(article => (
                       <li key={article.slug}>
-                        <a href={`/blog/${article.slug}`}>
-                          <span className="badge rounded-pill bg-light text-dark me-2">
-                            {article.date.split("-").reverse().join("/")}
-                          </span>
-                          {article.title}
-                        </a>
+                        <a href={`/blog/${article.slug}`}>{article.title}</a>
                       </li>
                     ))}
                 </ul>
