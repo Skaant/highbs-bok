@@ -15,7 +15,7 @@ function Character({
   outline?: boolean
   className?: string
 }) {
-  const { name, eras, summary, color } = CHARACTERS_DATA[character]
+  const { name, eras, summary, color, volume } = CHARACTERS_DATA[character]
   return (
     <Term
       term={{
@@ -29,6 +29,7 @@ function Character({
         }`,
         summary,
         color,
+        volume,
         regular: true,
       }}
       link={`${

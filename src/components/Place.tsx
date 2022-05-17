@@ -15,7 +15,7 @@ function Place({
   outline?: boolean
   className?: string
 }) {
-  const { name, summary, eras, color } = PLACES_DATA[place]
+  const { name, summary, eras, color, volume } = PLACES_DATA[place]
   return (
     <Term
       term={{
@@ -29,6 +29,7 @@ function Place({
         }`,
         summary,
         color,
+        volume,
         regular: true,
       }}
       link={`${

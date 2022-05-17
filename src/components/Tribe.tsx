@@ -3,6 +3,7 @@ import { COLORS } from "../../data/colors"
 import { TRIBES, TRIBES_DATA } from "../../data/tribes"
 import { PAGES, PAGES_DATA } from "../../data/pages"
 import Term from "./Term"
+import { VOLUMES } from "../../data/volumes"
 
 function Tribe({
   tribe,
@@ -29,6 +30,7 @@ function Tribe({
         short: `Une tribu de l'éveil.`,
         summary,
         color,
+        volume: VOLUMES.VOLUME_2,
       }}
       link={`${
         pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_TRIBUS_DE_L_EVEIL].url

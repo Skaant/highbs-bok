@@ -2,6 +2,7 @@ import * as React from "react"
 import { COLORS } from "../../data/colors"
 import { ERAS, ERAS_DATA } from "../../data/eras"
 import { PAGES, PAGES_DATA } from "../../data/pages"
+import { VOLUMES } from "../../data/volumes"
 import Term from "./Term"
 
 function Era({
@@ -27,11 +28,12 @@ function Era({
           : "Notre époque",
         summary,
         color,
+        volume: VOLUMES.VOLUME_1,
       }}
       link={`${pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_ERAS].url}#${id}`}
       outline={outline}
       textColor={textColor}
-      className={className}
+      className={`${className}${era === ERAS.PRESENT ? " font-regular" : ""}`}
     />
   )
 }
