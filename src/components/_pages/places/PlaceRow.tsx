@@ -5,6 +5,7 @@ import EraListInline from "../../EraListInline"
 import { SectionRow } from "../../_rows/SectionRow"
 import { TERMS } from "../../../../data/terms"
 import Term from "../../Term"
+import Place from "../../Place"
 
 function PlaceRow({
   place,
@@ -27,7 +28,7 @@ function PlaceRow({
             ) : (
               ""
             )}
-            {name}
+            <Place place={place} link={false} outline={true} />
           </h3>
         ),
       }}

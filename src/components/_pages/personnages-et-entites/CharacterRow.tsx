@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react"
 import { CHARACTERS, CHARACTERS_DATA } from "../../../../data/characters"
 import { COLORS_DATA } from "../../../../data/colors"
+import Character from "../../Character"
 import EraListInline from "../../EraListInline"
 import { SectionRow } from "../../_rows/SectionRow"
 
@@ -25,7 +26,7 @@ function CharacterRow({
             ) : (
               ""
             )}
-            {name}
+            <Character character={character} link={false} outline={true} />
           </h3>
         ),
       }}

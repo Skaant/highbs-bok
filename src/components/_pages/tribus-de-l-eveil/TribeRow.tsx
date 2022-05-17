@@ -21,7 +21,12 @@ function TribeRow({
     >
       <div className="col-12 col-md-10 col-lg-8 col-xl-6">
         <h3>
-          <Tribe tribe={TRIBES[tribe]} className="text-capitalize" />
+          <Tribe
+            tribe={TRIBES[tribe]}
+            link={false}
+            outline={true}
+            className="text-capitalize"
+          />
         </h3>
         {children}
         {summary}

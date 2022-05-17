@@ -3,6 +3,7 @@ import { CHARACTERS, CHARACTERS_DATA } from "../../../../data/characters"
 import { COLORS_DATA } from "../../../../data/colors"
 import { ERAS, ERAS_DATA } from "../../../../data/eras"
 import CharacterListInline from "../../CharacterListInline"
+import Era from "../../Era"
 
 function EraRow({ era, children }: { era: ERAS; children: ReactElement }) {
   const { id, name, color } = ERAS_DATA[era]
@@ -18,7 +19,9 @@ function EraRow({ era, children }: { era: ERAS; children: ReactElement }) {
       }${COLORS_DATA[color].textWhite ? " text-light" : ""}`}
     >
       <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-        <h3>{name}</h3>
+        <h3>
+          <Era era={era} link={false} outline={true} />
+        </h3>
         {children}
         {characters.length ? (
           <p className="mt-5">
