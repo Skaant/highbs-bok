@@ -150,8 +150,7 @@ export default function Glossaire() {
               <p>
                 Ainsi, ils essaient d'augmenter les connaissances qui circulent
                 sur le <Term term={TERMS.HOL_ONG} /> et espèrent, par
-                abstraction, dériver l'
-                <Term term={TERMS.HIGHBS} />.
+                abstraction, dériver l' <Term term={TERMS.HIGHBS} />.
               </p>
             </>
           </CharacterRow>
@@ -247,11 +246,11 @@ export default function Glossaire() {
             <>
               <p>
                 Candidat à l'exil pour aider la vie à coloniser des terres
-                inertes ou inexplorées, générées par l'
+                inertes ou inexplorées, générées par l'{" "}
                 <Term term={TERMS.EXPANS} />.
               </p>
               <p>
-                Membre de la <Tribe tribe={TRIBES.KOLOS} /> à l'
+                Membre de la <Tribe tribe={TRIBES.KOLOS} /> à l'{" "}
                 <Era era={ERAS.EXPANS_ERA} />, avec ses compagnons ils fondent
                 un nouvel établissement ailleurs.
               </p>

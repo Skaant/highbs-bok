@@ -1,7 +1,7 @@
 import React from "react"
 import { CHARACTERS } from "../../../data/characters"
-import { COLORS, COLORS_DATA } from "../../../data/colors"
-import { ERAS, ERAS_DATA } from "../../../data/eras"
+import { COLORS } from "../../../data/colors"
+import { ERAS } from "../../../data/eras"
 import { PAGES, PAGES_DATA } from "../../../data/pages"
 import { PLACES } from "../../../data/places"
 import { TERMS } from "../../../data/terms"
@@ -24,7 +24,7 @@ export default function SeptEras() {
       <>
         <Header title={PAGES_DATA[pageId].title} />
         <div className="container-fluid px-0">
-          <div className="row px-4 pt-4 pb-5 align-content-center">
+          <div className="row px-4 pb-5 align-content-center">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
               <h1>
                 Les sept <Term term={TERMS.ERA} plural={true} /> de l'histoire
@@ -194,23 +194,25 @@ export default function SeptEras() {
                 <Term term={TERMS.ZUM} plural={true} /> de la fin des temps.
               </p>
               <p>
-                Là, ils oeuvrent pour donner naissance à l'
+                Là, ils oeuvrent pour donner naissance à l'{" "}
                 <Character character={CHARACTERS.ANGK} />, l'être unique censé
                 pouvoir conceptualiser l'
-                <Term term={TERMS.HIGHBS} /> et faire basculer l'univers dans le{" "}
-                <Character character={CHARACTERS.TOUT_UN} />.
+                <Term term={TERMS.HIGHBS} outline={true} /> et faire basculer
+                l'univers dans le{" "}
+                <Character character={CHARACTERS.TOUT_UN} outline={true} />.
               </p>
             </>
           </EraRow>
           <EraRow era={ERAS.ANGK_ERA}>
             <>
               <p>
-                Le dernier être prend conscience que son monde lui est encore
-                exterieur.
+                Le dernier être prend conscience que{" "}
+                <b>son monde lui est encore exterieur</b>, donc qu'il n'est ni
+                un ni tout.
               </p>
               <p>
-                Il le remonte pour faire sien toutes choses, même les plus
-                précieuses ...
+                Il le remonte alors pour tenter de faire sien toutes choses,{" "}
+                <b>même les plus précieuses</b> ...
               </p>
             </>
           </EraRow>
