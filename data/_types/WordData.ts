@@ -5,4 +5,5 @@ export type WordData = {
   name: string
   summary: string
   color: COLORS
+  textWhite?: true
 }
