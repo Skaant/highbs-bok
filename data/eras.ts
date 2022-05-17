@@ -1,7 +1,7 @@
 import { COLORS } from "./colors"
 
 export enum ERAS {
-  PRESENT_ERA = "PRESENT_ERA",
+  PRESENT = "PRESENT",
   PALEO_ERA = "PALEO_ERA",
   PRIMA_ERA = "PRIMA_ERA",
   EXPANS_ERA = "EXPANS_ERA",
@@ -22,7 +22,7 @@ export type EraData = {
 export type EraDataSet = { [era in ERAS]: EraData }
 
 export const ERAS_DATA: EraDataSet = {
-  PRESENT_ERA: {
+  PRESENT: {
     index: 0,
     name: "Présent",
     summary: `Volontairement plongé dans les flots PSIK, le narrateur introduit et commente l'histoire des ZUMS.`,
