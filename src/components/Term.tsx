@@ -35,7 +35,7 @@ function Term({
     typeof term === "object" ? term : TERMS_DATA[term]
   const textColor = _textColor
     ? _textColor.toLowerCase()
-    : COLORS_DATA[color]?.colorWhite
+    : COLORS_DATA[color]?.textWhite
     ? "light"
     : "dark"
   const className = `term bg-${color.toLowerCase()} text-${textColor} ${
