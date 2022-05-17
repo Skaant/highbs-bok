@@ -109,6 +109,13 @@ td {
       font-size: 1.05rem;
     }
   }
+  table tr {
+    display: flex;
+    flex-direction: column;
+    > :first-child {
+      align-self: start;
+    }
+  }
 }
 
 .mb-6 {
