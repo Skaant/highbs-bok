@@ -1,8 +1,10 @@
 import React from "react"
+import { CHARACTERS } from "../../data/characters"
 import { COLORS } from "../../data/colors"
 import { PAGES } from "../../data/pages"
 import { TERMS } from "../../data/terms"
 import { ButtonsMenu } from "../components/ButtonsMenu"
+import Character from "../components/Character"
 import { Header } from "../components/Header"
 import { Layout } from "../components/Layout/Layout"
 import { TableOfContent } from "../components/TableOfContent"
@@ -58,30 +60,45 @@ export default function () {
           <SectionRow
             id={SECTIONS_ID.QU_EST_CE_QUE_L_HIGHBS_BOK}
             header={{
-              level: 2,
-              content: sections[SECTIONS_ID.QU_EST_CE_QUE_L_HIGHBS_BOK],
+              element: (
+                <h2>
+                  Qu'est-ce-que l'{" "}
+                  <Term term={TERMS.HIGHBS_BOK} outline={true} /> ?
+                </h2>
+              ),
             }}
             className="pt-4 bg-light_gold"
           >
             <>
               <p>
-                Ouvrage <b>synthétique</b>, l'HIGHBS-BOK prétend seulement être
-                une <b>actualisation de la forme</b> donnée aux idées (images,
+                Ouvrage <b>synthétique</b>, l'
+                <Term term={TERMS.HIGHBS} /> prétend seulement être une{" "}
+                <b>actualisation de la forme</b> donnée aux idées (images,
                 mythes et histoires), pour continuer à les faire vivre.
               </p>
               <p>
-                L'HIGHBS-BOK est également un recueil d'
+                L' <Term term={TERMS.HIGHBS_BOK} outline={true} /> est également
+                un recueil d'
                 <b>associations d'idées inédites</b> (les associations, pas les
-                idées). Science-fiction, ésotérisme, permaculture, aventure,
-                poèsie se rejoignent pour dessiner une saga utopique et
-                complète.
+                idées).{" "}
+                <b>
+                  Science-fiction, ésotérisme, permaculture, aventure, poèsie se
+                  rejoignent
+                </b>{" "}
+                pour dessiner une saga utopique et complète,{" "}
+                <b>un avenir qu'on a envie de vivre</b>.
               </p>
               <p>
-                Comme nous tous plus ou moins consciemment, les ZUMS cherchent
-                le <span className="bg-gold">tout-un</span>. La façon dont ils y
-                arrivent nécessite forcément des idées transcendantes.
+                Comme nous tous plus ou moins consciemment, les{" "}
+                <Term term={TERMS.ZUM} plural={true} /> cherchent le{" "}
+                <Character character={CHARACTERS.TOUT_UN} />. La façon dont ils
+                y arrivent <b>nécessite forcément des idées transcendantes</b>.
               </p>
-              <ExtraitAcheterCTA />
+              <ExtraitAcheterCTA
+                primaryBtnColor={COLORS.GOLD}
+                secondaryBtnColor={COLORS.PURPLE}
+                border={COLORS.GOLD}
+              />
             </>
           </SectionRow>
           <SectionRow
@@ -122,18 +139,28 @@ export default function () {
                 Comme au jardin, dans la création je crois aussi fort à l'action
                 continue d'amélioration.
               </p>
+              <p>
+                <b>
+                  Ce site est d'ailleurs un très bon support pour matérialiser
+                  ce processus !
+                </b>
+              </p>
               <p>Nous vivons et nos expériences nous transforment.</p>
               <p>
                 En conséquence, comme pour tout le reste, j'ai envie de dire :
-                pourvu que le temps nourrisse l'HIGHBS-BOK.
+                pourvu que le temps nourrisse l'{" "}
+                <Term term={TERMS.HIGHBS_BOK} />.
               </p>
             </>
           </SectionRow>
           <SectionRow
             id={SECTIONS_ID.HIGHBS_EGAL_ILLUMINATION}
             header={{
-              level: 2,
-              content: sections[SECTIONS_ID.HIGHBS_EGAL_ILLUMINATION],
+              element: (
+                <h2>
+                  <Term term={TERMS.HIGHBS} outline={true} /> = illumination ?
+                </h2>
+              ),
             }}
             className="bg-gold"
           >
@@ -147,8 +174,15 @@ export default function () {
                 <br />
                 comment décrire l'idée ultime ?
               </p>
+              <p>
+                Pourtant, voilà tout ce que l'on peut en dire :{" "}
+                <b>rien, et même ça serait trop</b> ...
+              </p>
               <p>Dès qu'on y pose des mots on en perd l'essence.</p>
-              <p>L'HIGHBS c'est être très très high mon pote.</p>
+              <p>
+                L' <Term term={TERMS.HIGHBS} outline={true} /> c'est être{" "}
+                <b>très très high</b> mon pote.
+              </p>
             </>
           </SectionRow>
           <SectionRow
@@ -225,8 +259,8 @@ export default function () {
                 les défis de chaque <Term term={TERMS.ERA} />.
               </p>
               <p>
-                Le postulat défendu par l'
-                <Term term={TERMS.HIGHBS_BOK} /> est qu'
+                Le postulat défendu par l' <Term term={TERMS.HIGHBS_BOK} /> est
+                qu'
                 <b>avec des idées</b>, on trouve{" "}
                 <b>des solutions à tous les problèmes</b> et on peut{" "}
                 <b>réaliser les choses les plus folles</b>.
