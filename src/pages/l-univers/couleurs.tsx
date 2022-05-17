@@ -7,6 +7,7 @@ import { PLACES_DATA } from "../../../data/places"
 import { TERMS, TERMS_DATA } from "../../../data/terms"
 import { TRIBES_DATA } from "../../../data/tribes"
 import { WordsDataSet } from "../../../data/_types/WordsDataSet"
+import Color from "../../components/Color"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import Term from "../../components/Term"
@@ -118,22 +119,11 @@ export default function Couleurs() {
                       ![COLORS.LIGHT, COLORS.MUTED, COLORS.DARK].includes(color)
                   )
                   .map(color => {
-                    const { name, hexa, textWhite } = COLORS_DATA[color]
+                    const { id, name, hexa, textWhite } = COLORS_DATA[color]
                     return (
-                      <tr key={color}>
+                      <tr key={color} id={id}>
                         <td>
-                          <span
-                            className={`badge rounded-pill text-capitalize w-100 ${
-                              textWhite ? " text-light" : ""
-                            }`}
-                            style={{
-                              backgroundColor: hexa,
-                              maxWidth: "25vw",
-                              whiteSpace: "initial",
-                            }}
-                          >
-                            {name}
-                          </span>
+                          <Color color={color} link={false} />
                         </td>
                         <td>
                           <div className="mb-4">{colorDescriptions[color]}</div>
