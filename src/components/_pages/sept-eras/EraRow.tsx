@@ -15,7 +15,7 @@ function EraRow({ era, children }: { era: ERAS; children: ReactElement }) {
       id={era}
       className={`row px-4 py-5 align-content-center${
         color ? ` bg-${color.toLowerCase()}` : ""
-      }${COLORS_DATA[color].colorWhite ? " text-light" : ""}`}
+      }${COLORS_DATA[color].textWhite ? " text-light" : ""}`}
     >
       <div className="col-12 col-md-10 col-lg-8 col-xl-6">
         <h3>{name}</h3>

@@ -32,7 +32,7 @@ function PlaceRow({
         ),
       }}
       className={`bg-${color.toLowerCase()} text-${
-        COLORS_DATA[color]?.colorWhite ? "light" : "dark"
+        COLORS_DATA[color]?.textWhite ? "light" : "dark"
       }`}
     >
       <>
