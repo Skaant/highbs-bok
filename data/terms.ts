@@ -1,5 +1,6 @@
 import { COLORS } from "./colors"
 import { VOLUMES } from "./volumes"
+import { Source } from "./_types/WordData"
 
 export enum TERMS {
   ABS = "ABS",
@@ -51,7 +52,7 @@ export type TermData = {
    *  never been introduced, while still part of
    *  the universe.
    */
-  volume: "storyboards" | VOLUMES
+  volume: Source
   color: COLORS
   /** Term will be printed w/ regular font. */
   regular?: boolean

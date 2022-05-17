@@ -1,7 +1,7 @@
 import { COLORS } from "./colors"
 import { ERAS } from "./eras"
 import { VOLUMES } from "./volumes"
-import { WordData } from "./_types/WordData"
+import { Source, WordData } from "./_types/WordData"
 
 export enum PLACES {
   TERA = "TERA",
@@ -12,7 +12,7 @@ export enum PLACES {
 
 export type PlaceData = WordData & {
   eras: ERAS[]
-  volume: VOLUMES
+  volume: Source
   particle?: string
 }
 

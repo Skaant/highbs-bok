@@ -1,6 +1,7 @@
 import { COLORS } from "./colors"
 import { ERAS } from "./eras"
 import { VOLUMES } from "./volumes"
+import { Source } from "./_types/WordData"
 
 export enum CHARACTERS {
   TOUT_UN = "TOUT_UN",
@@ -26,7 +27,7 @@ export type CharacterData = {
   summary: string
   color: COLORS
   /** First volume when the character appears. */
-  volume: VOLUMES
+  volume: Source
   particle?: string
   group?: boolean
 }
