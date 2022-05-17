@@ -338,6 +338,20 @@ export default function Glossaire() {
             title={sections[SECTIONS_ID.TERMES_DES_STORYBOARDS]}
             intro={
               <>
+                <p>
+                  Les storyboards, ce sont{" "}
+                  <b>toutes les notes de travail, tous les prototypes</b> de l'{" "}
+                  <Term term={TERMS.HIGHBS_BOK} /> ...
+                </p>
+                <p>
+                  <b>Pas inclus dans les livres</b> pour le moment, les termes
+                  des storyboard pourraient y figurer dans le futur.
+                </p>
+                <p>
+                  L'<b>inclusion et les commentaires</b> des storyboards sur le
+                  site est prévue, car leur contenu{" "}
+                  <b>rajouterait encore plus de la saveur à l'histoire</b>.
+                </p>
                 <TermsList terms={volumesTerms["storyboards"]} />
               </>
             }
