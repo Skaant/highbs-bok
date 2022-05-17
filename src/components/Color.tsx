@@ -1,27 +1,33 @@
 import React from "react"
 import { COLORS, COLORS_DATA } from "../../data/colors"
+import { VOLUMES } from "../../data/volumes"
 import Term from "./Term"
 
 function Color({
   color,
-  pageLink,
   link,
+  pageLink,
+  outline,
 }: {
   color: COLORS
-  pageLink?: boolean
   link?: boolean
+  pageLink?: boolean
+  outline?: boolean
 }) {
-  const { id, name, hexa } = COLORS_DATA[color]
+  const { id, name, hexa, volume = VOLUMES.VOLUME_1 } = COLORS_DATA[color]
   return (
     <Term
       term={{
         id,
         name,
-        short: hexa,
+        short: `La couleur ${name}.`,
+        summary: `Code hexa: ${hexa}`,
         color,
+        volume,
       }}
       link={link}
       pageLink={pageLink}
+      outline={outline}
       className="font-regular"
     />
   )
