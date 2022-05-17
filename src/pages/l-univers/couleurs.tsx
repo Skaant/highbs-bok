@@ -1,20 +1,18 @@
 import React from "react"
-import { CHARACTERS, CHARACTERS_DATA } from "../../../data/characters"
+import { CHARACTERS_DATA } from "../../../data/characters"
 import { COLORS, COLORS_DATA } from "../../../data/colors"
-import { ERAS, ERAS_DATA } from "../../../data/eras"
+import { ERAS_DATA } from "../../../data/eras"
 import { PAGES } from "../../../data/pages"
-import { PLACES, PLACES_DATA } from "../../../data/places"
+import { PLACES_DATA } from "../../../data/places"
 import { TERMS, TERMS_DATA } from "../../../data/terms"
-import { TRIBES, TRIBES_DATA } from "../../../data/tribes"
+import { TRIBES_DATA } from "../../../data/tribes"
 import { WordsDataSet } from "../../../data/_types/WordsDataSet"
-import Character from "../../components/Character"
-import Era from "../../components/Era"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
-import Place from "../../components/Place"
 import Term from "../../components/Term"
-import Tribe from "../../components/Tribe"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
+import colorDescriptions from "../../components/_pages/couleurs/ColorDescriptions.collection"
+import WordSwitch from "../../components/_pages/couleurs/WordSwitch"
 import { SectionRow } from "../../components/_rows/SectionRow"
 import "../../styles/global.scss"
 import { WORD_TYPES } from "../../_enums/word-types.enum"
@@ -120,13 +118,13 @@ export default function Couleurs() {
                       ![COLORS.LIGHT, COLORS.MUTED, COLORS.DARK].includes(color)
                   )
                   .map(color => {
-                    const { hexa, description, colorWhite } = COLORS_DATA[color]
+                    const { name, hexa, textWhite } = COLORS_DATA[color]
                     return (
                       <tr key={color}>
                         <td>
                           <span
                             className={`badge rounded-pill text-capitalize w-100 ${
-                              colorWhite ? " text-light" : ""
+                              textWhite ? " text-light" : ""
                             }`}
                             style={{
                               backgroundColor: hexa,
@@ -134,54 +132,19 @@ export default function Couleurs() {
                               whiteSpace: "initial",
                             }}
                           >
-                            {color.toLowerCase().replace(/\_/g, " ")}
+                            {name}
                           </span>
                         </td>
                         <td>
+                          <div className="mb-4">{colorDescriptions[color]}</div>
                           {COLORS_WORD_ENTRIES[color].map(({ key, type }) => {
-                            const _key = `${type}-${key}`
-                            switch (type) {
-                              case WORD_TYPES.TERM:
-                                return (
-                                  <Term
-                                    key={_key}
-                                    term={key as TERMS}
-                                    className="me-2"
-                                  />
-                                )
-                              case WORD_TYPES.CHARACTER:
-                                return (
-                                  <Character
-                                    key={_key}
-                                    character={key as CHARACTERS}
-                                    className="me-2"
-                                  />
-                                )
-                              case WORD_TYPES.ERA:
-                                return (
-                                  <Era
-                                    key={_key}
-                                    era={key as ERAS}
-                                    className="me-2"
-                                  />
-                                )
-                              case WORD_TYPES.PLACE:
-                                return (
-                                  <Place
-                                    key={_key}
-                                    place={key as PLACES}
-                                    className="me-2"
-                                  />
-                                )
-                              case WORD_TYPES.TRIBE:
-                                return (
-                                  <Tribe
-                                    key={_key}
-                                    tribe={key as TRIBES}
-                                    className="me-2"
-                                  />
-                                )
-                            }
+                            return (
+                              <WordSwitch
+                                key={`${type}-${key}`}
+                                type={type}
+                                _key={key}
+                              />
+                            )
                           })}
                         </td>
                       </tr>
