@@ -7,13 +7,21 @@
   }
   border-radius: 64px;
 }
+a.term {
+  cursor: pointer;
+}
+span.term {
+  cursor: help;
+}
 .unreleased-source {
   font-family: "CaesarDressing-Regular";
   color: #0008;
   position: absolute;
-  font-size: 1rem;
-  top: -16px;
-  right: -4px;
+  font-size: 0.8rem;
+  top: -12px;
+  right: -8px;
+  cursor: help;
+  box-shadow: 0 0 4px #0004;
 }
 p,
 li,
@@ -41,6 +49,15 @@ h2 .term {
     letter-spacing: 3px;
   }
   padding: 0 16px;
+}
+h3 .term {
+  &:not(.font-regular) {
+    letter-spacing: 2px;
+  }
+  .font-merri {
+    letter-spacing: unset;
+  }
+  padding: 0 12px;
 }
 .display-1 .term {
   font-size: inherit;
