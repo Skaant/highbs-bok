@@ -101,6 +101,11 @@ export default function () {
               <ButtonsMenu
                 buttons={[
                   {
+                    href: "/acheter",
+                    color: COLORS.PURPLE,
+                    label: "Acheter le livret",
+                  },
+                  {
                     href: "/a-propos",
                     color: COLORS.LIGHT,
                     label: "A propos",
@@ -109,11 +114,6 @@ export default function () {
                     href: EXTRACT_DOWNLOAD_LINK,
                     color: COLORS.LIGHT,
                     label: "Télécharger l'extrait",
-                  },
-                  {
-                    href: "/acheter",
-                    color: COLORS.PURPLE,
-                    label: "Acheter le livret",
                   },
                 ]}
               />
