@@ -7,12 +7,14 @@ import { VOLUMES } from "../../data/volumes"
 
 function Tribe({
   tribe,
+  link = true,
   pageLink = false,
   outline,
   textColor,
   className,
 }: {
   tribe: TRIBES
+  link?: boolean
   pageLink?: boolean
   outline?: boolean
   textColor?: COLORS
@@ -32,9 +34,12 @@ function Tribe({
         color,
         volume: VOLUMES.VOLUME_2,
       }}
-      link={`${
-        pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_TRIBUS_DE_L_EVEIL].url
-      }#${name}`}
+      link={
+        link &&
+        `${
+          pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_TRIBUS_DE_L_EVEIL].url
+        }#${name}`
+      }
       outline={outline}
       textColor={textColor}
       className={className}

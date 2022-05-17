@@ -6,11 +6,13 @@ import Term from "./Term"
 
 function Place({
   place,
+  link = true,
   pageLink = false,
   outline,
   className,
 }: {
   place: PLACES
+  link?: boolean
   pageLink?: boolean
   outline?: boolean
   className?: string
@@ -32,9 +34,12 @@ function Place({
         volume,
         regular: true,
       }}
-      link={`${
-        pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_LIEUX].url
-      }#${name.replace(/ /g, "-")}`}
+      link={
+        link &&
+        `${
+          pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_LIEUX].url
+        }#${name.replace(/ /g, "-")}`
+      }
       outline={outline}
       className={className}
     />

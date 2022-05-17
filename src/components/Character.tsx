@@ -6,11 +6,13 @@ import Term from "./Term"
 
 function Character({
   character,
+  link = true,
   pageLink = false,
   outline,
   className,
 }: {
   character: CHARACTERS
+  link?: boolean
   pageLink?: boolean
   outline?: boolean
   className?: string
@@ -32,9 +34,12 @@ function Character({
         volume,
         regular: true,
       }}
-      link={`${
-        pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES].url
-      }#${name.replace(/ /g, "-")}`}
+      link={
+        link &&
+        `${
+          pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES].url
+        }#${name.replace(/ /g, "-")}`
+      }
       outline={outline}
       className={className}
     />
