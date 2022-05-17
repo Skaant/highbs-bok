@@ -120,7 +120,7 @@ const colorDescriptions: { [color in COLORS]?: ReactElement } = {
     <>
       <p>
         <i>
-          Variation de <ColorLink color={COLORS.DEEP} />.
+          Variation de <ColorLink color={COLORS.SKIN} />.
         </i>
       </p>
       <p>
