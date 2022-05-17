@@ -10,6 +10,11 @@ type UnreleasedSources = VOLUMES.VOLUME_2 | "storyboards"
 function TermSource({ source }: { source: UnreleasedSources }) {
   return (
     <span
+      title={
+        source === VOLUMES.VOLUME_2
+          ? "Volume 2, en cours d'écriture"
+          : "Storyboards, dans les documents préparatoires mais pas dans les livres ... Pas encore"
+      }
       className={`unreleased-source ${
         source === VOLUMES.VOLUME_2 ? "bg-light_purple" : "bg-light_blue"
       } px-2 rounded-pill`}
