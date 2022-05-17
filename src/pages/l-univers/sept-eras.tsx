@@ -12,6 +12,7 @@ import Place from "../../components/Place"
 import Term from "../../components/Term"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import EraRow from "../../components/_pages/sept-eras/EraRow"
+import ErasList from "../../components/_pages/sept-eras/ErasList"
 import { SectionRow } from "../../components/_rows/SectionRow"
 import "../../styles/global.scss"
 
@@ -44,6 +45,7 @@ export default function SeptEras() {
                 l'univers par les forces du chaos; découvrez les idées les plus
                 folles sur l'avenir, la nature et le sens de toutes choses.
               </p>
+              <ErasList />
             </div>
           </div>
           <EraRow era={ERAS.PRESENT_ERA}>
