@@ -5,14 +5,14 @@ import { ERAS, ERAS_DATA } from "../../../../data/eras"
 import CharacterListInline from "../../CharacterListInline"
 
 function EraRow({ era, children }: { era: ERAS; children: ReactElement }) {
-  const { name, color } = ERAS_DATA[era]
+  const { id, name, color } = ERAS_DATA[era]
   const characters = Object.entries(CHARACTERS_DATA).filter(([_, { eras }]) =>
     eras.includes(era)
   )
   return (
     <div
       key={era}
-      id={era}
+      id={id}
       className={`row px-4 py-5 align-content-center${
         color ? ` bg-${color.toLowerCase()}` : ""
       }${COLORS_DATA[color].textWhite ? " text-light" : ""}`}

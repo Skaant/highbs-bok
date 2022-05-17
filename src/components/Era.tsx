@@ -17,7 +17,7 @@ function Era({
   textColor?: COLORS
   className?: string
 }) {
-  const { name, index, summary, color } = ERAS_DATA[era]
+  const { id, name, index, summary, color } = ERAS_DATA[era]
   return (
     <Term
       term={{
@@ -26,7 +26,7 @@ function Era({
         summary,
         color,
       }}
-      link={`${pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_ERAS].url}#${name}`}
+      link={`${pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_ERAS].url}#${id}`}
       outline={outline}
       textColor={textColor}
       className={className}
