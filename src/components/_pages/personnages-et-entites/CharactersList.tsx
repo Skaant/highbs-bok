@@ -14,7 +14,7 @@ function CharactersList({ characters }: { characters: CHARACTERS[] }) {
             ) : (
               ""
             )}
-            <Character character={character as CHARACTERS} />
+            <Character character={character as CHARACTERS} pageLink={true} />
           </li>
         )
       })}
