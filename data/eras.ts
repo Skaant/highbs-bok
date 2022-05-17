@@ -25,7 +25,7 @@ export const ERAS_DATA: EraDataSet = {
   PRESENT_ERA: {
     index: 0,
     name: "Présent",
-    summary: `Volontairement plongé dans les flots PSIK, le narrateur introduit la SAGA ZUMA : l'histoire des ZUMS.`,
+    summary: `Volontairement plongé dans les flots PSIK, le narrateur introduit et commente l'histoire des ZUMS.`,
     id: "present-era",
     color: COLORS.PURPLE,
   },
