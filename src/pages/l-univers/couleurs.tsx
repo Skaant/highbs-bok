@@ -6,6 +6,8 @@ import { PAGES } from "../../../data/pages"
 import { PLACES_DATA } from "../../../data/places"
 import { TERMS, TERMS_DATA } from "../../../data/terms"
 import { TRIBES_DATA } from "../../../data/tribes"
+import { VOLUMES } from "../../../data/volumes"
+import { Source } from "../../../data/_types/WordData"
 import { WordsDataSet } from "../../../data/_types/WordsDataSet"
 import Color from "../../components/Color"
 import { Header } from "../../components/Header"
@@ -40,39 +42,42 @@ function addWordEntryToColor(
   return colorsWords
 }
 
-const COLORS_WORD_ENTRIES: ColorWordEntriesSet = ([
-  {
-    type: WORD_TYPES.TERM,
-    dataSet: TERMS_DATA,
-  },
-  {
-    type: WORD_TYPES.CHARACTER,
-    dataSet: CHARACTERS_DATA,
-  },
-  {
-    type: WORD_TYPES.ERA,
-    dataSet: ERAS_DATA,
-  },
-  {
-    type: WORD_TYPES.PLACE,
-    dataSet: PLACES_DATA,
-  },
-  {
-    type: WORD_TYPES.TRIBE,
-    dataSet: TRIBES_DATA,
-  },
-] as { type: WORD_TYPES; dataSet: WordsDataSet }[]).reduce(
-  (colorsWords, { type, dataSet }) => {
-    Object.entries(dataSet).forEach(([key, data]) =>
-      addWordEntryToColor(colorsWords, data.color, {
-        key,
-        type,
-      })
-    )
-    return colorsWords
-  },
-  {}
-)
+const WORD_TYPES_DATASET: { [type in WORD_TYPES]: WordsDataSet } = {
+  TERM: TERMS_DATA,
+  CHARACTER: CHARACTERS_DATA,
+  ERA: ERAS_DATA,
+  PLACE: PLACES_DATA,
+  TRIBE: TRIBES_DATA,
+}
+
+const COLORS_WORD_ENTRIES: ColorWordEntriesSet = Object.entries(
+  WORD_TYPES_DATASET
+).reduce((colorsWords, [type, dataSet]) => {
+  Object.entries(dataSet).forEach(([key, data]) =>
+    addWordEntryToColor(colorsWords, data.color, {
+      key,
+      type: type as WORD_TYPES,
+    })
+  )
+  return colorsWords
+}, {})
+
+const SOURCES_SORT_VALUE: { [key in Source]: number } = {
+  VOLUME_1: 2,
+  VOLUME_2: 1,
+  storyboards: 0,
+}
+
+function getSource(type: WORD_TYPES, key: string): Source {
+  return (
+    WORD_TYPES_DATASET[type][key].volume ||
+    (type === WORD_TYPES.ERA
+      ? VOLUMES.VOLUME_1
+      : type === WORD_TYPES.TRIBE
+      ? VOLUMES.VOLUME_2
+      : "storyboards")
+  )
+}
 
 export default function Couleurs() {
   return (
@@ -119,23 +124,33 @@ export default function Couleurs() {
                       ![COLORS.LIGHT, COLORS.MUTED, COLORS.DARK].includes(color)
                   )
                   .map(color => {
-                    const { id, name, hexa, textWhite } = COLORS_DATA[color]
                     return (
-                      <tr key={color} id={id}>
+                      <tr key={color} id={COLORS_DATA[color].id}>
                         <td>
                           <Color color={color} link={false} />
                         </td>
                         <td>
                           <div className="mb-4">{colorDescriptions[color]}</div>
-                          {COLORS_WORD_ENTRIES[color].map(({ key, type }) => {
-                            return (
-                              <WordSwitch
-                                key={`${type}-${key}`}
-                                type={type}
-                                _key={key}
-                              />
+                          {COLORS_WORD_ENTRIES[color]
+                            .sort(
+                              (
+                                { type: aType, key: aKey },
+                                { type: bType, key: bKey }
+                              ) =>
+                                (SOURCES_SORT_VALUE[getSource(bType, bKey)] ||
+                                  -1) -
+                                (SOURCES_SORT_VALUE[getSource(aType, aKey)] ||
+                                  -1)
                             )
-                          })}
+                            .map(({ key, type }) => {
+                              return (
+                                <WordSwitch
+                                  key={`${type}-${key}`}
+                                  type={type}
+                                  _key={key}
+                                />
+                              )
+                            })}
                         </td>
                       </tr>
                     )
