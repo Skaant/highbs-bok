@@ -6,6 +6,7 @@ export type ButtonsMenuItem = {
   label: string
   color?: string | COLORS
   outline?: boolean
+  border?: COLORS
   disabled?: boolean
 }
 
@@ -19,13 +20,18 @@ export function ButtonsMenu({
   return (
     <div className={`btn-menu ${className || ""}`}>
       {buttons.map(
-        ({ href, color = COLORS.LIGHT, outline, label, disabled }, index) => (
+        (
+          { href, color = COLORS.LIGHT, outline, label, border, disabled },
+          index
+        ) => (
           <a
             key={index}
             href={href}
             className={`btn btn-${
               outline ? "outline-" : ""
-            }${color.toLowerCase()} ${disabled ? "disabled" : ""}`}
+            }${color.toLowerCase()}${
+              border ? ` border-${border.toLowerCase()} border-3` : ""
+            }${disabled ? " disabled" : ""}`}
           >
             {label}
           </a>
