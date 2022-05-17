@@ -1,4 +1,5 @@
-import { WordData } from "./_types/WordData"
+import { VOLUMES } from "./volumes"
+import { Source, WordData } from "./_types/WordData"
 
 export enum COLORS {
   /* Kept default Bootstrap's palette color */
@@ -25,6 +26,7 @@ export enum COLORS {
 
 type colorData = Omit<WordData, "summary" | "color"> & {
   hexa: string
+  volume?: Source
 }
 
 export const COLORS_DATA: { [color in COLORS]: colorData } = {
@@ -96,6 +98,7 @@ export const COLORS_DATA: { [color in COLORS]: colorData } = {
     id: "violet-clair",
     name: "Violet clair",
     hexa: "#c579ff",
+    volume: VOLUMES.VOLUME_2,
   },
   TURQUOIZE: {
     id: "turquoize",
@@ -107,10 +110,12 @@ export const COLORS_DATA: { [color in COLORS]: colorData } = {
     name: "Turquoize sombre",
     hexa: "#0298a3",
     textWhite: true,
+    volume: VOLUMES.VOLUME_2,
   },
   ORANGE: {
     id: "orange",
     name: "Orange",
     hexa: "#ff9900",
+    volume: "storyboards",
   },
 }
