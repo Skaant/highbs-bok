@@ -51,12 +51,6 @@ $table-cell-padding-x: map-get($spacers, 3);
 $table-cell-padding-y: map-get($spacers, 3);
 @import "../../node_modules/bootstrap/scss/tables";
 
-.table--first-row-right {
-  td:first-child {
-    text-align: right;
-  }
-}
-
 @import "../../node_modules/bootstrap/scss/badge";
 @import "../../node_modules/bootstrap/scss/images";
 @import "../../node_modules/bootstrap/scss/card";
@@ -112,8 +106,12 @@ td {
   table tr {
     display: flex;
     flex-direction: column;
+    width: calc(100vw - (2 * map.get($spacers, 4)));
     > :first-child {
       align-self: start;
+    }
+    > * {
+      width: 100%;
     }
   }
 }
@@ -136,27 +134,6 @@ figure {
   font-size: initial;
 }
 
-footer {
-  color: $gray-100;
-  background: $gray-900;
-
-  a,
-  a:hover,
-  a:focus,
-  a:active,
-  a:visited {
-    color: inherit;
-  }
-
-  li {
-    margin: map-get($spacers, 2) 0;
-  }
-
-  /* ul,
-  p:not(.h4) {
-    font-weight: lighter;
-  } */
-}
-
+@import "./components/footer";
 @import "./components/mini-row-absolute";
 @import "./components/term.scss";
