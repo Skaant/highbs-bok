@@ -5,6 +5,7 @@ export enum TERMS {
   ABS = "ABS",
   ABS_LANG = "ABS_LANG",
   ABS_SUTRAT = "ABS_SUTRAT",
+  ADAMAI = "ADAMAI",
   ANCIENS_ANCIENS = "ANCIENS_ANCIENS",
   AVE = "AVE",
   DATA = "DATA",
@@ -80,6 +81,13 @@ export const TERMS_DATA: TermDataSet = {
     summary: "Agrégat de DATA relatif à l'ABS",
     volume: "storyboards",
     color: COLORS.PURPLE,
+  },
+  ADAMAI: {
+    name: "ADAMAI",
+    short: "Adamantin",
+    summary: "Qui a la dureté du diamant, structure très pure.",
+    volume: "storyboards",
+    color: COLORS.JEWEL,
   },
   ANCIENS_ANCIENS: {
     name: "Anciens-anciens",
