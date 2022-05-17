@@ -148,9 +148,11 @@ const colorDescriptions: { [color in COLORS]?: ReactElement } = {
   PURPLE: (
     <>
       <p>
-        L'<b>esprit</b>, le <b>psychédélique</b>, le{" "}
-        <ColorLink color={COLORS.BLUE} />/<ColorLink color={COLORS.DEEP} /> de
-        l'âme.
+        L'<b>esprit</b>, le <b>psychédélique</b>, le rêve à sens, la créativité.
+      </p>
+      <p>
+        Le <ColorLink color={COLORS.BLUE} /> / <ColorLink color={COLORS.DEEP} />{" "}
+        <b>de l'âme</b> (conscience/esprit).
       </p>
       <p>
         <b>Imagination débridée</b>, <b>complétude</b> par pas-de-côté, confort
