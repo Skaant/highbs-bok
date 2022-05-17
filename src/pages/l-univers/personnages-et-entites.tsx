@@ -142,7 +142,7 @@ export default function Glossaire() {
               </p>
               <p>
                 Comme toutes les autres créatures qui habitent{" "}
-                <Character character={CHARACTERS.GRAND_ARBRE} />
+                <Character character={CHARACTERS.GRAND_ARBRE} pageLink={true} />
                 et son réseau conceptuel, le <Term term={TERMS.HOL_ONG} />,
                 Baltazum n'a de cesse d'avoir de nouvelles idées et de les
                 exterioriser.
@@ -160,9 +160,9 @@ export default function Glossaire() {
               <p>
                 Pour réaliser l'
                 <Term term={TERMS.HIGHBS} />, la conscience du{" "}
-                <Character character={CHARACTERS.TOUT_UN} />, les{" "}
-                <Term term={TERMS.ZUM} plural={true} /> pensent devoir d'abord
-                créer un être unique.
+                <Character character={CHARACTERS.TOUT_UN} pageLink={true} />,
+                les <Term term={TERMS.ZUM} plural={true} /> pensent devoir
+                d'abord créer un être unique.
               </p>
               <p>
                 Chantier ultime au coeur de la{" "}
@@ -217,7 +217,7 @@ export default function Glossaire() {
             <>
               <p>
                 <Term term={TERMS.KAMI} outline={true} /> du jardin de{" "}
-                <Character character={CHARACTERS.BALTAZUM} />.
+                <Character character={CHARACTERS.BALTAZUM} pageLink={true} />.
               </p>
             </>
           </CharacterRow>
@@ -230,7 +230,8 @@ export default function Glossaire() {
               <p>
                 Membre de la <Tribe tribe={TRIBES.PSIK} />, il va contribuer à
                 faire émerger le <Term term={TERMS.HOL_ONG} /> et{" "}
-                <Character character={CHARACTERS.GRAND_ARBRE} />.
+                <Character character={CHARACTERS.GRAND_ARBRE} pageLink={true} />
+                .
               </p>
             </>
           </CharacterRow>
@@ -264,8 +265,9 @@ export default function Glossaire() {
             <>
               <p>Meneuse du nuage de l'ombre.</p>
               <p>
-                Epaulée par <Character character={CHARACTERS.NUK_NOK} />, elle
-                assiège la <Place place={PLACES.CITE_AUBE} />.
+                Epaulée par{" "}
+                <Character character={CHARACTERS.NUK_NOK} pageLink={true} />,
+                elle assiège la <Place place={PLACES.CITE_AUBE} />.
               </p>
               <p>
                 Elle espère ainsi rendre à l'univers la vie qu'elle considère
