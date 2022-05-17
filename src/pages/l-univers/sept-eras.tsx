@@ -48,7 +48,7 @@ export default function SeptEras() {
               <ErasList />
             </div>
           </div>
-          <EraRow era={ERAS.PRESENT_ERA}>
+          <EraRow era={ERAS.PRESENT}>
             <>
               <p>Prenez un instant et considérez votre position un instant :</p>
               <p>
