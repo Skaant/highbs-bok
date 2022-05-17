@@ -15,6 +15,7 @@ import { Layout } from "../../components/Layout/Layout"
 import Term from "../../components/Term"
 import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import colorDescriptions from "../../components/_pages/couleurs/colorDescriptions.collection"
+import ColorsList from "../../components/_pages/couleurs/ColorsList"
 import WordSwitch from "../../components/_pages/couleurs/WordSwitch"
 import { SectionRow } from "../../components/_rows/SectionRow"
 import "../../styles/global.scss"
@@ -113,6 +114,7 @@ export default function Couleurs() {
                 <b>le contenu chromatique est porteur de sens</b> (au pluriel),
                 dont quelques uns sont <b>résumés ci-dessous</b> :
               </p>
+              <ColorsList outline={COLORS.BLUE} />
             </>
           </SectionRow>
           <SectionRow className="pt-4">
