@@ -10,7 +10,7 @@ function ErasList() {
         return (
           <li
             key={era}
-            className={`mb-3 ${era === ERAS.PRESENT_ERA ? "font-regular" : ""}`}
+            className={`mb-3 ${era === ERAS.PRESENT ? "font-regular" : ""}`}
           >
             <Era era={era as ERAS} pageLink={true} />
           </li>
