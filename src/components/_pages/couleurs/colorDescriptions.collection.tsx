@@ -1,10 +1,11 @@
 import React, { ReactElement } from "react"
-import { COLORS, COLORS_DATA } from "../../../../data/colors"
+import { COLORS } from "../../../../data/colors"
 import { TERMS } from "../../../../data/terms"
+import Color from "../../Color"
 import Term from "../../Term"
 
 function ColorLink({ color }: { color: COLORS }) {
-  return <a href={`#${COLORS_DATA[color].id}`}>{COLORS_DATA[color].name}</a>
+  return <Color color={color} pageLink={true} />
 }
 
 const colorDescriptions: { [color in COLORS]?: ReactElement } = {
