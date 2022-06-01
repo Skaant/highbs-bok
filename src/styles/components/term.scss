@@ -41,7 +41,19 @@ td {
     }
   }
 }
+figcaption .term {
+  &:not(.font-regular) {
+    letter-spacing: 1.6px;
+    > .font-merri {
+      letter-spacing: initial;
+    }
+  }
+  padding: 0 10px;
+}
 h1 .term {
+  &:not(.font-regular) {
+    letter-spacing: 6px;
+  }
   padding: 0 36px;
 }
 h2 .term {

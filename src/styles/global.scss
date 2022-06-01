@@ -128,6 +128,9 @@ figure {
     margin-left: auto;
     margin-right: auto;
   }
+  > figcaption {
+    font-size: 1rem;
+  }
 }
 
 .font-size-initial {
