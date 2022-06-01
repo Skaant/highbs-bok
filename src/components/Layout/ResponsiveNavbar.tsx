@@ -1,5 +1,5 @@
 import React from "react"
-import { PAGES } from "../../../data/pages"
+import { PAGES, PAGES_DATA } from "../../../data/pages"
 
 export default function ResponsiveNavbar({
   pageId,
@@ -30,9 +30,9 @@ export default function ResponsiveNavbar({
                 className={`nav-link btn ${
                   pageId === PAGES.ACHETER ? "btn-deep" : "btn-purple"
                 }  my-2 mx-sm-2 px-3 rounded-pill shadow`}
-                href="/acheter"
+                href={PAGES_DATA[PAGES.ACHETER].url}
               >
-                Acheter un livret
+                {PAGES_DATA[PAGES.ACHETER].title}
               </a>
             </li>
             <li className="nav-item">
@@ -44,9 +44,9 @@ export default function ResponsiveNavbar({
                     ? "btn-deep"
                     : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
-                href="/l-univers"
+                href={PAGES_DATA[PAGES.L_UNIVERS].url}
               >
-                L'univers
+                {PAGES_DATA[PAGES.L_UNIVERS].title}
               </a>
             </li>
             <li className="nav-item">
@@ -58,9 +58,9 @@ export default function ResponsiveNavbar({
                     ? "btn-deep"
                     : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
-                href="/blog"
+                href={PAGES_DATA[PAGES.BLOG].url}
               >
-                Blog
+                {PAGES_DATA[PAGES.BLOG].title}
               </a>
             </li>
             <li className="nav-item">
@@ -72,9 +72,9 @@ export default function ResponsiveNavbar({
                     ? "btn-deep"
                     : "btn-outline-purple"
                 } my-2 mx-sm-2 px-3 rounded-pill shadow`}
-                href="/a-propos"
+                href={PAGES_DATA[PAGES.A_PROPOS].url}
               >
-                À propos
+                {PAGES_DATA[PAGES.A_PROPOS].title}
               </a>
             </li>
           </ul>
