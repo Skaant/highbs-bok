@@ -1,15 +1,24 @@
 import React from "react"
+import ARTICLES_ELEMENTS from "../../../data/articles.components"
 import articles from "../../../data/articles"
+import { CHARACTERS } from "../../../data/characters"
 import { COLORS } from "../../../data/colors"
+import { ERAS } from "../../../data/eras"
+import { TERMS } from "../../../data/terms"
 import { ButtonsMenu } from "../../components/ButtonsMenu"
+import Character from "../../components/Character"
+import Era from "../../components/Era"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
+import Term from "../../components/Term"
 import { ExtraitAcheterCTA } from "../../components/_ctas/ExtraitAcheterCTA"
 import { SectionRow } from "../../components/_rows/SectionRow"
 import "../../styles/global.scss"
 
+const INDEX = 1
+
 export default function () {
-  const { slug, title, date } = articles[1]
+  const { slug, title, date } = articles[INDEX]
   return (
     <Layout pageId={slug} navbarAlternativeColor={true}>
       <>
@@ -29,7 +38,9 @@ export default function () {
           </SectionRow>
           <div className="row px-4 bg-purple text-light">
             <div className="col-12 col-md-10 col-lg-8 col-xl-6">
-              <h1 className="my-0">{title}</h1>
+              <h1 className="my-0">
+                {ARTICLES_ELEMENTS[INDEX].title || title}
+              </h1>
               <p className="mb-6 font-size-initial">
                 Publié le {date.split("-").reverse().join("/")}
               </p>
@@ -40,8 +51,10 @@ export default function () {
               <figure>
                 <img src="/images/articles/1/symbole-psik.jpg" />
                 <figcaption>
-                  La lettre Psi, symbole du PSIK dans l'HIGHBS-BOK. La couleur
-                  violette vif y est associée.
+                  La lettre Psi, symbole du{" "}
+                  <Term term={TERMS.PSIK} outline={true} /> dans l'{" "}
+                  <Term term={TERMS.HIGHBS_BOK} />. La couleur violette vif y
+                  est associée.
                 </figcaption>
               </figure>
             </div>
@@ -55,7 +68,7 @@ export default function () {
           >
             <>
               <p>
-                Avec des idées, et les actions nécessaires à leur
+                Avec des idées, et les actions nécessaires à leur{" "}
                 <strong>matérialisation</strong>, on peut tout résoudre : la
                 faim, la pauvreté, la crise environnementale, la violence ou
                 encore la dépression.
@@ -69,9 +82,12 @@ export default function () {
               <figure>
                 <img src="/images/articles/1/perspectives-de-l'expans-era.jpg" />
                 <figcaption>
-                  Perspective de la structure de GRAND-ARBRE pendant
-                  l'EXPANS-ERA. Les ZUMS peuvent observer les couloirs et les
-                  noeuds dans lesquels brillent de petits soleils.
+                  Perspective de la structure de{" "}
+                  <Character character={CHARACTERS.GRAND_ARBRE} /> pendant l'
+                  <Era era={ERAS.EXPANS_ERA} />. Les{" "}
+                  <Term term={TERMS.ZUM} plural={true} /> peuvent observer les
+                  couloirs et les noeuds dans lesquels brillent de petits
+                  soleils.
                 </figcaption>
               </figure>
               <p>
@@ -81,22 +97,27 @@ export default function () {
                 Pourtant les bonnes vieilles recettes ont leurs limites.
               </p>
               <p>
-                Les ZUMS, les protagonistes de l'HIGHBS-BOK, l'ont bien compris
-                ...
+                Les <Term term={TERMS.ZUM} plural={true} />, les protagonistes
+                de l' <Term term={TERMS.HIGHBS_BOK} />, l'ont bien compris ...
               </p>
             </>
           </SectionRow>
           <SectionRow
             header={{
-              level: 2,
-              content: "Pourquoi les ZUMS utilisent du PSIK ?",
+              element: (
+                <h2>
+                  Pourquoi les <Term term={TERMS.ZUM} plural={true} /> utilisent
+                  du <Term term={TERMS.PSIK} outline={true} /> ?
+                </h2>
+              ),
             }}
             className="bg-purple text-light"
           >
             <>
               <p>
-                Les ZUMS vouent désormais un culte au PSIK : l'ensemble des
-                pratiques et matériaux qui{" "}
+                Les <Term term={TERMS.ZUM} plural={true} /> vouent désormais un
+                culte au <Term term={TERMS.PSIK} outline={true} /> : l'ensemble
+                des pratiques et matériaux qui{" "}
                 <strong>diversifient, sinon multiplient,</strong> les idées
                 qu'un individu peut générer.
               </p>
@@ -105,28 +126,6 @@ export default function () {
                 d'idées ?<br />
                 Plus qualitatives et diversifiées ?
               </p>
-              <p>
-                Grâce au PSIK, les ZUMS ont abandonné le fatalisme et abordent
-                maintenant les défis de leur époque avec{" "}
-                <strong>optimisme et créativité</strong>.
-              </p>
-              <p>
-                <strong>
-                  Posez-vous de nombreuses questions et générez des idées encore
-                  plus belles en lisant l'HIGHBS-BOK volume 1.
-                </strong>
-              </p>
-              <p>
-                Pré-commandes sur Ulule :{" "}
-                <a
-                  href="https://fr.ulule.com/highbs-bok-volume-1/"
-                  className="text-info"
-                >
-                  https://fr.ulule.com/highbs-bok-volume-1/
-                </a>
-                <br />
-                Vous avez jusqu'au 26 Décembre !
-              </p>
               <figure>
                 <img src="/images/articles/1/zums-consommant-du-psik.jpg" />
                 <figcaption>
@@ -134,6 +133,12 @@ export default function () {
                   PSIK.
                 </figcaption>
               </figure>
+              <p>
+                Grâce au <Term term={TERMS.PSIK} outline={true} />, les{" "}
+                <Term term={TERMS.ZUM} plural={true} /> ont abandonné le
+                fatalisme et abordent maintenant les défis de leur époque avec{" "}
+                <strong>optimisme et créativité</strong>.
+              </p>
               <ExtraitAcheterCTA
                 primaryBtnColor={COLORS.GOLD}
                 secondaryBtnColor={COLORS.LIGHT}
