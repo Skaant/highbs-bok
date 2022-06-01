@@ -56,7 +56,7 @@ export const PAGES_DATA: { [key in PAGES]: PageData } = {
     url: "/l-univers/tribus-de-l-eveil",
   },
   BLOG: {
-    title: "Blog",
+    title: "Le blog",
     url: "/blog",
   },
   A_PROPOS: {
