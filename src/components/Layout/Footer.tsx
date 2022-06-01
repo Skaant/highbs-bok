@@ -1,5 +1,6 @@
 import React from "react"
 import articles from "../../../data/articles"
+import ARTICLES_ELEMENTS from "../../../data/articles.components"
 import { PAGES, PAGES_DATA } from "../../../data/pages"
 
 export function Footer() {
@@ -38,12 +39,16 @@ export function Footer() {
               <li>
                 <a href="/blog">Blog</a>
                 <ul className="list-unstyled ps-4 py-3">
+                  {}
                   {articles
-                    .slice(0, 5)
                     .sort((a, b) => (a.date < b.date ? 1 : -1))
-                    .map(article => (
-                      <li key={article.slug}>
-                        <a href={`/blog/${article.slug}`}>{article.title}</a>
+                    .slice(articles.length - 5)
+                    .map(({ index, title, slug }) => (
+                      <li key={slug}>
+                        <a href={`/blog/${slug}`}>
+                          {ARTICLES_ELEMENTS[index + articles.length - 5]
+                            ?.title || title}
+                        </a>
                       </li>
                     ))}
                 </ul>
