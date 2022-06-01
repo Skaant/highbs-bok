@@ -68,7 +68,7 @@ export default function Glossaire() {
             <>
               <p className="mb-5">
                 Il y a <b>quelques mots étranges</b>, écrits <b>en majuscule</b>
-                , dans l'HIGHBS-BOK.{" "}
+                , dans l' <Term term={TERMS.HIGHBS_BOK} />.{" "}
                 <a
                   href={`/a-propos#${A_PROPOS_SECTIONS_ID.POURQUOI_UTILISER_DES_MOTS_BIZARRES}`}
                 >
@@ -77,8 +77,11 @@ export default function Glossaire() {
               </p>
               <p>
                 Retrouvez ci-dessous{" "}
-                <b>la liste des termes employés dans l'HIGHBS-BOK</b>, ainsi que{" "}
-                <b>leur définition</b>.
+                <b>
+                  la liste des termes employés dans l'{" "}
+                  <Term term={TERMS.HIGHBS_BOK} />
+                </b>
+                , ainsi que <b>leur définition</b>.
               </p>
               <TableOfContent
                 sections={sections}
