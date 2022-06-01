@@ -1,4 +1,5 @@
 export type ArticleData = {
+  index: number
   slug: string
   date: string
   title: string
@@ -8,54 +9,61 @@ export type ArticleData = {
 
 const articles: ArticleData[] = [
   {
+    index: 0,
     slug: "un-monde-sans-mort",
     date: "2021-11-26",
-    title: "On ne meurt pas vraiment chez les ZUMS",
+    title: "Les ZUMS ne meurent pas",
     description:
       "Dans la société des ZUMS, il n'y a plus de mort ni de tristesse.",
     tags: ["zums", "immortalité", "univers"],
   },
   {
-    // 1
+    index: 1,
     slug: "avoir-plus-d-idees",
     date: "2021-12-08",
-    title:
-      "Le PSIK : qu'est-ce qui est plus précieux qu'avoir de nouvelles idées ?",
+    title: "PSIK, le nectar des idées",
     description:
       "Dans la société des ZUMS, ce qui permet de créer plus d'idées est très valorisé.",
     tags: ["zums", "psik", "idées", "psychédéliques"],
   },
   {
-    // 2
+    index: 2,
     slug: "campagne-ulule-terminee-la-suite",
     date: "2022-01-24",
-    title: "Campagne Ulule terminée ! La suite ...",
+    title: "Campagne Ulule réussie, et après ?",
     description:
       "Ma campagne Ulule s'est achevée avec succès et les contreparties ont été expédiées. " +
       "Maintenant, mon attention est tournée vers le volume 2.",
     tags: ["ulule", "volume 2", "site"],
   },
   {
-    // 3
+    index: 3,
     slug: "tout-un-ou-toute-une",
     date: "2022-02-27",
-    title: "Tout-un ou toute-une ?",
+    title: "Tout-Un, tout-un ou toute-une ?",
     description:
       "Le tout-un est-il masculin ou féminin ? Au regard de son exceptionelle abstraction, " +
       "cette question a-t'elle même un sens ?",
     tags: ["tout-un", "dualité", "abstraction", "hol-adin"],
   },
-  /* {
-    // 4
-    slug: "la-source-de-l-angoisse-existentielle",
-    date: "2022-02-2x",
-    title: "La source de l'angoisse existentielle",
+  {
+    index: 4,
+    slug: "mise-a-jour-2-2-univers-renforce",
+    date: "2022-05-29",
+    title: "Mise-à-jour 2.2: univers renforcé",
     description:
-      "Qu'est-ce qui nous met en mouvement ? La sensation d'inconfort. " +
-      "Quelle est la plus grande source d'inconfort ? Notre fin ? " +
-      "Non, la fin de toutes choses",
-    tags: ["univers", "philosophie", "angoisse existentielle"],
-  }, */
+      "Connexe à la conception du volume 2, cette mise-à-jour axée sémantique revoit toutes les pages. " +
+      "La section l-univers a été enrichie des pages : personnages, lieux et tribus. " +
+      "Toutes les mentions à un élément de l'univers pointent vers sa définition et affichent un résumé au survol.",
+    tags: [
+      "mise-a-jour",
+      "univers",
+      "semantique",
+      "personnages",
+      "lieux",
+      "tribus",
+    ],
+  },
 ]
 
 export default articles
