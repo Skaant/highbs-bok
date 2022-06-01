@@ -1,5 +1,6 @@
 import React from "react"
 import { CHARACTERS } from "../../../data/characters"
+import { COLORS } from "../../../data/colors"
 import { PAGES, PAGES_DATA } from "../../../data/pages"
 import { PLACES, PLACES_DATA } from "../../../data/places"
 import { TERMS } from "../../../data/terms"
@@ -12,6 +13,7 @@ import Place from "../../components/Place"
 import { TableOfContent } from "../../components/TableOfContent"
 import Term from "../../components/Term"
 import Tribe from "../../components/Tribe"
+import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import PlaceRow from "../../components/_pages/places/PlaceRow"
 import PlacesList from "../../components/_pages/places/PlacesList"
 import { SectionRow } from "../../components/_rows/SectionRow"
@@ -154,6 +156,16 @@ export default function Lieux() {
               </p>
             </>
           </PlaceRow>
+          <SectionRow
+            header={{
+              level: 2,
+              content: "Autres pages de l'univers",
+            }}
+          >
+            <>
+              <UniversePagesCTA current={page} buttonsColor={COLORS.PURPLE} />
+            </>
+          </SectionRow>
         </div>
       </>
     </Layout>
