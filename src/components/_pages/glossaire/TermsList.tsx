@@ -8,7 +8,7 @@ function TermsList({ terms }: { terms: TERMS[] }) {
       {terms.map(term => {
         return (
           <li key={term} className="mb-3">
-            <Term term={term as TERMS} />
+            <Term term={term as TERMS} pageLink={true} />
           </li>
         )
       })}
