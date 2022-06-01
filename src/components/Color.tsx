@@ -1,5 +1,6 @@
 import React from "react"
 import { COLORS, COLORS_DATA } from "../../data/colors"
+import { PAGES, PAGES_DATA } from "../../data/pages"
 import { VOLUMES } from "../../data/volumes"
 import Term from "./Term"
 
@@ -25,7 +26,12 @@ function Color({
         color,
         volume,
       }}
-      link={link}
+      link={
+        link &&
+        `${
+          pageLink ? "" : PAGES_DATA[PAGES.L_UNIVERS_COULEURS].url
+        }#${name.replace(/ /g, "-")}`
+      }
       pageLink={pageLink}
       outline={outline}
       className="font-regular"

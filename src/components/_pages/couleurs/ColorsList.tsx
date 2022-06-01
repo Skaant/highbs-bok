@@ -9,7 +9,11 @@ function ColorsList({ outline }: { outline?: COLORS }) {
         return (
           COLORS_DATA[color] && (
             <li key={color} className="mb-3">
-              <Color color={color} outline={outline === color} />
+              <Color
+                color={color}
+                outline={outline === color}
+                pageLink={true}
+              />
             </li>
           )
         )
