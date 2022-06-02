@@ -195,6 +195,28 @@ export default function Glossaire() {
               </p>
             </>
           </CharacterRow>
+          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_1][4]}>
+            <>
+              <p>
+                Bien que peu mis en avant dans le volume 1, le narrateur est{" "}
+                <b>ce personnage presque omniscient</b> qui raconte l'
+                <Term term={TERMS.HIGHBS_BOK} />.
+              </p>
+              <p>
+                Comme l'
+                <Term term={TERMS.ERA} /> <Era era={ERAS.PRESENT} /> nous invite
+                à <b>nous rattacher à notre ancrage ici et maintenant</b>, le
+                narrateur nous rappelle qu'
+                <b>une histoire n'existe que parce qu'elle est lue</b>.
+              </p>
+              <p>
+                <i>
+                  Se pourrait-il qu'il devienne un jour acteur de cette histoire
+                  ?
+                </i>
+              </p>
+            </>
+          </CharacterRow>
           <SectionRow
             id={SECTIONS_ID.PERSONNAGES_ET_ENTITES_DU_VOLUME_2}
             header={{

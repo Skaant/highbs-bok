@@ -8,6 +8,7 @@ export enum CHARACTERS {
   BALTAZUM = "BALTAZUM",
   ANGK = "ANGK",
   GRAND_ARBRE = "GRAND_ARBRE",
+  NARRATEUR = "NARRATEUR",
   RAZ_LA = "RAZ_LA",
   BINDA = "BINDA",
   ZA_ZOZ = "ZA_ZOZ",
@@ -72,6 +73,13 @@ export const CHARACTERS_DATA: CharacterDataSet = {
     summary:
       "La structure organique qui sert de support à la colonisation de l'univers par les ZUMS.",
     color: COLORS.GREEN,
+    volume: VOLUMES.VOLUME_1,
+  },
+  NARRATEUR: {
+    name: "Narrateur",
+    eras: [ERAS.PRESENT],
+    summary: "Quelqu'un raconte l'HIGHBS-BOK présentement.",
+    color: COLORS.JEWEL,
     volume: VOLUMES.VOLUME_1,
   },
   RAZ_LA: {
