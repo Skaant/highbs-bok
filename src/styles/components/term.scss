@@ -41,14 +41,20 @@ td {
     }
   }
 }
-figcaption .term {
-  &:not(.font-regular) {
-    letter-spacing: 1.6px;
-    > .font-merri {
-      letter-spacing: initial;
+figcaption {
+  .term {
+    &:not(.font-regular) {
+      letter-spacing: 1.6px;
+      > .font-merri {
+        letter-spacing: initial;
+      }
     }
+    padding: 0 10px;
   }
-  padding: 0 10px;
+  .unreleased-source {
+    font-size: 0.5rem;
+    top: -8px;
+  }
 }
 h1 .term {
   &:not(.font-regular) {

@@ -13,7 +13,7 @@ function Figure({
     <figure className="d-flex flex-column">
       <img src={src} alt={alt} />
       {caption && (
-        <figcaption className="text-center">
+        <figcaption>
           {typeof caption === "string" ? caption : caption({})}
         </figcaption>
       )}
