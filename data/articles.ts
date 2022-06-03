@@ -48,9 +48,9 @@ const articles: ArticleData[] = [
   },
   {
     index: 4,
-    slug: "mise-a-jour-2-2-univers-renforce",
+    slug: "mise-a-jour-site-2-2-univers-renforce",
     date: "2022-05-29",
-    title: "Mise-à-jour 2.2: univers renforcé",
+    title: "Mise-à-jour du site 2.2: univers renforcé",
     description:
       "Connexe à la conception du volume 2, cette mise-à-jour axée sémantique revoit toutes les pages. " +
       "La section l-univers a été enrichie des pages : personnages, lieux et tribus. " +
