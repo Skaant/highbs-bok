@@ -17,6 +17,7 @@ import { UniversePagesCTA } from "../../components/_ctas/UniversePagesCTA"
 import PlaceRow from "../../components/_pages/places/PlaceRow"
 import PlacesList from "../../components/_pages/places/PlacesList"
 import { SectionRow } from "../../components/_rows/SectionRow"
+import "../../styles/global.scss"
 
 export enum SECTIONS_ID {
   LIEUX_DU_VOLUME_1 = "lieux-du-volume-1",
