@@ -130,8 +130,7 @@ export default function () {
                 <li className="mb-3">
                   Leur <b>apparence visuelle cohérente</b> (un terme = une
                   couleur, police spécifique pour les termes en{" "}
-                  <Term term={TERMS.ABS_LANG} />
-                  ).
+                  <Term term={TERMS.ABS_LANG} /> ).
                 </li>
                 <li className="mb-3">
                   Et la <b>référence systématique</b> à ces termes dans le
@@ -309,8 +308,7 @@ export default function () {
               <p>
                 Au niveau du site lui-même, j'ai lancé quelques gros chantiers
                 pour faciliter la <b>navigation dans l'univers</b>, et pour le
-                rendre
-                <b>plus rapidement compréhensible</b>.
+                rendre <b>plus rapidement compréhensible</b>.
               </p>
               <p>
                 Les sites internet sont géniaux pour ça : on peut constamment
@@ -331,7 +329,8 @@ export default function () {
           >
             <>
               <p>
-                Tous les termes de l' <Term term={TERMS.HIGHBS_BOK} /> , sont
+                Tous les termes de l'{" "}
+                <Term term={TERMS.HIGHBS_BOK} outline={true} /> , sont
                 maintenant affichés en utilisant des badges-liens colorés.
               </p>
               <p>
@@ -353,10 +352,10 @@ export default function () {
               </p>
               <p>
                 Exemples : <Character character={CHARACTERS.BALTAZUM} />,{" "}
-                <Era era={ERAS.PRIMA_ERA} />,
+                <Era era={ERAS.EXPANS_ERA} />,{" "}
                 <Place place={PLACES.CITE_AUBE} outline={true} />,{" "}
-                <Term term={TERMS.PSIK} />,
-                <Color color={COLORS.BLUE} />, <Tribe tribe={TRIBES.NOV} />.
+                <Term term={TERMS.PSIK} />, <Color color={COLORS.BLUE} />,{" "}
+                <Tribe tribe={TRIBES.NOV} />.
               </p>
               <p>
                 Les pages existantes ont été revues pour intégrer ces badges, se
