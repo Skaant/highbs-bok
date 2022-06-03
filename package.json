@@ -2,7 +2,7 @@
   "name": "highbs-bok",
   "private": true,
   "description": "HIGHBS-BOK.art website source code",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "license": "0BSD",
   "scripts": {
     "build": "npx gatsby build",
