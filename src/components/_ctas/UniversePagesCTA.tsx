@@ -4,11 +4,11 @@ import { PAGES, PAGES_DATA } from "../../../data/pages"
 import { ButtonsMenu } from "../ButtonsMenu"
 
 export function UniversePagesCTA({
-  current,
+  current = "",
   buttonsColor,
 }: {
   /** @todo Set type to PAGES */
-  current: string
+  current?: string
   buttonsColor?: COLORS
 }) {
   return (
