@@ -38,14 +38,14 @@ export const TRIBES_DATA: TribeDataSet = {
     id: "kolos",
     name: "KOLOS",
     summary:
-      "Fabrique les mille moyens de diffusion de Grand-Arbre, et prend place à bord de ceux-ci.",
+      "Fabrique les mille moyens de diffusion de Grand-Arbre, et prend place à bord de ceux-ci pour s'établir dans des territoires vierges.",
     color: COLORS.TURQUOIZE,
   },
   NOV: {
     id: "nov",
     name: "NOV",
     summary:
-      "Premiers arrivés sur une terre vierge, ils identifient des ressources, créent des campements et développent le WIGHLD là où il n'est pas .",
+      "Spécialistes des conditions extrèmes, ils créent des campements et développe le WIGHLD là où il n'est pas.",
     color: COLORS.LIGHT_BLUE,
   },
   PERMA: {
