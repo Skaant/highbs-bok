@@ -15,7 +15,6 @@ import Figure from "../../components/Figure"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import Place from "../../components/Place"
-import { TableOfContent } from "../../components/TableOfContent"
 import Term from "../../components/Term"
 import Tribe from "../../components/Tribe"
 import { ExtraitAcheterCTA } from "../../components/_ctas/ExtraitAcheterCTA"
@@ -152,19 +151,37 @@ export default function () {
               level: 2,
               content: "Ajout de nouveau contenu",
             }}
+            className="pb-0"
           >
-            <></>
+            <>
+              <p>
+                Tout les apports de cette mise-à-jour ont été{" "}
+                <b>
+                  motivés par l'ajout de contenu du volume 2 et le nécessaire
+                  alignement de celui du volume 1 dessus.
+                </b>
+              </p>
+              <p>
+                Ces ajouts sont détaillés ici d'un point de vue plutôt
+                technique, mais{" "}
+                <a href={PAGES_DATA[PAGES.L_UNIVERS].url}>
+                  rendez-vous directement sur les pages de l'univers
+                </a>{" "}
+                pour en apprendre plus.
+              </p>
+            </>
           </SectionRow>
           <SectionRow
             header={{
               level: 3,
               content: "Éléments du volume 2, pas encore fixés",
             }}
+            className="pb-0"
           >
             <>
               <p>
                 Comme dit plus haut, je suis entré dans la phase de conception
-                de l'HIGHBS-BOK volume 2.
+                de l' <Term term={TERMS.HIGHBS_BOK} /> volume 2.
               </p>
               <p>
                 Le premier texte est posé,{" "}
@@ -180,20 +197,38 @@ export default function () {
                     href={
                       PAGES_DATA[PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES].url
                     }
-                    className="text-turquoize"
                   >
                     {PAGES_DATA[PAGES.L_UNIVERS_PERSONNAGES_ET_ENTITES].title}
                   </a>
+                  , où on découvre des créatures vraiment stupéfiantes avec le
+                  volume 2,
+                </li>
+                <li>
+                  La succinte page{" "}
+                  <a href={PAGES_DATA[PAGES.L_UNIVERS_LIEUX].url}>
+                    {PAGES_DATA[PAGES.L_UNIVERS_LIEUX].title}
+                  </a>
+                  , où trône fièrement les quatres seuls endroits identifiés
+                  dans l'histoire,
+                </li>
+                <li>
+                  La très alléchante page des
+                  <a href={PAGES_DATA[PAGES.L_UNIVERS_TRIBUS_DE_L_EVEIL].url}>
+                    {PAGES_DATA[PAGES.L_UNIVERS_TRIBUS_DE_L_EVEIL].title}
+                  </a>
+                  , ces groupes de <Term term={TERMS.ZUM} plural={true} /> et
+                  autres qui remplissent l'infinité de l'espace du tronc de{" "}
+                  <Character character={CHARACTERS.GRAND_ARBRE} />.
                 </li>
               </ul>
-              <p>
+              <p className="mt-5">
                 <i>
                   Le CTA "Pages de l'univers" s'enrichit de trois nouveaux
                   boutons :
                 </i>
               </p>
-              <UniversePagesCTA />
-              <p>
+              <UniversePagesCTA buttonsColor={COLORS.PURPLE} />
+              <p className="mt-5">
                 Bien entendu, il reste à étoffer certains des 14 chapitres, et
                 sans nul doute les affiner ensuite plusieurs fois.
               </p>
@@ -213,12 +248,12 @@ export default function () {
                 caption={() => (
                   <>
                     Extrait d'un storyboard de 2018 :<br />
-                    <i>"Lieux démesurés dédiés à la création.</i>
+                    <i>"Lieux démesurés dédiés à la création,</i>
                     <br />
-                    <i>"Propice au rêve.</i>
+                    <i>Propice au rêve,</i>
                     <br />
                     <i>
-                      "<b>Ces fameux temples de la potente flemme.</b>"
+                      <b>Ces fameux temples de la potente flemme.</b>"
                     </i>
                   </>
                 )}
@@ -252,17 +287,11 @@ export default function () {
               </p>
               <p>
                 Notons aussi les furieuses améliorations des pages{" "}
-                <a
-                  href={PAGES_DATA[PAGES.L_UNIVERS_COULEURS].url}
-                  className="text-turquoize"
-                >
+                <a href={PAGES_DATA[PAGES.L_UNIVERS_COULEURS].url}>
                   {PAGES_DATA[PAGES.L_UNIVERS_COULEURS].title}
                 </a>{" "}
                 et{" "}
-                <a
-                  href={PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url}
-                  className="text-turquoize"
-                >
+                <a href={PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url}>
                   {PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].title}
                 </a>{" "}
                 (détaillées plus bas) qui décrivent mieux leurs objets.
@@ -274,7 +303,7 @@ export default function () {
               level: 2,
               content: "Modification de l'interface graphique du site",
             }}
-            className="bg-light_gold"
+            className="bg-light_gold pb-0"
           >
             <>
               <p>
@@ -298,7 +327,7 @@ export default function () {
               level: 3,
               content: "Badges sémantiques",
             }}
-            className="bg-light_gold"
+            className="bg-light_gold pb-0"
           >
             <>
               <p>
@@ -325,7 +354,8 @@ export default function () {
               <p>
                 Exemples : <Character character={CHARACTERS.BALTAZUM} />,{" "}
                 <Era era={ERAS.PRIMA_ERA} />,
-                <Place place={PLACES.CITE_AUBE} />, <Term term={TERMS.PSIK} />,
+                <Place place={PLACES.CITE_AUBE} outline={true} />,{" "}
+                <Term term={TERMS.PSIK} />,
                 <Color color={COLORS.BLUE} />, <Tribe tribe={TRIBES.NOV} />.
               </p>
               <p>
@@ -364,18 +394,14 @@ export default function () {
                     <br />
                     Bientôt le <Place place={PLACES.SIEGE_PENSEE} /> s'éteindra
                     et laissera la place au temps de l'action.
-                    <i>
-                      En contrebas, quelques{" "}
-                      <Term term={TERMS.DOM} plural={true} />
-                    </i>
+                    <br />
+                    En contrebas, quelques{" "}
+                    <Term term={TERMS.DOM} plural={true} /> ont poussé.
                   </>
                 )}
               />
               <p>
-                <a
-                  href={PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url}
-                  className="text-turquoize"
-                >
+                <a href={PAGES_DATA[PAGES.L_UNIVERS_GLOSSAIRE].url}>
                   Le glossaire
                 </a>{" "}
                 a vécu quelques changements :
@@ -392,10 +418,7 @@ export default function () {
                 </li>
               </ul>
               <p>
-                <a
-                  href={PAGES_DATA[PAGES.L_UNIVERS_COULEURS].url}
-                  className="text-turquoize"
-                >
+                <a href={PAGES_DATA[PAGES.L_UNIVERS_COULEURS].url}>
                   La page des couleurs
                 </a>{" "}
                 a elle beneficié des mêmes changements.
@@ -406,11 +429,8 @@ export default function () {
                 utilisant une couleur.
               </p>
               <p>
-                <a
-                  href={PAGES_DATA[PAGES.L_UNIVERS_ERAS].url}
-                  className="text-turquoize"
-                >
-                  La page <Term term={TERMS.ERA} plural={true} />
+                <a href={PAGES_DATA[PAGES.L_UNIVERS_ERAS].url}>
+                  La page <Term term={TERMS.ERA} plural={true} link={false} />
                 </a>{" "}
                 liste maintenant les personnages qui s'y manifestent.
               </p>
