@@ -26,7 +26,7 @@ function Era({
       term={{
         name,
         short: index
-          ? `Période ${index} de l'histoire des ZUMS.`
+          ? `Période ${index} de l'histoire des ZUMS`
           : "Notre époque",
         summary,
         color,
