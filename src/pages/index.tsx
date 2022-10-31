@@ -152,7 +152,7 @@ export default function Home() {
                 <b>
                   pour tenter de réaliser l'
                   <Term term={TERMS.HIGHBS} outline={true} /> et de manifester
-                  le <span className="bg-gold">tout-un</span>
+                  le <Character character={CHARACTERS.TOUT_UN} outline={true} />
                 </b>
                 .
               </p>
