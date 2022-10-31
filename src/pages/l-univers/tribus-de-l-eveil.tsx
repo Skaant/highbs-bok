@@ -65,7 +65,7 @@ export default function SeptEras() {
           <TribeRow tribe={TRIBES.PERMA}>
             <></>
           </TribeRow>
-          <TribeRow tribe={TRIBES.TRAK}>
+          <TribeRow tribe={TRIBES.WATCHK}>
             <></>
           </TribeRow>
           <TribeRow tribe={TRIBES.OMRA}>
@@ -77,7 +77,7 @@ export default function SeptEras() {
           <TribeRow tribe={TRIBES.ABS}>
             <></>
           </TribeRow>
-          <TribeRow tribe={TRIBES.ZONG}>
+          <TribeRow tribe={TRIBES.TRAK}>
             <></>
           </TribeRow>
           <TribeRow tribe={TRIBES.SKIGH}>

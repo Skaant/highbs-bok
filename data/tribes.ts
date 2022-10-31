@@ -7,13 +7,13 @@ export enum TRIBES {
   NOV = "NOV",
   PERMA = "PERMA",
   /** WATCHRS */
-  TRAK = "TRAK",
+  WATCHK = "WATCHK",
   /** ROAMRS */
   OMRA = "OMRA",
   /** SHAPRS */
   SHAPI = "SHAPI",
   ABS = "ABS",
-  ZONG = "ZONG",
+  TRAK = "TRAK",
   SKIGH = "SKIGH",
   /** RAWS */
   RAAG = "RAAG",
@@ -55,9 +55,9 @@ export const TRIBES_DATA: TribeDataSet = {
       "Capte les flux d'énergies et de ressources pour amplifier le WIGHLD et favoriser les autres tribus.",
     color: COLORS.GREEN,
   },
-  TRAK: {
+  WATCHK: {
     id: "trak",
-    name: "TRAK",
+    name: "WATCHK",
     summary:
       "Accroît la connaissance des environnements, indexent les génétiques, proches des villes ou lors d'expéditions dans le WIGHLD.",
     color: COLORS.DARK_TURQUOIZE,
@@ -83,9 +83,9 @@ export const TRIBES_DATA: TribeDataSet = {
       "Combinent les idées pour trouver des motifs de plus en plus abstraits.",
     color: COLORS.LIGHT_PURPLE,
   },
-  ZONG: {
+  TRAK: {
     id: "zong",
-    name: "ZONG",
+    name: "TRAK",
     summary:
       "Développement du réseau PRIGHM à travers le WIGHLD et l'EXPANS, fluidifie localement les échanges entre les être et le HOL-ONG.",
     color: COLORS.TURQUOIZE,
