@@ -192,11 +192,10 @@ export default function Glossaire() {
                   </p>
                   <p>
                     <i>
-                      Sur <Character character={CHARACTERS.GRAND_ARBRE} />, tous
-                      les êtres sont dotés d'un <Term term={TERMS.ONG} />,
-                      l'organe qui permet de parler en concept et de se
-                      connecter les uns aux autres via le{" "}
-                      <Term term={TERMS.PRIGHM} />.
+                      Sur <Place place={PLACES.GRAND_ARBRE} />, tous les êtres
+                      sont dotés d'un <Term term={TERMS.ONG} />, l'organe qui
+                      permet de parler en concept et de se connecter les uns aux
+                      autres via le <Term term={TERMS.PRIGHM} />.
                     </i>
                   </p>
                 </>
@@ -330,7 +329,7 @@ export default function Glossaire() {
                       (voir <Term term={TERMS.MIKO_PRIGHM} />)
                     </i>
                     , au <Term term={TERMS.HOL_ONG} /> et à{" "}
-                    <Character character={CHARACTERS.GRAND_ARBRE} />.
+                    <Place place={PLACES.GRAND_ARBRE} />.
                   </p>
                 </>
               ),

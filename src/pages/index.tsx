@@ -16,6 +16,8 @@ import Term from "../components/Term"
 import { TERMS } from "../../data/terms"
 import Character from "../components/Character"
 import { CHARACTERS } from "../../data/characters"
+import Place from "../components/Place"
+import { PLACES } from "../../data/places"
 
 const pageId = PAGES.HOME
 
@@ -138,7 +140,7 @@ export default function Home() {
             <>
               <p className="mb-4">
                 Avec leurs puissants alliés : le <Term term={TERMS.PSIK} />, la
-                vie et <Character character={CHARACTERS.GRAND_ARBRE} />,{" "}
+                vie et <Place place={PLACES.GRAND_ARBRE} />,{" "}
                 <b>
                   les <Term term={TERMS.ZUM} plural={true} />, cette espèce de
                   singes vraiment brillants,
@@ -202,7 +204,7 @@ export default function Home() {
             <>
               "Il connaît son travail, c’est le même que tous les autres{" "}
               <Term term={TERMS.ZUM} plural={true} />
-              <br />à travers <Character character={CHARACTERS.GRAND_ARBRE} /> :
+              <br />à travers <Place place={PLACES.GRAND_ARBRE} /> :
               <br />
               <b>Susciter plus d’idées encore !</b>
               <br />

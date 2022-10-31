@@ -5,6 +5,7 @@ import { Source, WordData } from "./_types/WordData"
 
 export enum PLACES {
   TERA = "TERA",
+  GRAND_ARBRE = "GRAND_ARBRE",
   SIEGE_PENSEE = "SIEGE_PENSEE",
   CITE_AUBE = "CITE_AUBE",
   WAILANDA = "WAILANDA",
@@ -28,6 +29,20 @@ export const PLACES_DATA: PlaceDataSet = {
     eras: [ERAS.AURO_ERA],
     volume: VOLUMES.VOLUME_1,
     particle: "la ",
+  },
+  GRAND_ARBRE: {
+    id: "grand-arbre",
+    name: "Grand-Arbre",
+    eras: [
+      ERAS.PRIMA_ERA,
+      ERAS.EXPANS_ERA,
+      ERAS.DISPERSION_ERA,
+      ERAS.CONTRACTION_ERA,
+    ],
+    summary:
+      "La structure organique qui sert de support à la colonisation de l'univers par les ZUMS.",
+    color: COLORS.GREEN,
+    volume: VOLUMES.VOLUME_1,
   },
   SIEGE_PENSEE: {
     id: "siege-de-la-pensee",

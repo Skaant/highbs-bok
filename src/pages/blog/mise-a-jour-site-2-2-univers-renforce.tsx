@@ -217,7 +217,7 @@ export default function () {
                   </a>
                   , ces groupes de <Term term={TERMS.ZUM} plural={true} /> et
                   autres qui remplissent l'infinité de l'espace du tronc de{" "}
-                  <Character character={CHARACTERS.GRAND_ARBRE} />.
+                  <Place place={PLACES.GRAND_ARBRE} />.
                 </li>
               </ul>
               <p className="mt-5">
@@ -282,7 +282,7 @@ export default function () {
               <p>Cela réduit la quantité de termes à définir !</p>
               <p>
                 <b>Concernés :</b> <Character character={CHARACTERS.TOUT_UN} />,{" "}
-                <Character character={CHARACTERS.GRAND_ARBRE} />.
+                <Place place={PLACES.GRAND_ARBRE} />.
               </p>
               <p>
                 Notons aussi les furieuses améliorations des pages{" "}

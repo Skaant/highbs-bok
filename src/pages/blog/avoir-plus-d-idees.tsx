@@ -83,7 +83,7 @@ export default function () {
                 <img src="/images/articles/1/perspectives-de-l'expans-era.jpg" />
                 <figcaption>
                   Perspective de la structure de{" "}
-                  <Character character={CHARACTERS.GRAND_ARBRE} /> pendant l'
+                  <Place place={PLACES.GRAND_ARBRE} /> pendant l'
                   <Era era={ERAS.EXPANS_ERA} />. Les{" "}
                   <Term term={TERMS.ZUM} plural={true} /> peuvent observer les
                   couloirs et les noeuds dans lesquels brillent de petits

@@ -108,16 +108,15 @@ export default function SeptEras() {
           <EraRow era={ERAS.PRIMA_ERA}>
             <>
               <p>
-                À bord de <Character character={CHARACTERS.GRAND_ARBRE} />, la
-                forêt spatiale de vaisseaux-arbres, les{" "}
+                À bord de <Place place={PLACES.GRAND_ARBRE} />, la forêt
+                spatiale de vaisseaux-arbres, les{" "}
                 <Term term={TERMS.ZUM} plural={true} outline={true} /> commence
                 leur inexorable croissance par delà TERA.
               </p>
               <p>Leur système solaire est à son tour recyclé.</p>
               <p>
                 Bientôt ils lancent les graines de{" "}
-                <Character character={CHARACTERS.GRAND_ARBRE} /> à travers toute
-                la galaxie.
+                <Place place={PLACES.GRAND_ARBRE} /> à travers toute la galaxie.
               </p>
               <p>Et ce n'est que le début ...</p>
             </>
@@ -126,8 +125,8 @@ export default function SeptEras() {
             <>
               <p>
                 La croissance de{" "}
-                <Character character={CHARACTERS.GRAND_ARBRE} outline={true} />{" "}
-                a pris des proportions demesurées.
+                <Place place={PLACES.GRAND_ARBRE} outline={true} /> a pris des
+                proportions demesurées.
               </p>
               <p>
                 L'univers est en train de se remplir de vie et de conscience.
@@ -152,8 +151,8 @@ export default function SeptEras() {
               <p>
                 Il ne reste encore que quelques particules extérieures au{" "}
                 <Term term={TERMS.HOL_ONG} />, mais celles-ci sont si espacées
-                que l'intégrité de{" "}
-                <Character character={CHARACTERS.GRAND_ARBRE} /> est menacée.
+                que l'intégrité de <Place place={PLACES.GRAND_ARBRE} /> est
+                menacée.
               </p>
               <p>
                 Les seigneurs de l'infini sont créés pour aller chercher les

@@ -7,7 +7,6 @@ export enum CHARACTERS {
   TOUT_UN = "TOUT_UN",
   BALTAZUM = "BALTAZUM",
   ANGK = "ANGK",
-  GRAND_ARBRE = "GRAND_ARBRE",
   NARRATEUR = "NARRATEUR",
   RAZ_LA = "RAZ_LA",
   BINDA = "BINDA",
@@ -61,19 +60,6 @@ export const CHARACTERS_DATA: CharacterDataSet = {
     color: COLORS.DARK_SKIN,
     volume: VOLUMES.VOLUME_1,
     particle: "l'",
-  },
-  GRAND_ARBRE: {
-    name: "Grand-Arbre",
-    eras: [
-      ERAS.PRIMA_ERA,
-      ERAS.EXPANS_ERA,
-      ERAS.DISPERSION_ERA,
-      ERAS.CONTRACTION_ERA,
-    ],
-    summary:
-      "La structure organique qui sert de support à la colonisation de l'univers par les ZUMS.",
-    color: COLORS.GREEN,
-    volume: VOLUMES.VOLUME_1,
   },
   NARRATEUR: {
     name: "Narrateur",

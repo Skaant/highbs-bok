@@ -17,7 +17,7 @@ import "../../styles/global.scss"
 import Era from "../../components/Era"
 import { ERAS } from "../../../data/eras"
 import Character from "../../components/Character"
-import { PLACES } from "../../../data/places"
+import { PLACES, PLACES_DATA } from "../../../data/places"
 import Place from "../../components/Place"
 import Tribe from "../../components/Tribe"
 import { TRIBES } from "../../../data/tribes"
@@ -142,7 +142,7 @@ export default function Glossaire() {
               </p>
               <p>
                 Comme toutes les autres créatures qui habitent{" "}
-                <Character character={CHARACTERS.GRAND_ARBRE} pageLink={true} />
+                <Place place={PLACES.GRAND_ARBRE} pageLink={true} />
                 et son réseau conceptuel, le <Term term={TERMS.HOL_ONG} />,
                 Baltazum n'a de cesse d'avoir de nouvelles idées et de les
                 exterioriser.
@@ -175,27 +175,6 @@ export default function Glossaire() {
             </>
           </CharacterRow>
           <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_1][3]}>
-            <>
-              <p>
-                À la <Era era={ERAS.PALEO_ERA} />, les{" "}
-                <Term term={TERMS.ZUM} plural={true} /> parviennent à créer{" "}
-                {CHARACTERS_DATA[CHARACTERS.GRAND_ARBRE].name}{" "}
-                <b>en recyclant leur planète-mère</b>{" "}
-                <Place place={PLACES.TERA} />.
-              </p>
-              <p>
-                De là, {CHARACTERS_DATA[CHARACTERS.GRAND_ARBRE].name} et ses
-                graines, avec l'aide des <Term term={TERMS.ZUM} plural={true} />{" "}
-                et de la vie, <b>colonisent l'univers jusqu'à l'infini</b>.
-              </p>
-              <p>
-                Au retour, à la <Era era={ERAS.CONTRACTION_ERA} />, l'arbre se
-                fossilise et forme le nuage de joyaux conceptuels autour du
-                <Place place={PLACES.SIEGE_PENSEE} />.
-              </p>
-            </>
-          </CharacterRow>
-          <CharacterRow character={volumesCharacters[VOLUMES.VOLUME_1][4]}>
             <>
               <p>
                 Bien que peu mis en avant dans le volume 1, le narrateur est{" "}
@@ -251,8 +230,7 @@ export default function Glossaire() {
               <p>
                 Membre de la <Tribe tribe={TRIBES.PSIK} />, il va contribuer à
                 faire émerger le <Term term={TERMS.HOL_ONG} /> et{" "}
-                <Character character={CHARACTERS.GRAND_ARBRE} pageLink={true} />
-                .
+                <Place place={PLACES.GRAND_ARBRE} pageLink={true} />.
               </p>
             </>
           </CharacterRow>

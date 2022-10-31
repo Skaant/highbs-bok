@@ -1,12 +1,14 @@
 import React from "react"
 import { CHARACTERS } from "../../../data/characters"
 import { COLORS } from "../../../data/colors"
+import { ERAS } from "../../../data/eras"
 import { PAGES, PAGES_DATA } from "../../../data/pages"
 import { PLACES, PLACES_DATA } from "../../../data/places"
 import { TERMS } from "../../../data/terms"
 import { TRIBES } from "../../../data/tribes"
 import { VOLUMES } from "../../../data/volumes"
 import Character from "../../components/Character"
+import Era from "../../components/Era"
 import { Header } from "../../components/Header"
 import { Layout } from "../../components/Layout/Layout"
 import Place from "../../components/Place"
@@ -89,6 +91,27 @@ export default function Lieux() {
             </>
           </PlaceRow>
           <PlaceRow place={volumesPlaces[VOLUMES.VOLUME_1][1]}>
+            <>
+              <p>
+                À la <Era era={ERAS.PALEO_ERA} />, les{" "}
+                <Term term={TERMS.ZUM} plural={true} /> parviennent à créer{" "}
+                {PLACES_DATA[PLACES.GRAND_ARBRE].name}{" "}
+                <b>en recyclant leur planète-mère</b>{" "}
+                <Place place={PLACES.TERA} />.
+              </p>
+              <p>
+                De là, {PLACES_DATA[PLACES.GRAND_ARBRE].name} et ses graines,
+                avec l'aide des <Term term={TERMS.ZUM} plural={true} /> et de la
+                vie, <b>colonisent l'univers jusqu'à l'infini</b>.
+              </p>
+              <p>
+                Au retour, à la <Era era={ERAS.CONTRACTION_ERA} />, l'arbre se
+                fossilise et forme le nuage de joyaux conceptuels autour du
+                <Place place={PLACES.SIEGE_PENSEE} />.
+              </p>
+            </>
+          </PlaceRow>
+          <PlaceRow place={volumesPlaces[VOLUMES.VOLUME_1][2]}>
             <>
               <p>La dernière ville de l'univers.</p>
               <p>
