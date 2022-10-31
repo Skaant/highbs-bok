@@ -14,6 +14,8 @@ import Term from "../../components/Term"
 import { ExtraitAcheterCTA } from "../../components/_ctas/ExtraitAcheterCTA"
 import { SectionRow } from "../../components/_rows/SectionRow"
 import "../../styles/global.scss"
+import Place from "../../components/Place"
+import { PLACES } from "../../../data/places"
 
 const INDEX = 1
 

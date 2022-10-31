@@ -16,6 +16,8 @@ import TermsRow from "../../components/_pages/glossaire/TermsRow"
 import { CHARACTERS } from "../../../data/characters"
 import Character from "../../components/Character"
 import TermsList from "../../components/_pages/glossaire/TermsList"
+import Place from "../../components/Place"
+import { PLACES } from "../../../data/places"
 
 const pageId = PAGES.L_UNIVERS_GLOSSAIRE
 const title = "Glossaire"
